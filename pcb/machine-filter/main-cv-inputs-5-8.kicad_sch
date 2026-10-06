@@ -1742,12 +1742,12 @@
 		(lib_id "Amplifier_Operational:LMV324")
 		(at 228.6 76.2 0)
 		(mirror x)
-		(unit 1)
+		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bdb44c05-46f1-5c15-a27c-2edd060b9942")
+		(uuid "0d3a5ddd-ec5a-5050-a9e3-62881860fa48")
 		(property "Reference" "U1"
 			(at 229.87 82.55 0)
 			(effects
@@ -1829,20 +1829,20 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "a6f141d4-85e0-527c-833b-f0a940e232b5")
+		(pin "5"
+			(uuid "dc45b031-91b3-5a84-b7d2-b33acea040f2")
 		)
-		(pin "2"
-			(uuid "5953c71d-c26d-5059-9181-3245a5bc7675")
+		(pin "6"
+			(uuid "d2463ca7-8a2b-58ff-b3a5-aaf90001a1b9")
 		)
-		(pin "3"
-			(uuid "bc2ffd33-d189-50bb-88c9-bcd9a70b8f66")
+		(pin "7"
+			(uuid "32f1dda0-842a-586d-a361-a960fd001d13")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3dd72cb2-cdc5-5f7b-b550-d0ad4f67f81a"
 					(reference "U1")
-					(unit 1)
+					(unit 2)
 				)
 			)
 		)
@@ -3190,12 +3190,12 @@
 		(lib_id "Amplifier_Operational:LMV324")
 		(at 228.6 167.64 0)
 		(mirror x)
-		(unit 2)
+		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0d3a5ddd-ec5a-5050-a9e3-62881860fa48")
+		(uuid "cf2d5086-9008-59f6-ab18-fe69cc15bae2")
 		(property "Reference" "U1"
 			(at 229.87 173.99 0)
 			(effects
@@ -3277,20 +3277,20 @@
 				(hide yes)
 			)
 		)
-		(pin "5"
-			(uuid "dc45b031-91b3-5a84-b7d2-b33acea040f2")
+		(pin "12"
+			(uuid "3d7367a3-687d-59d5-8bf6-d406c0390511")
 		)
-		(pin "6"
-			(uuid "d2463ca7-8a2b-58ff-b3a5-aaf90001a1b9")
+		(pin "13"
+			(uuid "3d4dbf20-eedf-5f26-8568-91f253030395")
 		)
-		(pin "7"
-			(uuid "32f1dda0-842a-586d-a361-a960fd001d13")
+		(pin "14"
+			(uuid "7f534af5-91c2-5aff-806b-b67ddb27d9f7")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3dd72cb2-cdc5-5f7b-b550-d0ad4f67f81a"
 					(reference "U1")
-					(unit 2)
+					(unit 4)
 				)
 			)
 		)

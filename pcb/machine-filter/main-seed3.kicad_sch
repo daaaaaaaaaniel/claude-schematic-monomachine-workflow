@@ -2824,7 +2824,7 @@
 		)
 	)
 	(no_connect
-		(at 72.39 100.33)
+		(at 72.39 109.22)
 		(uuid "982ffff8-5b43-57c5-bb8e-a81f528873f0")
 	)
 	(no_connect
@@ -3085,7 +3085,7 @@
 			)
 		)
 	)
-	(global_label "ADC_WIDTH"
+	(global_label "ADC_HPRES"
 		(shape input)
 		(at 67.31 81.28 180)
 		(fields_autoplaced yes)
@@ -3129,7 +3129,7 @@
 			)
 		)
 	)
-	(global_label "POT_VOL"
+	(global_label "ADC_LPRES"
 		(shape input)
 		(at 67.31 86.36 180)
 		(fields_autoplaced yes)
@@ -3151,7 +3151,7 @@
 			)
 		)
 	)
-	(global_label "ADC_LPRES"
+	(global_label "ADC_EQF"
 		(shape input)
 		(at 67.31 88.9 180)
 		(fields_autoplaced yes)
@@ -3173,7 +3173,7 @@
 			)
 		)
 	)
-	(global_label "ADC_HPRES"
+	(global_label "ADC_EQG"
 		(shape input)
 		(at 67.31 91.44 180)
 		(fields_autoplaced yes)
@@ -3195,7 +3195,7 @@
 			)
 		)
 	)
-	(global_label "ADC_EQF"
+	(global_label "ADC_DIST"
 		(shape input)
 		(at 67.31 93.98 180)
 		(fields_autoplaced yes)
@@ -3217,7 +3217,7 @@
 			)
 		)
 	)
-	(global_label "ADC_EQG"
+	(global_label "POT_VOL"
 		(shape input)
 		(at 67.31 96.52 180)
 		(fields_autoplaced yes)
@@ -3239,9 +3239,9 @@
 			)
 		)
 	)
-	(global_label "ADC_DIST"
+	(global_label "ADC_WIDTH"
 		(shape input)
-		(at 67.31 102.87 180)
+		(at 67.31 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3251,7 +3251,7 @@
 		)
 		(uuid "a2fffd94-1f2c-5ae9-a9e9-94e7820c89a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 67.31 102.87 180)
+			(at 67.31 100.33 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3263,7 +3263,7 @@
 	)
 	(global_label "ADC_SRR"
 		(shape input)
-		(at 67.31 106.68 180)
+		(at 67.31 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3273,7 +3273,7 @@
 		)
 		(uuid "269d0cb5-b75f-5e4d-8456-42f72888698a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 67.31 106.68 180)
+			(at 67.31 102.87 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3285,7 +3285,7 @@
 	)
 	(global_label "POT_MUX"
 		(shape input)
-		(at 67.31 109.22 180)
+		(at 67.31 106.68 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3295,7 +3295,7 @@
 		)
 		(uuid "043bdf05-bdf7-56b5-90d8-0d1f9afb9587")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 67.31 109.22 180)
+			(at 67.31 106.68 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3768,7 +3768,7 @@
 		)
 		(uuid "3138f687-d4ea-5501-aa8a-50720948755f")
 	)
-	(text "the firmware maps them: 22=WIDTH, 23=BASE, 24=POT_VOL, 25=LPRES, 26=HPRES"
+	(text "the firmware maps them: 22=HPRES, 23=BASE, 24=LPRES, 25=EQF, 26=EQG"
 		(exclude_from_sim no)
 		(at 20.32 154.94 0)
 		(effects
@@ -3780,7 +3780,7 @@
 		)
 		(uuid "39673c46-b73b-5e49-9642-04e8e33135f2")
 	)
-	(text "  27=EQF, 28=EQG, 30=DIST, 31=SRR, 32=POT_MUX"
+	(text "  27=DIST, 28=POT_VOL, 29=WIDTH, 30=SRR, 31=POT_MUX"
 		(exclude_from_sim no)
 		(at 20.32 158.75 0)
 		(effects
@@ -5666,8 +5666,8 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 102.87)
-			(xy 72.39 102.87)
+			(xy 67.31 100.33)
+			(xy 72.39 100.33)
 		)
 		(stroke
 			(width 0)
@@ -5677,8 +5677,8 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 106.68)
-			(xy 72.39 106.68)
+			(xy 67.31 102.87)
+			(xy 72.39 102.87)
 		)
 		(stroke
 			(width 0)
@@ -5688,8 +5688,8 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 109.22)
-			(xy 72.39 109.22)
+			(xy 67.31 106.68)
+			(xy 72.39 106.68)
 		)
 		(stroke
 			(width 0)

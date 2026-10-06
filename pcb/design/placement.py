@@ -43,4 +43,23 @@ STEPS = [
                "C21": ("main", 61.0, 42.5, 0, "back")},
      "check_pads": {("U2", "1"): (51.89, 46.31), ("U2", "7"): (51.89, 38.69), ("U2", "14"): (57.29, 46.31)},
      "traces": [("U2", "1", "A1", "23", 0.25, "B.Cu")]},
+    # 3. U1, CV 5-8 group (d: "go on to the next component"): the same column as U2, below it; rotation 0 on the
+    #    back (pins 1-7 up the left side, facing the ADC pins). Pin 1 level with Seed3 pin 29 (A7, until now
+    #    unused). Parts: section A's below the chip, then B's; C's (pins 8-10) right-upper, D's (12-14) right-lower;
+    #    C20 between them. Which channel uses which section and ADC pin is re-matched after this step
+    #    (tools/rematch_adc.py); the critical trace (the WIDTH output -> its ADC pin) is drawn after that.
+    {"name": "cv_u1",
+     "parts": {"U1": ("main", 54.6, 57.81, 0, "back"),
+               "R14": ("main", 51.5, 66.0, 90, "back"), "R17": ("main", 53.3, 66.0, 90, "back"),
+               "R15": ("main", 55.1, 66.0, 90, "back"), "C11": ("main", 56.9, 66.0, 90, "back"),
+               "R16": ("main", 58.7, 66.0, 90, "back"),
+               "R30": ("main", 51.5, 70.0, 90, "back"), "R31": ("main", 53.3, 70.0, 90, "back"),
+               "C15": ("main", 55.1, 70.0, 90, "back"), "R32": ("main", 56.9, 70.0, 90, "back"),
+               "R34": ("main", 60.0, 54.8, 90, "back"), "R35": ("main", 61.8, 54.8, 90, "back"),
+               "C16": ("main", 63.6, 54.8, 90, "back"), "R36": ("main", 65.4, 54.8, 90, "back"),
+               "R38": ("main", 60.0, 60.8, 90, "back"), "R39": ("main", 61.8, 60.8, 90, "back"),
+               "C17": ("main", 63.6, 60.8, 90, "back"), "R40": ("main", 65.4, 60.8, 90, "back"),
+               "C20": ("main", 61.0, 57.8, 0, "back")},
+     "check_pads": {("U1", "1"): (51.89, 61.627), ("U1", "7"): (51.89, 54.007), ("U1", "14"): (57.29, 61.627)},
+     "traces": []},
 ]

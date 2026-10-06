@@ -8,17 +8,17 @@ All of this is generated: `pcb/design/floorplan.py` writes `pcb/design/pinmap.py
 
 | Seed3 pin | Daisy name | rev alpha | **rev beta** |
 |---|---|---|---|
-| 22 | A0 | POT_MUX (pot multiplexer) | **CV 2 WIDTH (1V/OCT)** |
+| 22 | A0 | POT_MUX (pot multiplexer) | **CV 3 HP RES** |
 | 23 | A1 | CV 1 BASE (1V/OCT) | **CV 1 BASE (1V/OCT)** |
-| 24 | A2 | CV 2 WIDTH (1V/OCT) | **POT_VOL (VOLUME pot)** |
-| 25 | A3 | CV 3 HP RES | **CV 4 LP RES** |
-| 26 | A4 | CV 4 LP RES | **CV 3 HP RES** |
-| 27 | A5 | CV 5 EQ FREQ | **CV 5 EQ FREQ** |
-| 28 | A6 | CV 6 EQ GAIN | **CV 6 EQ GAIN** |
-| 29 | A7 | CV 7 DIST | **—** |
-| 30 | A8 | CV 8 SMPL RATE | **CV 7 DIST** |
-| 31 | A9 | POT_VOL (VOLUME pot) | **CV 8 SMPL RATE** |
-| 32 | A10 | — | **POT_MUX (pot multiplexer)** |
+| 24 | A2 | CV 2 WIDTH (1V/OCT) | **CV 4 LP RES** |
+| 25 | A3 | CV 3 HP RES | **CV 5 EQ FREQ** |
+| 26 | A4 | CV 4 LP RES | **CV 6 EQ GAIN** |
+| 27 | A5 | CV 5 EQ FREQ | **CV 7 DIST** |
+| 28 | A6 | CV 6 EQ GAIN | **POT_VOL (VOLUME pot)** |
+| 29 | A7 | CV 7 DIST | **CV 2 WIDTH (1V/OCT)** |
+| 30 | A8 | CV 8 SMPL RATE | **CV 8 SMPL RATE** |
+| 31 | A9 | POT_VOL (VOLUME pot) | **POT_MUX (pot multiplexer)** |
+| 32 | A10 | — | **—** |
 | 35 | A11 | — | **—** |
 
 Pin 29 (A7) is now unused (the matching found the other pins shorter); it's free for a future input.
@@ -27,7 +27,7 @@ The CV scaling is unchanged: reading = 1.667 V − CV/6, so +8 V reads 0.33 V an
 
 ## 2. Pot multiplexer channel table (must change)
 
-The U6 (74HC4051) select lines are unchanged: MUX_A = S0 on Seed3 pin 8 (D7), MUX_B = S1 on pin 9 (D8), MUX_C = S2 on pin 10 (D9). The common output POT_MUX moves to pin 32 (A10, see the table above). The pot behind each channel changes:
+The U6 (74HC4051) select lines are unchanged: MUX_A = S0 on Seed3 pin 8 (D7), MUX_B = S1 on pin 9 (D8), MUX_C = S2 on pin 10 (D9). The common output POT_MUX moves to pin 31 (A9, see the table above). The pot behind each channel changes:
 
 | Select (S2 S1 S0) | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|

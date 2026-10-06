@@ -2,7 +2,7 @@
   (version "D")
   (design
     (source "machine_filter.py")
-    (date "10/06/2026 09:49 PM")
+    (date "10/06/2026 10:08 PM")
     (tool "SKiDL (2.3.0)")
     (sheet
       (number 1)
@@ -5163,7 +5163,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "30")
+        (pin "27")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "C16")
@@ -5183,7 +5183,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "27")
+        (pin "25")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "C14")
@@ -5203,7 +5203,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "28")
+        (pin "26")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "C15")
@@ -5215,7 +5215,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "U1")
-        (pin "1")
+        (pin "7")
         (pintype "OUTPUT")))
     (net
       (code 10)
@@ -5223,7 +5223,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "26")
+        (pin "22")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "C12")
@@ -5243,7 +5243,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "25")
+        (pin "24")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "C13")
@@ -5263,7 +5263,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "31")
+        (pin "30")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "C17")
@@ -5275,7 +5275,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "U1")
-        (pin "7")
+        (pin "14")
         (pintype "OUTPUT")))
     (net
       (code 13)
@@ -5283,7 +5283,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "22")
+        (pin "29")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "C11")
@@ -5295,7 +5295,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "U1")
-        (pin "14")
+        (pin "1")
         (pintype "OUTPUT")))
     (net
       (code 14)
@@ -6259,7 +6259,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "U1")
-        (pin "2")
+        (pin "6")
         (pintype "INPUT")))
     (net
       (code 47)
@@ -6331,7 +6331,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "U1")
-        (pin "6")
+        (pin "13")
         (pintype "INPUT")))
     (net
       (code 50)
@@ -6355,7 +6355,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "U1")
-        (pin "13")
+        (pin "2")
         (pintype "INPUT")))
     (net
       (code 51)
@@ -6747,11 +6747,11 @@
         (pintype "BIDIRECTIONAL")))
     (net
       (code 81)
-      (name "NC_A1_29")
+      (name "NC_A1_32")
       (class "Default")
       (node
         (ref "A1")
-        (pin "29")
+        (pin "32")
         (pintype "BIDIRECTIONAL")))
     (net
       (code 82)
@@ -6931,7 +6931,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "32")
+        (pin "31")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "U6")
@@ -6955,7 +6955,7 @@
       (class "Default")
       (node
         (ref "A1")
-        (pin "24")
+        (pin "28")
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "RV1")

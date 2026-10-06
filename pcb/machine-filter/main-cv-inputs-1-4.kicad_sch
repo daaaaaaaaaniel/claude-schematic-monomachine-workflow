@@ -2090,12 +2090,12 @@
 		(lib_id "Amplifier_Operational:LMV324")
 		(at 228.6 76.2 0)
 		(mirror x)
-		(unit 4)
+		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8e5ef737-c82a-56bb-ba99-ec7aa2d003c5")
+		(uuid "3c196654-5563-5428-93f1-5797c7961eb3")
 		(property "Reference" "U1"
 			(at 229.87 82.55 0)
 			(effects
@@ -2177,20 +2177,20 @@
 				(hide yes)
 			)
 		)
-		(pin "12"
-			(uuid "b7ab0cc6-12af-5c8e-b782-0282f460fd35")
+		(pin "1"
+			(uuid "24844c13-14a0-5b72-94ab-7c04502a24cc")
 		)
-		(pin "13"
-			(uuid "8219c4ac-d786-5ba4-ae35-54cc4ffaca5e")
+		(pin "2"
+			(uuid "b50a049b-b13e-5848-af10-b0fc2b01a586")
 		)
-		(pin "14"
-			(uuid "f56ff700-bebc-5393-9166-4262a25d34f5")
+		(pin "3"
+			(uuid "33809c4f-24fa-5bc5-a91b-d46900c0658b")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/8e40b2c3-2b41-533a-9c82-023551050a03"
 					(reference "U1")
-					(unit 4)
+					(unit 1)
 				)
 			)
 		)

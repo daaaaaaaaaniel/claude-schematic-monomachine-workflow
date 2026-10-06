@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/claude/claude-schematic-monomachine-workflow/pcb/machine-filter/machine-filter.kicad_sch")
-		(date "2026-10-06T21:49:40")
+		(date "2026-10-06T22:08:24")
 		(tool "Eeschema 10.0.6-10.0.6~ubuntu24.04.1")
 		(sheet
 			(number "1")
@@ -4402,7 +4402,7 @@
 				(names "/Main: CV inputs 1-4/")
 				(tstamps "/8e40b2c3-2b41-533a-9c82-023551050a03/")
 			)
-			(tstamps "8e5ef737-c82a-56bb-ba99-ec7aa2d003c5" "7ce8be80-0a8f-527b-abc2-60c3b18b1322")
+			(tstamps "7ce8be80-0a8f-527b-abc2-60c3b18b1322" "3c196654-5563-5428-93f1-5797c7961eb3")
 			(units
 				(unit
 					(name "A")
@@ -14773,8 +14773,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "30")
-				(pinfunction "D23_30")
+				(pin "27")
+				(pinfunction "D20_27")
 				(pintype "bidirectional")
 			)
 			(node
@@ -14799,8 +14799,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "27")
-				(pinfunction "D20_27")
+				(pin "25")
+				(pinfunction "D18_25")
 				(pintype "bidirectional")
 			)
 			(node
@@ -14825,8 +14825,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "28")
-				(pinfunction "D21_28")
+				(pin "26")
+				(pinfunction "D19_26")
 				(pintype "bidirectional")
 			)
 			(node
@@ -14841,7 +14841,7 @@
 			)
 			(node
 				(ref "U1")
-				(pin "1")
+				(pin "7")
 				(pintype "output")
 			)
 		)
@@ -14851,8 +14851,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "26")
-				(pinfunction "D19_26")
+				(pin "22")
+				(pinfunction "D15_22")
 				(pintype "bidirectional")
 			)
 			(node
@@ -14877,8 +14877,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "25")
-				(pinfunction "D18_25")
+				(pin "24")
+				(pinfunction "D17_24")
 				(pintype "bidirectional")
 			)
 			(node
@@ -14903,8 +14903,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "31")
-				(pinfunction "D24_31")
+				(pin "30")
+				(pinfunction "D23_30")
 				(pintype "bidirectional")
 			)
 			(node
@@ -14919,7 +14919,7 @@
 			)
 			(node
 				(ref "U1")
-				(pin "7")
+				(pin "14")
 				(pintype "output")
 			)
 		)
@@ -14929,8 +14929,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "22")
-				(pinfunction "D15_22")
+				(pin "29")
+				(pinfunction "D22_29")
 				(pintype "bidirectional")
 			)
 			(node
@@ -14945,7 +14945,7 @@
 			)
 			(node
 				(ref "U1")
-				(pin "14")
+				(pin "1")
 				(pintype "output")
 			)
 		)
@@ -17064,6 +17064,37 @@
 			(name "Net-(U1A--)")
 			(class "Default")
 			(node
+				(ref "C11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R15")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R16")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R17")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "94")
+			(name "Net-(U1B--)")
+			(class "Default")
+			(node
 				(ref "C15")
 				(pin "1")
 				(pintype "passive")
@@ -17080,37 +17111,6 @@
 			)
 			(node
 				(ref "R32")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "U1")
-				(pin "2")
-				(pinfunction "-_2")
-				(pintype "input")
-			)
-		)
-		(net
-			(code "94")
-			(name "Net-(U1B--)")
-			(class "Default")
-			(node
-				(ref "C17")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R38")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R39")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R40")
 				(pin "1")
 				(pintype "passive")
 			)
@@ -17157,23 +17157,23 @@
 			(name "Net-(U1D--)")
 			(class "Default")
 			(node
-				(ref "C11")
+				(ref "C17")
 				(pin "1")
 				(pintype "passive")
 			)
 			(node
-				(ref "R15")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R16")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R17")
+				(ref "R38")
 				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R39")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R40")
+				(pin "1")
 				(pintype "passive")
 			)
 			(node
@@ -17753,8 +17753,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "32")
-				(pinfunction "D25_32")
+				(pin "31")
+				(pinfunction "D24_31")
 				(pintype "bidirectional")
 			)
 			(node
@@ -17770,8 +17770,8 @@
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "24")
-				(pinfunction "D17_24")
+				(pin "28")
+				(pinfunction "D21_28")
 				(pintype "bidirectional")
 			)
 			(node
@@ -17837,12 +17837,12 @@
 		)
 		(net
 			(code "129")
-			(name "unconnected-(A1-D22-Pad29)")
+			(name "unconnected-(A1-D25-Pad32)")
 			(class "Default")
 			(node
 				(ref "A1")
-				(pin "29")
-				(pinfunction "D22_29")
+				(pin "32")
+				(pinfunction "D25_32")
 				(pintype "bidirectional+no_connect")
 			)
 		)

@@ -100,13 +100,13 @@ This guide says which parts should sit next to which other parts, for the **rev 
 | CV | Section: − / out / + | R_in at − pin | R_f | C_f | Offset | From header pin | To Seed3 pin |
 |---|---|---|---|---|---|---|---|
 | 1 BASE (1V/OCT) | U2A: 2 / 1 / 3 | R13 (R10 behind it) | R11 | C10 | R12 | JB2.2 | 23 |
-| 2 WIDTH (1V/OCT) | U1D: 13 / 14 / 12 | R17 (R14 behind it) | R15 | C11 | R16 | JB2.3 | 22 |
-| 3 HP RES | U2B: 6 / 7 / 5 | R18 | R19 | C12 | R20 | JB2.5 | 26 |
-| 4 LP RES | U2C: 9 / 8 / 10 | R22 | R23 | C13 | R24 | JB2.6 | 25 |
-| 5 EQ FREQ | U2D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB2.9 | 27 |
-| 6 EQ GAIN | U1A: 2 / 1 / 3 | R30 | R31 | C15 | R32 | JB2.8 | 28 |
-| 7 DIST | U1C: 9 / 8 / 10 | R34 | R35 | C16 | R36 | JB2.12 | 30 |
-| 8 SMPL RATE | U1B: 6 / 7 / 5 | R38 | R39 | C17 | R40 | JB2.11 | 31 |
+| 2 WIDTH (1V/OCT) | U1A: 2 / 1 / 3 | R17 (R14 behind it) | R15 | C11 | R16 | JB2.3 | 29 |
+| 3 HP RES | U2B: 6 / 7 / 5 | R18 | R19 | C12 | R20 | JB2.5 | 22 |
+| 4 LP RES | U2C: 9 / 8 / 10 | R22 | R23 | C13 | R24 | JB2.6 | 24 |
+| 5 EQ FREQ | U2D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB2.9 | 25 |
+| 6 EQ GAIN | U1B: 6 / 7 / 5 | R30 | R31 | C15 | R32 | JB2.8 | 26 |
+| 7 DIST | U1C: 9 / 8 / 10 | R34 | R35 | C16 | R36 | JB2.12 | 27 |
+| 8 SMPL RATE | U1D: 13 / 14 / 12 | R38 | R39 | C17 | R40 | JB2.11 | 30 |
 
 **Detail**
 - **U2 serves CV 1, 3, 4 and 5; U1 serves CV 2 and 6–8**, so each chip carries one 1V/OCT channel (BASE on U2, WIDTH on U1; d, 2026-10-06). Which section feeds which ADC pin is re-matched once U1/U2 are placed, so no output trace crosses another.
@@ -293,9 +293,9 @@ This guide says which parts should sit next to which other parts, for the **rev 
   - **Left column** goes down one side, to pins 15, 14, 13, 12: RV2 (BASE), RV4 (HP RES), RV6 (EQ FREQ), RV8 (DIST).
   - **Right column** goes down the other side, to pins 1, 2, 4, 5: RV3 (WIDTH), RV5 (LP RES), RV7 (EQ GAIN), RV9 (SMPL RATE).
   - Mind the back-side mirroring when you turn U6.
-- **U6 pin 3 (POT_MUX)** runs to JA3 pin 2, then on the main board from JB3 pin 2 to Seed3 pin 32.
+- **U6 pin 3 (POT_MUX)** runs to JA3 pin 2, then on the main board from JB3 pin 2 to Seed3 pin 31.
 - **MUX_A/B/C** (U6 pins 11/10/9) run to JA3 pins 7/5/4. On the main board they go from JB3 to Seed3 pins 8/9/10.
-- **RV1 (VOLUME)** wiper runs to JA1 pin 8, then from JB1 pin 8 to Seed3 pin 24.
+- **RV1 (VOLUME)** wiper runs to JA1 pin 8, then from JB1 pin 8 to Seed3 pin 28.
 - **C80** at pin 16. Pins 6, 7, 8 to GND.
 
 **Detail:** the firmware's channel table is select 0–7 = EQ FREQ, HP RES, BASE, DIST, WIDTH, SMPL RATE, LP RES, EQ GAIN (`docs/firmware-changes.md`; `python machine_filter.py` prints it).
