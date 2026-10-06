@@ -39,10 +39,10 @@ def main():
         for ref, (board, x, y, rot, side) in step["parts"].items():
             kx, ky = kicad(board, x, y)
             moves.append({"reference": ref, "x": kx, "y": ky, "rotation": rot})
-        c.call("set_component_placements", {"board": BOARD, "placements": moves})
-        for ref, (board, x, y, rot, side) in step["parts"].items():
-            c.call("flip_component", {"board": BOARD, "reference": ref,
+        for ref, (board, x, y, rot, side) in step["parts"].items():      # side first: rotation is then KiCad's
+            c.call("flip_component", {"board": BOARD, "reference": ref,     # on the final side, so re-runs agree
                                       "layer": "B.Cu" if side == "back" else "F.Cu"})
+        c.call("set_component_placements", {"board": BOARD, "placements": moves})
         got = {x["reference"]: x for x in c.call("get_component_list", {"board": BOARD})["components"]}
         for ref in step["parts"]:
             g = got[ref]

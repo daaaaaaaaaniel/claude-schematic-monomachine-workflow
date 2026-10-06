@@ -1,6 +1,7 @@
 """Placement decisions, step by step (d, 2026-10-06): the record of what has been put on the boards, so the layout
 can be rebuilt or reviewed. Panel frame (boards.py: mm, seen from the front panel); KiCad (x, y) = panel (x, y) +
-the board's offset (pcb_skeleton.py). Footprint origin, rotation in degrees as KiCad shows it, side "front" or
+the board's offset (pcb_skeleton.py). Footprint origin, rotation in degrees as KiCad shows it on the part's final side
+(konnect_place.py flips first, then sets the rotation), side "front" or
 "back". KiCad flips a part top-to-bottom, so a back-side rotation differs by 180 from floorplan.py's (left-right).
 tools/konnect_place.py applies every step up to the one asked for and checks the result.
 
@@ -63,4 +64,30 @@ STEPS = [
      "check_pads": {("U1", "1"): (51.89, 61.627), ("U1", "7"): (51.89, 54.007), ("U1", "14"): (57.29, 61.627)},
      # after the re-match (d: keep it), WIDTH is on U1 section A and Seed3 pin 29: a straight 3 mm trace
      "traces": [("U1", "1", "A1", "29", 0.25, "B.Cu")]},
+    # 4. U3 (audio in) and U4 (audio out), d: "do both U3 and U4, and their critical traces". Left of the Seed3,
+    #    by the codec pins (16/17 = CODEC_IN_L/R, 18/19 = CODEC_OUT_L/R). Back side, rotation 0 (pins 1-4 up the
+    #    left, 8-5 up the right). U3 below U4. The four codec-side resistors stand in two columns between the
+    #    op-amps and the Seed3's left row (2.54 mm pin pitch is less than a resistor's 3.25 mm courtyard), each with
+    #    its codec pad level with its Seed3 pin, so every codec trace is a straight horizontal line that passes no
+    #    other pad: R52 (pin 16) and R60 (18) nearest the Seed3, R56 (17) and R64 (19) behind them. On the back at
+    #    rotation 90, pad 2 is the upper one. (A first try with one column made L-bend traces that crossed the
+    #    resistors' other pads: DRC shorts; deleted.)
+    #    Critical traces: Seed3 pin 16 -> R52 (codec input), Seed3 pin 18 -> R60 (codec output).
+    {"name": "audio",
+     "parts": {"U3": ("main", 23.5, 49.5, 0, "back"), "U4": ("main", 23.5, 41.5, 0, "back"),
+               "R52": ("main", 30.6, 52.24, 90, "back"), "R60": ("main", 30.6, 45.46, 90, "back"),
+               "R56": ("main", 28.4, 49.70, 90, "back"), "R64": ("main", 28.4, 42.92, 90, "back"),
+               "R50": ("main", 13.0, 50.0, 90, "back"), "R51": ("main", 14.8, 50.0, 90, "back"),
+               "C50": ("main", 16.6, 50.0, 90, "back"),
+               "R54": ("main", 20.0, 55.0, 90, "back"), "R55": ("main", 21.8, 55.0, 90, "back"),
+               "C52": ("main", 23.6, 55.0, 90, "back"), "C70": ("main", 25.4, 55.0, 90, "back"),
+               "C71": ("main", 14.0, 46.2, 0, "back"),
+               "R61": ("main", 13.0, 41.5, 90, "back"), "C60": ("main", 14.8, 41.5, 90, "back"),
+               "R62": ("main", 16.6, 41.5, 90, "back"),
+               "C73": ("main", 18.2, 35.5, 90, "back"), "R65": ("main", 20.0, 35.5, 90, "back"),
+               "C62": ("main", 21.8, 35.5, 90, "back"), "R66": ("main", 23.6, 35.5, 90, "back"),
+               "C72": ("main", 25.4, 35.5, 90, "back")},
+     "check_pads": {("U3", "1"): (20.8, 51.405), ("U3", "7"): (26.2, 50.135), ("U4", "1"): (20.8, 43.405),
+                    ("U4", "6"): (26.2, 40.865), ("R52", "2"): (30.6, 51.39), ("R60", "1"): (30.6, 46.31)},
+     "traces": [("A1", "16", "R52", "2", 0.25, "B.Cu"), ("A1", "18", "R60", "1", 0.25, "B.Cu")]},
 ]
