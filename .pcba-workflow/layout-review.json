@@ -1,0 +1,99 @@
+{
+ "schema": "pcb-layout-review-v1",
+ "status": "BLOCKED",
+ "board_revision": "rev beta, branch pcb-first-placement",
+ "board_sha256": "f5db5974c27d4d39abb25b74d90193cdbc27ad674bb477b84d81f7cb22f1314b",
+ "project_sha256": "222abaa5ae4ed02df039fdc5f9ba447e376a80818a0fdab55cdee42df26a663b",
+ "variant_port": {
+  "donor_board_sha256": "",
+  "delta_manifest": "",
+  "mating_geometry": "NOT_APPLICABLE",
+  "same_scale_comparison": ""
+ },
+ "connector_stack": {
+  "status": "USER_REVIEW",
+  "exact_mpn": "",
+  "manufacturer_drawing": "",
+  "footprint_geometry": "NOT_APPLICABLE",
+  "pad_support": "NOT_APPLICABLE",
+  "sample_measured": false,
+  "mating_card_thickness_mm": null,
+  "insertion_depth_mm": null,
+  "retention": "NOT_APPLICABLE",
+  "dimension_basis": "TBD",
+  "note": "board-to-board headers JA/JB: positions and pin order not chosen; stack height ~11 mm (inferred)"
+ },
+ "mechanical_assembly": {
+  "status": "NOT_APPLICABLE",
+  "same_scale_render": "",
+  "orthographic_dimension_view": "",
+  "overall_height_mm": null,
+  "overall_height_basis": "TBD",
+  "proxies": [
+   "Daisy Seed3 and microSD socket have no 3D model"
+  ],
+  "note": "d: case depth is not a factor"
+ },
+ "stackup": [
+  "F.Cu",
+  "B.Cu"
+ ],
+ "placement": {
+  "logical": "BLOCKED",
+  "visual_mechanical": "BLOCKED",
+  "note": "primaries, secondaries and ten input resistors placed; 47 minor parts parked off-board; headers, control-board ICs and standoffs not placed"
+ },
+ "fanout": {
+  "dense_connector_power_ground": "BLOCKED",
+  "note": "power/GND escapes not yet planned; ground-fill strategy undecided"
+ },
+ "connectivity": {
+  "raw_disconnects": 206,
+  "signal_splits": 0,
+  "power_disconnects": 162
+ },
+ "drc": {
+  "real_errors": 0,
+  "waivers": []
+ },
+ "layout_checks": {
+  "failures": 0,
+  "warnings": [
+   "17 footprints differ from their library copies (pre-existing)"
+  ]
+ },
+ "critical_nets": [
+  "ADC_* (8 CV op-amp outputs to Seed3 ADC pins: routed)",
+  "CODEC_IN_L/CODEC_OUT_L to R52/R60 (routed)",
+  "VIN to C6 (routed)",
+  "USB_DM/USB_DP to J14 (routed)",
+  "-10V_REF U5 to R28 (routed)"
+ ],
+ "via_drill_histogram": {
+  "0.4": 4
+ },
+ "manufacturing_findings": [],
+ "silkscreen": {
+  "status": "USER_REVIEW",
+  "findings": [
+   "reference labels overlap on the back"
+  ]
+ },
+ "renders": {
+  "top": "",
+  "bottom": "pcb/out/round1-3d-main.png",
+  "isometric": "pcb/out/round1-3d-main.png",
+  "layers": []
+ },
+ "experiment_baseline": {
+  "frozen_input_sha256": "",
+  "best_safe_candidate_sha256": "f5db5974c27d4d39abb25b74d90193cdbc27ad674bb477b84d81f7cb22f1314b"
+ },
+ "unresolved": [
+  "placement freeze (minor parts at their function; headers; control-board ICs)",
+  "ground and power strategy on 2 layers",
+  "trace widths / net classes",
+  "J15 SD-clock critical route",
+  "rules table awaiting d"
+ ]
+}

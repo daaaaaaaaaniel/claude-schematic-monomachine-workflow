@@ -24,7 +24,7 @@ A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This fol
 | PCB layout | **step 1 done** on branch `pcb-first-placement`: all 154 footprints are in the PCB file (Konnect, update from schematic), sorted into function groups beside their boards (`design/groups.py`, `design/stage_groups.py`, `tools/konnect_stage.py`), plus 8 optional standoff holes. Zone sketch: `pcb/out/zone-sketch.png` (`design/zone_sketch.py`). **Step 2 done:** the Seed3 at its USB-rule spot (back), its supply filter by VIN and R70 by pin 12, and the VIN pin 39 → C6 trace (`design/placement.py`, applied by `tools/konnect_place.py seed3`; picture `pcb/out/step2-seed3-kicad.png`). Note: KiCad flips back-side parts top-to-bottom, so their rotation is 180° off `floorplan.py`'s |
 | Firmware | three table changes: `docs/firmware-changes.md` |
 
-**Placement is under way: read `docs/placement-workflow.md` first** (method, d's decisions, KiCad + Konnect setup in the cloud, gotchas, costs, next step).
+**PCB layout follows the `pcb-layout-review` skill** (vendored in `.claude/skills/`; d gave it primacy on 2026-10-07). Then read `docs/placement-workflow.md` (d's decisions, KiCad + Konnect + Freerouting setup, gotchas, costs, status) and `.pcba-workflow/` (review record, experiments, lessons).
 
 ## Post-mortem (2026-10-06): the board-to-board headers were treated as a design driver. They aren't one.
 

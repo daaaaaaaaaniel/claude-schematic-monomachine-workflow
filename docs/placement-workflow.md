@@ -1,109 +1,50 @@
-# Placement workflow (agreed with d, 2026-10-06)
+# PCB layout workflow (rev 2026-10-07)
 
-How the PCB layout is being done, why, and how to run it in a fresh cloud session. Read this before touching the
-PCB. The post-mortem that led here is in `HANDOFF.md`.
+**The governing process is the `pcb-layout-review` skill** (d, 2026-10-07: it has primacy over the flow we built on
+2026-10-06, which needed too much oversight). It is vendored in `.claude/skills/pcb-layout-review/` (MIT, from
+Keitark/pcba-design-skills; see `VENDORED.md`), so it loads for any agent session in this repo. Read its `SKILL.md`
+and references first. Its records live in `.pcba-workflow/`:
+- `layout-review.json`: the review record (status, connectivity, DRC, placement and fanout gates, unresolved items);
+- `layout-experiments.jsonl`: one line per experiment, written by the skill's `scripts/score_experiment.py`;
+- `layout-lessons.md`: this project's lessons, written by the skill's `scripts/record_lesson.py`.
 
-## 1. Where things stand
+This document holds only what the skill can't know: d's decisions and constraints (§4), how to drive KiCad here
+(§5), what went wrong before (§6, and the lessons file), costs (§7) and how the skill's steps map onto our tools (§8).
+Where anything below conflicts with the skill, the skill wins.
 
-| Step | What | Status |
-|---|---|---|
-| 1 | Footprints in the PCB, sorted into function groups beside the boards; area budget; zone sketch | done |
-| 2 | Seed3 placed with its group; first trace (VIN pin 39 → C6) | done |
-| 3 | U2 with its CV group (BASE, HP RES, LP RES, EQ FREQ), right of the ADC pins, pin 1 level with Seed3 pin 23; trace: U2 pin 1 (BASE out) → Seed3 pin 23, straight, 3 mm | done |
-| 4 | U1 with its CV group below U2; ADC pins re-matched to the placed chips (`tools/rematch_adc.py`; d: keep it); trace: U1 pin 1 (WIDTH out) → Seed3 pin 29, straight, 3 mm | done |
-| 5 | U3, U4 (audio) left of the Seed3, by the codec pins 16–19; traces: Seed3 pin 16 → R52, pin 18 → R60 (the codec lines pass through series resistors; there is no direct Seed3–op-amp pin pair) | done |
-| 6 | U5 (−10 V ref) at the right edge beside the CV groups, not under the Seed3 (8 offset lines would cross the socket row); trace U5 → R28 | done |
-| 7 | J13 power entry (bottom left, sideways), J15 microSD (left middle), J14 (bottom right), each as one packed block; trace J13 → FB1 | done |
-| 8 | All eight CV op-amp outputs → Seed3 ADC pins (4 on the back, 4 via the front) | done |
-| 9 | Control board panel parts (12 jacks, 9 pots, 9 LEDs) at their fixed panel positions, front | done |
-| 9b | J14 re-placed sideways by Seed3 pins 36/37; USB D−/D+ traces round the outside of the header (back) | done |
-| 9c | Op-amps rotated, J13/J14 upright; ten CV input resistors in line with their op-amp inputs | done |
-| 9d | All 47 untraced minor parts parked beside the board (`tools/park_minor.py`); board shows only decided parts | done |
-| 10 | Headers (main front + control back, same panel spot, clear of the panel parts) | **next** |
-| 11 | U6, U7, U8 as blocks on the control board's back; standoffs | later (d: main board first) |
+## 1. Where things stand (2026-10-07)
 
-Round-one flags for d (`pcb/out/round1-main-board.png`):
-- the J15 critical trace (SD clock) was drawn and deleted: its last leg ran along the socket's pad row (DRC short);
-  it needs a deliberate route (J14's USB pair is done);
-- R70 (Seed3 group) overlaps R100 (microSD block): minor parts, for the minor-parts round;
-- U5 is not where the zone sketch put it (see step 6).
+Placement is **not frozen**. On the main board (back side): the Seed3, U1–U5, J13, J14, J15, the decoupling and
+secondary parts (C6, C20, C21, C70–C73, C7, C100, the power-entry chain), and the ten CV input resistors are placed;
+the 47 other minor parts are parked beside the board; the board-to-board headers, the control board's ICs and the
+standoffs are not placed. Routed so far, all checked: the eight CV op-amp outputs to the ADC pins, the codec lines at
+R52/R60, VIN to C6, USB D−/D+ to J14, U5 to R28, J13 to FB1, and the ten input-resistor links. DRC: 0 problems.
+Best safe candidate: `explore/candidates/c01-parked` (metrics in its `metrics.json`).
 
-Branch: `pcb-first-placement`. Pictures: `pcb/out/zone-sketch.png`, `pcb/out/step1-groups-kicad.png`,
-`pcb/out/step2-seed3-kicad.png`, `pcb/out/step3-u2-kicad.png`, `pcb/out/step3-u2-closeup.png`, `pcb/out/step4-u1-closeup.png`, `pcb/out/step5-audio-closeup.png`.
-DRC after step 3: no courtyard or clearance problems; only reference labels overlapping on silkscreen (tidy at the
-end), and 17 footprints flagged as differing from their library copies (pre-existing; check before fabrication).
+History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the pictures in `pcb/out/`.
 
-## 2. The method (d)
+**What the skill changes about our earlier flow** (superseded, kept here so nobody revives them by accident):
+- *Placing one primary at a time and drawing its critical trace before the rest is placed.* The skill freezes
+  placement from the architecture first, including critical locality (decoupling, feedback, protection at their
+  function), and only then routes. The traces already drawn stay as fixed routes unless an experiment shows they
+  block something.
+- *"A minor part doesn't exist until it has a trace."* Superseded: minor parts get placed at their function as part
+  of the placement freeze, before routing. `drc_summary.py`'s ignore rule is only a convenience while they are
+  parked.
+- *Routing by hand-computed coordinates, trace by trace, with d reviewing each.* Remaining routing is done as measured
+  experiments (Freerouting, or explicit lanes for a few nets), each scored against the best safe candidate.
+- *"Groups as one block" and the fixed placement order.* Groups (`pcb/design/groups.py`) remain the architecture
+  input, but placement follows the skill's review order, not our step list.
 
-1. **Groups first, off the board.**
-   - Every part belongs to one function group around one *primary* part (`pcb/design/groups.py`).
-   - Parts that must sit close to the primary are its *secondaries*: decoupling, the parts at an op-amp section's
-     − input, the protection chain at the power header.
-   - The remaining small parts join the group whose primary they connect to.
-   - Within a function, groups are balanced: each CV quad carries four channels and one 1V/OCT input, and audio in
-     and audio out have 11 parts each.
-2. **Area budget and zones, before anything goes on a board.**
-   - Each group gets an area estimate: courtyards × 2.5 for routing on 2 layers (a rule of thumb).
-   - Each group gets a zone: quiet (CV, audio, the reference) or noisy (power entry, microSD, USB/MIDI, the Seed's
-     supply).
-   - The goal: noisy currents never flow under quiet parts. See `pcb/out/zone-sketch.png`.
-3. **One primary at a time, most consequential first.** Place it in its zone, a general area rather than an exact
-   spot, and bring its group with it.
-4. **Draw its critical trace**: the one connection that matters most for that group (e.g. VIN pin → C6, the BASE
-   op-amp output → its ADC pin). It proves the shortest important path exists.
-5. **Stop for d's review** after each step or batch, with one picture of the board and its ratsnest.
-6. Then, in order:
-   - the small parts inside each group (by `docs/placement-guide.md`, decoupling first);
-   - power routing; ground pours; the rest of the routing;
-   - the headers, last, with their pin order set to suit the routing; rebuild the schematic;
-   - DRC; an autorouter run (Freerouting) as a routability test; gerbers.
-
-**How to judge a placement:** the ratsnest. KiCad draws a thin straight line for every connection still to be made.
-- Good: short lines running the same general way.
-- Bad: long lines across the board, crossing bundles, many lines squeezing through one gap, a decoupling capacitor
-  far from its pin.
-
-**Scope of a placement step (d, 2026-10-06):** place the primary with its group in a general area, and draw its
-critical trace. Resistors and other small parts are not arranged until every primary and secondary part is placed:
-no fine-tuning of passives during these steps. (Step 5 overdid it: the codec resistors were lined up level with
-their Seed3 pins after a first trace crossed a resistor's other pad.)
-
-**How a group goes onto the board (d, 2026-10-06):** like dragging and dropping the whole group in one gesture.
-The group's cluster, as staged beside the board, moves as one block (its parts keep their positions relative to
-each other) so that the primary lands where it should; on the back side the block is mirrored with it. No
-part-by-part arranging: minor parts (resistors, small capacitors) are sorted out only after every primary and
-secondary part is on the board. The one deliberate placement in a step: when the critical trace passes through a
-minor part, that one part is put where the trace needs it, and the report says so with the screenshot, e.g.
-"critical trace would be U4 to the Seed3, but it needs R60, placed provisionally". d gives feedback on where it
-should go. Steps 2-5 arranged their groups part by part, before this rule; they stay as they are.
-
-**Routing rules (d, 2026-10-06):**
-- Horizontal and vertical segments only; no diagonals.
-- Layer convention (community guide, routing §): front mostly horizontal, back mostly vertical. Short hops inside a
-  group go whichever way they need.
-- A minor part (resistor or capacitor that isn't a secondary part) counts as absent until one of its pads has a
-  trace on its own net (d): ignore its pads and courtyard while routing; those parts move later.
-  `tools/drc_summary.py` runs DRC and lists clashes with such parts separately from real problems.
-- **Deleting vias** (Konnect can't): use KiCad's own IPC library, kicad-python (`pip install --break-system-packages
-  kicad-python`): `KiCad(socket_path="ipc:///tmp/kicad/api.sock").get_board()`, `get_vias()`, `remove_items(...)`.
-  `konnect_place.py` does this for a step's `delete_vias` nets. Delete by position when KiCad has re-netted a via.
-  **Never type into the editor's window** (scripting console or otherwise): on 2026-10-06 a missed click sent a line
-  of code to the board as keyboard shortcuts; File > Revert to the last save undid it.
-- **Deleting a trace leaves its vias**, and KiCad re-nets an orphaned via to whatever pad it touches (here GND and
-  −10 V), which then shows up as a short. Delete the old vias whenever a route is redrawn.
-
-## 3. Placement order (d agreed)
-
-1. **Seed3.** Its area is set by d's USB rule.
-2. **U2, then U1.** They carry the CV lines into the ADC, including the pitch inputs, where a millivolt at the ADC is
-   audible. With WIDTH moved to U1, they tie.
-3. **U3 and U4.** The codec lines.
-4. **U5.** It feeds every CV stage; it sits under the Seed between the socket rows.
-5. **J13 power entry.** It has to stay away from the audio.
-6. **J15 microSD and J14 expansion.** Optional; they fill the remaining room.
-7. **The board-to-board headers.** Last: in the schematic they are just wires with a part number.
-8. **Standoffs.** Optional (d): M3 holes at the same panel position on both boards; board-only parts H1–H4 and
-   H11–H14.
+**Next, in the skill's order:**
+1. *Establish truth:* record hashes, stackup (2 layers), net classes, raw and classified DRC, top/bottom renders.
+   Decide with d the open constraints (net-class widths, ground strategy, header positions): the rules table d was
+   sent on 2026-10-06 lists proposed defaults.
+2. *Architecture placement, then critical locality:* place every remaining part (minor parts at their function,
+   headers, control-board ICs, standoffs) and freeze placement.
+3. *Layer and reference strategy, fanout:* ground fill and stitching on 2 layers; a legal escape for every power and
+   GND pad.
+4. *Routing* as experiments, *power and zones*, *manufacturing* (JLC limits), *independent visual pass*, release gate.
 
 ## 4. Decisions and constraints from d (2026-10-06)
 
@@ -218,39 +159,14 @@ cd pcb/machine-filter && DISPLAY=:99 pcbnew machine-filter.kicad_pcb &
   - one undo step per change;
   - pictures of KiCad's real view, ratsnest included.
 
-## 8. Candidates and checklist (d, 2026-10-07; adapted from Keitark/pcba-design-skills, `pcb-layout-review`, MIT)
+## 8. How the skill's steps map onto our tools
 
-The aim is fewer review rounds for d: each batch of placement or routing is a **candidate**, measured on the whole
-set of numbers and compared with the best accepted one. d sees one picture per batch plus the exceptions.
-
-**The loop**
-1. Freeze placement from the architecture (the function groups, signal flow) before autorouting; don't optimise wire
-   length or run the autorouter on a placement that isn't settled.
-2. Make one coherent change (a batch), save, then `python3 pcb/tools/score_candidate.py <name> "<what changed>"`.
-   It copies the board to `explore/candidates/<name>/` and records:
-   - unrouted connections between placed parts;
-   - power disconnects (GND, ±12 V, 3V3, VIN, −10 V, CTL_ rails);
-   - real DRC problems (`drc_summary.py` rules);
-   - vias, total track length, diagonal segments, parts on the main board.
-3. A candidate is **better** only if it adds no unrouted connection, DRC problem or power disconnect and removes at
-   least one (on a tie: fewer vias, then shorter track). Promote it with `--accept`. Never trade a short or a new
-   open for a better number. Don't repeat a change that measured worse unless something material changed.
-4. Report to d: the picture, the metrics against the best candidate, and only what needs a decision.
-
-Baseline `c01-parked` (2026-10-07: critical traces and input resistors, minor parts parked): 206 unrouted between
-placed parts, 162 power disconnects (mostly GND, for the ground fill), 0 DRC problems, 4 vias, 198 mm of track,
-0 diagonals.
-
-**Checklist** (the parts of the skill's checklist that apply to this board)
-- Placement: decoupling sits in the supply pin's current path; protection and filters sit at their function (power
-  entry chain at J13, C6 at VIN); parts follow the signal flow without backtracking.
-- Before dense signal routing: give every power and GND pad a legal way out (a via or a path to the ground fill); route
-  shared spines (power, −10 V reference) and scarce corridors early, so later routing can't strand them.
-- No via inside an SMD pad. After adding vias, check each still has its net after save (KiCad re-nets orphaned vias;
-  see §6).
-- Zero unrouted is not the finish line: real DRC, power connectivity and each ground-fill fragment reaching the main
-  ground all have to pass.
-- Autorouter diagnosis: when Freerouting leaves a connection unrouted, check which parts were fixed and which movable,
-  and what blocked it, before changing settings.
-- Visual pass at the end of a batch: both sides, plus a 3D render after any footprint, rotation or position change;
-  check pin 1, polarity and silkscreen.
+| Skill step | Tool here |
+|---|---|
+| Establish truth: hashes, DRC, connectivity | `sha256sum`; `pcb/tools/drc_summary.py`; `pcb/tools/score_candidate.py <name>` (also keeps a board copy in `explore/candidates/`) |
+| Placement edits | `pcb/tools/konnect_place.py <step>` from `pcb/design/placement.py` (rotation chosen by pad position; pads checked before routing) |
+| Routing experiments | Freerouting via Konnect (`export_specctra_dsn` → `route_specctra_dsn` → `plan_specctra_ses_import`/`apply_specctra_ses`), or explicit lanes in `placement.py` |
+| Experiment ledger | `python3 .claude/skills/pcb-layout-review/scripts/score_experiment.py --ledger .pcba-workflow/layout-experiments.jsonl ...` with before/after counts from `score_candidate.py` (opens = unrouted between placed parts; real_drc; power_disconnects; layout_fails; manufacturing_defects) |
+| Lessons | `python3 .claude/skills/pcb-layout-review/scripts/record_lesson.py --file .pcba-workflow/layout-lessons.md ...` |
+| Renders | `kicad-cli pcb render` (3D, both sides), `kicad-cli pcb export svg` (layers); the GUI only when the ratsnest matters |
+| Review record | `.pcba-workflow/layout-review.json` (status stays BLOCKED until every gate refers to the same saved board) |
