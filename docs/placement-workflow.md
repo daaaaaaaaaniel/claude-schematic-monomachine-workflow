@@ -217,3 +217,40 @@ cd pcb/machine-filter && DISPLAY=:99 pcbnew machine-filter.kicad_pcb &
   - KiCad's own update from schematic (it caught the UUID problem safely);
   - one undo step per change;
   - pictures of KiCad's real view, ratsnest included.
+
+## 8. Candidates and checklist (d, 2026-10-07; adapted from Keitark/pcba-design-skills, `pcb-layout-review`, MIT)
+
+The aim is fewer review rounds for d: each batch of placement or routing is a **candidate**, measured on the whole
+set of numbers and compared with the best accepted one. d sees one picture per batch plus the exceptions.
+
+**The loop**
+1. Freeze placement from the architecture (the function groups, signal flow) before autorouting; don't optimise wire
+   length or run the autorouter on a placement that isn't settled.
+2. Make one coherent change (a batch), save, then `python3 pcb/tools/score_candidate.py <name> "<what changed>"`.
+   It copies the board to `explore/candidates/<name>/` and records:
+   - unrouted connections between placed parts;
+   - power disconnects (GND, ±12 V, 3V3, VIN, −10 V, CTL_ rails);
+   - real DRC problems (`drc_summary.py` rules);
+   - vias, total track length, diagonal segments, parts on the main board.
+3. A candidate is **better** only if it adds no unrouted connection, DRC problem or power disconnect and removes at
+   least one (on a tie: fewer vias, then shorter track). Promote it with `--accept`. Never trade a short or a new
+   open for a better number. Don't repeat a change that measured worse unless something material changed.
+4. Report to d: the picture, the metrics against the best candidate, and only what needs a decision.
+
+Baseline `c01-parked` (2026-10-07: critical traces and input resistors, minor parts parked): 206 unrouted between
+placed parts, 162 power disconnects (mostly GND, for the ground fill), 0 DRC problems, 4 vias, 198 mm of track,
+0 diagonals.
+
+**Checklist** (the parts of the skill's checklist that apply to this board)
+- Placement: decoupling sits in the supply pin's current path; protection and filters sit at their function (power
+  entry chain at J13, C6 at VIN); parts follow the signal flow without backtracking.
+- Before dense signal routing: give every power and GND pad a legal way out (a via or a path to the ground fill); route
+  shared spines (power, −10 V reference) and scarce corridors early, so later routing can't strand them.
+- No via inside an SMD pad. After adding vias, check each still has its net after save (KiCad re-nets orphaned vias;
+  see §6).
+- Zero unrouted is not the finish line: real DRC, power connectivity and each ground-fill fragment reaching the main
+  ground all have to pass.
+- Autorouter diagnosis: when Freerouting leaves a connection unrouted, check which parts were fixed and which movable,
+  and what blocked it, before changing settings.
+- Visual pass at the end of a batch: both sides, plus a 3D render after any footprint, rotation or position change;
+  check pin 1, polarity and silkscreen.

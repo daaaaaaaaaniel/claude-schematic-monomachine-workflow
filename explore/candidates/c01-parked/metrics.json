@@ -1,0 +1,13 @@
+{
+ "name": "c01-parked",
+ "note": "critical traces, input resistors; minor parts parked",
+ "metrics": {
+  "unrouted_between_placed_parts": 206,
+  "power_disconnects": 162,
+  "drc_problems": 0,
+  "vias": 4,
+  "track_mm": 198.3,
+  "parts_on_main_board": 39,
+  "diagonal_segments": 0
+ }
+}
