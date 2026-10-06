@@ -7,6 +7,7 @@
 #   3. KiCad ERC (must report 0)               -> out/erc.rpt
 #   4. KiCad netlist of the drawing            -> out/drawn.net
 #   5. tools/check_netlist.py: drawing == SKiDL; main + control joined == logical; changes from rev alpha intended
+#      tools/check_swaps.py: the pin assignment obeys design/swap_groups.py (ADC pins, sections, mux, headers)
 #   6. PDF and the whole-module BOM            -> out/machine-filter.pdf, out/bom.csv (Board, Assembly, DNP columns)
 # Per-board fabrication folders (fab/main, fab/control) come from tools/separate.sh once the PCB is laid out.
 set -euo pipefail
@@ -34,6 +35,7 @@ echo "== 4. netlist of the drawing"
 kicad-cli sch export netlist "$SCH" --format kicadsexpr -o out/drawn.net >/dev/null
 echo "== 5. checks"
 python3 tools/check_netlist.py
+"$SK_PY" tools/check_swaps.py 2>&1 | grep -v -i warning; [ "${PIPESTATUS[0]}" = 0 ]
 echo "== 6. PDF and BOM"
 kicad-cli sch export pdf "$SCH" -o out/machine-filter.pdf >/dev/null
 kicad-cli sch export bom "$SCH" -o out/bom.csv \

@@ -1,4 +1,5 @@
-"""Pin assignments and placement, written by design/floorplan.py: edit floorplan.py, not this file.
+"""Pin assignments and placement. Since 2026-10-06 the pin map follows the PCB layout: edit this file to match the
+layout (FLOORPLAN=1 would overwrite it). What may be swapped, and what a swap costs: design/swap_groups.py.
 
 Used by machine_filter.py (SKiDL) and design/boards.py. Units: 1 = A (pins 1-3), 2 = B (5-7), 3 = C (8-10),
 4 = D (12-14). Positions: panel frame seen from the front, mm: (x, y, rotation) of the footprint origin

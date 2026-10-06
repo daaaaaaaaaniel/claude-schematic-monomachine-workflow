@@ -21,7 +21,7 @@ All of this is generated: `pcb/design/floorplan.py` writes `pcb/design/pinmap.py
 | 32 | A10 | — | **—** |
 | 35 | A11 | — | **—** |
 
-Pin 29 (A7) is now unused (the matching found the other pins shorter); it's free for a future input.
+Pins 32 (A10) and 35 (A11) are unused ADC pins, free for a future input (design/swap_groups.py lists every swappable pin).
 
 The CV scaling is unchanged: reading = 1.667 V − CV/6, so +8 V reads 0.33 V and −8 V reads 3.0 V. The reading is inverted.
 

@@ -139,7 +139,8 @@ ADC_UNIT, LED_UNIT = PM.ADC_UNIT, PM.LED_UNIT
 MUX_PIN = PM.MUX_PIN                     # pot -> 74HC4051 pin
 MUX_CHANNEL_OF_PIN = {"13": 0, "14": 1, "15": 2, "12": 3, "1": 4, "5": 5, "2": 6, "4": 7}   # 74HC4051 datasheet
 
-# Seed3 pins (Electrosmith Seed3_pinout.csv). ADC pins from the floorplan; MIDI on D2/D1 (USART3).
+# Seed3 pins (Electrosmith Seed3_pinout.csv). ADC pins from design/pinmap.py; MIDI on pins 14/15 (D13/D14, USART1).
+# Which pins may trade places: design/swap_groups.py.
 SEED_PINS = {"2": "SD_D3", "3": "SD_D2", "4": "SD_D1", "5": "SD_D0", "6": "SD_CMD", "7": "SD_CK", "8": "MUX_A", "9": "MUX_B", "10": "MUX_C", "12": "LED_CLIP",
              "16": "CODEC_IN_L", "17": "CODEC_IN_R", "18": "CODEC_OUT_L", "19": "CODEC_OUT_R",
              "36": "USB_DM", "37": "USB_DP"}

@@ -9,6 +9,7 @@ design were checked against primary sources, and which questions remain. Checked
 |---|---|---|
 | Every Seed3 pin used (audio 16–19, AGND 20, 3V3_A 21, ADC A0–A9 on 22–31, USB 36/37, 3V3_D 38, VIN 39, GND 40, GPIO 2/3, 8–10, 12) | Electrosmith `Seed3_pinout.csv` | all match |
 | Project symbol `Daisy_Seed3` pin numbers and names | same CSV | match |
+| Swap groups (`pcb/design/swap_groups.py`): ADC-capable pins A0–A11 = 22–32 and 35; PWM-capable GPIO; pins fixed to SDMMC1 (2–7), USART1 (14/15), USB (36/37); free GPIO 1, 11, 13, 33, 34 | Electrosmith `Seed3_pinout.csv` (daisy.nyc3.cdn.digitaloceanspaces.com/products/seed3/Seed3_pinout.csv), fetched 2026-10-07 | recorded; `tools/check_swaps.py` enforces it |
 | Seed3 footprint: two rows 15.24 mm apart, 2.54 mm pitch, DIP numbering | Daisy Seed datasheet v1.0.5 (Seed3 is pin-compatible per Electrosmith) | match |
 | MIDI on USART3 at PC10/PC11 | libDaisy `src/per/uart.cpp` | supported |
 | 74HC4051 pinout (channels 0–7 on pins 13, 14, 15, 12, 1, 5, 2, 4; S0–S2 on 11/10/9; enable 6, VEE 7) | 74HC4051 datasheet, KiCad stock symbol | match |
