@@ -201,4 +201,27 @@ STEPS = [
         ("/Main: Daisy Seed3/USB_DP", [("B.Cu", [(48.855, 81.87), (51.2, 81.87), (51.2, 83.14), (57.77, 83.14),
                                                   (57.77, 81.87)])]),
     ]},
+    # U1, U2 1.5 mm further from the Seed3 (d), their decoupling C20/C21 with them; the eight ADC traces redrawn to
+    #    follow (left-side ones longer; right-side lanes and vias 1.5 mm right). The four dangling vias were deleted
+    #    first with KiCad's Tools > Cleanup Tracks & Vias ("delete vias connected on only one layer").
+    {"name": "u1u2_shift", "parts": {"U2": ("main", 56.1, 42.493, 0, "back"), "U1": ("main", 56.1, 57.81, 0, "back"),
+                                     "C21": ("main", 63.5, 42.5, 0, "back"), "C20": ("main", 62.5, 57.8, 0, "back")},
+     "check_pads": {("U2", "1"): (53.39, 46.31), ("U1", "14"): (58.79, 61.627)}},
+    {"name": "u1u2_traces", "board": "main",
+     "delete": {"B.Cu": ["ADC_BASE", "ADC_WIDTH", "ADC_EQG", "ADC_HPRES", "ADC_LPRES", "ADC_EQF", "ADC_DIST", "ADC_SRR"],
+                "F.Cu": ["ADC_LPRES", "ADC_EQF", "ADC_DIST", "ADC_SRR"]},
+     "routes": [
+        ("ADC_BASE", [("B.Cu", [(53.39, 46.31), (48.855, 46.31)])]),
+        ("ADC_WIDTH", [("B.Cu", [(53.39, 61.627), (48.855, 61.627)])]),
+        ("ADC_EQG", [("B.Cu", [(53.39, 54.007), (48.855, 54.007)])]),
+        ("ADC_HPRES", [("B.Cu", [(53.39, 38.69), (50.4, 38.69), (50.4, 43.77), (48.855, 43.77)])]),
+        ("ADC_LPRES", [("B.Cu", [(58.79, 38.69), (61.5, 38.69), (61.5, 48.85)]), ("F.Cu", [(61.5, 48.85), (48.855, 48.85)])]),
+        ("ADC_EQF", [("B.Cu", [(58.79, 46.31), (60.3, 46.31), (60.3, 51.39)]), ("F.Cu", [(60.3, 51.39), (48.855, 51.39)])]),
+        ("ADC_DIST", [("B.Cu", [(58.79, 54.007), (60.3, 54.007), (60.3, 56.47)]), ("F.Cu", [(60.3, 56.47), (48.855, 56.47)])]),
+        ("ADC_SRR", [("B.Cu", [(58.79, 61.627), (60.3, 61.627), (60.3, 64.09)]), ("F.Cu", [(60.3, 64.09), (48.855, 64.09)])]),
+    ]},
+    # LP RES lane at x 61.5 (its via was 0.28 mm from EQ FREQ's lane at 61.1) and C21 0.4 mm right with it. Leftover
+    #    vias from the old lanes deleted by position in KiCad's scripting console (Konnect has no via delete).
+    {"name": "lpres_lane", "board": "main", "delete": {"B.Cu": ["ADC_LPRES"], "F.Cu": ["ADC_LPRES"]},
+     "routes": [("ADC_LPRES", [("B.Cu", [(58.79, 38.69), (61.5, 38.69), (61.5, 48.85)]), ("F.Cu", [(61.5, 48.85), (48.855, 48.85)])])]},
 ]
