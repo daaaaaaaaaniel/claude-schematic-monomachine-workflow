@@ -286,4 +286,25 @@ STEPS = [
         ("Net-(R14-Pad2)", [("B.Cu", [(53.553, 48.6), (53.553, 50.55)])]),
         ("Net-(U1A--)", [("B.Cu", [(53.553, 52.25), (53.553, 55.1)])]),
     ]},
+    # The other input resistors (d: "Do the other resistors"): R22 (LP RES), R26 (EQ FREQ), R30 (EQ GAIN), R34 (DIST),
+    #    R38 (SMPL RATE), each with its connecting pad in line with its op-amp's - input, so every trace is straight.
+    #    Between U2 and U1 four resistors share two columns, so they lie sideways in pairs: R26 above R17's column,
+    #    R22 above R30 in the right column. R14 moves out of R26's spot to just right of R17 (straight 1.7 mm trace).
+    #    R34 and R38 stand upright below U1.
+    {"name": "input_rs_2", "board": "main",
+     "rotate": {"R26": ("main", 54.403, 48.0, "back", [180, 0], "2", (53.553, 48.0)),
+                "R22": ("main", 59.483, 48.0, "back", [180, 0], "2", (58.633, 48.0)),
+                "R30": ("main", 59.483, 51.9, "back", [180, 0], "2", (58.633, 51.9)),
+                "R14": ("main", 56.1, 50.55, "back", [180, 0], "2", (55.25, 50.55)),
+                "R34": ("main", 58.633, 64.4, "back", [90, 270], "2", (58.633, 63.55)),
+                "R38": ("main", 53.553, 64.4, "back", [90, 270], "2", (53.553, 63.55))},
+     "delete": {"B.Cu": ["Net-(R14-Pad2)"]},
+     "routes": [
+        ("Net-(U2D--)", [("B.Cu", [(53.553, 45.183), (53.553, 48.0)])]),
+        ("Net-(U2C--)", [("B.Cu", [(58.633, 45.183), (58.633, 48.0)])]),
+        ("Net-(U1B--)", [("B.Cu", [(58.633, 55.1), (58.633, 51.9)])]),
+        ("Net-(R14-Pad2)", [("B.Cu", [(53.553, 50.55), (55.25, 50.55)])]),
+        ("Net-(U1C--)", [("B.Cu", [(58.633, 60.5), (58.633, 63.55)])]),
+        ("Net-(U1D--)", [("B.Cu", [(53.553, 60.5), (53.553, 63.55)])]),
+    ]},
 ]
