@@ -1,9 +1,9 @@
 {
  "schema": "pcb-layout-review-v1",
- "status": "BLOCKED",
- "board_revision": "rev beta, branch pcb-first-placement",
- "board_sha256": "f5db5974c27d4d39abb25b74d90193cdbc27ad674bb477b84d81f7cb22f1314b",
- "project_sha256": "222abaa5ae4ed02df039fdc5f9ba447e376a80818a0fdab55cdee42df26a663b",
+ "status": "IN_PROGRESS: automatic placement freeze (d 2026-10-07: 'let it rip')",
+ "board_revision": "dac76cc",
+ "board_sha256": "b15097d89633af6d0e91636a55d4e0ce6d03363dbc694ad74e090ae7582c98a3",
+ "project_sha256": "e12e3f255370cd7d1f6497b4125c8e07bd27b87310dfa72cb1195e7d1659eddf",
  "variant_port": {
   "donor_board_sha256": "",
   "delta_manifest": "",
@@ -34,10 +34,10 @@
   ],
   "note": "d: case depth is not a factor"
  },
- "stackup": [
-  "F.Cu",
-  "B.Cu"
- ],
+ "stackup": {
+  "layers": 2,
+  "boards": "main 70x100 (back SMD, JLC), control 70x107 (hand-soldered)"
+ },
  "placement": {
   "logical": "BLOCKED",
   "visual_mechanical": "BLOCKED",
@@ -54,8 +54,9 @@
   "power_disconnects": 162
  },
  "drc": {
-  "real_errors": 0,
-  "waivers": []
+  "real_problems": 0,
+  "candidate": "c04-j14-swap",
+  "date": "2026-10-07"
  },
  "layout_checks": {
   "failures": 0,
