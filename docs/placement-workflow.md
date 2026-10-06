@@ -102,6 +102,15 @@ mechanically: `pcb/tools/check_locks.py HEAD` (or score_candidate.py, which runs
 any candidate that moved a locked part, without asking d. To revise an approved block, unlock only that block. Nothing
 is locked yet: no block has been approved.
 
+**Control-board spacing (from d's survey of 53 open-source Eurorack layouts, `docs/reference/eurorack-tht-spacing-survey.md`,
+2026-10-07; to apply when the control board's small parts are redone):**
+- A back-side through-hole part's lead holes stay at least 1.0 mm outside any jack or pot outline (iron access).
+- Its body may overhang a jack or pot outline, as long as the lead holes stay outside it.
+- Its body keeps 0.5–1.0 mm from the jack's or pot's own solder pins.
+- Neighbouring through-hole parts may have touching courtyards; parallel resistors at 3.17 mm pitch.
+- Standing (vertically mounted) resistors can fill the 2–3 mm gutters between jack columns (a footprint change).
+- Back-side SMD parts (U6–U8) may sit under a jack or pot, clear of its solder pins.
+
 ## 5. Tools: KiCad 10 GUI + Konnect in the cloud container
 
 Konnect (github.com/mixelpixx/Konnect, v0.13) is an MCP server that edits the board open in KiCad's PCB editor
