@@ -21,7 +21,7 @@ A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This fol
 | PCB file | outlines only: `pcb/machine-filter/machine-filter.kicad_pcb` (from `design/pcb_skeleton.py`); separation tested with KiKit |
 | Fabrication | `tools/separate.sh` → `pcb/fab/main/`, `pcb/fab/control/` (separated board + BOM); gerbers and CPL **not yet** (after layout) |
 | Placement plan | `docs/placement-guide.md` |
-| PCB layout | **step 1 done** on branch `pcb-first-placement`: all 154 footprints are in the PCB file (Konnect, update from schematic), sorted into function groups beside their boards (`design/groups.py`, `design/stage_groups.py`, `tools/konnect_stage.py`), plus 8 optional standoff holes. Zone sketch for d's review: `pcb/out/zone-sketch.png` (`design/zone_sketch.py`). Nothing is on a board yet |
+| PCB layout | **step 1 done** on branch `pcb-first-placement`: all 154 footprints are in the PCB file (Konnect, update from schematic), sorted into function groups beside their boards (`design/groups.py`, `design/stage_groups.py`, `tools/konnect_stage.py`), plus 8 optional standoff holes. Zone sketch: `pcb/out/zone-sketch.png` (`design/zone_sketch.py`). **Step 2 done:** the Seed3 at its USB-rule spot (back), its supply filter by VIN and R70 by pin 12, and the VIN pin 39 → C6 trace (`design/placement.py`, applied by `tools/konnect_place.py seed3`; picture `pcb/out/step2-seed3-kicad.png`). Note: KiCad flips back-side parts top-to-bottom, so their rotation is 180° off `floorplan.py`'s |
 | Firmware | three table changes: `docs/firmware-changes.md` |
 
 ## Post-mortem (2026-10-06): the board-to-board headers were treated as a design driver. They aren't one.
@@ -191,7 +191,7 @@ FLOORPLAN=1 pcb/tools/build.sh      # also re-derive pinmap.py from the floorpla
      4. the small parts, following `docs/placement-guide.md`: decoupling first, then each − input node.
    - **`pinmap.MAIN_PLACEMENT` / `CONTROL_PLACEMENT` are a rough guide at most.** They come from candidate A's floorplan, built around the old Seed3 position.
    - **Headers last:** a spot that's legal on both boards, then the pin order to suit the routing (see the post-mortem's last step).
-4. **Both boards are 2-layer** (d, 2026-10-06). The PCB file still has 4 copper layers from the skeleton: set it to 2 in Board Setup → Board Stackup before routing (nothing uses In1/In2).
+4. **Both boards are 2-layer** (d, 2026-10-06); the PCB file is set to 2 copper layers. `design/pcb_skeleton.py` still creates 4 if it is ever re-run on an empty file: change `SetCopperLayerCount` first.
 5. **Route, DRC** (`kicad-cli pcb drc`). Every component lives on one board, and no net spans both, so the DRC is meaningful as it stands.
 6. **Fabrication outputs:**
    - Run `pcb/tools/separate.sh`. It cuts each board out with `kikit separate` into `pcb/fab/main/` and `pcb/fab/control/`, and writes their BOMs (`bom-jlc.csv` is JLC's upload format).
