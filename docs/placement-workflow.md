@@ -58,6 +58,25 @@ History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the
 | Pitch channels | WIDTH moved to U1 section D (EQ FREQ to U2 D), so each quad has one 1V/OCT input. |
 | Process | Transparency: before a run, say what it changes and how long it takes; report results in mm or plain units, with pictures; no long opaque searches. |
 
+**Proposed rules from the sources (2026-10-07, awaiting d's OK)** — community guide (`docs/community-pcb-layout-guide.md`
+§3–4) and Eddy Bergman's KiCad tutorials (eddybergman.com, 2025/05 quick guide and 2025/10 part 2):
+- *Ground:* no ground traces; a ground fill on both layers, stitched with vias but not overdone, "remove islands"
+  on; any GND pad the fill can't reach gets a short track or via (both sources). Fill pieces should join each other,
+  preferably along one path, to avoid ground loops (Bergman). Unfill before moving parts, refill and re-run DRC after.
+- *Track widths:* signals at least 0.3 mm (community; our existing signal traces are 0.25 mm and would be widened
+  where clearance allows); power 0.4–0.5 mm for an analog module (community) or 0.4–0.5 mm everywhere (Bergman's
+  preference); power between connectors and through-hole parts 1 mm, narrowing to 0.5 mm at SMD pads (community).
+- *Small passives on the fill:* keep the copper on both pads balanced (thermal reliefs) to avoid tombstoning.
+- *Edges:* keep parts a few mm from the board edge (Bergman). U5's column currently sits about 0.4 mm from the right
+  edge.
+- *Board-to-board headers:* ~11 mm stack (Bergman's example matches ours); extra GND pins for solid ground and next
+  to analog signals (both); put header pins under the points where force is applied (jacks, pots), so the boards
+  don't seesaw or bend (Bergman). This gives the header placement a rule.
+- *Initial placement:* arrange parts as the schematic draws them (Bergman uses KiCad's "Place by Schematic"
+  plugin), then route.
+- *Multi-board DRC:* Bergman warns DRC misreports across two boards in one file; this project avoids that with the
+  `CTL_` net prefix (see HANDOFF.md).
+
 ## 5. Tools: KiCad 10 GUI + Konnect in the cloud container
 
 Konnect (github.com/mixelpixx/Konnect, v0.13) is an MCP server that edits the board open in KiCad's PCB editor
