@@ -19586,7 +19586,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "20b20e69-e267-4af5-880e-2de0a0a61e07")
-		(at 231.5 100 -90)
+		(at 233.553 82.6 -90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R10"
@@ -22265,11 +22265,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "51895f1b-9d32-4269-87de-3fd4d6577ab3")
-		(at 231.5 116 90)
+		(at 234.403 98.6 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R14"
-			(at 0 1.449999 270)
+			(at 0 1.449999 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "270358c3-d139-4a90-9387-3a59175cf3f2")
@@ -22282,7 +22282,7 @@
 			)
 		)
 		(property "Value" "100k 0.1%"
-			(at 0 -1.45 270)
+			(at 0 -1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -22296,7 +22296,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "115105da-d8a5-4d0c-9899-09ec562ee64e")
@@ -22308,7 +22308,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 270)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7e4e168a-6f58-49fb-b082-f91ff03e100c")
@@ -22343,16 +22343,6 @@
 			(uuid "f40aee11-8ed1-473d-9675-083a1c46829c")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "5c4e1bed-e05e-47b9-8a09-fdc609246295")
-		)
-		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -22361,6 +22351,16 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "b38c1237-ac59-414c-83fb-bc0690df1e21")
+		)
+		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "74b9c81e-be0e-490f-b617-730882790143")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -22373,24 +22373,24 @@
 			(uuid "5f49ff16-b270-46f8-8441-f4f7e22b42be")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "74b9c81e-be0e-490f-b617-730882790143")
+			(uuid "5c4e1bed-e05e-47b9-8a09-fdc609246295")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "CV_WIDTH")
 			(uuid "ce9f2eb1-bb90-4ea6-995e-959b5d5ea32e")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(R14-Pad2)")
@@ -22559,7 +22559,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "53ef9ea6-9005-4bf0-8508-1e39ccd3b85a")
-		(at 233.3 100 -90)
+		(at 233.553 86 -90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R13"
@@ -23145,7 +23145,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "63305839-2baf-427b-ae90-ec9ea9afb3ac")
-		(at 231.5 85 -90)
+		(at 238.633 86 -90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R18"
@@ -29622,11 +29622,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "c15dc97c-79e9-4abe-bb39-bfe0fd1901ea")
-		(at 233.3 116 90)
+		(at 233.553 101.4 -90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R17"
-			(at 0 1.449999 270)
+			(at 0 1.449999 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "463fec0c-f386-45c7-9386-422f93b1f2c3")
@@ -29639,7 +29639,7 @@
 			)
 		)
 		(property "Value" "20k 0.1%"
-			(at 0 -1.45 270)
+			(at 0 -1.45 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -29653,7 +29653,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "596b5599-34de-4a45-b7d8-5d5884979845")
@@ -29665,7 +29665,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "98dd5ffb-0363-46f9-bf86-58dc54a52782")
@@ -29680,16 +29680,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.85 -0.7)
-			(end -0.85 -0.7)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "0aa0f693-bcb3-4aea-bac9-8093c9b80262")
-		)
-		(fp_line
 			(start -0.85 0.699999)
 			(end 0.85 0.699999)
 			(stroke
@@ -29700,24 +29690,24 @@
 			(uuid "798c0d27-9ee3-4328-b97a-58447f765717")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
+			(start 0.85 -0.7)
+			(end -0.85 -0.7)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "B.CrtYd")
-			(uuid "24606088-44d0-446a-ac94-9e2faac2d882")
+			(layer "B.SilkS")
+			(uuid "0aa0f693-bcb3-4aea-bac9-8093c9b80262")
 		)
 		(fp_line
-			(start 1.6 0.75)
-			(end 1.6 -0.75)
+			(start -1.6 0.75)
+			(end 1.6 0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "81b89596-1504-4ae6-8a33-eace106556f4")
+			(uuid "5e9d1a14-c2f7-407b-937a-f4595f019d91")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -29730,24 +29720,34 @@
 			(uuid "9f95c7f0-3d67-420e-8540-995cdc6bbe58")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start 1.6 0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "5e9d1a14-c2f7-407b-937a-f4595f019d91")
+			(uuid "81b89596-1504-4ae6-8a33-eace106556f4")
+		)
+		(fp_line
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "24606088-44d0-446a-ac94-9e2faac2d882")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0 270)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(R14-Pad2)")
 			(uuid "cd840bd7-d60a-4fff-9e00-b955eec8def3")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0 270)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1A--)")
@@ -33865,6 +33865,22 @@
 		(uuid "e7f5f581-fdd9-4819-8441-b215b27dd65a")
 	)
 	(segment
+		(start 233.553 86.85)
+		(end 233.553 89.783)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "Net-(U2A--)")
+		(uuid "bbc6a220-83c2-41c5-bb86-aede72608829")
+	)
+	(segment
+		(start 238.633 86.85)
+		(end 238.633 89.783)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "Net-(U2B--)")
+		(uuid "e9ae531a-de26-4e05-bf7f-2d344b40b7e8")
+	)
+	(segment
 		(start 247.325 97.825)
 		(end 245.4 97.825)
 		(width 0.25)
@@ -33881,6 +33897,22 @@
 		(uuid "e6638a30-fb4e-418e-9b8e-d05d778f40be")
 	)
 	(segment
+		(start 233.553 83.45)
+		(end 233.553 85.15)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "Net-(R10-Pad2)")
+		(uuid "7f7ce48b-5e40-4c3e-ba50-ec6ce362358b")
+	)
+	(segment
+		(start 233.553 102.25)
+		(end 233.553 105.1)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "Net-(U1A--)")
+		(uuid "20ccdcd5-e6a7-4be7-bbd2-539fbd5413a7")
+	)
+	(segment
 		(start 195.2175 141.624999)
 		(end 195.2175 136.975)
 		(width 0.25)
@@ -33895,6 +33927,14 @@
 		(layer "B.Cu")
 		(net "Net-(FB1-Pad1)")
 		(uuid "6f67f9bc-b7a2-4747-a5a8-62c49036637c")
+	)
+	(segment
+		(start 233.553 98.6)
+		(end 233.553 100.55)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "Net-(R14-Pad2)")
+		(uuid "25c51224-72ea-43b5-b53d-4f4d78b11f32")
 	)
 	(embedded_fonts no)
 )

@@ -268,4 +268,22 @@ STEPS = [
         ("/Main: Daisy Seed3/USB_DP", [("B.Cu", [(48.855, 81.87), (61.8, 81.87), (61.8, 80.6), (64.6, 80.6),
                                                   (64.6, 81.87), (65.87, 81.87)])]),
     ]},
+    # Input resistors (d: "place R10, R13, R14, R17, R18 and draw their traces connecting them to the op amp ...
+    #    orient them to keep the trace in a straight line"). Each stands in line with the op-amp pin it feeds, so every
+    #    trace is a straight vertical line on the back: R10 -> R13 -> U2 pin 2 (BASE), R18 -> U2 pin 6 (HP RES),
+    #    R14 -> R17 -> U1 pin 2 (WIDTH). Between U2 and U1 there is room for one upright resistor only, so R14 lies
+    #    sideways with its pad 2 in line. The KiCad angle is chosen by where the connecting pad lands.
+    {"name": "input_rs", "board": "main",
+     "rotate": {"R13": ("main", 53.553, 36.0, "back", [270, 90], "2", (53.553, 36.85)),
+                "R10": ("main", 53.553, 32.6, "back", [270, 90], "2", (53.553, 33.45)),
+                "R18": ("main", 58.633, 36.0, "back", [270, 90], "2", (58.633, 36.85)),
+                "R17": ("main", 53.553, 51.4, "back", [270, 90], "2", (53.553, 52.25)),
+                "R14": ("main", 54.403, 48.6, "back", [180, 0], "2", (53.553, 48.6))},
+     "routes": [
+        ("Net-(U2A--)", [("B.Cu", [(53.553, 36.85), (53.553, 39.783)])]),
+        ("Net-(R10-Pad2)", [("B.Cu", [(53.553, 33.45), (53.553, 35.15)])]),
+        ("Net-(U2B--)", [("B.Cu", [(58.633, 36.85), (58.633, 39.783)])]),
+        ("Net-(R14-Pad2)", [("B.Cu", [(53.553, 48.6), (53.553, 50.55)])]),
+        ("Net-(U1A--)", [("B.Cu", [(53.553, 52.25), (53.553, 55.1)])]),
+    ]},
 ]
