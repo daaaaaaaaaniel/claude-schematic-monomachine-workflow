@@ -158,4 +158,19 @@ STEPS = [
                "RV7": ("control", 32.9, 87.5, 0, "front"),
                "RV8": ("control", 12.9, 110.5, 180, "front"),
                "RV9": ("control", 32.9, 110.5, 180, "front")}},
+    # Straightened (d: "we already have lots of diagonal traces. straighten those out."): horizontal and vertical
+    #    segments only. The four front traces keep their vias; on the front each runs horizontally from the via, turns
+    #    down at its own lane (front is empty there; the back lanes are blocked by the groups' parts for now) and
+    #    enters its Seed3 pin horizontally. EQ GAIN and WIDTH become single horizontal lines (their ends sit inside
+    #    the Seed3 pins' pads, 0.08 mm off centre).
+    {"name": "straighten", "board": "main", "delete": {"F.Cu": ["ADC_LPRES", "ADC_EQF", "ADC_DIST", "ADC_SRR"],
+                                                       "B.Cu": ["ADC_EQG", "ADC_WIDTH"]},
+     "routes": [
+        ("ADC_LPRES", [("F.Cu", [(58.8, 38.69), (51.2, 38.69), (51.2, 48.85), (48.855, 48.85)])]),
+        ("ADC_EQF", [("F.Cu", [(58.8, 46.31), (52.4, 46.31), (52.4, 51.39), (48.855, 51.39)])]),
+        ("ADC_DIST", [("F.Cu", [(58.8, 54.007), (51.2, 54.007), (51.2, 56.47), (48.855, 56.47)])]),
+        ("ADC_SRR", [("F.Cu", [(58.8, 61.627), (51.2, 61.627), (51.2, 64.09), (48.855, 64.09)])]),
+        ("ADC_EQG", [("B.Cu", [(51.89, 54.007), (48.855, 54.007)])]),
+        ("ADC_WIDTH", [("B.Cu", [(51.89, 61.627), (48.855, 61.627)])]),
+    ]},
 ]

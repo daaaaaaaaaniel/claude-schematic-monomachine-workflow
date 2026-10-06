@@ -122,6 +122,16 @@ def pack(c, step):
 def routes(c, step):
     """Each route: (net, [(layer, [(x, y), ...]), ...]) in panel mm on `board`; a via joins consecutive layers."""
     board = step["board"]
+    tr = c.call("query_traces", {"board": BOARD})
+    tr = tr["traces"] if isinstance(tr, dict) else tr
+    gone = 0
+    for layer, nets in step.get("delete", {}).items():        # replace these traces
+        for x in tr:
+            if x["layer"] == layer and x["net"] in nets:
+                c.call("delete_trace", {"board": BOARD, "uuid": x["uuid"]})
+                gone += 1
+    if gone:
+        print(f"  deleted {gone} segments")
     for net, legs in step["routes"]:
         for i, (layer, pts) in enumerate(legs):
             k = [kicad(board, x, y) for x, y in pts]
