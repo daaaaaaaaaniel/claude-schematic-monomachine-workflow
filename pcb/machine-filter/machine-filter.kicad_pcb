@@ -33402,6 +33402,22 @@
 		(uuid "e7f5f581-fdd9-4819-8441-b215b27dd65a")
 	)
 	(segment
+		(start 231.89 111.627)
+		(end 228.855 111.627)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "ADC_WIDTH")
+		(uuid "0cb20d78-706d-4769-98eb-d2a3d31af3db")
+	)
+	(segment
+		(start 228.855 111.627)
+		(end 228.855 111.55)
+		(width 0.25)
+		(layer "B.Cu")
+		(net "ADC_WIDTH")
+		(uuid "7d45dd2d-60cb-48ce-8b62-28a66a42b7b9")
+	)
+	(segment
 		(start 231.89 96.310001)
 		(end 228.855 96.31)
 		(width 0.25)

@@ -10,11 +10,12 @@ PCB. The post-mortem that led here is in `HANDOFF.md`.
 | 1 | Footprints in the PCB, sorted into function groups beside the boards; area budget; zone sketch | done |
 | 2 | Seed3 placed with its group; first trace (VIN pin 39 → C6) | done |
 | 3 | U2 with its CV group (BASE, HP RES, LP RES, EQ FREQ), right of the ADC pins, pin 1 level with Seed3 pin 23; trace: U2 pin 1 (BASE out) → Seed3 pin 23, straight, 3 mm | done |
-| 4 | U1 with its CV group; then re-match the four channels' sections ↔ ADC pins to the placed chips (pin map) | **next** |
-| 5… | U3, U4; U5; J13; J15, J14; headers; standoffs (the order in §3) | to do |
+| 4 | U1 with its CV group below U2; ADC pins re-matched to the placed chips (`tools/rematch_adc.py`; d: keep it); trace: U1 pin 1 (WIDTH out) → Seed3 pin 29, straight, 3 mm | done |
+| 5 | U3, U4 (audio) left of the Seed3, by the codec pins 16–19; trace: one codec line | **next** |
+| 6… | U5; J13; J15, J14; headers; standoffs (the order in §3) | to do |
 
 Branch: `pcb-first-placement`. Pictures: `pcb/out/zone-sketch.png`, `pcb/out/step1-groups-kicad.png`,
-`pcb/out/step2-seed3-kicad.png`, `pcb/out/step3-u2-kicad.png`.
+`pcb/out/step2-seed3-kicad.png`, `pcb/out/step3-u2-kicad.png`, `pcb/out/step3-u2-closeup.png`, `pcb/out/step4-u1-closeup.png`.
 DRC after step 3: no courtyard or clearance problems; only reference labels overlapping on silkscreen (tidy at the
 end), and 17 footprints flagged as differing from their library copies (pre-existing; check before fabrication).
 
@@ -124,6 +125,14 @@ cd pcb/machine-filter && DISPLAY=:99 pcbnew machine-filter.kicad_pcb &
 - **Clicking KiCad dialogs is fragile and token-expensive.** The Board Setup dialog widens when its page changes, so
   a remembered OK position hit Cancel. Use Konnect or scripts for edits. If a GUI dialog is unavoidable, screenshot
   before each click.
+- **A multi-unit chip changes identity when its first unit moves to another schematic page** (the KiCad link uses
+  that unit's sheet path). Konnect's update then refuses with `reference_identity_conflict` for that chip. Fix:
+  `delete_component` the chip, run the update (it re-adds it), re-run its placement step. This happened to U1 when
+  WIDTH (its unit A) moved to the CV 1–4 page.
+- **The ratsnest display comes back on after an update from the schematic.** Its toggle is the left-toolbar button at
+  screen (322, 331); check the screenshot after clicking.
+- **Scope (d):** say before each step what it will change. If that goes beyond the agreed step (e.g. the ADC
+  re-match), wait for d's OK; announcing it is what let d catch it.
 - **Regenerating the PCB skeleton is blocked** (`pcb_skeleton.py --force`) as a destructive overwrite. Change board
   settings in place instead.
 

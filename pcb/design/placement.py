@@ -61,5 +61,6 @@ STEPS = [
                "C17": ("main", 63.6, 60.8, 90, "back"), "R40": ("main", 65.4, 60.8, 90, "back"),
                "C20": ("main", 61.0, 57.8, 0, "back")},
      "check_pads": {("U1", "1"): (51.89, 61.627), ("U1", "7"): (51.89, 54.007), ("U1", "14"): (57.29, 61.627)},
-     "traces": []},
+     # after the re-match (d: keep it), WIDTH is on U1 section A and Seed3 pin 29: a straight 3 mm trace
+     "traces": [("U1", "1", "A1", "29", 0.25, "B.Cu")]},
 ]
