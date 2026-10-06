@@ -2,7 +2,7 @@
   (version "D")
   (design
     (source "machine_filter.py")
-    (date "10/06/2026 08:01 PM")
+    (date "10/06/2026 09:49 PM")
     (tool "SKiDL (2.3.0)")
     (sheet
       (number 1)
@@ -302,8 +302,8 @@
           (value ""))))
     (sheet
       (number 9)
-      (name "/cv/cv7/")
-      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
+      (name "/audio/")
+      (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/")
       (title_block
         (title)
         (company)
@@ -339,8 +339,8 @@
           (value ""))))
     (sheet
       (number 10)
-      (name "/audio/")
-      (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/")
+      (name "/cv/cv7/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
       (title_block
         (title)
         (company)
@@ -3472,7 +3472,7 @@
         (pin "2")
         (pintype "PASSIVE"))
       (node
-        (ref "U1")
+        (ref "U2")
         (pin "14")
         (pintype "OUTPUT")))
     (net
@@ -3572,7 +3572,7 @@
         (pin "2")
         (pintype "PASSIVE"))
       (node
-        (ref "U2")
+        (ref "U1")
         (pin "14")
         (pintype "OUTPUT")))
     (net
@@ -4200,7 +4200,7 @@
         (pin "1")
         (pintype "PASSIVE"))
       (node
-        (ref "U1")
+        (ref "U2")
         (pin "13")
         (pintype "INPUT")))
     (net
@@ -4320,7 +4320,7 @@
         (pin "2")
         (pintype "PASSIVE"))
       (node
-        (ref "U2")
+        (ref "U1")
         (pin "13")
         (pintype "INPUT")))
     (net

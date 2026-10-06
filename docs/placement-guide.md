@@ -3,7 +3,7 @@
 This guide says which parts should sit next to which other parts, for the **rev beta** two-board schematic (`pcb/out/machine-filter.pdf`: main board pages 2–7, control board pages 8–12). Net names here are the main board's; on the control board the same nets carry the prefix `CTL_` (`CTL_CV_BASE`, `CTL_GND`, …), because each board's copper is its own net, joined only through the headers. Sections run from most to least important. Each one opens with the rule it applies, then names every part and pin it affects.
 
 **The boards** (d, 2026-10-06):
-- **MAIN** is assembled by JLC (SMD only), 70 × 100 mm, 4 layers recommended. Its back carries every SMD part, the Seed3 on sockets, the power header J13, the expansion header J14 and the optional microSD socket J15 (DNP). Its front carries only the male headers JB1–JB3.
+- **MAIN** is assembled by JLC (SMD only), 70 × 100 mm, 2 layers (d, 2026-10-06). Its back carries every SMD part, the Seed3 on sockets, the power header J13, the expansion header J14 and the optional microSD socket J15 (DNP). Its front carries only the male headers JB1–JB3.
 - **CONTROL** is hand-soldered, 70 × 107 mm, 2 layers is fine. Its front faces the panel and carries the jacks, pots and LEDs. Its back carries the pot multiplexer U6, the LED drivers U7/U8 (SOIC), their through-hole resistors and capacitors, and the female headers JA1–JA3.
 - The control board's JA1–JA3 plug onto the main board's JB1–JB3 (JAn onto JBn, pin k to pin k). With 8.5 mm sockets on 2.5 mm header plastic the boards sit about 11 mm apart.
 
@@ -100,16 +100,16 @@ This guide says which parts should sit next to which other parts, for the **rev 
 | CV | Section: − / out / + | R_in at − pin | R_f | C_f | Offset | From header pin | To Seed3 pin |
 |---|---|---|---|---|---|---|---|
 | 1 BASE (1V/OCT) | U2A: 2 / 1 / 3 | R13 (R10 behind it) | R11 | C10 | R12 | JB2.2 | 23 |
-| 2 WIDTH (1V/OCT) | U2D: 13 / 14 / 12 | R17 (R14 behind it) | R15 | C11 | R16 | JB2.3 | 22 |
+| 2 WIDTH (1V/OCT) | U1D: 13 / 14 / 12 | R17 (R14 behind it) | R15 | C11 | R16 | JB2.3 | 22 |
 | 3 HP RES | U2B: 6 / 7 / 5 | R18 | R19 | C12 | R20 | JB2.5 | 26 |
 | 4 LP RES | U2C: 9 / 8 / 10 | R22 | R23 | C13 | R24 | JB2.6 | 25 |
-| 5 EQ FREQ | U1D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB2.9 | 27 |
+| 5 EQ FREQ | U2D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB2.9 | 27 |
 | 6 EQ GAIN | U1A: 2 / 1 / 3 | R30 | R31 | C15 | R32 | JB2.8 | 28 |
 | 7 DIST | U1C: 9 / 8 / 10 | R34 | R35 | C16 | R36 | JB2.12 | 30 |
 | 8 SMPL RATE | U1B: 6 / 7 / 5 | R38 | R39 | C17 | R40 | JB2.11 | 31 |
 
 **Detail**
-- **U2 serves CV 1–4 and U1 serves CV 5–8.** In the floorplan, U2 sits above U1 between the Seed3's ADC pins and JB2. Each chip's sections face the ADC pins they feed, so no output trace crosses another.
+- **U2 serves CV 1, 3, 4 and 5; U1 serves CV 2 and 6–8**, so each chip carries one 1V/OCT channel (BASE on U2, WIDTH on U1; d, 2026-10-06). Which section feeds which ADC pin is re-matched once U1/U2 are placed, so no output trace crosses another.
 - The ADC pins and sections come from the floorplan's minimum-length matching, so the ADC pin order isn't the jack order. The firmware maps it (`docs/firmware-changes.md`).
 - **1V/OCT precision group:** keep R10, R13 and R11 touching each other, and the same for R14, R17 and R15. Their ratio sets the tracking, so they should all sit at the same temperature. Keep both groups away from R1/R2 (section 8) and U5/R3 (section 5).
 

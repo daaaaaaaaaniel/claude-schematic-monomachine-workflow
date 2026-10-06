@@ -59,8 +59,17 @@ CUSTOM_POWER = {"+3V3_A": ("+3V3", "Power symbol: +3.3 V analog rail, from the S
 STOCK_POWER = {"GND": "power:GND", "+12V": "power:+12V", "-12V": "power:-12V"}
 
 
-def U():
-    return str(uuid.uuid4())
+UUID_NS = uuid.UUID("6d0f3c1e-5b8a-4c2e-9a77-3f1e0b6d2a10")   # fixed: IDs are stable from one build to the next
+_UUID_N = [0]
+
+
+def U(key=None):
+    """A stable UUID. Sheets and symbols are keyed by name (the PCB links footprints to symbols through these, so
+    a rebuild must not change them); other items by their order of creation, which keeps rebuilds diff-quiet."""
+    if key is None:
+        _UUID_N[0] += 1
+        key = f"item:{_UUID_N[0]}"
+    return str(uuid.uuid5(UUID_NS, key))
 
 
 def K(v):
@@ -200,7 +209,7 @@ def lib_symbol(lib_id):
 
 
 # ----------------------------------------------------------------------------------------- sheets
-ROOT_UUID = U()
+ROOT_UUID = U("root")
 PLACED = {}            # (ref, unit) -> sheet name
 PWR_COUNT = [0]
 
@@ -211,8 +220,8 @@ class Sheet:
     def __init__(self, name, fname, page, heading, paper="A3", board=None):
         self.name, self.fname, self.page, self.heading, self.paper = name, fname, page, heading, paper
         self.board = board              # "main", "control", or None (the overview)
-        self.file_uuid = ROOT_UUID if page == 1 else U()
-        self.sym_uuid = None if page == 1 else U()        # uuid of this sheet's symbol on the root sheet
+        self.file_uuid = ROOT_UUID if page == 1 else U(f"sheet-file:{fname}")
+        self.sym_uuid = None if page == 1 else U(f"sheet-symbol:{fname}")        # uuid of this sheet's symbol on the root sheet
         self.items, self.wires, self.pinpts, self.labelpts = [], [], [], []
         self.libs = {}
         self.summary = []
@@ -236,9 +245,9 @@ class Sheet:
         e += [[Sym("unit"), unit], [Sym("exclude_from_sim"), Sym("no")],
               [Sym("in_bom"), Sym(flags[0])], [Sym("on_board"), Sym(flags[1])],
               [Sym("dnp"), Sym(flags[2] if len(flags) > 2 else "no")],
-              [Sym("uuid"), U()]] + fields
+              [Sym("uuid"), U(f"symbol:{self.fname}:{ref}:{unit}")]] + fields
         for num in pins_all:
-            e.append([Sym("pin"), num, [Sym("uuid"), U()]])
+            e.append([Sym("pin"), num, [Sym("uuid"), U(f"pin:{self.fname}:{ref}:{unit}:{num}")]])
         e.append([Sym("instances"), [Sym("project"), PROJECT,
                                      [Sym("path"), self.path, [Sym("reference"), ref], [Sym("unit"), unit]]]])
         self.items.append(e)

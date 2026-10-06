@@ -7,3 +7,5 @@ pcb/machine-filter/*-backups/
 pcb/machine-filter/fp-info-cache
 pcb/machine-filter/*.lck
 .DS_Store
+# KiCad 10 local history
+pcb/machine-filter/.history/

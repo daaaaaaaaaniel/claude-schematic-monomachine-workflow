@@ -21,7 +21,7 @@ A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This fol
 | PCB file | outlines only: `pcb/machine-filter/machine-filter.kicad_pcb` (from `design/pcb_skeleton.py`); separation tested with KiKit |
 | Fabrication | `tools/separate.sh` → `pcb/fab/main/`, `pcb/fab/control/` (separated board + BOM); gerbers and CPL **not yet** (after layout) |
 | Placement plan | `docs/placement-guide.md` |
-| PCB layout | **starting** on branch `pcb-first-placement`: major parts to general areas first (rev alpha's single-board `gen_pcb.py` is stale, per d) |
+| PCB layout | **step 1 done** on branch `pcb-first-placement`: all 154 footprints are in the PCB file (Konnect, update from schematic), sorted into function groups beside their boards (`design/groups.py`, `design/stage_groups.py`, `tools/konnect_stage.py`), plus 8 optional standoff holes. Zone sketch for d's review: `pcb/out/zone-sketch.png` (`design/zone_sketch.py`). Nothing is on a board yet |
 | Firmware | three table changes: `docs/firmware-changes.md` |
 
 ## Post-mortem (2026-10-06): the board-to-board headers were treated as a design driver. They aren't one.
@@ -70,6 +70,9 @@ A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This fol
   3. the power entry J13, the expansion header J14 and the microSD socket J15;
   4. the small parts, by `docs/placement-guide.md`;
   5. the headers, last.
+- **Schematic IDs are stable** (2026-10-06): `gen_sch.py` derives every sheet and symbol UUID from its name, so a
+  rebuild leaves the PCB's footprint links intact (Konnect's update from schematic reports nothing to do). Before
+  this, each build made new random IDs, which would have cut every link.
 - **Then match the schematic to the layout.**
   - Once the headers are placed, set their pin order in `pinmap.py` to suit the routing.
   - Set the ADC pins, the op-amp sections and the mux channels to suit where the parts actually landed.
@@ -79,7 +82,7 @@ A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This fol
 
 ## The two boards
 
-- **MAIN** (70 × 100 mm, panel y 14–114; 4 layers recommended):
+- **MAIN** (70 × 100 mm, panel y 14–114; 2 layers, d 2026-10-06: the 4-layer plan was for the single-board module):
   - Back: Seed3 on sockets (USB end down, at least 25 mm inside the control board's edge: see the post-mortem), power entry J13, CV ADC stages U1/U2, audio U3/U4, the −10 V reference U5, expansion header J14, every SMD R/C.
   - Front: male headers JB1–JB3. The schematic has candidate A's provisional headers: JB1 15 pins, JB2 13 pins, JB3 10 pins. Their count, pin order and sites get settled after the major parts are placed.
 - **CONTROL** (70 × 107 mm, the panel's board area; 2 layers):
@@ -188,7 +191,7 @@ FLOORPLAN=1 pcb/tools/build.sh      # also re-derive pinmap.py from the floorpla
      4. the small parts, following `docs/placement-guide.md`: decoupling first, then each − input node.
    - **`pinmap.MAIN_PLACEMENT` / `CONTROL_PLACEMENT` are a rough guide at most.** They come from candidate A's floorplan, built around the old Seed3 position.
    - **Headers last:** a spot that's legal on both boards, then the pin order to suit the routing (see the post-mortem's last step).
-4. **One layer stack for both boards:** the file has 4 copper layers. Keep inner-layer copper (In1/In2 planes) inside the MAIN outline only. The control board can then be ordered as 2 layers by exporting just F.Cu/B.Cu for it. If you'd rather not manage that, make both boards 2-layer, or both 4-layer.
+4. **Both boards are 2-layer** (d, 2026-10-06). The PCB file still has 4 copper layers from the skeleton: set it to 2 in Board Setup → Board Stackup before routing (nothing uses In1/In2).
 5. **Route, DRC** (`kicad-cli pcb drc`). Every component lives on one board, and no net spans both, so the DRC is meaningful as it stands.
 6. **Fabrication outputs:**
    - Run `pcb/tools/separate.sh`. It cuts each board out with `kikit separate` into `pcb/fab/main/` and `pcb/fab/control/`, and writes their BOMs (`bom-jlc.csv` is JLC's upload format).
@@ -202,4 +205,7 @@ FLOORPLAN=1 pcb/tools/build.sh      # also re-derive pinmap.py from the floorpla
 - **KiKit 1.8** in a venv at `/opt/kikit` (with system site-packages, for pcbnew): `kikit separate` for the multiboard split. On this container wxPython won't import under Python 3.13, so `separate.sh` puts an empty `wx` stand-in on the path. KiKit only needs `import wx` to succeed when there's no display.
 - **pcbnew Python module** (ships with KiCad): used by `floorplan.py` and `pcb_skeleton.py`. A footprint must be added to a `BOARD()` before you query it, or pcbnew segfaults.
 - **SKiDL 2.3.0** lives in a venv at `/opt/sk`, because a system-wide pip install fails on Ubuntu 24.04's Python 3.13. It runs one process per board, because SKiDL keeps one global circuit per process.
-- **atopile** wasn't used: it doesn't produce a schematic and works best with its own parts ecosystem, not this project library. **Konnect** (a KiCad MCP plugin) could drive interactive placement from a Claude session on a machine with KiCad's GUI.
+- **atopile** wasn't used: it doesn't produce a schematic and works best with its own parts ecosystem, not this project library. **Konnect** (KiCad MCP server, github.com/mixelpixx/Konnect, v0.13) drives the live PCB editor. In a cloud container:
+  - Build it from source (`cargo build --release -p konnect`, about 10 min; needs `protobuf-compiler` and `libprotobuf-dev`). Release downloads are blocked by the proxy.
+  - Run the GUI editor on a virtual display: `Xvfb :99 &`, then `DISPLAY=:99 pcbnew pcb/machine-filter/machine-filter.kicad_pcb`. Set `api.enable_server: true` in `~/.config/kicad/10.0/kicad_common.json` first. Dismiss the first-run dialog with `xdotool` (Cancel, then Yes). Screenshots: `DISPLAY=:99 import -window root shot.png`; Ctrl+Home zooms to all objects.
+  - Call Konnect from scripts with `pcb/tools/konnect_call.py` (a small MCP stdio client). Konnect's rule: board edits go through its tools, never text edits of `.kicad_pcb`.
