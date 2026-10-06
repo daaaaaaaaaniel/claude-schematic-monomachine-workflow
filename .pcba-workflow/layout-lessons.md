@@ -52,3 +52,9 @@ violations automatically instead of trusting the placer/router to honour locks.
 ## widen-then-drc (2026-10-07)
 Widening traces to net-class widths can create clearance errors that the thin trace didn't have (the 1 mm J13–FB1
 trace hit C2's pad). Re-run DRC after any width change and reroute the offender rather than narrowing the class.
+
+## layer-convention-check (2026-10-07)
+With every main-board SMD part on the back, every trace starts on the back, so horizontal runs drift onto the back
+unless a via is planned. 23 of 49 segments broke "front horizontal, back vertical" before anyone counted. Through-hole
+ends (Seed pins, J13, J14) can take the front directly with no via. Now measured: `off_convention_long` in
+score_candidate.py (segments over 2.5 mm).

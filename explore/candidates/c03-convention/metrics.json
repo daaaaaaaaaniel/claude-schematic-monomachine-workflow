@@ -1,14 +1,15 @@
 {
- "name": "c01-parked",
- "note": "critical traces, input resistors; minor parts parked",
+ "name": "c03-convention",
+ "note": "long back-side horizontals moved to the front (USB, VIN, power entry, codec)",
  "metrics": {
   "unrouted_between_placed_parts": 206,
   "power_disconnects": 162,
   "drc_problems": 0,
-  "vias": 4,
+  "vias": 8,
   "track_mm": 198.3,
   "parts_on_main_board": 39,
   "diagonal_segments": 0,
-  "off_convention_long": 7
+  "off_convention_long": 0,
+  "locked_violations": []
  }
 }

@@ -7,7 +7,7 @@ full set of measurements, not on one number (adapted from Keitark/pcba-design-sk
 Writes explore/candidates/<name>/ with a copy of the board file and metrics.json, and prints the comparison with the
 best accepted candidate (explore/candidates/best.txt). A candidate that moved a part locked in the best candidate (an
 approved block, see check_locks.py) is rejected outright. Otherwise it is better only if it adds no unrouted connection,
-real DRC problem or power disconnect, and improves at least one of them (or, when those tie, vias or track length).
+real DRC problem, power disconnect, diagonal or long off-convention segment, and improves at least one of them (or, when those tie, vias or track length).
 Promote it with --accept.
 """
 import json
@@ -46,14 +46,24 @@ def measure():
             "drc_problems": len(real), "vias": sum(1 for t in b.GetTracks() if t.GetClass() == "PCB_VIA"),
             "track_mm": round(sum(pcbnew.ToMM(t.GetLength()) for t in tracks), 1),
             "parts_on_main_board": sum(1 for f in b.GetFootprints() if 180 <= pcbnew.ToMM(f.GetPosition().x) <= 251),
-            "diagonal_segments": sum(1 for t in tracks if t.GetStart().x != t.GetEnd().x and t.GetStart().y != t.GetEnd().y)}
+            "diagonal_segments": sum(1 for t in tracks if t.GetStart().x != t.GetEnd().x and t.GetStart().y != t.GetEnd().y),
+            "off_convention_long": sum(1 for t in tracks if off_convention(t) and pcbnew.ToMM(t.GetLength()) > STUB_MM)}
+
+
+STUB_MM = 2.5   # d, 2026-10-07: front horizontal, back vertical; pad escapes up to 2.5 mm are exempt
+
+
+def off_convention(t):
+    s, e, layer = t.GetStart(), t.GetEnd(), t.GetLayerName()
+    return (layer == "B.Cu" and s.y == e.y and s.x != e.x) or (layer == "F.Cu" and s.x == e.x and s.y != e.y)
 
 
 def better(new, old):
-    hard = ("unrouted_between_placed_parts", "drc_problems", "power_disconnects")
-    if any(new[k] > old[k] for k in hard):
+    hard = ("unrouted_between_placed_parts", "drc_problems", "power_disconnects", "diagonal_segments",
+            "off_convention_long")
+    if any(new.get(k, 0) > old.get(k, 0) for k in hard):
         return False
-    if any(new[k] < old[k] for k in hard):
+    if any(new.get(k, 0) < old.get(k, 0) for k in hard):
         return True
     return (new["vias"], new["track_mm"]) < (old["vias"], old["track_mm"])
 

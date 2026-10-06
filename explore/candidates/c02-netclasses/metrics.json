@@ -9,6 +9,7 @@
   "track_mm": 198.3,
   "parts_on_main_board": 39,
   "diagonal_segments": 0,
-  "locked_violations": []
+  "locked_violations": [],
+  "off_convention_long": 8
  }
 }
