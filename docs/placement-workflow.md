@@ -78,8 +78,9 @@ should go. Steps 2-5 arranged their groups part by part, before this rule; they 
 - Horizontal and vertical segments only; no diagonals.
 - Layer convention (community guide, routing §): front mostly horizontal, back mostly vertical. Short hops inside a
   group go whichever way they need.
-- While routing, ignore any resistor (or other minor-part) pad that has no trace on it: those parts move later.
-  `tools/drc_summary.py <traced pads, e.g. R52.2>` runs DRC and lists such clashes separately from real problems.
+- A minor part (resistor or capacitor that isn't a secondary part) counts as absent until one of its pads has a
+  trace on its own net (d): ignore its pads and courtyard while routing; those parts move later.
+  `tools/drc_summary.py` runs DRC and lists clashes with such parts separately from real problems.
 - Pending: four dangling vias (from the first ADC routing, at the op-amp pins' level, x 58.8) to delete in the
   editor (Konnect has no via delete; KiCad: Tracks > Cleanup Tracks & Vias, or select and Delete).
 
