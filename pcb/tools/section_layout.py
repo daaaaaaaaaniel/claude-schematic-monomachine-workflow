@@ -56,7 +56,26 @@ def cv_top(w, chip, minus, out_dir, parts, extra_r_in=None):
     return res
 
 
+def cv_bottom(w, chip, minus, out_dir, parts):
+    """The mirror of cv_top for a section on the chip's bottom pin row, facing down (+y)."""
+    mx, my = pin(w, chip, minus)
+    r1 = cy_edge(w, chip, "bottom") + 0.5 + 0.775
+    rows = [r1 + k * ROW for k in range(3)]
+    res = []
+    for (ref, side), ry in zip(parts[:3], rows):
+        d = out_dir if side == "out" else -out_dir
+        res.append((ref, mx + d * P, ry, 180 if d < 0 else 0))
+    bottom = rows[2] + 0.775 + 0.5 + 1.625
+    for k, ref in enumerate(parts[3:]):                 # pad 2 = the - side (top), pad 1 = toward the jack
+        res.append((ref, mx, bottom + k * (3.25 + 0.5), 90))
+    return res
+
+
 def layout(w, section):
+    if section == "u2_bottom":
+        c = cv_bottom(w, "U2", "9", +1, [("R23", "out"), ("C13", "out"), ("R24", "vref"), "R22"])
+        d = cv_bottom(w, "U2", "13", -1, [("C14", "out"), ("R28", "vref"), ("R27", "out"), "R26"])
+        return c + d
     if section == "u2_top":
         a = cv_top(w, "U2", "2", -1, [("C10", "out"), ("R12", "vref"), ("R11", "out"), "R13", "R10"])
         b = cv_top(w, "U2", "6", +1, [("R19", "out"), ("C12", "out"), ("R20", "vref"), "R18"])
@@ -89,7 +108,7 @@ def legalise(w, ref, x, y, rot):
     if w.legal(ref, kx, ky, s):
         return kx, ky, s, 0.0
     best = None
-    for r in [k * 0.05 for k in range(1, 61)]:
+    for r in [k * 0.05 for k in range(1, 61)] + [3.0 + k * 0.25 for k in range(1, 25)]:
         for i in range(max(8, int(2 * math.pi * r / 0.05))):
             a = 2 * math.pi * i / max(8, int(2 * math.pi * r / 0.05))
             cx, cy = round((kx + r * math.cos(a)) / 0.05) * 0.05, round((ky + r * math.sin(a)) / 0.05) * 0.05
@@ -116,7 +135,7 @@ def main():
     for ref, x, y, rot in plan:
         got = legalise(w, ref, x, y, rot)
         if got is None:
-            print(f"{ref}: no legal spot within 3 mm of its pattern position")
+            print(f"{ref}: no legal spot within 9 mm of its pattern position")
             continue
         kx, ky, s, moved = got
         w.placed[ref] = (kx, ky, s)
