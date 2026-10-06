@@ -74,6 +74,15 @@ minor part, that one part is put where the trace needs it, and the report says s
 "critical trace would be U4 to the Seed3, but it needs R60, placed provisionally". d gives feedback on where it
 should go. Steps 2-5 arranged their groups part by part, before this rule; they stay as they are.
 
+**Routing rules (d, 2026-10-06):**
+- Horizontal and vertical segments only; no diagonals.
+- Layer convention (community guide, routing §): front mostly horizontal, back mostly vertical. Short hops inside a
+  group go whichever way they need.
+- While routing, ignore any resistor (or other minor-part) pad that has no trace on it: those parts move later.
+  `tools/drc_summary.py <traced pads, e.g. R52.2>` runs DRC and lists such clashes separately from real problems.
+- Pending: four dangling vias (from the first ADC routing, at the op-amp pins' level, x 58.8) to delete in the
+  editor (Konnect has no via delete; KiCad: Tracks > Cleanup Tracks & Vias, or select and Delete).
+
 ## 3. Placement order (d agreed)
 
 1. **Seed3.** Its area is set by d's USB rule.

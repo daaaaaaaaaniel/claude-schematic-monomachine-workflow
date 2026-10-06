@@ -173,4 +173,18 @@ STEPS = [
         ("ADC_EQG", [("B.Cu", [(51.89, 54.007), (48.855, 54.007)])]),
         ("ADC_WIDTH", [("B.Cu", [(51.89, 61.627), (48.855, 61.627)])]),
     ]},
+    # Layer convention (d): back vertical, front horizontal; resistor pads without a trace are ignored when routing
+    #    (those parts move later). Each of the four far-side outputs: back stub to its lane right of the op-amp,
+    #    vertical on the back down to its Seed3 pin's level, via, horizontal on the front into the pin. LP RES takes
+    #    the outer lane (x 59.6) so it doesn't cross EQ FREQ's stub. The earlier vias at the op-amp pins' level stay
+    #    (Konnect has no via delete); they sit on their own traces.
+    {"name": "convention", "board": "main", "delete": {"F.Cu": ["ADC_LPRES", "ADC_EQF", "ADC_DIST", "ADC_SRR"]},
+     "routes": [
+        ("ADC_LPRES", [("B.Cu", [(58.8, 38.69), (59.6, 38.69), (59.6, 48.85)]), ("F.Cu", [(59.6, 48.85), (48.855, 48.85)])]),
+        ("ADC_EQF", [("B.Cu", [(58.8, 46.31), (58.8, 51.39)]), ("F.Cu", [(58.8, 51.39), (48.855, 51.39)])]),
+        ("ADC_DIST", [("B.Cu", [(58.8, 54.007), (58.8, 56.47)]), ("F.Cu", [(58.8, 56.47), (48.855, 56.47)])]),
+        ("ADC_SRR", [("B.Cu", [(58.8, 61.627), (58.8, 64.09)]), ("F.Cu", [(58.8, 64.09), (48.855, 64.09)])]),
+    ]},
+    # C21 (U2 decoupling, a secondary part) 0.6 mm right: clear of LP RES's back lane at x 59.6.
+    {"name": "c21_nudge", "parts": {"C21": ("main", 61.6, 42.5, 0, "back")}},
 ]
