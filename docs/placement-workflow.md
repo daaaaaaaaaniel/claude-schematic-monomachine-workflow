@@ -129,6 +129,10 @@ cd pcb/machine-filter && DISPLAY=:99 pcbnew machine-filter.kicad_pcb &
   that unit's sheet path). Konnect's update then refuses with `reference_identity_conflict` for that chip. Fix:
   `delete_component` the chip, run the update (it re-adds it), re-run its placement step. This happened to U1 when
   WIDTH (its unit A) moved to the CV 1–4 page.
+  Considered and declined for now (d, 2026-10-06, "let's see if we regret it"): a separate flat one-page
+  schematic, made for machines, for the PCB to link to, with the 12-page drawing kept for people only. It would
+  end these identity changes for good; about 45 min plus one automated re-link of all parts. Revisit if they
+  recur.
 - **The ratsnest display comes back on after an update from the schematic.** Its toggle is the left-toolbar button at
   screen (322, 331); check the screenshot after clicking.
 - **Scope (d):** say before each step what it will change. If that goes beyond the agreed step (e.g. the ADC
