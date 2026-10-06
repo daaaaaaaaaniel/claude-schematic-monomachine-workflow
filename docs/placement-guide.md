@@ -100,13 +100,13 @@ This guide says which parts should sit next to which other parts, for the **rev 
 | CV | Section: − / out / + | R_in at − pin | R_f | C_f | Offset | From header pin | To Seed3 pin |
 |---|---|---|---|---|---|---|---|
 | 1 BASE (1V/OCT) | U2A: 2 / 1 / 3 | R13 (R10 behind it) | R11 | C10 | R12 | JB1.10 | 23 |
-| 2 WIDTH (1V/OCT) | U1A: 2 / 1 / 3 | R17 (R14 behind it) | R15 | C11 | R16 | JB1.11 | 29 |
-| 3 HP RES | U2B: 6 / 7 / 5 | R18 | R19 | C12 | R20 | JB1.20 | 22 |
-| 4 LP RES | U2C: 9 / 8 / 10 | R22 | R23 | C13 | R24 | JB2.1 | 24 |
-| 5 EQ FREQ | U2D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB1.21 | 25 |
-| 6 EQ GAIN | U1B: 6 / 7 / 5 | R30 | R31 | C15 | R32 | JB2.3 | 26 |
-| 7 DIST | U1C: 9 / 8 / 10 | R34 | R35 | C16 | R36 | JB4.1 | 27 |
-| 8 SMPL RATE | U1D: 13 / 14 / 12 | R38 | R39 | C17 | R40 | JB4.3 | 30 |
+| 2 WIDTH (1V/OCT) | U1A: 2 / 1 / 3 | R17 (R14 behind it) | R15 | C11 | R16 | JB1.12 | 29 |
+| 3 HP RES | U2B: 6 / 7 / 5 | R18 | R19 | C12 | R20 | JB1.19 | 22 |
+| 4 LP RES | U2C: 9 / 8 / 10 | R22 | R23 | C13 | R24 | JB1.21 | 24 |
+| 5 EQ FREQ | U2D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB1.25 | 25 |
+| 6 EQ GAIN | U1B: 6 / 7 / 5 | R30 | R31 | C15 | R32 | JB3.1 | 26 |
+| 7 DIST | U1C: 9 / 8 / 10 | R34 | R35 | C16 | R36 | JB1.27 | 27 |
+| 8 SMPL RATE | U1D: 13 / 14 / 12 | R38 | R39 | C17 | R40 | JB1.23 | 30 |
 
 **Detail**
 - **U2 serves CV 1, 3, 4 and 5; U1 serves CV 2 and 6–8**, so each chip carries one 1V/OCT channel (BASE on U2, WIDTH on U1; d, 2026-10-06). Which section feeds which ADC pin is re-matched once U1/U2 are placed, so no output trace crosses another.
@@ -219,18 +219,22 @@ distance from each signal's pin to its pads on both boards. `pcb/tools/sync_head
 
 | Header | Pins | Pin 1 (panel frame, mm) | Orientation (main side) | Pin order |
 |---|---|---|---|---|
-| JA1 / JB1 | 22 | (44.45, 25.4) | vertical, pin 1 at the top | GND, OUT_R, OUT_L, GND, IN_R, IN_L, GND, +3V3_A, GND, CV_BASE, CV_WIDTH, GND, +12V, GND, POT_VOL, POT_MUX, GND, -12V, GND, CV_HPRES, CV_EQF, GND |
-| JA2 / JB2 | 3 | (67.31, 59.69) | vertical, pin 1 at the top | CV_LPRES, GND, CV_EQG |
-| JA3 / JB3 | 5 | (26.67, 68.58) | vertical, pin 1 at the top | LED_A, MUX_B, MUX_C, MUX_A, GND |
-| JA4 / JB4 | 3 | (57.15, 111.76) | vertical, pin 1 at the bottom | CV_DIST, GND, CV_SRR |
+| JA1 / JB1 | 30 | (43.18, 25.4) | vertical, pin 1 at the top | OUT_R, GND, OUT_L, GND, IN_R, IN_L, GND, +3V3_A, GND, CV_BASE, GND, CV_WIDTH, GND, +12V, GND, POT_VOL, POT_MUX, GND, CV_HPRES, GND, CV_LPRES, GND, CV_SRR, GND, CV_EQF, GND, CV_DIST, GND, -12V, GND |
+| JA2 / JB2 | 5 | (21.59, 57.15) | horizontal, pin 1 at the right | LED_A, MUX_A, MUX_C, MUX_B, GND |
+| JA3 / JB3 | 2 | (64.77, 100.33) | horizontal, pin 1 at the left | CV_EQG, GND |
 
 **Detail**
-- **33 pins, 12 of them ground** (the old three headers had 38 and 17).
-  - **J1 (22 pins)** runs down the channel between the right pot column and the CV jacks (panel x 44.45, y 25–79);
-    on the main board it stands between the Seed3's socket rows. It carries the audio, the supplies, both pot
-    signals and four CVs.
-  - **J2 and J4 (3 pins each)** sit beside the CV jacks and carry two CVs each.
-  - **J3 (5 pins)** sits beside U6 and carries the mux selects and the clip-LED drive.
+- **37 pins, 16 of them ground** (the old three headers had 38 and 17).
+  - **J1 (30 pins)** runs down the channel between the right pot column and the CV jacks (panel x 43.18,
+    y 25–99); on the main board it stands between the Seed3's socket rows. It carries the audio, the supplies,
+    both pot signals and seven CVs, each CV with its own ground.
+  - **J2 (5 pins, horizontal)** sits between the pot columns and carries the mux selects and the clip-LED drive.
+  - **J3 (2 pins, horizontal)** sits at the right edge between two jack rows and carries CV EQ GAIN.
+- **Hand-soldering clearance (d, 2026-10-07):** every header pad keeps at least 1.25 mm (edge to edge) from every
+  other pad on both boards and from the whole box around each jack, pot and LED, so there is room for the iron and
+  no bridge to a pot or jack leg. The first search had put a connector 1.7 mm from pot RV5's snap-in tab, inside
+  the pot's box, and another in the 3 mm gap between two CV jacks; both are gone. The control board's own
+  through-hole parts keep the same 1.25 mm between pads.
 - **Hand soldering.** JB1's pins come out on the main board's back between the Seed3's socket rows, under the module:
   solder JB1 before the Seed3 sockets and trim the pins flush; the Seed sits 8.5 mm up on its sockets.
 - **Orientation.** JAn on the back is turned 180° from JBn (KiCad flips back-side parts top-to-bottom); the tools

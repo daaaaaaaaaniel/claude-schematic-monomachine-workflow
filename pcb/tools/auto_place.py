@@ -3,6 +3,7 @@
 
     python3 pcb/tools/auto_place.py main  [--refs R1,R2] [-o out.json]    # compute only (reads the saved board)
     python3 pcb/tools/auto_place.py control ...
+    python3 pcb/tools/auto_place.py control --free R71,R72  # re-place parts already on the board
     python3 pcb/tools/apply_placement.py out.json                          # put it on the live board (Konnect)
 
 Computed offline with KiCad's pcbnew module on the saved board; nothing is written to the board here.
@@ -14,6 +15,8 @@ in order of how strongly they are tied to what's already placed, then every part
 others fixed. A pose is legal when (rules from d, 2026-10-06/07, docs/placement-workflow.md):
   - its courtyard keeps 0.5 mm from every other courtyard on the same side and 1.5 mm inside the board edge;
   - its pads keep 0.3 mm from other nets' pads, tracks and vias on its copper (through-hole pads: both layers);
+    hand-soldered pads keep 1.25 mm (control-board through-hole pads from other pads; anything from the
+    board-to-board header pads), d 2026-10-07;
   - its through-hole pads stay out of the other side's courtyards (a jack or pot body sits on them), and no other
     part's through-hole lead sits under its body.
 Sides: main board = back (JLC assembly); control board = back (bodies), leads through to the front.
@@ -38,6 +41,7 @@ OFFSET = {"main": (180.0, 50.0), "control": (100.0, 50.0)}
 GAP = 0.5            # courtyard to courtyard
 EDGE = 1.5           # courtyard to board edge
 CLEAR = 0.3          # pad to other-net copper
+SOLDER = 1.25        # hand soldering: pad to pad on the control board, and to the board-to-board headers (d)
 POWER = {"+12V", "-12V", "+3V3_A", "+3V3_D", "VIN", "CTL_+12V", "CTL_-12V", "CTL_+3V3_A"}
 GROUND = {"GND", "CTL_GND"}
 STEP = 0.25
@@ -125,7 +129,7 @@ class World:
     def rebuild(self):
         """Obstacle indexes and net anchors from everything placed."""
         cy = {"F": [], "B": []}
-        cu = {"F": list(self.copper["F"]), "B": list(self.copper["B"])}
+        cu = {"F": [(g, n, "") for g, n in self.copper["F"]], "B": [(g, n, "") for g, n in self.copper["B"]]}
         self.anchor = {}
         for r, (x, y, s) in self.placed.items():
             side = "B" if s.back else "F"
@@ -134,14 +138,14 @@ class World:
             for num, net, px, py, hw, hh, tht in s.pads:
                 g = box(x + px - hw, y + py - hh, x + px + hw, y + py + hh)
                 for sd in ("FB" if tht else side):
-                    cu[sd].append((g, net))
+                    cu[sd].append((g, net, r))
                 if net:
                     self.anchor.setdefault(net, []).append((x + px, y + py, r))
         tht = [(box(x + px - hw, y + py - hh, x + px + hw, y + py + hh), r)
                for r, (x, y, s) in self.placed.items() for num, net, px, py, hw, hh, th in s.pads if th]
         self.tht = (STRtree([g for g, _ in tht]) if tht else None, tht)
         self.cy = {s: (STRtree([g for g, _ in v]) if v else None, v) for s, v in cy.items()}
-        self.cu = {s: (STRtree([g for g, _ in v]) if v else None, v) for s, v in cu.items()}
+        self.cu = {s: (STRtree([it[0] for it in v]) if v else None, v) for s, v in cu.items()}
 
     def legal(self, ref, x, y, s):
         side, other = ("B", "F") if s.back else ("F", "B")
@@ -161,12 +165,20 @@ class World:
                 if items[i][1] != ref:
                     return False
         for num, net, px, py, hw, hh, tht in s.pads:
-            g = box(x + px - hw - CLEAR, y + py - hh - CLEAR, x + px + hw + CLEAR, y + py + hh + CLEAR)
+            pad = box(x + px - hw, y + py - hh, x + px + hw, y + py + hh)
+            g = pad.buffer(SOLDER, join_style=2)
             for sd in ("FB" if tht else side):
                 tree, items = self.cu[sd]
                 if tree is not None:
                     for i in tree.query(g, predicate="intersects"):
-                        if items[i][1] != net or not net:
+                        geom, n2, r2 = items[i]
+                        if r2 == ref:
+                            continue
+                        # hand-soldered pads (control board through-hole, the board-to-board headers) keep
+                        # SOLDER from other pads; everything else CLEAR
+                        need = SOLDER if r2 and ((tht and self.board == "control") or r2.startswith(("JA", "JB"))) \
+                            else CLEAR
+                        if (n2 != net or not net) and pad.distance(geom) < need:
                             return False
             if tht:
                 tree, items = self.cy[other]
@@ -241,6 +253,10 @@ def main():
     path = args[args.index("--board") + 1] if "--board" in args else BOARD
     out = args[args.index("-o") + 1] if "-o" in args else os.path.join(HERE, "..", "out", f"auto-place-{board}.json")
     w = World(path, board)
+    if "--free" in args:                                  # re-place these: treat them as not yet placed
+        for r in args[args.index("--free") + 1].split(","):
+            w.placed.pop(r, None)
+        w.rebuild()
     if "--refs" in args:
         todo = args[args.index("--refs") + 1].split(",")
     else:

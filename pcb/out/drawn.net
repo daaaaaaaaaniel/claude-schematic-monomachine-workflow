@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/claude/claude-schematic-monomachine-workflow/pcb/machine-filter/machine-filter.kicad_sch")
-		(date "2026-10-07T01:41:35")
+		(date "2026-10-07T02:03:10")
 		(tool "Eeschema 10.0.6-10.0.6~ubuntu24.04.1")
 		(sheet
 			(number "1")
@@ -7635,18 +7635,18 @@
 		)
 		(comp
 			(ref "JB1")
-			(value "1x22 header")
-			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x22_P2.54mm_Vertical")
+			(value "1x30 header")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x30_P2.54mm_Vertical")
 			(description "to the control board (male, on the main board's front)")
 			(fields
 				(field
-					(name "MPN") "2.54 mm male pin header 1x22")
+					(name "MPN") "2.54 mm male pin header 1x30")
 				(field
 					(name "Assembly") "hand")
 				(field
 					(name "Board") "main")
 				(field
-					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x22_P2.54mm_Vertical")
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x30_P2.54mm_Vertical")
 				(field
 					(name "Datasheet")
 				)
@@ -7655,12 +7655,12 @@
 			)
 			(libsource
 				(lib "Connector_Generic")
-				(part "Conn_01x22")
-				(description "Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)")
+				(part "Conn_01x30")
+				(description "Generic connector, single row, 01x30, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(property
 				(name "MPN")
-				(value "2.54 mm male pin header 1x22")
+				(value "2.54 mm male pin header 1x30")
 			)
 			(property
 				(name "Assembly")
@@ -7761,87 +7761,36 @@
 						(pin
 							(num "22")
 						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "29")
+						)
+						(pin
+							(num "30")
+						)
 					)
 				)
 			)
 		)
 		(comp
 			(ref "JB2")
-			(value "1x3 header")
-			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-			(description "to the control board (male, on the main board's front)")
-			(fields
-				(field
-					(name "MPN") "2.54 mm male pin header 1x3")
-				(field
-					(name "Assembly") "hand")
-				(field
-					(name "Board") "main")
-				(field
-					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description") "to the control board (male, on the main board's front)")
-			)
-			(libsource
-				(lib "Connector_Generic")
-				(part "Conn_01x03")
-				(description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
-			)
-			(property
-				(name "MPN")
-				(value "2.54 mm male pin header 1x3")
-			)
-			(property
-				(name "Assembly")
-				(value "hand")
-			)
-			(property
-				(name "Board")
-				(value "main")
-			)
-			(property
-				(name "Sheetname")
-				(value "Main: connector")
-			)
-			(property
-				(name "Sheetfile")
-				(value "main-connector.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "connector")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "Connector*:*_1x??_*")
-			)
-			(sheetpath
-				(names "/Main: connector/")
-				(tstamps "/d99c1c84-6094-5894-b2b7-d3a9bcd880e7/")
-			)
-			(tstamps "306b3da9-1472-573a-acf9-9366a5ecf029")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
-							(num "3")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "JB3")
 			(value "1x5 header")
 			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical")
 			(description "to the control board (male, on the main board's front)")
@@ -7897,7 +7846,7 @@
 				(names "/Main: connector/")
 				(tstamps "/d99c1c84-6094-5894-b2b7-d3a9bcd880e7/")
 			)
-			(tstamps "1b3236ac-b059-5c20-a07c-745ff2e76728")
+			(tstamps "306b3da9-1472-573a-acf9-9366a5ecf029")
 			(units
 				(unit
 					(name "A")
@@ -7922,19 +7871,19 @@
 			)
 		)
 		(comp
-			(ref "JB4")
-			(value "1x3 header")
-			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+			(ref "JB3")
+			(value "1x2 header")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
 			(description "to the control board (male, on the main board's front)")
 			(fields
 				(field
-					(name "MPN") "2.54 mm male pin header 1x3")
+					(name "MPN") "2.54 mm male pin header 1x2")
 				(field
 					(name "Assembly") "hand")
 				(field
 					(name "Board") "main")
 				(field
-					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
 				(field
 					(name "Datasheet")
 				)
@@ -7943,12 +7892,12 @@
 			)
 			(libsource
 				(lib "Connector_Generic")
-				(part "Conn_01x03")
-				(description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
+				(part "Conn_01x02")
+				(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(property
 				(name "MPN")
-				(value "2.54 mm male pin header 1x3")
+				(value "2.54 mm male pin header 1x2")
 			)
 			(property
 				(name "Assembly")
@@ -7978,7 +7927,7 @@
 				(names "/Main: connector/")
 				(tstamps "/d99c1c84-6094-5894-b2b7-d3a9bcd880e7/")
 			)
-			(tstamps "40e4497c-a17c-57ff-bb08-7313eb5a31dc")
+			(tstamps "1b3236ac-b059-5c20-a07c-745ff2e76728")
 			(units
 				(unit
 					(name "A")
@@ -7988,9 +7937,6 @@
 						)
 						(pin
 							(num "2")
-						)
-						(pin
-							(num "3")
 						)
 					)
 				)
@@ -12535,18 +12481,18 @@
 		)
 		(comp
 			(ref "JA1")
-			(value "1x22 socket")
-			(footprint "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical")
+			(value "1x30 socket")
+			(footprint "Connector_PinSocket_2.54mm:PinSocket_1x30_P2.54mm_Vertical")
 			(description "to the main board (female, on the control board's back)")
 			(fields
 				(field
-					(name "MPN") "2.54 mm female header 1x22, 8.5 mm (as the Seed3 sockets)")
+					(name "MPN") "2.54 mm female header 1x30, 8.5 mm (as the Seed3 sockets)")
 				(field
 					(name "Assembly") "hand")
 				(field
 					(name "Board") "control")
 				(field
-					(name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical")
+					(name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x30_P2.54mm_Vertical")
 				(field
 					(name "Datasheet")
 				)
@@ -12555,12 +12501,12 @@
 			)
 			(libsource
 				(lib "Connector_Generic")
-				(part "Conn_01x22")
-				(description "Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)")
+				(part "Conn_01x30")
+				(description "Generic connector, single row, 01x30, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(property
 				(name "MPN")
-				(value "2.54 mm female header 1x22, 8.5 mm (as the Seed3 sockets)")
+				(value "2.54 mm female header 1x30, 8.5 mm (as the Seed3 sockets)")
 			)
 			(property
 				(name "Assembly")
@@ -12661,87 +12607,36 @@
 						(pin
 							(num "22")
 						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "29")
+						)
+						(pin
+							(num "30")
+						)
 					)
 				)
 			)
 		)
 		(comp
 			(ref "JA2")
-			(value "1x3 socket")
-			(footprint "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical")
-			(description "to the main board (female, on the control board's back)")
-			(fields
-				(field
-					(name "MPN") "2.54 mm female header 1x3, 8.5 mm (as the Seed3 sockets)")
-				(field
-					(name "Assembly") "hand")
-				(field
-					(name "Board") "control")
-				(field
-					(name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical")
-				(field
-					(name "Datasheet")
-				)
-				(field
-					(name "Description") "to the main board (female, on the control board's back)")
-			)
-			(libsource
-				(lib "Connector_Generic")
-				(part "Conn_01x03")
-				(description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
-			)
-			(property
-				(name "MPN")
-				(value "2.54 mm female header 1x3, 8.5 mm (as the Seed3 sockets)")
-			)
-			(property
-				(name "Assembly")
-				(value "hand")
-			)
-			(property
-				(name "Board")
-				(value "control")
-			)
-			(property
-				(name "Sheetname")
-				(value "Control: connector")
-			)
-			(property
-				(name "Sheetfile")
-				(value "control-connector.kicad_sch")
-			)
-			(property
-				(name "ki_keywords")
-				(value "connector")
-			)
-			(property
-				(name "ki_fp_filters")
-				(value "Connector*:*_1x??_*")
-			)
-			(sheetpath
-				(names "/Control: connector/")
-				(tstamps "/3882cb41-c82e-57e5-bcf7-b957e380e56b/")
-			)
-			(tstamps "8d1d592a-210b-5335-94a6-4aa70135520d")
-			(units
-				(unit
-					(name "A")
-					(pins
-						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
-							(num "3")
-						)
-					)
-				)
-			)
-		)
-		(comp
-			(ref "JA3")
 			(value "1x5 socket")
 			(footprint "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical")
 			(description "to the main board (female, on the control board's back)")
@@ -12797,7 +12692,7 @@
 				(names "/Control: connector/")
 				(tstamps "/3882cb41-c82e-57e5-bcf7-b957e380e56b/")
 			)
-			(tstamps "a527f851-ddef-5d55-b08d-9ce1380fa839")
+			(tstamps "8d1d592a-210b-5335-94a6-4aa70135520d")
 			(units
 				(unit
 					(name "A")
@@ -12822,19 +12717,19 @@
 			)
 		)
 		(comp
-			(ref "JA4")
-			(value "1x3 socket")
-			(footprint "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical")
+			(ref "JA3")
+			(value "1x2 socket")
+			(footprint "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical")
 			(description "to the main board (female, on the control board's back)")
 			(fields
 				(field
-					(name "MPN") "2.54 mm female header 1x3, 8.5 mm (as the Seed3 sockets)")
+					(name "MPN") "2.54 mm female header 1x2, 8.5 mm (as the Seed3 sockets)")
 				(field
 					(name "Assembly") "hand")
 				(field
 					(name "Board") "control")
 				(field
-					(name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical")
+					(name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical")
 				(field
 					(name "Datasheet")
 				)
@@ -12843,12 +12738,12 @@
 			)
 			(libsource
 				(lib "Connector_Generic")
-				(part "Conn_01x03")
-				(description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
+				(part "Conn_01x02")
+				(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(property
 				(name "MPN")
-				(value "2.54 mm female header 1x3, 8.5 mm (as the Seed3 sockets)")
+				(value "2.54 mm female header 1x2, 8.5 mm (as the Seed3 sockets)")
 			)
 			(property
 				(name "Assembly")
@@ -12878,7 +12773,7 @@
 				(names "/Control: connector/")
 				(tstamps "/3882cb41-c82e-57e5-bcf7-b957e380e56b/")
 			)
-			(tstamps "830ce117-3e4f-53c3-bbf9-92c604565f0d")
+			(tstamps "a527f851-ddef-5d55-b08d-9ce1380fa839")
 			(units
 				(unit
 					(name "A")
@@ -12888,9 +12783,6 @@
 						)
 						(pin
 							(num "2")
-						)
-						(pin
-							(num "3")
 						)
 					)
 				)
@@ -13205,8 +13097,8 @@
 		)
 		(libpart
 			(lib "Connector_Generic")
-			(part "Conn_01x03")
-			(description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(part "Conn_01x02")
+			(description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			(footprints
 				(fp "Connector*:*_1x??_*")
 			)
@@ -13214,7 +13106,7 @@
 				(field
 					(name "Reference") "J")
 				(field
-					(name "Value") "Conn_01x03")
+					(name "Value") "Conn_01x02")
 				(field
 					(name "Footprint")
 				)
@@ -13222,7 +13114,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
+					(name "Description") "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(pins
 				(pin
@@ -13233,11 +13125,6 @@
 				(pin
 					(num "2")
 					(name "Pin_2")
-					(type "passive")
-				)
-				(pin
-					(num "3")
-					(name "Pin_3")
 					(type "passive")
 				)
 			)
@@ -13293,8 +13180,8 @@
 		)
 		(libpart
 			(lib "Connector_Generic")
-			(part "Conn_01x22")
-			(description "Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(part "Conn_01x30")
+			(description "Generic connector, single row, 01x30, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			(footprints
 				(fp "Connector*:*_1x??_*")
 			)
@@ -13302,7 +13189,7 @@
 				(field
 					(name "Reference") "J")
 				(field
-					(name "Value") "Conn_01x22")
+					(name "Value") "Conn_01x30")
 				(field
 					(name "Footprint")
 				)
@@ -13310,7 +13197,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)")
+					(name "Description") "Generic connector, single row, 01x30, script generated (kicad-library-utils/schlib/autogen/connector/)")
 			)
 			(pins
 				(pin
@@ -13421,6 +13308,46 @@
 				(pin
 					(num "22")
 					(name "Pin_22")
+					(type "passive")
+				)
+				(pin
+					(num "23")
+					(name "Pin_23")
+					(type "passive")
+				)
+				(pin
+					(num "24")
+					(name "Pin_24")
+					(type "passive")
+				)
+				(pin
+					(num "25")
+					(name "Pin_25")
+					(type "passive")
+				)
+				(pin
+					(num "26")
+					(name "Pin_26")
+					(type "passive")
+				)
+				(pin
+					(num "27")
+					(name "Pin_27")
+					(type "passive")
+				)
+				(pin
+					(num "28")
+					(name "Pin_28")
+					(type "passive")
+				)
+				(pin
+					(num "29")
+					(name "Pin_29")
+					(type "passive")
+				)
+				(pin
+					(num "30")
+					(name "Pin_30")
 					(type "passive")
 				)
 			)
@@ -14471,8 +14398,8 @@
 			)
 			(node
 				(ref "JB1")
-				(pin "13")
-				(pinfunction "Pin_13_13")
+				(pin "14")
+				(pinfunction "Pin_14_14")
 				(pintype "passive")
 			)
 			(node
@@ -14586,8 +14513,8 @@
 			)
 			(node
 				(ref "JB1")
-				(pin "18")
-				(pinfunction "Pin_18_18")
+				(pin "29")
+				(pinfunction "Pin_29_29")
 				(pintype "passive")
 			)
 			(node
@@ -15167,8 +15094,8 @@
 			)
 			(node
 				(ref "JA1")
-				(pin "13")
-				(pinfunction "Pin_13_13")
+				(pin "14")
+				(pinfunction "Pin_14_14")
 				(pintype "passive")
 			)
 			(node
@@ -15200,8 +15127,8 @@
 			)
 			(node
 				(ref "JA1")
-				(pin "18")
-				(pinfunction "Pin_18_18")
+				(pin "29")
+				(pinfunction "Pin_29_29")
 				(pintype "passive")
 			)
 			(node
@@ -15250,9 +15177,9 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "JA4")
-				(pin "1")
-				(pinfunction "Pin_1_1")
+				(ref "JA1")
+				(pin "27")
+				(pinfunction "Pin_27_27")
 				(pintype "passive")
 			)
 			(node
@@ -15273,8 +15200,8 @@
 			)
 			(node
 				(ref "JA1")
-				(pin "21")
-				(pinfunction "Pin_21_21")
+				(pin "25")
+				(pinfunction "Pin_25_25")
 				(pintype "passive")
 			)
 			(node
@@ -15294,9 +15221,9 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "JA2")
-				(pin "3")
-				(pinfunction "Pin_3_3")
+				(ref "JA3")
+				(pin "1")
+				(pinfunction "Pin_1_1")
 				(pintype "passive")
 			)
 			(node
@@ -15317,8 +15244,8 @@
 			)
 			(node
 				(ref "JA1")
-				(pin "20")
-				(pinfunction "Pin_20_20")
+				(pin "19")
+				(pinfunction "Pin_19_19")
 				(pintype "passive")
 			)
 			(node
@@ -15338,9 +15265,9 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "JA2")
-				(pin "1")
-				(pinfunction "Pin_1_1")
+				(ref "JA1")
+				(pin "21")
+				(pinfunction "Pin_21_21")
 				(pintype "passive")
 			)
 			(node
@@ -15360,9 +15287,9 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "JA4")
-				(pin "3")
-				(pinfunction "Pin_3_3")
+				(ref "JA1")
+				(pin "23")
+				(pinfunction "Pin_23_23")
 				(pintype "passive")
 			)
 			(node
@@ -15383,8 +15310,8 @@
 			)
 			(node
 				(ref "JA1")
-				(pin "11")
-				(pinfunction "Pin_11_11")
+				(pin "12")
+				(pinfunction "Pin_12_12")
 				(pintype "passive")
 			)
 			(node
@@ -15556,38 +15483,68 @@
 			)
 			(node
 				(ref "JA1")
-				(pin "1")
-				(pinfunction "Pin_1_1")
+				(pin "11")
+				(pinfunction "Pin_11_11")
 				(pintype "passive")
 			)
 			(node
 				(ref "JA1")
-				(pin "12")
-				(pinfunction "Pin_12_12")
+				(pin "13")
+				(pinfunction "Pin_13_13")
 				(pintype "passive")
 			)
 			(node
 				(ref "JA1")
-				(pin "14")
-				(pinfunction "Pin_14_14")
+				(pin "15")
+				(pinfunction "Pin_15_15")
 				(pintype "passive")
 			)
 			(node
 				(ref "JA1")
-				(pin "17")
-				(pinfunction "Pin_17_17")
+				(pin "18")
+				(pinfunction "Pin_18_18")
 				(pintype "passive")
 			)
 			(node
 				(ref "JA1")
-				(pin "19")
-				(pinfunction "Pin_19_19")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "JA1")
+				(pin "20")
+				(pinfunction "Pin_20_20")
 				(pintype "passive")
 			)
 			(node
 				(ref "JA1")
 				(pin "22")
 				(pinfunction "Pin_22_22")
+				(pintype "passive")
+			)
+			(node
+				(ref "JA1")
+				(pin "24")
+				(pinfunction "Pin_24_24")
+				(pintype "passive")
+			)
+			(node
+				(ref "JA1")
+				(pin "26")
+				(pinfunction "Pin_26_26")
+				(pintype "passive")
+			)
+			(node
+				(ref "JA1")
+				(pin "28")
+				(pinfunction "Pin_28_28")
+				(pintype "passive")
+			)
+			(node
+				(ref "JA1")
+				(pin "30")
+				(pinfunction "Pin_30_30")
 				(pintype "passive")
 			)
 			(node
@@ -15610,18 +15567,12 @@
 			)
 			(node
 				(ref "JA2")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "JA3")
 				(pin "5")
 				(pinfunction "Pin_5_5")
 				(pintype "passive")
 			)
 			(node
-				(ref "JA4")
+				(ref "JA3")
 				(pin "2")
 				(pinfunction "Pin_2_2")
 				(pintype "passive")
@@ -15830,7 +15781,7 @@
 				(pintype "passive")
 			)
 			(node
-				(ref "JA3")
+				(ref "JA2")
 				(pin "1")
 				(pinfunction "Pin_1_1")
 				(pintype "passive")
@@ -15841,9 +15792,9 @@
 			(name "CTL_MUX_A")
 			(class "Default")
 			(node
-				(ref "JA3")
-				(pin "4")
-				(pinfunction "Pin_4_4")
+				(ref "JA2")
+				(pin "2")
+				(pinfunction "Pin_2_2")
 				(pintype "passive")
 			)
 			(node
@@ -15858,9 +15809,9 @@
 			(name "CTL_MUX_B")
 			(class "Default")
 			(node
-				(ref "JA3")
-				(pin "2")
-				(pinfunction "Pin_2_2")
+				(ref "JA2")
+				(pin "4")
+				(pinfunction "Pin_4_4")
 				(pintype "passive")
 			)
 			(node
@@ -15875,7 +15826,7 @@
 			(name "CTL_MUX_C")
 			(class "Default")
 			(node
-				(ref "JA3")
+				(ref "JA2")
 				(pin "3")
 				(pinfunction "Pin_3_3")
 				(pintype "passive")
@@ -15916,8 +15867,8 @@
 			)
 			(node
 				(ref "JA1")
-				(pin "2")
-				(pinfunction "Pin_2_2")
+				(pin "1")
+				(pinfunction "Pin_1_1")
 				(pintype "passive")
 			)
 		)
@@ -15927,8 +15878,8 @@
 			(class "Default")
 			(node
 				(ref "JA1")
-				(pin "16")
-				(pinfunction "Pin_16_16")
+				(pin "17")
+				(pinfunction "Pin_17_17")
 				(pintype "passive")
 			)
 			(node
@@ -15944,8 +15895,8 @@
 			(class "Default")
 			(node
 				(ref "JA1")
-				(pin "15")
-				(pinfunction "Pin_15_15")
+				(pin "16")
+				(pinfunction "Pin_16_16")
 				(pintype "passive")
 			)
 			(node
@@ -15976,9 +15927,9 @@
 			(name "CV_DIST")
 			(class "Default")
 			(node
-				(ref "JB4")
-				(pin "1")
-				(pinfunction "Pin_1_1")
+				(ref "JB1")
+				(pin "27")
+				(pinfunction "Pin_27_27")
 				(pintype "passive")
 			)
 			(node
@@ -15993,8 +15944,8 @@
 			(class "Default")
 			(node
 				(ref "JB1")
-				(pin "21")
-				(pinfunction "Pin_21_21")
+				(pin "25")
+				(pinfunction "Pin_25_25")
 				(pintype "passive")
 			)
 			(node
@@ -16008,9 +15959,9 @@
 			(name "CV_EQG")
 			(class "Default")
 			(node
-				(ref "JB2")
-				(pin "3")
-				(pinfunction "Pin_3_3")
+				(ref "JB3")
+				(pin "1")
+				(pinfunction "Pin_1_1")
 				(pintype "passive")
 			)
 			(node
@@ -16025,8 +15976,8 @@
 			(class "Default")
 			(node
 				(ref "JB1")
-				(pin "20")
-				(pinfunction "Pin_20_20")
+				(pin "19")
+				(pinfunction "Pin_19_19")
 				(pintype "passive")
 			)
 			(node
@@ -16040,9 +15991,9 @@
 			(name "CV_LPRES")
 			(class "Default")
 			(node
-				(ref "JB2")
-				(pin "1")
-				(pinfunction "Pin_1_1")
+				(ref "JB1")
+				(pin "21")
+				(pinfunction "Pin_21_21")
 				(pintype "passive")
 			)
 			(node
@@ -16056,9 +16007,9 @@
 			(name "CV_SRR")
 			(class "Default")
 			(node
-				(ref "JB4")
-				(pin "3")
-				(pinfunction "Pin_3_3")
+				(ref "JB1")
+				(pin "23")
+				(pinfunction "Pin_23_23")
 				(pintype "passive")
 			)
 			(node
@@ -16073,8 +16024,8 @@
 			(class "Default")
 			(node
 				(ref "JB1")
-				(pin "11")
-				(pinfunction "Pin_11_11")
+				(pin "12")
+				(pinfunction "Pin_12_12")
 				(pintype "passive")
 			)
 			(node
@@ -16255,38 +16206,68 @@
 			)
 			(node
 				(ref "JB1")
-				(pin "1")
-				(pinfunction "Pin_1_1")
+				(pin "11")
+				(pinfunction "Pin_11_11")
 				(pintype "passive")
 			)
 			(node
 				(ref "JB1")
-				(pin "12")
-				(pinfunction "Pin_12_12")
+				(pin "13")
+				(pinfunction "Pin_13_13")
 				(pintype "passive")
 			)
 			(node
 				(ref "JB1")
-				(pin "14")
-				(pinfunction "Pin_14_14")
+				(pin "15")
+				(pinfunction "Pin_15_15")
 				(pintype "passive")
 			)
 			(node
 				(ref "JB1")
-				(pin "17")
-				(pinfunction "Pin_17_17")
+				(pin "18")
+				(pinfunction "Pin_18_18")
 				(pintype "passive")
 			)
 			(node
 				(ref "JB1")
-				(pin "19")
-				(pinfunction "Pin_19_19")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "JB1")
+				(pin "20")
+				(pinfunction "Pin_20_20")
 				(pintype "passive")
 			)
 			(node
 				(ref "JB1")
 				(pin "22")
 				(pinfunction "Pin_22_22")
+				(pintype "passive")
+			)
+			(node
+				(ref "JB1")
+				(pin "24")
+				(pinfunction "Pin_24_24")
+				(pintype "passive")
+			)
+			(node
+				(ref "JB1")
+				(pin "26")
+				(pinfunction "Pin_26_26")
+				(pintype "passive")
+			)
+			(node
+				(ref "JB1")
+				(pin "28")
+				(pinfunction "Pin_28_28")
+				(pintype "passive")
+			)
+			(node
+				(ref "JB1")
+				(pin "30")
+				(pinfunction "Pin_30_30")
 				(pintype "passive")
 			)
 			(node
@@ -16309,18 +16290,12 @@
 			)
 			(node
 				(ref "JB2")
-				(pin "2")
-				(pinfunction "Pin_2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "JB3")
 				(pin "5")
 				(pinfunction "Pin_5_5")
 				(pintype "passive")
 			)
 			(node
-				(ref "JB4")
+				(ref "JB3")
 				(pin "2")
 				(pinfunction "Pin_2_2")
 				(pintype "passive")
@@ -16453,7 +16428,7 @@
 			(name "LED_A")
 			(class "Default")
 			(node
-				(ref "JB3")
+				(ref "JB2")
 				(pin "1")
 				(pinfunction "Pin_1_1")
 				(pintype "passive")
@@ -16475,9 +16450,9 @@
 				(pintype "bidirectional")
 			)
 			(node
-				(ref "JB3")
-				(pin "4")
-				(pinfunction "Pin_4_4")
+				(ref "JB2")
+				(pin "2")
+				(pinfunction "Pin_2_2")
 				(pintype "passive")
 			)
 		)
@@ -16492,9 +16467,9 @@
 				(pintype "bidirectional")
 			)
 			(node
-				(ref "JB3")
-				(pin "2")
-				(pinfunction "Pin_2_2")
+				(ref "JB2")
+				(pin "4")
+				(pinfunction "Pin_4_4")
 				(pintype "passive")
 			)
 		)
@@ -16509,7 +16484,7 @@
 				(pintype "bidirectional")
 			)
 			(node
-				(ref "JB3")
+				(ref "JB2")
 				(pin "3")
 				(pinfunction "Pin_3_3")
 				(pintype "passive")
@@ -17739,8 +17714,8 @@
 			(class "Default")
 			(node
 				(ref "JB1")
-				(pin "2")
-				(pinfunction "Pin_2_2")
+				(pin "1")
+				(pinfunction "Pin_1_1")
 				(pintype "passive")
 			)
 			(node
@@ -17761,8 +17736,8 @@
 			)
 			(node
 				(ref "JB1")
-				(pin "16")
-				(pinfunction "Pin_16_16")
+				(pin "17")
+				(pinfunction "Pin_17_17")
 				(pintype "passive")
 			)
 		)
@@ -17778,8 +17753,8 @@
 			)
 			(node
 				(ref "JB1")
-				(pin "15")
-				(pinfunction "Pin_15_15")
+				(pin "16")
+				(pinfunction "Pin_16_16")
 				(pintype "passive")
 			)
 		)

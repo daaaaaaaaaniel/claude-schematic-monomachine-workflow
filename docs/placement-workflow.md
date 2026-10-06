@@ -77,6 +77,8 @@ History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the
   assembly, d: "do whichever one is easier to script", so one piece: stock KiCad footprints, no courtyard variant).
   Pin order is free (swap groups). Found by an exhaustive search over the legal straight runs once the other parts
   are placed.
+  **Hand soldering (d, 2026-10-07):** header pads keep 1.25 mm (edge to edge) from every other pad on both boards
+  and from the box around each jack, pot and LED; the control board's through-hole pads keep 1.25 mm from each other.
 - *Board-to-board headers:* ~11 mm stack (Bergman's example matches ours); extra GND pins for solid ground and next
   to analog signals (both); put header pins under the points where force is applied (jacks, pots), so the boards
   don't seesaw or bend (Bergman). This gives the header placement a rule.

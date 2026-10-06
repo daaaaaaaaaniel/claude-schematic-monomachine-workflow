@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Find the board-to-board connectors: up to 4 straight header lines, their pins, and their pin order.
 
-    python3 pcb/tools/connector_search.py [--seed N] [--restarts K] [--write]
+    python3 pcb/tools/connector_search.py [--seed N] [--restarts K] [--free R1,C2,...] [--write]
+
+--free leaves those parts out (as if not yet placed): use it for parts that get re-placed around the connectors.
 
 Rules (d, 2026-10-07; docs/placement-workflow.md section 4):
   - at most 4 lines; each line is one 1xN header pair (2-40 pins), horizontal or vertical, JAn on the control
     board's back over JBn on the main board's front, pin k on pin k; lines may sit right at the board edge;
   - grounds: every connector has at least one; every audio or CV signal has a ground beside it; a supply pin has grounds on both sides; two kinds of
     signal (audio, CV, pot, digital, supply) never sit side by side without a ground between them.
+Hand soldering (d, 2026-10-07): every header pad keeps 1.25 mm (edge to edge) from every other part's pad on both
+boards, and keeps 1.25 mm from the whole box around each jack, pot and LED on the control front (iron access).
 A pin site is legal when, at the same panel position, on the main board it keeps 0.3 mm from all copper on both
 layers and stays out of the back-side courtyards (the Seed3's only along its socket strips: a header between the
 socket rows is fine, soldered before the sockets), and on the control board its pad keeps 0.3 mm from all copper,
@@ -43,14 +47,15 @@ OFFSET = {"main": (180.0, 50.0), "control": (100.0, 50.0)}
 AREA = {"main": (180.4, 64.0, 250.4, 164.0), "control": (100.4, 60.75, 170.4, 167.75)}
 LAT = 1.27                      # lattice for pin sites, mm (pins are 2 steps apart)
 PITCH = 2
-PAD_R = 0.85                    # 1.7 mm pads
+PAD_R = 0.85                    # 1.7 mm pads (pin 1 is square: clearances are taken from the square)
 CLEAR = 0.3
+SOLDER = 1.25                   # header pad to any other part's pad, edge to edge: hand soldering (d, 2026-10-07)
 BODY = 1.27                     # half the header body width
 CRT = 1.8                       # half the socket courtyard width (PinSocket_1xNN: 0.5 mm past the body)
 SUPPLY = {"+12V", "-12V", "+3V3_A"}
 MAX_LINES = 4
 W_GND, W_LINE = 1.0, 5.0
-BAD = 1000.0
+BAD = 1e5                       # per illegal pin or clash: far above any real distance
 
 
 def kind(s):
@@ -93,29 +98,33 @@ def board_of(x, y):
     return None
 
 
-def load():
+def load(free=()):
+    """free: parts to leave out (they get re-placed around the connectors afterwards)."""
     b = pcbnew.LoadBoard(BOARD)
     copper = {"main": [], "control": []}
     cy = {("main", "F"): [], ("main", "B"): [], ("control", "F"): [], ("control", "B"): []}
     socket = []
     targets = {}
     tht = {"main": [], "control": []}
+    pads = {"main": [], "control": []}
     for f in b.GetFootprints():
         ref = f.GetReference()
         fx, fy = mm(f.GetPosition().x), mm(f.GetPosition().y)
         bd = board_of(fx, fy)
-        if bd is None or ref.startswith(("JA", "JB")):
+        if bd is None or ref.startswith(("JA", "JB")) or ref in free:
             continue
         side = "B" if f.GetLayer() == pcbnew.B_Cu else "F"
         if ref != "A1":
             g = courtyard(f)
             if g is not None:
-                cy[(bd, side)].append(g)
+                # control front (jack, pot, LED bodies): the whole box, not a notched outline (hand soldering)
+                cy[(bd, side)].append(box(*g.bounds) if (bd, side) == ("control", "F") else g)
         xs = []
         for p in f.Pads():
             bb = p.GetBoundingBox()
             g = box(mm(bb.GetX()), mm(bb.GetY()), mm(bb.GetRight()), mm(bb.GetBottom()))
             copper[bd].append(g)
+            pads[bd].append(g)
             if p.GetAttribute() in (pcbnew.PAD_ATTRIB_PTH, pcbnew.PAD_ATTRIB_NPTH):
                 tht[bd].append(g)                             # leads stick out on both sides
             px, py = mm(p.GetPosition().x), mm(p.GetPosition().y)
@@ -137,6 +146,8 @@ def load():
             copper[bd].append(LineString([(sx, sy), (mm(t.GetEnd().x), mm(t.GetEnd().y))]).buffer(mm(t.GetWidth()) / 2))
     cy[("main", "B")] += socket
     cy[("control", "tht")] = tht["control"]
+    cy[("main", "pads")] = pads["main"]
+    cy[("control", "pads")] = pads["control"]
     return copper, cy, targets
 
 
@@ -160,9 +171,11 @@ def legal_grid(copper, cy):
             cx, cy_ = x + OFFSET["control"][0], y + OFFSET["control"][1]
             pin_m = Point(mx, my).buffer(PAD_R + CLEAR)
             pin_c = Point(cx, cy_).buffer(PAD_R + CLEAR)
-            if hits("main", pin_m) or hits(("main", "B"), Point(mx, my).buffer(PAD_R)):
+            if hits("main", pin_m) or hits(("main", "B"), Point(mx, my).buffer(PAD_R)) \
+                    or hits(("main", "pads"), box(mx - PAD_R, my - PAD_R, mx + PAD_R, my + PAD_R).buffer(SOLDER)):
                 continue
-            if hits("control", pin_c) or hits(("control", "F"), Point(cx, cy_).buffer(PAD_R)):
+            if hits("control", pin_c) or hits(("control", "F"), box(cx - PAD_R, cy_ - PAD_R, cx + PAD_R, cy_ + PAD_R).buffer(SOLDER)) \
+                    or hits(("control", "pads"), box(cx - PAD_R, cy_ - PAD_R, cx + PAD_R, cy_ + PAD_R).buffer(SOLDER)):
                 continue
             body = box(cx - BODY, cy_ - BODY, cx + BODY, cy_ + BODY)
             crt = box(cx - CRT, cy_ - CRT, cx + CRT, cy_ + CRT)     # the socket's courtyard, as KiCad draws it
@@ -173,8 +186,8 @@ def legal_grid(copper, cy):
 
 
 class Problem:
-    def __init__(self):
-        copper, cy, targets = load()
+    def __init__(self, free=()):
+        copper, cy, targets = load(free)
         self.xs, self.ys, self.ok = legal_grid(copper, cy)
         self.sigs = [s for pins in PM.HEADER_PINS.values() for s in pins if s != "GND"]
         X, Y = np.meshgrid(self.xs, self.ys, indexing="ij")
@@ -378,7 +391,8 @@ def main():
     args = sys.argv[1:]
     seed = int(args[args.index("--seed") + 1]) if "--seed" in args else 1
     restarts = int(args[args.index("--restarts") + 1]) if "--restarts" in args else 8
-    P = Problem()
+    free = args[args.index("--free") + 1].split(",") if "--free" in args else []
+    P = Problem(free)
     print(f"legal pin sites: {int(P.ok.sum())} of {P.ok.size} lattice points (both boards)")
     if P.missing:
         print("no placed target for:", ", ".join(P.missing))
@@ -390,7 +404,7 @@ def main():
         if s < bs:
             best, bs = sol, s
     if bs >= BAD:
-        sys.exit("no legal arrangement found")
+        sys.exit(f"no legal arrangement found (best score {bs:.0f}: {int(bs // BAD)} illegal pins or clashes)")
     rot = rotations()
     lines = []
     for n, line in enumerate(best):

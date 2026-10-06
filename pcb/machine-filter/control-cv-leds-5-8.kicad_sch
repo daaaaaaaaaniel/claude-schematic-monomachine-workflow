@@ -1450,7 +1450,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "b0900c60-2dd1-54e2-8106-0441afb0b7c3")
+		(uuid "c49d4179-b3bf-5f86-921d-9985f910750a")
 	)
 	(text "CV 5: EQ FREQ LED"
 		(exclude_from_sim no)
@@ -1462,7 +1462,7 @@
 			)
 			(justify left)
 		)
-		(uuid "474a1217-99df-58e0-8b5b-b63a40772be7")
+		(uuid "40943cc3-2c00-52a9-964a-658b96f547dc")
 	)
 	(global_label "CTL_CV_EQF"
 		(shape input)
@@ -1474,7 +1474,7 @@
 			)
 			(justify right)
 		)
-		(uuid "248d25b9-04d9-583b-b387-b55f3868e0cf")
+		(uuid "b0900c60-2dd1-54e2-8106-0441afb0b7c3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 50.8 66.04 180)
 			(effects
@@ -1792,8 +1792,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "08f04d6d-103e-5581-b926-387837367084")
-		(property "Reference" "#PWR109"
+		(uuid "04ec684c-7cbb-503f-95fa-16f6abf5ad62")
+		(property "Reference" "#PWR113"
 			(at 68.58 82.55 0)
 			(effects
 				(font
@@ -1838,12 +1838,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ad14fec2-ce28-5cb8-9cb7-9d172b6e78a6")
+			(uuid "3c620fef-ce27-520f-9742-9ea94c455f2d")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR109")
+					(reference "#PWR113")
 					(unit 1)
 				)
 			)
@@ -2047,8 +2047,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ec0e1218-f52e-58a6-b68f-1fb0dce284ef")
-		(property "Reference" "#PWR110"
+		(uuid "515d5be0-8345-5160-8304-9d0d17f397ab")
+		(property "Reference" "#PWR114"
 			(at 83.82 95.25 0)
 			(effects
 				(font
@@ -2093,12 +2093,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "1b1ab016-d0a5-552a-b3aa-bbe2c4c672e3")
+			(uuid "c0ff409b-610b-59a8-b56a-adc8eb98495b")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR110")
+					(reference "#PWR114")
 					(unit 1)
 				)
 			)
@@ -2113,7 +2113,7 @@
 			)
 			(justify left)
 		)
-		(uuid "1f1f2981-c699-56c1-9c14-ad3fb32f495d")
+		(uuid "474a1217-99df-58e0-8b5b-b63a40772be7")
 	)
 	(text "green +, red -"
 		(exclude_from_sim no)
@@ -2124,7 +2124,7 @@
 			)
 			(justify left)
 		)
-		(uuid "ffd69ecc-9c3a-5829-a886-14e27e33169f")
+		(uuid "248d25b9-04d9-583b-b387-b55f3868e0cf")
 	)
 	(rectangle
 		(start 152.4 53.34)
@@ -2137,7 +2137,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "a3910529-f702-57c2-8765-59db8d7cdeb9")
+		(uuid "1f1f2981-c699-56c1-9c14-ad3fb32f495d")
 	)
 	(text "CV 6: EQ GAIN LED"
 		(exclude_from_sim no)
@@ -2149,7 +2149,7 @@
 			)
 			(justify left)
 		)
-		(uuid "81b17b7a-44c8-5906-a261-934b080ec7b6")
+		(uuid "ffd69ecc-9c3a-5829-a886-14e27e33169f")
 	)
 	(global_label "CTL_CV_EQG"
 		(shape input)
@@ -2161,7 +2161,7 @@
 			)
 			(justify right)
 		)
-		(uuid "11ccb4d7-2285-5cfb-91f7-990263222044")
+		(uuid "a3910529-f702-57c2-8765-59db8d7cdeb9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 182.88 66.04 180)
 			(effects
@@ -2479,8 +2479,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "79ca1a1b-5769-534e-bf20-c271a0e21244")
-		(property "Reference" "#PWR111"
+		(uuid "7f15efc5-8d5c-5dc2-a487-768802ecb232")
+		(property "Reference" "#PWR115"
 			(at 200.66 82.55 0)
 			(effects
 				(font
@@ -2525,12 +2525,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "2714b862-92e8-57ff-8fc8-705bd0a70e28")
+			(uuid "9e13947e-7ce3-58d8-91f3-cdc7aceef582")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR111")
+					(reference "#PWR115")
 					(unit 1)
 				)
 			)
@@ -2734,8 +2734,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2b2dd654-60e0-5b88-8d55-c9e692eae472")
-		(property "Reference" "#PWR112"
+		(uuid "e6728659-1447-5187-bc19-ea71cb709cda")
+		(property "Reference" "#PWR116"
 			(at 215.9 95.25 0)
 			(effects
 				(font
@@ -2780,12 +2780,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "5c2ab8ad-2e59-50ea-a5ba-fdd7452c4923")
+			(uuid "be8dd3c1-71aa-5f73-b4bd-7ff7e988ee9a")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR112")
+					(reference "#PWR116")
 					(unit 1)
 				)
 			)
@@ -2800,7 +2800,7 @@
 			)
 			(justify left)
 		)
-		(uuid "0f48c839-07f4-55bb-bc01-b674949369cf")
+		(uuid "81b17b7a-44c8-5906-a261-934b080ec7b6")
 	)
 	(text "green +, red -"
 		(exclude_from_sim no)
@@ -2811,7 +2811,7 @@
 			)
 			(justify left)
 		)
-		(uuid "9fb81358-f944-5f70-951d-2c6e07c93821")
+		(uuid "11ccb4d7-2285-5cfb-91f7-990263222044")
 	)
 	(rectangle
 		(start 20.32 111.76)
@@ -2824,7 +2824,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "c7a6240f-1148-57cb-9799-e8aed843ac3e")
+		(uuid "0f48c839-07f4-55bb-bc01-b674949369cf")
 	)
 	(text "CV 7: DISTORTION LED"
 		(exclude_from_sim no)
@@ -2836,7 +2836,7 @@
 			)
 			(justify left)
 		)
-		(uuid "ae24364e-6a95-524e-9e98-96385d8798c1")
+		(uuid "9fb81358-f944-5f70-951d-2c6e07c93821")
 	)
 	(global_label "CTL_CV_DIST"
 		(shape input)
@@ -2848,7 +2848,7 @@
 			)
 			(justify right)
 		)
-		(uuid "7f121e33-f5a7-5e07-b2c9-cf3c17d43ddc")
+		(uuid "c7a6240f-1148-57cb-9799-e8aed843ac3e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 50.8 124.46 180)
 			(effects
@@ -3166,8 +3166,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "04ec684c-7cbb-503f-95fa-16f6abf5ad62")
-		(property "Reference" "#PWR113"
+		(uuid "7ea4b642-b0bf-51d9-9ffe-d25ca21cf33e")
+		(property "Reference" "#PWR117"
 			(at 68.58 140.97 0)
 			(effects
 				(font
@@ -3212,12 +3212,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "3c620fef-ce27-520f-9742-9ea94c455f2d")
+			(uuid "7facbba7-189d-5a1b-9167-cf30c2cb3362")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR113")
+					(reference "#PWR117")
 					(unit 1)
 				)
 			)
@@ -3421,8 +3421,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "515d5be0-8345-5160-8304-9d0d17f397ab")
-		(property "Reference" "#PWR114"
+		(uuid "d831fade-1f55-5beb-ac74-564f730b22d0")
+		(property "Reference" "#PWR118"
 			(at 83.82 153.67 0)
 			(effects
 				(font
@@ -3467,12 +3467,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c0ff409b-610b-59a8-b56a-adc8eb98495b")
+			(uuid "e6a99eee-7c75-5e6d-80f0-1b37de9c41ce")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR114")
+					(reference "#PWR118")
 					(unit 1)
 				)
 			)
@@ -3487,7 +3487,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c58841fe-45fa-514a-91b3-313174af9061")
+		(uuid "ae24364e-6a95-524e-9e98-96385d8798c1")
 	)
 	(text "green +, red -"
 		(exclude_from_sim no)
@@ -3498,7 +3498,7 @@
 			)
 			(justify left)
 		)
-		(uuid "9d8c40d4-d531-5241-9fd8-daaaa411b6ca")
+		(uuid "7f121e33-f5a7-5e07-b2c9-cf3c17d43ddc")
 	)
 	(rectangle
 		(start 152.4 111.76)
@@ -3511,7 +3511,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "58e2d4a1-3103-5448-8e30-3ee79983783b")
+		(uuid "c58841fe-45fa-514a-91b3-313174af9061")
 	)
 	(text "CV 8: SMPL RATE LED"
 		(exclude_from_sim no)
@@ -3523,7 +3523,7 @@
 			)
 			(justify left)
 		)
-		(uuid "afb87248-c282-513a-b136-2a5388132e1c")
+		(uuid "9d8c40d4-d531-5241-9fd8-daaaa411b6ca")
 	)
 	(global_label "CTL_CV_SRR"
 		(shape input)
@@ -3535,7 +3535,7 @@
 			)
 			(justify right)
 		)
-		(uuid "74fdbe2e-72c4-5684-8657-9f24cf6be269")
+		(uuid "58e2d4a1-3103-5448-8e30-3ee79983783b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 182.88 124.46 180)
 			(effects
@@ -3853,8 +3853,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7f15efc5-8d5c-5dc2-a487-768802ecb232")
-		(property "Reference" "#PWR115"
+		(uuid "5bfe02dc-fff0-568e-aaf2-265650c6cdd6")
+		(property "Reference" "#PWR119"
 			(at 200.66 140.97 0)
 			(effects
 				(font
@@ -3899,12 +3899,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "9e13947e-7ce3-58d8-91f3-cdc7aceef582")
+			(uuid "7614a5db-63f9-5c09-8360-746e2bdbc36d")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR115")
+					(reference "#PWR119")
 					(unit 1)
 				)
 			)
@@ -4108,8 +4108,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e6728659-1447-5187-bc19-ea71cb709cda")
-		(property "Reference" "#PWR116"
+		(uuid "137a1ee0-5ea3-52b1-9cf5-ca0ea58d42b9")
+		(property "Reference" "#PWR120"
 			(at 215.9 153.67 0)
 			(effects
 				(font
@@ -4154,12 +4154,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "be8dd3c1-71aa-5f73-b4bd-7ff7e988ee9a")
+			(uuid "16bc21a9-6811-5192-8652-14e292cbc7b4")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR116")
+					(reference "#PWR120")
 					(unit 1)
 				)
 			)
@@ -4174,7 +4174,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c14eabe1-a252-5eca-b7a9-41fd565d97d0")
+		(uuid "afb87248-c282-513a-b136-2a5388132e1c")
 	)
 	(text "green +, red -"
 		(exclude_from_sim no)
@@ -4185,7 +4185,7 @@
 			)
 			(justify left)
 		)
-		(uuid "98f1153b-ca11-5825-937b-8271e594b159")
+		(uuid "74fdbe2e-72c4-5684-8657-9f24cf6be269")
 	)
 	(rectangle
 		(start 289.56 38.1)
@@ -4198,7 +4198,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "06e0e20c-7f22-56b0-a616-9895e8ed43d0")
+		(uuid "c14eabe1-a252-5eca-b7a9-41fd565d97d0")
 	)
 	(text "Op-amp supplies"
 		(exclude_from_sim no)
@@ -4210,7 +4210,7 @@
 			)
 			(justify left)
 		)
-		(uuid "979f6040-4083-5426-a4cc-218139d67066")
+		(uuid "98f1153b-ca11-5825-937b-8271e594b159")
 	)
 	(text "U8: LM324, LED drivers"
 		(exclude_from_sim no)
@@ -4222,7 +4222,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c4dbebb9-6c11-5508-b658-9c3df0e983c8")
+		(uuid "06e0e20c-7f22-56b0-a616-9895e8ed43d0")
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:LM324")
@@ -4337,8 +4337,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7ea4b642-b0bf-51d9-9ffe-d25ca21cf33e")
-		(property "Reference" "#PWR117"
+		(uuid "696628bb-5b23-52f4-9c7a-4e1dac1a1aae")
+		(property "Reference" "#PWR121"
 			(at 309.88 67.31 0)
 			(effects
 				(font
@@ -4383,12 +4383,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7facbba7-189d-5a1b-9167-cf30c2cb3362")
+			(uuid "b7535543-93c9-555c-bd10-c11d84d55410")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR117")
+					(reference "#PWR121")
 					(unit 1)
 				)
 			)
@@ -4402,8 +4402,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d831fade-1f55-5beb-ac74-564f730b22d0")
-		(property "Reference" "#PWR118"
+		(uuid "6408e38c-adc9-543d-843a-7686a211aace")
+		(property "Reference" "#PWR122"
 			(at 309.88 85.09 0)
 			(effects
 				(font
@@ -4448,12 +4448,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "e6a99eee-7c75-5e6d-80f0-1b37de9c41ce")
+			(uuid "1b139215-1347-5428-807b-25c911df0bf2")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR118")
+					(reference "#PWR122")
 					(unit 1)
 				)
 			)
@@ -4659,8 +4659,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5bfe02dc-fff0-568e-aaf2-265650c6cdd6")
-		(property "Reference" "#PWR119"
+		(uuid "f9a30e7d-f623-51c2-954b-d93e11ccf34e")
+		(property "Reference" "#PWR123"
 			(at 332.74 82.55 0)
 			(effects
 				(font
@@ -4705,12 +4705,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7614a5db-63f9-5c09-8360-746e2bdbc36d")
+			(uuid "da91abc1-4653-55f6-8d9a-c380c5ebd77d")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/ee91d556-5852-5e13-8199-39003c5ab2c4"
-					(reference "#PWR119")
+					(reference "#PWR123")
 					(unit 1)
 				)
 			)
@@ -4726,7 +4726,7 @@
 			)
 			(justify left)
 		)
-		(uuid "6c6b5c43-ed2b-5937-ab89-de38f4cae079")
+		(uuid "979f6040-4083-5426-a4cc-218139d67066")
 	)
 	(text "an LM324 with the LED in its feedback loop (after Mutable Instruments' Shades):"
 		(exclude_from_sim no)
@@ -4737,7 +4737,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8549dc5a-0ce1-5926-97ed-ed78b74feb56")
+		(uuid "c4dbebb9-6c11-5508-b658-9c3df0e983c8")
 	)
 	(text "LED current = CV / 1.5k, no dead zone, levelling off near 5.5-6 mA from about ±8.5 V."
 		(exclude_from_sim no)
@@ -4748,7 +4748,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c3779cf2-3242-57a7-99d4-6740b9eb8e14")
+		(uuid "6c6b5c43-ed2b-5937-ab89-de38f4cae079")
 	)
 	(text "10k: input protection; 1M: an undriven cable reads 0 V, LED dark."
 		(exclude_from_sim no)
@@ -4759,7 +4759,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5c60fa63-3213-55a5-a10b-5937cbeef196")
+		(uuid "8549dc5a-0ce1-5926-97ed-ed78b74feb56")
 	)
 	(text "Through-hole resistors and capacitors (hand-soldered); U7, U8 SOIC (hand-soldered)."
 		(exclude_from_sim no)
@@ -4770,7 +4770,7 @@
 			)
 			(justify left)
 		)
-		(uuid "0fb250c1-7bd0-5ba4-a6b0-70e5afcafd35")
+		(uuid "c3779cf2-3242-57a7-99d4-6740b9eb8e14")
 	)
 	(text "11   Control board: CV LEDs 5-8, LED drivers"
 		(exclude_from_sim no)

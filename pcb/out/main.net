@@ -2,7 +2,7 @@
   (version "D")
   (design
     (source "machine_filter.py")
-    (date "10/07/2026 01:41 AM")
+    (date "10/07/2026 02:02 AM")
     (tool "SKiDL (2.3.0)")
     (sheet
       (number 1)
@@ -191,6 +191,43 @@
           (value ""))))
     (sheet
       (number 6)
+      (name "/cv/cv7/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 7)
       (name "/cv/cv8/")
       (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/4c579a76-6370-557c-9b35-c15e8f695a0e/")
       (title_block
@@ -227,7 +264,7 @@
           (number "9")
           (value ""))))
     (sheet
-      (number 7)
+      (number 8)
       (name "/cv/cv3/")
       (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/33520868-9ca9-592a-a7e0-ce5b9acd5fe1/")
       (title_block
@@ -264,46 +301,9 @@
           (number "9")
           (value ""))))
     (sheet
-      (number 8)
+      (number 9)
       (name "/cv/cv6/")
       (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/")
-      (title_block
-        (title)
-        (company)
-        (rev)
-        (date)
-        (source "machine_filter.py")
-        (comment
-          (number "1")
-          (value ""))
-        (comment
-          (number "2")
-          (value ""))
-        (comment
-          (number "3")
-          (value ""))
-        (comment
-          (number "4")
-          (value ""))
-        (comment
-          (number "5")
-          (value ""))
-        (comment
-          (number "6")
-          (value ""))
-        (comment
-          (number "7")
-          (value ""))
-        (comment
-          (number "8")
-          (value ""))
-        (comment
-          (number "9")
-          (value ""))))
-    (sheet
-      (number 9)
-      (name "/cv/cv7/")
-      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
       (title_block
         (title)
         (company)
@@ -1576,18 +1576,18 @@
       (tstamps "04970c04-e60f-5bc1-9f16-4557771f6289"))
     (comp
       (ref "JB1")
-      (value "1x22 header")
-      (description "Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)")
-      (footprint "Connector_PinHeader_2.54mm:PinHeader_1x22_P2.54mm_Vertical")
+      (value "1x30 header")
+      (description "Generic connector, single row, 01x30, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (footprint "Connector_PinHeader_2.54mm:PinHeader_1x30_P2.54mm_Vertical")
       (fields
         (field
-          (name "MPN") "2.54 mm male pin header 1x22")
+          (name "MPN") "2.54 mm male pin header 1x30")
         (field
           (name "Assembly") "hand")
         (field
-          (name "Description") "Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)")
+          (name "Description") "Generic connector, single row, 01x30, script generated (kicad-library-utils/schlib/autogen/connector/)")
         (field
-          (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x22_P2.54mm_Vertical")
+          (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x30_P2.54mm_Vertical")
         (field
           (name "Datasheet"))
         (field
@@ -1596,7 +1596,7 @@
           (name "SKiDL Line") "machine_filter.py:116"))
       (libsource
         (lib "Connector_Generic")
-        (part "Conn_01x22"))
+        (part "Conn_01x30"))
       (sheetpath
         (names "/connectors/")
         (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/"))
@@ -1604,34 +1604,6 @@
       (tstamps "b93a4f6d-52fe-5881-9e32-05ad070b5173"))
     (comp
       (ref "JB2")
-      (value "1x3 header")
-      (description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
-      (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-      (fields
-        (field
-          (name "MPN") "2.54 mm male pin header 1x3")
-        (field
-          (name "Assembly") "hand")
-        (field
-          (name "Description") "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
-        (field
-          (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-        (field
-          (name "Datasheet"))
-        (field
-          (name "SKiDL Tag") "JB2")
-        (field
-          (name "SKiDL Line") "machine_filter.py:116"))
-      (libsource
-        (lib "Connector_Generic")
-        (part "Conn_01x03"))
-      (sheetpath
-        (names "/connectors/")
-        (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/"))
-      (component_classes)
-      (tstamps "25dd56a7-efb2-5761-b62a-781fd58c7974"))
-    (comp
-      (ref "JB3")
       (value "1x5 header")
       (description "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)")
       (footprint "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical")
@@ -1647,7 +1619,7 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "JB3")
+          (name "SKiDL Tag") "JB2")
         (field
           (name "SKiDL Line") "machine_filter.py:116"))
       (libsource
@@ -1657,35 +1629,35 @@
         (names "/connectors/")
         (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/"))
       (component_classes)
-      (tstamps "c92ed7a5-0dee-59e0-8359-c732dfbe57d6"))
+      (tstamps "25dd56a7-efb2-5761-b62a-781fd58c7974"))
     (comp
-      (ref "JB4")
-      (value "1x3 header")
-      (description "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
-      (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+      (ref "JB3")
+      (value "1x2 header")
+      (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
       (fields
         (field
-          (name "MPN") "2.54 mm male pin header 1x3")
+          (name "MPN") "2.54 mm male pin header 1x2")
         (field
           (name "Assembly") "hand")
         (field
-          (name "Description") "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)")
+          (name "Description") "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
         (field
-          (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
+          (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "JB4")
+          (name "SKiDL Tag") "JB3")
         (field
           (name "SKiDL Line") "machine_filter.py:116"))
       (libsource
         (lib "Connector_Generic")
-        (part "Conn_01x03"))
+        (part "Conn_01x02"))
       (sheetpath
         (names "/connectors/")
         (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/"))
       (component_classes)
-      (tstamps "11f810d0-c36d-5465-bfef-8daf9bf87287"))
+      (tstamps "c92ed7a5-0dee-59e0-8359-c732dfbe57d6"))
     (comp
       (ref "R1")
       (value "3.3 0.75W")
@@ -3273,7 +3245,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
-        (pin "13")
+        (pin "14")
         (pintype "PASSIVE"))
       (node
         (ref "R1")
@@ -3429,7 +3401,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
-        (pin "18")
+        (pin "29")
         (pintype "PASSIVE"))
       (node
         (ref "R3")
@@ -3828,8 +3800,8 @@
       (name "CV_DIST")
       (class "Default")
       (node
-        (ref "JB4")
-        (pin "1")
+        (ref "JB1")
+        (pin "27")
         (pintype "PASSIVE"))
       (node
         (ref "R34")
@@ -3841,7 +3813,7 @@
       (class "Default")
       (node
         (ref "JB1")
-        (pin "21")
+        (pin "25")
         (pintype "PASSIVE"))
       (node
         (ref "R26")
@@ -3852,8 +3824,8 @@
       (name "CV_EQG")
       (class "Default")
       (node
-        (ref "JB2")
-        (pin "3")
+        (ref "JB3")
+        (pin "1")
         (pintype "PASSIVE"))
       (node
         (ref "R30")
@@ -3865,7 +3837,7 @@
       (class "Default")
       (node
         (ref "JB1")
-        (pin "20")
+        (pin "19")
         (pintype "PASSIVE"))
       (node
         (ref "R18")
@@ -3876,8 +3848,8 @@
       (name "CV_LPRES")
       (class "Default")
       (node
-        (ref "JB2")
-        (pin "1")
+        (ref "JB1")
+        (pin "21")
         (pintype "PASSIVE"))
       (node
         (ref "R22")
@@ -3888,8 +3860,8 @@
       (name "CV_SRR")
       (class "Default")
       (node
-        (ref "JB4")
-        (pin "3")
+        (ref "JB1")
+        (pin "23")
         (pintype "PASSIVE"))
       (node
         (ref "R38")
@@ -3901,7 +3873,7 @@
       (class "Default")
       (node
         (ref "JB1")
-        (pin "11")
+        (pin "12")
         (pintype "PASSIVE"))
       (node
         (ref "R14")
@@ -4033,27 +4005,47 @@
         (pintype "POWER-IN"))
       (node
         (ref "JB1")
-        (pin "1")
+        (pin "11")
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
-        (pin "12")
+        (pin "13")
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
-        (pin "14")
+        (pin "15")
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
-        (pin "17")
+        (pin "18")
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
-        (pin "19")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JB1")
+        (pin "20")
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
         (pin "22")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JB1")
+        (pin "24")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JB1")
+        (pin "26")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JB1")
+        (pin "28")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JB1")
+        (pin "30")
         (pintype "PASSIVE"))
       (node
         (ref "JB1")
@@ -4069,14 +4061,10 @@
         (pintype "PASSIVE"))
       (node
         (ref "JB2")
-        (pin "2")
-        (pintype "PASSIVE"))
-      (node
-        (ref "JB3")
         (pin "5")
         (pintype "PASSIVE"))
       (node
-        (ref "JB4")
+        (ref "JB3")
         (pin "2")
         (pintype "PASSIVE"))
       (node
@@ -4360,7 +4348,7 @@
       (name "LED_A")
       (class "Default")
       (node
-        (ref "JB3")
+        (ref "JB2")
         (pin "1")
         (pintype "PASSIVE"))
       (node
@@ -4412,8 +4400,8 @@
         (pin "8")
         (pintype "BIDIRECTIONAL"))
       (node
-        (ref "JB3")
-        (pin "4")
+        (ref "JB2")
+        (pin "2")
         (pintype "PASSIVE")))
     (net
       (code 50)
@@ -4424,8 +4412,8 @@
         (pin "9")
         (pintype "BIDIRECTIONAL"))
       (node
-        (ref "JB3")
-        (pin "2")
+        (ref "JB2")
+        (pin "4")
         (pintype "PASSIVE")))
     (net
       (code 51)
@@ -4436,7 +4424,7 @@
         (pin "10")
         (pintype "BIDIRECTIONAL"))
       (node
-        (ref "JB3")
+        (ref "JB2")
         (pin "3")
         (pintype "PASSIVE")))
     (net
@@ -4549,7 +4537,7 @@
       (class "Default")
       (node
         (ref "JB1")
-        (pin "2")
+        (pin "1")
         (pintype "PASSIVE"))
       (node
         (ref "R66")
@@ -4593,7 +4581,7 @@
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "JB1")
-        (pin "16")
+        (pin "17")
         (pintype "PASSIVE")))
     (net
       (code 67)
@@ -4605,7 +4593,7 @@
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "JB1")
-        (pin "15")
+        (pin "16")
         (pintype "PASSIVE")))
     (net
       (code 68)

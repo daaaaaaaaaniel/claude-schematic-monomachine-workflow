@@ -5,8 +5,8 @@ Used by machine_filter.py (SKiDL) and design/boards.py. Units: 1 = A (pins 1-3),
 4 = D (12-14). Positions: panel frame seen from the front, mm: (x, y, rotation) of the footprint origin
 as pcbnew's SetPosition takes it (KiCad = panel + (100, 50)); back-side parts are then flipped left-right."""
 
-HEADER_PINS = {'1': ['GND', 'OUT_R', 'OUT_L', 'GND', 'IN_R', 'IN_L', 'GND', '+3V3_A', 'GND', 'CV_BASE', 'CV_WIDTH', 'GND', '+12V', 'GND', 'POT_VOL', 'POT_MUX', 'GND', '-12V', 'GND', 'CV_HPRES', 'CV_EQF', 'GND'], '2': ['CV_LPRES', 'GND', 'CV_EQG'], '3': ['LED_A', 'MUX_B', 'MUX_C', 'MUX_A', 'GND'], '4': ['CV_DIST', 'GND', 'CV_SRR']}
-HEADER_POS = {'1': (44.45, 25.4, 0, 180), '2': (67.31, 59.69, 0, 180), '3': (26.67, 68.58, 0, 180), '4': (57.15, 111.76, 180, 0)}   # pin 1 panel x, y; rotation of JBn (main, front) and of JAn (control, back), from tools/connector_search.py
+HEADER_PINS = {'1': ['OUT_R', 'GND', 'OUT_L', 'GND', 'IN_R', 'IN_L', 'GND', '+3V3_A', 'GND', 'CV_BASE', 'GND', 'CV_WIDTH', 'GND', '+12V', 'GND', 'POT_VOL', 'POT_MUX', 'GND', 'CV_HPRES', 'GND', 'CV_LPRES', 'GND', 'CV_SRR', 'GND', 'CV_EQF', 'GND', 'CV_DIST', 'GND', '-12V', 'GND'], '2': ['LED_A', 'MUX_A', 'MUX_C', 'MUX_B', 'GND'], '3': ['CV_EQG', 'GND']}
+HEADER_POS = {'1': (43.18, 25.4, 0, 180), '2': (21.59, 57.15, 270, 90), '3': (64.77, 100.33, 90, 270)}   # pin 1 panel x, y; rotation of JBn (main, front) and of JAn (control, back), from tools/connector_search.py
 SEED = (14.565, 110.9, 180)   # main board, back; rotation 0 = USB end up, 180 = down
 # 2026-10-06: ADC_UNIT and SEED_ADC re-matched to the placed U1/U2 (tools/rematch_adc.py); each quad carries one 1V/OCT channel, on section A
 ADC_UNIT = {"BASE": ("U2", 1), "WIDTH": ("U1", 1), "HPRES": ("U2", 2), "LPRES": ("U2", 3), "EQF": ("U2", 4), "EQG": ("U1", 2), "DIST": ("U1", 3), "SRR": ("U1", 4)}

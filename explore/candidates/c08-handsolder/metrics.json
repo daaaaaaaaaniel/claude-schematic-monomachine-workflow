@@ -1,0 +1,15 @@
+{
+ "name": "c08-handsolder",
+ "note": "hand-soldering clearance 1.25 mm: 3 connector lines (30+5+2), control parts re-placed",
+ "metrics": {
+  "unrouted_between_placed_parts": 197,
+  "power_disconnects": 152,
+  "drc_problems": 0,
+  "vias": 8,
+  "track_mm": 193.2,
+  "parts_on_main_board": 93,
+  "diagonal_segments": 0,
+  "off_convention_long": 0,
+  "locked_violations": []
+ }
+}
