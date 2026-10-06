@@ -142,6 +142,12 @@ cd pcb/machine-filter && DISPLAY=:99 pcbnew machine-filter.kicad_pcb &
   points at a file KiCad doesn't ship), and the microSD socket has none, so both render flat.
 - Pictures without the GUI: `kicad-cli pcb export svg <pcb> --layers B.Cu,B.Silkscreen,B.Courtyard,Edge.Cuts
   --mode-single --fit-page-to-board` takes about 0.5 s; no ratsnest. Use the GUI only when the ratsnest matters.
+- Freerouting (autorouter, driven by Konnect's `route_specctra_dsn`): the jar can't be downloaded here (GitHub release
+  and Maven downloads are blocked); d attached `freerouting-2.3.0.jar`, installed at `/opt/freerouting/freerouting.jar`.
+  It needs Java 25 (`apt-get install openjdk-25-jre-headless`, then `update-alternatives --set java
+  /usr/lib/jvm/java-25-openjdk-amd64/bin/java`). Konnect's `check_freerouting` (toolset `integration`) confirms it.
+- After a session restart, Xvfb and the editor are gone (files survive): restart both as above; the first-run dialog
+  comes back (Cancel, then Yes).
 - Screenshot: `DISPLAY=:99 import -window root shot.png`. Ctrl+Home zooms to all objects; scroll (xdotool click 4)
   zooms in at the mouse.
 
