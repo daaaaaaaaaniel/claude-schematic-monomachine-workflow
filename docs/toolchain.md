@@ -133,3 +133,21 @@ make -j$(nproc) && make install && ldconfig
   `pcb/tools/separate.sh` then puts `pcb/tools/wxstub/` (an empty `wx` module) on `PYTHONPATH`: with no `DISPLAY`,
   KiKit does nothing else with wx. On a desktop with KiCad's own Python (macOS, Windows), install KiKit into KiCad's
   Python instead, and no stand-in is needed.
+
+## Tried 2026-10-06: atopile (not adopted)
+
+d asked to try [atopile](https://github.com/atopile/atopile) on the `pcb-second-placement` branch. What happened in
+the cloud container:
+- **0.12.6** (the newest release that installs on Python 3.13) refuses to run: "atopile 0.12 is retired and can no
+  longer run commands. Move to app.atopile.io (0.16+)."
+- **0.15.8** (the last classic CLI; needs Python 3.14, installed with `uv venv --python 3.14`) runs, and a two-part test
+  design compiles up to part picking, then stops: "Part picking on atopile 0.15.8 requires sign-in. Run `ato auth
+  login`, or migrate to app.atopile.io (0.16+)." Sign-in is a browser OAuth flow against `clerk.atopile.io`, and
+  picking calls `gateway.atopile.io`.
+- **None of atopile's servers are reachable** from the cloud container (`gateway.atopile.io`, `clerk.atopile.io`,
+  `app.atopile.io`: no connection through the network allowlist), so neither sign-in nor picking can work here.
+- **0.16+** is a browser workspace at app.atopile.io, outside this repository and toolchain.
+
+Beyond access: atopile would mean re-describing the whole circuit in `.ato`, a third source of connectivity beside
+SKiDL and `boards.py`, after the schematic was declared done. The feature that would help this layout most, laying
+out one CV channel and repeating it, is also in KiCad itself (multichannel layout tools), with no rewrite.
