@@ -1,6 +1,6 @@
 # MACHINE FILTER: working rules for agent sessions
 
-Read `HANDOFF.md` first: it has the state, the folder layout and the next steps.
+Read `HANDOFF.md` first: it has the state, the folder layout and the next steps. For PCB work, then read `docs/placement-workflow.md`: the agreed method, d's decisions, how to run KiCad + Konnect here, and the gotchas.
 
 - **Toolchain:** set up a fresh container with `pcb/tools/setup-toolchain.sh`, then build and verify with `pcb/tools/build.sh`. The build must end with `OK` before any work is handed back.
 - **Two boards, one KiCad project** (`pcb/machine-filter/`, KiKit multiboard workflow): MAIN (JLC SMD assembly, ≤ 100 × 100 mm) and CONTROL (hand-soldered: through-hole R/C and SOIC only, no SMD R/C) share one schematic and one PCB file, with the outlines side by side. `tools/separate.sh` cuts them apart into `pcb/fab/main/` and `pcb/fab/control/`. The control board's nets are prefixed `CTL_`, so no net spans both boards; keep it that way, or the PCB's DRC breaks. Every part in `boards.py` carries `board="main"` or `"control"`. Keep JLC-only parts off the control board and jacks/sockets/headers out of the JLC assembly.
