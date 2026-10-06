@@ -70,6 +70,8 @@ History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the
 - *Small passives on the fill:* keep the copper on both pads balanced (thermal reliefs) to avoid tombstoning.
 - *Edges:* keep parts a few mm from the board edge (Bergman). U5's column currently sits about 0.4 mm from the right
   edge.
+  **Exception (d, 2026-10-07): the board-to-board headers may sit right at the edge**; only the fab's copper-to-edge
+  minimum applies to their pads.
 - *Board-to-board headers:* ~11 mm stack (Bergman's example matches ours); extra GND pins for solid ground and next
   to analog signals (both); put header pins under the points where force is applied (jacks, pots), so the boards
   don't seesaw or bend (Bergman). This gives the header placement a rule.
