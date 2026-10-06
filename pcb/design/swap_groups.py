@@ -82,7 +82,7 @@ GROUPS = {
                        "side without a ground between; a supply pin has grounds on both sides (never +12 V next to "
                        "-12 V); JAn on the back must be turned so its pin k sits on JBn pin k. Headers may sit "
                        "right at the board edge (d, 2026-10-07). Planned (d, 2026-10-07): up to 4 straight "
-                       "lines of butted 1x2 / 1x3 headers instead of three long ones. Changing a header's "
+                       "lines (2-40 pins each, one header per line) instead of the three fixed ones. Changing a header's "
                        "pin count changes its footprint (a board update re-adds it)",
         "firmware": "none", "edit": "pinmap.HEADER_PINS",
         "rematch": "python3 pcb/tools/rematch.py headers [--write]: best order by orthogonal distance on both boards",
