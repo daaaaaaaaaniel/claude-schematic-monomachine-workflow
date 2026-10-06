@@ -1,4 +1,4 @@
-# MACHINE FILTER: handoff (rev beta schematic, two boards, 2026-10-06)
+# MACHINE FILTER: handoff (rev beta schematic, two boards, PCB placement started, 2026-10-06)
 
 A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This folder holds:
 - the schematic source and the project library;
@@ -18,24 +18,24 @@ A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This fol
 | Source of truth for connectivity | `pcb/machine_filter.py` (SKiDL) |
 | Readable drawings | `pcb/design/gen_sch.py` (draws from `boards.py`); checked identical to SKiDL by `tools/check_netlist.py` |
 | BOM | one for the whole module: `pcb/out/bom.csv` (Board, Assembly and DNP columns); per-board BOMs come with `tools/separate.sh` |
-| PCB file | outlines only: `pcb/machine-filter/machine-filter.kicad_pcb` (from `design/pcb_skeleton.py`); separation tested with KiKit |
+| PCB file | `pcb/machine-filter/machine-filter.kicad_pcb`: both outlines + all 154 footprints with nets, linked to the schematic (DRC schematic parity: clean). 54 at decided positions, 100 small passives parked below their board (`design/place_first.py`, run once). Picture: `pcb/out/pcb-placement.png` (`tools/render_pcb.py`) |
 | Fabrication | `tools/separate.sh` → `pcb/fab/main/`, `pcb/fab/control/` (separated board + BOM); gerbers and CPL **not yet** (after layout) |
 | Placement plan | `docs/placement-guide.md` |
-| PCB layout | **not started** (rev alpha's single-board `gen_pcb.py` is stale, per d) |
+| PCB layout | **step 1 done** (footprints in, fixed parts placed); next: place the parked passives, board by board |
 | Firmware | three table changes: `docs/firmware-changes.md` |
 
-## Status (2026-10-06): header layout is an open decision
+## Status (2026-10-06, second session): schematic frozen, PCB work started
 
-- The schematic, PDF and docs describe candidate **A**: three headers (15/13/10 pins), Seed3 USB end at the bottom
-  edge. They build and pass every check as they stand.
-- Since then the floorplan code moved on (not yet reflected in the schematic):
-  - `design/headers.py` is a row search (rows first, signal pairs placed along them; groups aren't headers);
-  - `design/floorplan.py` has d's USB rule (USB socket at least 25 mm inside the control board's edge, plug path
-    clear of tall parts) and writes `out/floorplan-report.json` and `out/floorplan-crossing.png`, with trace lengths
-    tiered by importance.
-  - So `FLOORPLAN=1 tools/build.sh` would produce a different layout from the one drawn.
-- The candidates, their pictures and a comparison are in `explore/header-candidates/`. Before choosing: add the
-  "pocket" rule there (headers between the Seed3's socket rows carry only GND or signals that end at the Seed3).
+- **The schematic is done** (d: "100% done, with moderate confidence it stays that way"). Don't regenerate it to
+  explore ideas. `FLOORPLAN=1` is off the table: it changes pin assignments and so the whole schematic.
+- **Header layout is parked** (d: it doesn't matter until much more progress is made). The PCB uses candidate **A**
+  as drawn (JB1/JB3 between the Seed3's socket rows; USB end ~5 mm from the main board's bottom edge, short of d's
+  25 mm rule). Revisit it later as one deliberate change, not a search. The other candidates stay in
+  `explore/header-candidates/` for reference.
+- **Schematic uuids are now deterministic** (`gen_sch.py`: keyed by sheet file, reference, unit and pin). A rebuild
+  with unchanged input gives byte-identical schematics, so the PCB's footprint-to-symbol links survive `build.sh`.
+  (Before this, every build gave new random uuids, which would have orphaned every placed footprint.)
+- **Work in small steps**, each one reviewed by d before the next.
 
 ## The two boards
 
@@ -80,6 +80,7 @@ pcb/
     boards.py             parts and nets as data (with board = main/control); drives the drawing
     gen_sch.py            draws the hierarchical schematic (both boards) from boards.py
     pcb_skeleton.py       creates the PCB file with both outlines (once; refuses to overwrite); separation boxes
+    place_first.py        brings every footprint into the PCB file, with nets and schematic links (once; refuses if footprints exist)
     kicadlib.py, sexpr.py helpers (KiCad library reader, s-expression read/write)
   lib/                    project library: filter-module.kicad_sym, filter-module.pretty, SOURCES.md (provenance)
   machine-filter/         THE KiCad 10 project: *.kicad_sch (generated, 12 pages), machine-filter.kicad_pcb (both boards),
@@ -95,6 +96,7 @@ pcb/
     separate.sh           KiKit: cut each board out of the PCB file into fab/<board>/, plus per-board BOMs
     split_bom.py          whole-module BOM -> fab/main/bom.csv, fab/main/bom-jlc.csv (JLC upload), fab/control/bom.csv
     doc_tables.py         prints the ADC-pin, CV-stage and header tables for the docs from pinmap.py
+    render_pcb.py         picture of the PCB file for review -> out/pcb-placement.png
     wxstub/               empty wx module so KiKit runs where wxPython won't import (see toolchain.md)
   out/                    logical/main/control.net, drawn.net, erc.rpt, machine-filter.pdf, bom.csv,
                           floorplan-main.png, floorplan-control.png
@@ -130,7 +132,10 @@ FLOORPLAN=1 pcb/tools/build.sh      # also re-derive pinmap.py from the floorpla
    (DNP) on pins 2–7; audio output ×5.1 (R61/R65 51k, C60/C62 47p); R12/R16 25 ppm/K; BOM checked against JLC basic
    parts (TL072 and ferrites swapped to basic ones; see `docs/design-review.md`). Still open: stack height against
    the case, and the bicolour LED part (polarity, brightness at low CV).
-2. **Bring the footprints into the PCB file.** In KiCad, open `pcb/machine-filter/` and run "Update PCB from schematic", or use a `pcbnew` script reading `out/drawn.net`.
+2. **Done (2026-10-06): footprints in the PCB file** (`design/place_first.py`, from `out/drawn.net`). Panel parts,
+   headers, the Seed3, ICs, connectors and bulky capacitors are at their positions; the other 100 parts are parked
+   below their board, one row per schematic page. Check: `kicad-cli pcb drc --schematic-parity` (only silkscreen
+   warnings and unrouted connections). Later schematic edits come in with KiCad's "Update PCB from schematic".
 3. **Place each part on its own board's outline** (the `Board` field says which).
    - **Offsets:** KiCad (x, y) = panel (x, y) + `CONTROL_OFFSET` (100, 50) for the control board, or + `MAIN_OFFSET` (180, 50) for the main board (`design/pcb_skeleton.py`). `design/floorplan.py` used (100, 50) for both, so main-board positions from `pinmap.py` get +80 mm in x.
    - **Front parts** come from `boards.py` (`KNOB`, `CV_JACK`, `AUDIO_JACK`, `CV_LED`, `LED_XY`).

@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "81a6d8da-00c8-47ba-baa1-d553f71aa18b")
+	(uuid "93c1dd64-9398-5e7a-a867-30574b117d2a")
 	(paper "A3")
 	(title_block
 		(title "MACHINE FILTER")
@@ -25,7 +25,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "3cf024b0-af50-4eb2-8f6c-a1b4a6bd256d")
+		(uuid "cbf31791-0ef0-5a04-ba1e-1591ba037336")
 	)
 	(text "Two boards, one module"
 		(exclude_from_sim no)
@@ -37,7 +37,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a5cfdb76-d7ac-4937-a925-75b784d8783b")
+		(uuid "2a5daa1f-863f-5c77-b79e-e45563b2e9a9")
 	)
 	(text "one KiCad project; the PCB file holds both boards side by side, cut apart for fabrication by tools/separate.sh (KiKit)"
 		(exclude_from_sim no)
@@ -49,7 +49,7 @@
 			)
 			(justify left)
 		)
-		(uuid "bad75ed6-0afd-42ab-afdc-4777e05142b8")
+		(uuid "54079480-75b7-537f-9030-731355840c16")
 	)
 	(text "MAIN board"
 		(exclude_from_sim no)
@@ -61,7 +61,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8564559d-3602-4b35-a9e6-614641bccbc7")
+		(uuid "061a0b78-d4c8-5d94-8280-5f09e22ad117")
 	)
 	(text "JLC SMD assembly, 70 x 100 mm. Back: Daisy Seed3 on sockets, power entry, CV ADC stages U1/U2, audio U3/U4,"
 		(exclude_from_sim no)
@@ -72,7 +72,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a8242a8d-b813-43d0-bc75-46b2d9869cab")
+		(uuid "bf113231-6d10-5b90-98a5-8c2b244241c9")
 	)
 	(text "-10 V reference U5, expansion header J14, optional microSD J15 (DNP). Front: male headers JB1 (15 pins), JB2 (13 pins), JB3 (10 pins)."
 		(exclude_from_sim no)
@@ -83,7 +83,7 @@
 			)
 			(justify left)
 		)
-		(uuid "34fad61b-e5f2-4637-9a39-02bf1c348f77")
+		(uuid "33103f13-4d02-52c7-b26d-ffca9f77a5da")
 	)
 	(text "CONTROL board"
 		(exclude_from_sim no)
@@ -95,7 +95,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8cd754d9-07d0-4d75-a174-bed56aa1101e")
+		(uuid "8ca0177d-53c7-59e0-929e-d3e5208ca0c8")
 	)
 	(text "Hand-soldered, 70 x 107 mm. Front: 12 jacks, 9 pots, 9 LEDs. Back: pot multiplexer U6, LED drivers U7/U8 (SOIC),"
 		(exclude_from_sim no)
@@ -106,7 +106,7 @@
 			)
 			(justify left)
 		)
-		(uuid "4a296c01-e2c8-4fbe-914d-27597349fdbf")
+		(uuid "99573dd0-ec23-57bb-a91a-0c54caedb9fb")
 	)
 	(text "through-hole resistors and capacitors, female headers JA1, JA2, JA3."
 		(exclude_from_sim no)
@@ -117,7 +117,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8914ecbf-12d9-4c9a-bec4-8dbe79117250")
+		(uuid "37afc2d7-b26c-58c7-91d8-eb4da62b25d4")
 	)
 	(text "How they meet"
 		(exclude_from_sim no)
@@ -129,7 +129,7 @@
 			)
 			(justify left)
 		)
-		(uuid "f93cc98d-34f1-440c-9b38-ab0390cfde1c")
+		(uuid "5c287187-45f8-5b9b-9646-8ee8fd453833")
 	)
 	(text "JAn plugs onto JBn, pin k to pin k, about 11 mm apart. Every net on the control board is its own copper, so it has its"
 		(exclude_from_sim no)
@@ -140,7 +140,7 @@
 			)
 			(justify left)
 		)
-		(uuid "9a97de1a-e412-4993-adcc-383d1a410544")
+		(uuid "12762737-c1eb-508f-bc49-421d829127dd")
 	)
 	(text "own name: the main board's name with the prefix CTL_ (CTL_GND, CTL_+12V, CTL_CV_BASE, ...). CTL_x meets x only at"
 		(exclude_from_sim no)
@@ -151,7 +151,7 @@
 			)
 			(justify left)
 		)
-		(uuid "87b158ba-86a2-4735-8774-50d54b90ed60")
+		(uuid "cc986b5b-fa59-56fe-b309-e79140fb96d8")
 	)
 	(text "the header pins (pages 7 and 12), as in the hardware. tools/check_netlist.py checks that the boards joined there are"
 		(exclude_from_sim no)
@@ -162,7 +162,7 @@
 			)
 			(justify left)
 		)
-		(uuid "9c2153a9-6fbf-4900-a9cf-f77806cc4417")
+		(uuid "cd50298a-2428-5469-b702-284211e7e70d")
 	)
 	(text "exactly the one-circuit SKiDL netlist (machine_filter.py)."
 		(exclude_from_sim no)
@@ -173,7 +173,7 @@
 			)
 			(justify left)
 		)
-		(uuid "909d0109-2daa-4abe-8747-1c140881e523")
+		(uuid "0b702f87-b15c-5987-8786-12f33d6a20e0")
 	)
 	(text "MAIN board (JLC SMD assembly)"
 		(exclude_from_sim no)
@@ -185,7 +185,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a0f42219-cb32-4a75-a4de-f0f61721174c")
+		(uuid "b3b06e6e-7b05-5ad1-9352-5138f517071e")
 	)
 	(text "page 2"
 		(exclude_from_sim no)
@@ -197,7 +197,7 @@
 			)
 			(justify left)
 		)
-		(uuid "bcb12f49-46a1-4ab7-96a6-d1d62b1c3157")
+		(uuid "f799a54d-5ceb-5a6f-872c-744e386b1fdb")
 	)
 	(text "Eurorack power entry"
 		(exclude_from_sim no)
@@ -208,7 +208,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5767f028-c77c-4f56-8bf4-931548c0bd17")
+		(uuid "d612b72d-fd4e-5006-959d-30e21de131f0")
 	)
 	(text "Seed3 VIN filter"
 		(exclude_from_sim no)
@@ -219,7 +219,7 @@
 			)
 			(justify left)
 		)
-		(uuid "87bfe551-554a-4292-a521-416a30cc4d3c")
+		(uuid "41ce4f92-2f14-51f9-9d0b-5070008deed8")
 	)
 	(text "-10 V reference"
 		(exclude_from_sim no)
@@ -230,7 +230,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8cd0455a-2cc0-49d2-9494-c30708b1c445")
+		(uuid "e4150cf5-0d8f-5d64-95ea-1c01db572a6f")
 	)
 	(text "page 3"
 		(exclude_from_sim no)
@@ -242,7 +242,7 @@
 			)
 			(justify left)
 		)
-		(uuid "686cf11d-69a7-4091-b475-17c418ba530a")
+		(uuid "d3cee3ef-e219-50f6-b608-e4fe652a0503")
 	)
 	(text "Daisy Seed3 (A1)"
 		(exclude_from_sim no)
@@ -253,7 +253,7 @@
 			)
 			(justify left)
 		)
-		(uuid "50fcf7d5-c85c-42de-a456-eafdb56cfa52")
+		(uuid "68673eab-144d-52a3-ad99-933243a13bbf")
 	)
 	(text "expansion header J14"
 		(exclude_from_sim no)
@@ -264,7 +264,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a865acec-f65c-4a14-bb1c-b4fd399889d4")
+		(uuid "7d5e9fc9-edac-5c8a-859d-2f1d72526ed9")
 	)
 	(text "clip-LED resistor R70"
 		(exclude_from_sim no)
@@ -275,7 +275,7 @@
 			)
 			(justify left)
 		)
-		(uuid "0efe87f7-892e-4c59-b49d-87038e4138f4")
+		(uuid "5ebab323-3374-5642-bb1b-0f41ba569246")
 	)
 	(text "microSD J15 (optional)"
 		(exclude_from_sim no)
@@ -286,7 +286,7 @@
 			)
 			(justify left)
 		)
-		(uuid "d9e44372-6bf4-4feb-8918-df14b46cd8b4")
+		(uuid "1e7f820c-5a2f-5fe0-9b9b-f2edf01b9fc4")
 	)
 	(text "page 4"
 		(exclude_from_sim no)
@@ -298,7 +298,7 @@
 			)
 			(justify left)
 		)
-		(uuid "b8e9f868-acba-4fcd-8ba1-b00d4408803f")
+		(uuid "375086b6-4bd3-55ed-90ac-6e539b94dae4")
 	)
 	(text "BASE, WIDTH, HP RES, LP RES"
 		(exclude_from_sim no)
@@ -309,7 +309,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2837805b-86bd-43e7-bda6-a55b5736c76f")
+		(uuid "9ca90a6f-1fd7-5ca0-bd17-8fbb5f40ca3a")
 	)
 	(text "ADC stages (U2)"
 		(exclude_from_sim no)
@@ -320,7 +320,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8950a7ae-ec1a-4175-96c6-85f2c6fb64d5")
+		(uuid "097ae393-cb14-53ca-b10b-c56f7efa6a52")
 	)
 	(text "page 5"
 		(exclude_from_sim no)
@@ -332,7 +332,7 @@
 			)
 			(justify left)
 		)
-		(uuid "63751fdf-b6eb-43c8-a892-d8ad524c92c7")
+		(uuid "545bea73-5b74-53b4-9f1d-5c750a1bd845")
 	)
 	(text "EQ FREQ, EQ GAIN, DIST, SMPL RATE"
 		(exclude_from_sim no)
@@ -343,7 +343,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8b129d71-7faa-4634-8f5a-436a612061b9")
+		(uuid "3b845e3a-5ba0-5728-b546-7e83610c23ae")
 	)
 	(text "ADC stages (U1)"
 		(exclude_from_sim no)
@@ -354,7 +354,7 @@
 			)
 			(justify left)
 		)
-		(uuid "b2743a6f-9efb-4bb9-bef4-dd3189c5a244")
+		(uuid "3f4f4a8f-2531-51ca-a1a8-4afa487051be")
 	)
 	(text "page 6"
 		(exclude_from_sim no)
@@ -366,7 +366,7 @@
 			)
 			(justify left)
 		)
-		(uuid "6888d0d5-8ad9-488a-b0d3-ba9502f11192")
+		(uuid "7785eb1c-e91b-5310-9322-f04f35365ed1")
 	)
 	(text "IN L / IN R -> U3 -> codec"
 		(exclude_from_sim no)
@@ -377,7 +377,7 @@
 			)
 			(justify left)
 		)
-		(uuid "df544a94-e377-4891-9d6d-d7a3e96f063b")
+		(uuid "19d994cc-ed60-542b-a623-a793f8bfd35b")
 	)
 	(text "codec -> U4 -> OUT L / OUT R"
 		(exclude_from_sim no)
@@ -388,7 +388,7 @@
 			)
 			(justify left)
 		)
-		(uuid "7f9cae4d-408b-4765-adf2-e2494f645da1")
+		(uuid "f008fe80-2f25-5882-9981-47d207998552")
 	)
 	(text "page 7"
 		(exclude_from_sim no)
@@ -400,7 +400,7 @@
 			)
 			(justify left)
 		)
-		(uuid "1a347295-8026-4d0e-a8ee-1bf27606db09")
+		(uuid "4835018e-da25-59f9-a395-f997dcadc315")
 	)
 	(text "JB1, JB2, JB3"
 		(exclude_from_sim no)
@@ -411,7 +411,7 @@
 			)
 			(justify left)
 		)
-		(uuid "b42bbc4d-d0ea-4ab5-9def-0195c5d3bf7d")
+		(uuid "69561b8e-d159-54a5-9f7e-a72cdb1f4532")
 	)
 	(text "to the control board"
 		(exclude_from_sim no)
@@ -422,7 +422,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5655a97e-0bc1-48cf-b989-86c8ee67509f")
+		(uuid "f69e3f71-84c7-5f51-8b02-668bcd47cdff")
 	)
 	(text "CONTROL board (hand-soldered)"
 		(exclude_from_sim no)
@@ -434,7 +434,7 @@
 			)
 			(justify left)
 		)
-		(uuid "b7c0aacf-9265-49ba-9b27-a0482a73debd")
+		(uuid "c797d3d4-a588-5f50-97a0-7d1d03fd9cdf")
 	)
 	(text "page 8"
 		(exclude_from_sim no)
@@ -446,7 +446,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2122b0db-7bd0-4b62-8954-553534471488")
+		(uuid "7a666c7f-efd6-5d9c-83f5-a2263bf00ceb")
 	)
 	(text "12 jacks"
 		(exclude_from_sim no)
@@ -457,7 +457,7 @@
 			)
 			(justify left)
 		)
-		(uuid "bf6d82fe-5d93-4d14-a051-1095ce66b81c")
+		(uuid "386f43a1-0aae-5831-b4c6-fc4f38c9a458")
 	)
 	(text "clip LED D1"
 		(exclude_from_sim no)
@@ -468,7 +468,7 @@
 			)
 			(justify left)
 		)
-		(uuid "e5b22498-39ca-4008-ad5c-0c00bfe9b9b3")
+		(uuid "9aaa9d47-352f-5627-97df-8448c96eeab6")
 	)
 	(text "page 9"
 		(exclude_from_sim no)
@@ -480,7 +480,7 @@
 			)
 			(justify left)
 		)
-		(uuid "88d9e74a-7844-4082-9e4e-1211528b25ea")
+		(uuid "afbc180b-0c91-5f4f-b151-de8078ae17ec")
 	)
 	(text "9 pots"
 		(exclude_from_sim no)
@@ -491,7 +491,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8677c65e-9626-4915-b532-7615770454a3")
+		(uuid "1d2a1a71-5c1f-564d-adb9-4c724a77c7b1")
 	)
 	(text "pot multiplexer U6"
 		(exclude_from_sim no)
@@ -502,7 +502,7 @@
 			)
 			(justify left)
 		)
-		(uuid "1a326b3e-7be2-4c59-b20a-191f7b8165a8")
+		(uuid "845921c5-c7ef-5828-89ab-9bd1d2284d8f")
 	)
 	(text "page 10"
 		(exclude_from_sim no)
@@ -514,7 +514,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5e97c3fe-58c0-44e4-86be-168b8dee5a2e")
+		(uuid "5e1fe2f9-332c-5aa6-9092-99f50853f955")
 	)
 	(text "BASE, WIDTH, HP RES, LP RES"
 		(exclude_from_sim no)
@@ -525,7 +525,7 @@
 			)
 			(justify left)
 		)
-		(uuid "d319baae-fe4d-4501-a759-bf0a4fdb58ac")
+		(uuid "2c5f5847-168a-5851-b92a-700bc8fc4bf3")
 	)
 	(text "LED drivers (U7)"
 		(exclude_from_sim no)
@@ -536,7 +536,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5b926b5f-af6a-406b-87fc-9f71c41abfde")
+		(uuid "000e984c-7207-5282-8deb-028dfbc24e52")
 	)
 	(text "page 11"
 		(exclude_from_sim no)
@@ -548,7 +548,7 @@
 			)
 			(justify left)
 		)
-		(uuid "3222b49f-f668-4a50-aa0d-bdd9af7ee83d")
+		(uuid "7b911525-4f79-543f-9f6e-b6c65f2f77b8")
 	)
 	(text "EQ FREQ, EQ GAIN, DIST, SMPL RATE"
 		(exclude_from_sim no)
@@ -559,7 +559,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5bd91d57-432a-4f3b-9ee5-bad725f18ddb")
+		(uuid "43e6c4d1-f3c1-58df-a72d-dff0bb9e7a43")
 	)
 	(text "LED drivers (U8)"
 		(exclude_from_sim no)
@@ -570,7 +570,7 @@
 			)
 			(justify left)
 		)
-		(uuid "3dfca6a0-2303-406d-a998-ff88e397f139")
+		(uuid "d9e3a31d-f977-5d59-9b2b-c322d4d16f7a")
 	)
 	(text "page 12"
 		(exclude_from_sim no)
@@ -582,7 +582,7 @@
 			)
 			(justify left)
 		)
-		(uuid "5741f420-20d4-4a4b-831f-ba75fa2f0c05")
+		(uuid "f83d1bd3-0f43-5990-9f36-5769e5d3edc5")
 	)
 	(text "JA1, JA2, JA3"
 		(exclude_from_sim no)
@@ -593,7 +593,7 @@
 			)
 			(justify left)
 		)
-		(uuid "1feeb6d7-d356-480a-bb90-22eec56af85c")
+		(uuid "f09d7270-c8bc-552a-b2f1-ae1498591138")
 	)
 	(text "to the main board"
 		(exclude_from_sim no)
@@ -604,7 +604,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a508683c-208c-40e5-8c7c-028113745583")
+		(uuid "272d3b78-43db-5856-92bd-7c841ec63b0d")
 	)
 	(text "1   MACHINE FILTER: two boards"
 		(exclude_from_sim no)
@@ -616,7 +616,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c68e89fa-d470-4383-b641-92d9bc832acc")
+		(uuid "1af6efe5-0ce7-58e9-93b0-c4a829d812f4")
 	)
 	(sheet
 		(at 20.32 129.54)
@@ -633,7 +633,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "ea3a9dfc-8d04-4e94-9323-75fe7f32635a")
+		(uuid "aa67a407-ad49-5640-b4ef-b31a26b61e27")
 		(property "Sheetname" "Main: power"
 			(at 20.32 128.8284 0)
 			(effects
@@ -655,7 +655,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "2")
 				)
 			)
@@ -676,7 +676,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "050808f4-2777-4725-9175-f9ff58c7a572")
+		(uuid "07700791-3666-5089-a595-0a0da8f0b0ae")
 		(property "Sheetname" "Main: Daisy Seed3"
 			(at 83.82 128.8284 0)
 			(effects
@@ -698,7 +698,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "3")
 				)
 			)
@@ -719,7 +719,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "58f48f13-bb1e-4abe-be3b-692992488351")
+		(uuid "e1935287-c385-555b-9ad1-07c920c3edb4")
 		(property "Sheetname" "Main: CV inputs 1-4"
 			(at 147.32 128.8284 0)
 			(effects
@@ -741,7 +741,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "4")
 				)
 			)
@@ -762,7 +762,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "5780b017-d0b5-4370-88c0-b9ffa4bd6724")
+		(uuid "5473af04-063b-50f3-bfc8-b371b75c1913")
 		(property "Sheetname" "Main: CV inputs 5-8"
 			(at 210.82 128.8284 0)
 			(effects
@@ -784,7 +784,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "5")
 				)
 			)
@@ -805,7 +805,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "16dcb901-9887-4c46-90ed-8da36474b337")
+		(uuid "7134b23f-eb41-59cd-95d0-1524dab44117")
 		(property "Sheetname" "Main: audio"
 			(at 274.32 128.8284 0)
 			(effects
@@ -827,7 +827,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "6")
 				)
 			)
@@ -848,7 +848,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "80c83993-e6e5-4951-b1ba-58960efc9fb2")
+		(uuid "89b29abd-85ab-5df2-8f76-67b3ba30b426")
 		(property "Sheetname" "Main: connector"
 			(at 337.82 128.8284 0)
 			(effects
@@ -870,7 +870,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "7")
 				)
 			)
@@ -891,7 +891,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "673b796a-4d58-41e0-a41c-7a09eb476dec")
+		(uuid "8fbeecf5-630b-55a7-a369-45bf55373a43")
 		(property "Sheetname" "Control: jacks"
 			(at 20.32 187.2484 0)
 			(effects
@@ -913,7 +913,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "8")
 				)
 			)
@@ -934,7 +934,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "f8ff3f6f-f4c0-475a-b577-6260bd3d40f4")
+		(uuid "38d79e4a-90ce-5865-89af-b83406a7d724")
 		(property "Sheetname" "Control: pots"
 			(at 83.82 187.2484 0)
 			(effects
@@ -956,7 +956,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "9")
 				)
 			)
@@ -977,7 +977,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "267cd885-2f27-46a7-8c0c-d670b9e80c43")
+		(uuid "0077891e-6309-5e5e-92c5-0aca4b08732a")
 		(property "Sheetname" "Control: CV LEDs 1-4"
 			(at 147.32 187.2484 0)
 			(effects
@@ -999,7 +999,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "10")
 				)
 			)
@@ -1020,7 +1020,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "bcad83c3-0127-4d10-97ba-92a41e98d8fd")
+		(uuid "bba8c182-1b8e-5eb6-8d69-f83375145fdc")
 		(property "Sheetname" "Control: CV LEDs 5-8"
 			(at 210.82 187.2484 0)
 			(effects
@@ -1042,7 +1042,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "11")
 				)
 			)
@@ -1063,7 +1063,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "9e332a2b-9368-467c-af2c-9bd945cc5093")
+		(uuid "c29e1e84-217c-5d34-8155-8e1485b0fe12")
 		(property "Sheetname" "Control: connector"
 			(at 274.32 187.2484 0)
 			(effects
@@ -1085,7 +1085,7 @@
 		)
 		(instances
 			(project "machine-filter"
-				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+				(path "/93c1dd64-9398-5e7a-a867-30574b117d2a"
 					(page "12")
 				)
 			)
