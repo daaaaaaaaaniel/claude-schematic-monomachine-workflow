@@ -58,7 +58,7 @@ History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the
 | Pitch channels | WIDTH moved to U1 section D (EQ FREQ to U2 D), so each quad has one 1V/OCT input. |
 | Process | Transparency: before a run, say what it changes and how long it takes; report results in mm or plain units, with pictures; no long opaque searches. |
 
-**Proposed rules from the sources (2026-10-07, awaiting d's OK)** — community guide (`docs/community-pcb-layout-guide.md`
+**Rules from the sources (accepted by d, 2026-10-07)** — community guide (`docs/community-pcb-layout-guide.md`
 §3–4) and Eddy Bergman's KiCad tutorials (eddybergman.com, 2025/05 quick guide and 2025/10 part 2):
 - *Ground:* no ground traces; a ground fill on both layers, stitched with vias but not overdone, "remove islands"
   on; any GND pad the fill can't reach gets a short track or via (both sources). Fill pieces should join each other,
@@ -76,6 +76,20 @@ History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the
   plugin), then route.
 - *Multi-board DRC:* Bergman warns DRC misreports across two boards in one file; this project avoids that with the
   `CTL_` net prefix (see HANDOFF.md).
+
+In the board since 2026-10-07: net classes in `machine-filter.kicad_pro` (written with Konnect's `create_netclass` /
+`assign_net_to_class`): **Default** (signals) 0.3 mm, clearance 0.2 mm, via 0.6/0.3 mm; **Power** 0.5 mm (GND, ±12V,
++3V3_A, +3V3_D, VIN and their `CTL_` twins); **PowerEntry** 1.0 mm, clearance 0.25 mm, via 0.8/0.4 mm (J13 → FB1/FB2 →
+D10/D11: `Net-(FB1-Pad1)`, `Net-(FB2-Pad1)`, `Net-(D10-A)`, `Net-(D11-K)`). Router sizes 0.3/0.5/1.0 mm. -10V_REF stays a
+signal (it carries almost no current). The existing traces were widened to their class; the 1 mm J13–FB1 trace then
+crowded C2's pad, so it now leaves J13 pin 10 upward and runs straight into FB1 (DRC 0).
+
+**Approval and locks (from d, 2026-10-07; advice from another session).** Revisions are incremental: d approves the
+board one block (function group) at a time; `pcb/tools/lock_block.py <group>` sets KiCad's own locked flag on that
+block's placed parts and the approval is committed, so git records what was approved. Every later candidate is checked
+mechanically: `pcb/tools/check_locks.py HEAD` (or score_candidate.py, which runs it against the best candidate) rejects
+any candidate that moved a locked part, without asking d. To revise an approved block, unlock only that block. Nothing
+is locked yet: no block has been approved.
 
 ## 5. Tools: KiCad 10 GUI + Konnect in the cloud container
 

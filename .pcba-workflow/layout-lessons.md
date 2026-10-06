@@ -43,3 +43,12 @@
 - **Evidence:** Seed3 came out upside down (2026-10-06); konnect_place.py pad check caught it
 - **Check:** konnect_place.py check_pads
 
+
+## lock-approved-blocks (2026-10-07)
+Revisions stay small only if approved work can't drift. Approve per block, set KiCad's locked flag on its parts
+(`lock_block.py`), commit, and check every candidate against the approved board (`check_locks.py`); reject
+violations automatically instead of trusting the placer/router to honour locks.
+
+## widen-then-drc (2026-10-07)
+Widening traces to net-class widths can create clearance errors that the thin trace didn't have (the 1 mm J13–FB1
+trace hit C2's pad). Re-run DRC after any width change and reroute the offender rather than narrowing the class.

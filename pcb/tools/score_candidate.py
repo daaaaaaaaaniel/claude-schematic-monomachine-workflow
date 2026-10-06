@@ -5,7 +5,8 @@ full set of measurements, not on one number (adapted from Keitark/pcba-design-sk
     python3 tools/score_candidate.py <name> ["what changed"]
 
 Writes explore/candidates/<name>/ with a copy of the board file and metrics.json, and prints the comparison with the
-best accepted candidate (explore/candidates/best.txt). A candidate is better only if it adds no unrouted connection,
+best accepted candidate (explore/candidates/best.txt). A candidate that moved a part locked in the best candidate (an
+approved block, see check_locks.py) is rejected outright. Otherwise it is better only if it adds no unrouted connection,
 real DRC problem or power disconnect, and improves at least one of them (or, when those tie, vias or track length).
 Promote it with --accept.
 """
@@ -69,8 +70,15 @@ def main():
     print(f"{name}: {m}")
     if best and best != name:
         bm = json.load(open(os.path.join(CAND, best, "metrics.json")))["metrics"]
-        verdict = "better" if better(m, bm) else "not better"
+        import check_locks
+        lk = check_locks.check(os.path.join(CAND, best, "machine-filter.kicad_pcb"), D.PCB)
+        m["locked_violations"] = lk["locked_violations"]
+        json.dump({"name": name, "note": note, "metrics": m}, open(os.path.join(CAND, name, "metrics.json"), "w"), indent=1)
+        verdict = ("REJECTED: moved locked parts " + ", ".join(lk["locked_violations"]) if lk["locked_violations"]
+                   else "better" if better(m, bm) else "not better")
         print(f"vs best ({best}): {bm}\n=> {verdict}")
+    if m.get("locked_violations"):
+        sys.exit(1)
     if "--accept" in sys.argv or not best:
         open(best_file, "w").write(name)
         print(f"best is now {name}")

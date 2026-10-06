@@ -41,7 +41,8 @@
  "placement": {
   "logical": "BLOCKED",
   "visual_mechanical": "BLOCKED",
-  "note": "primaries, secondaries and ten input resistors placed; 47 minor parts parked off-board; headers, control-board ICs and standoffs not placed"
+  "note": "primaries, secondaries and ten input resistors placed; 47 minor parts parked off-board; headers, control-board ICs and standoffs not placed",
+  "locks": "KiCad locked flag per approved block (lock_block.py); check_locks.py rejects candidates that move locked parts; none approved yet"
  },
  "fanout": {
   "dense_connector_power_ground": "BLOCKED",
@@ -95,5 +96,43 @@
   "trace widths / net classes",
   "J15 SD-clock critical route",
   "rules table awaiting d"
- ]
+ ],
+ "stackup_rules": {
+  "netclasses": {
+   "Default": {
+    "track_mm": 0.3,
+    "clearance_mm": 0.2,
+    "via": "0.6/0.3"
+   },
+   "Power": {
+    "track_mm": 0.5,
+    "nets": [
+     "GND",
+     "+12V",
+     "-12V",
+     "+3V3_A",
+     "+3V3_D",
+     "VIN",
+     "CTL_GND",
+     "CTL_+12V",
+     "CTL_-12V",
+     "CTL_+3V3_A"
+    ]
+   },
+   "PowerEntry": {
+    "track_mm": 1.0,
+    "clearance_mm": 0.25,
+    "via": "0.8/0.4",
+    "nets": [
+     "Net-(FB1-Pad1)",
+     "Net-(FB2-Pad1)",
+     "Net-(D10-A)",
+     "Net-(D11-K)"
+    ]
+   }
+  },
+  "ground": "pour both layers, remove islands, stitched, one connected piece; poured after placement freeze, refilled before DRC/gerbers",
+  "edge_clearance_mm": 2,
+  "accepted_by": "d 2026-10-07"
+ }
 }

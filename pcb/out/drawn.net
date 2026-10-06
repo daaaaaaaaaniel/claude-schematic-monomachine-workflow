@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/claude/claude-schematic-monomachine-workflow/pcb/machine-filter/machine-filter.kicad_sch")
-		(date "2026-10-06T22:08:24")
+		(date "2026-10-07T00:20:10")
 		(tool "Eeschema 10.0.6-10.0.6~ubuntu24.04.1")
 		(sheet
 			(number "1")
@@ -14288,7 +14288,7 @@
 		(net
 			(code "1")
 			(name "+3V3_A")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "A1")
 				(pin "21")
@@ -14327,7 +14327,7 @@
 		(net
 			(code "2")
 			(name "+3V3_D")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "A1")
 				(pin "38")
@@ -14380,7 +14380,7 @@
 		(net
 			(code "3")
 			(name "+12V")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "C1")
 				(pin "1")
@@ -14495,7 +14495,7 @@
 		(net
 			(code "5")
 			(name "-12V")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "C3")
 				(pin "2")
@@ -15016,7 +15016,7 @@
 		(net
 			(code "28")
 			(name "CTL_+3V3_A")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "C80")
 				(pin "1")
@@ -15092,7 +15092,7 @@
 		(net
 			(code "29")
 			(name "CTL_+12V")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "C81")
 				(pin "1")
@@ -15125,7 +15125,7 @@
 		(net
 			(code "30")
 			(name "CTL_-12V")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "C82")
 				(pin "2")
@@ -15334,7 +15334,7 @@
 		(net
 			(code "39")
 			(name "CTL_GND")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "C80")
 				(pin "2")
@@ -16054,7 +16054,7 @@
 		(net
 			(code "58")
 			(name "GND")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "A1")
 				(pin "20")
@@ -16956,7 +16956,7 @@
 		(net
 			(code "87")
 			(name "Net-(D10-A)")
-			(class "Default")
+			(class "PowerEntry,Default")
 			(node
 				(ref "D10")
 				(pin "2")
@@ -16972,7 +16972,7 @@
 		(net
 			(code "88")
 			(name "Net-(D11-K)")
-			(class "Default")
+			(class "PowerEntry,Default")
 			(node
 				(ref "D11")
 				(pin "1")
@@ -16988,7 +16988,7 @@
 		(net
 			(code "89")
 			(name "Net-(FB1-Pad1)")
-			(class "Default")
+			(class "PowerEntry,Default")
 			(node
 				(ref "FB1")
 				(pin "1")
@@ -17010,7 +17010,7 @@
 		(net
 			(code "90")
 			(name "Net-(FB2-Pad1)")
-			(class "Default")
+			(class "PowerEntry,Default")
 			(node
 				(ref "FB2")
 				(pin "1")
@@ -17784,7 +17784,7 @@
 		(net
 			(code "125")
 			(name "VIN")
-			(class "Default")
+			(class "Power,Default")
 			(node
 				(ref "A1")
 				(pin "39")
