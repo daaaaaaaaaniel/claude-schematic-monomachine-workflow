@@ -54,12 +54,14 @@ critical trace. Resistors and other small parts are not arranged until every pri
 no fine-tuning of passives during these steps. (Step 5 overdid it: the codec resistors were lined up level with
 their Seed3 pins after a first trace crossed a resistor's other pad.)
 
-**Secondary vs minor parts (d, 2026-10-06):** a step places the primary and its secondary parts only
-(`groups.SECONDARY`: decoupling capacitors, the power-entry chain, C6 at VIN). When the critical trace passes through
-a minor part (a resistor, a small capacitor), place just that one part, deliberately or roughly, draw the trace to
-it, and say so in the report with the screenshot, e.g. "critical trace would be U4 to the Seed3, but it needs R60,
-placed provisionally". d gives feedback on where it should go. Steps 2-5 placed whole groups, minor parts
-included, before this rule.
+**How a group goes onto the board (d, 2026-10-06):** like dragging and dropping the whole group in one gesture.
+The group's cluster, as staged beside the board, moves as one block (its parts keep their positions relative to
+each other) so that the primary lands where it should; on the back side the block is mirrored with it. No
+part-by-part arranging: minor parts (resistors, small capacitors) are sorted out only after every primary and
+secondary part is on the board. The one deliberate placement in a step: when the critical trace passes through a
+minor part, that one part is put where the trace needs it, and the report says so with the screenshot, e.g.
+"critical trace would be U4 to the Seed3, but it needs R60, placed provisionally". d gives feedback on where it
+should go. Steps 2-5 arranged their groups part by part, before this rule; they stay as they are.
 
 ## 3. Placement order (d agreed)
 
