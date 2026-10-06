@@ -146,6 +146,8 @@ cd pcb/machine-filter && DISPLAY=:99 pcbnew machine-filter.kicad_pcb &
 - **KiCad flips back-side parts top-to-bottom.** `floorplan.py` mirrored left-to-right. So a back-side part needs
   KiCad rotation = floorplan rotation + 180°. The Seed3 is rotation 0 in KiCad (180 in `floorplan.py`).
   `konnect_place.py` checks pads, which caught this.
+- **Back-side headers need the opposite rotation.** JAn (control, back) at JBn's rotation has its pins in reverse
+  order after KiCad's flip; turn it 180° so pin k sits on pin k. `tools/rematch.py headers` checks every pair.
 - **Schematic IDs must be stable.** `gen_sch.py` used random UUIDs on every build, and KiCad links each footprint to
   its symbol by UUID path, so every rebuild would have cut all links. Now sheets and symbols get name-derived UUIDs:
   rebuilds are byte-identical, and Konnect's update reports `noop`. If links ever break again, Konnect's dry run

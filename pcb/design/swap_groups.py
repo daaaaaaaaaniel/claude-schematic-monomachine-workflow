@@ -37,6 +37,7 @@ GROUPS = {
                        "outputs, so leaving one of them free keeps a DAC available.",
         "firmware": "ADC pin table (docs/firmware-changes.md section 1)",
         "edit": "pinmap.SEED_ADC",
+        "rematch": "python3 pcb/tools/rematch.py adc [--write] (tools/rematch_adc.py)",
     },
     "seed_gpio_out": {
         "what": "digital outputs: MUX_A/B/C (mux selects S0-S2, pins 8/9/10) and LED_CLIP (pin 12, via R70)",
@@ -77,9 +78,12 @@ GROUPS = {
     "board_headers": {
         "what": "pin order of the board-to-board headers JA1-JA3 / JB1-JB3, and which header carries which net",
         "slots": "15 + 13 + 10 pins; JAn pin k = JBn pin k by construction",
-        "constraints": "keep a ground between the audio, CV and digital groups and beside each supply pin; changing "
-                       "a header's pin count changes its footprint (a board update re-adds it)",
+        "constraints": "ground pins keep their places; no two kinds of signal (audio, CV, pot, digital) side by "
+                       "side without a ground between; a supply pin has grounds on both sides (never +12 V next to "
+                       "-12 V); JAn on the back must be turned so its pin k sits on JBn pin k. Changing a header's "
+                       "pin count changes its footprint (a board update re-adds it)",
         "firmware": "none", "edit": "pinmap.HEADER_PINS",
+        "rematch": "python3 pcb/tools/rematch.py headers [--write]: best order by orthogonal distance on both boards",
     },
     "expansion_j14": {
         "what": "pin order of the 2x4 expansion header J14",

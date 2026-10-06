@@ -59,8 +59,8 @@ def main():
         bad.append(f"board_headers: a net appears twice: {sorted({n for n in nets if nets.count(n) > 1})}")
     for h, sigs in PM.HEADER_PINS.items():
         for k, n in enumerate(sigs):
-            if n in ("+12V", "-12V", "+3V3_A") and "GND" not in sigs[max(0, k - 1):k + 2]:
-                bad.append(f"board_headers: JB{h} pin {k + 1} ({n}) has no ground beside it")
+            if n in ("+12V", "-12V", "+3V3_A") and any(m != "GND" for m in sigs[max(0, k - 1):k] + sigs[k + 1:k + 2]):
+                bad.append(f"board_headers: JB{h} pin {k + 1} ({n}) needs grounds on both sides")
     print("swap groups:", "all assignments legal" if not bad else "PROBLEMS:")
     for b in bad:
         print("   ", b)

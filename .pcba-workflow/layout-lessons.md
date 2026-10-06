@@ -58,3 +58,9 @@ With every main-board SMD part on the back, every trace starts on the back, so h
 unless a via is planned. 23 of 49 segments broke "front horizontal, back vertical" before anyone counted. Through-hole
 ends (Seed pins, J13, J14) can take the front directly with no via. Now measured: `off_convention_long` in
 score_candidate.py (segments over 2.5 mm).
+
+## header-stack-alignment (2026-10-07)
+KiCad flips a footprint top-to-bottom, so a back-side JAn at the same rotation as the front-side JBn has its pin
+order reversed along the column: pin k no longer sits on pin k. pinmap.HEADER_POS gives both the same rotation
+(floorplan.py assumed a left-right mirror), which is wrong in KiCad. `tools/rematch.py headers` checks every pin pair
+and refuses misaligned pairs; in the test a 180° turn of JAn fixed it.
