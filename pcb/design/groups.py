@@ -37,7 +37,7 @@ CONTROL = {
     "panel": ("J1", ["J2", "J3", "J4", "J5", "J6", "J7", "J8", "J9", "J10", "J11", "J12", "D1", "D2", "D3", "D4",
                      "D5", "D6", "D7", "D8", "D9", "RV1", "RV2", "RV3", "RV4", "RV5", "RV6", "RV7", "RV8", "RV9"]),
 }
-STANDOFFS = {"main": ["H1", "H2", "H3", "H4"], "control": ["H11", "H12", "H13", "H14"]}   # optional (d)
+STANDOFFS = {"main": [], "control": []}   # d, 2026-10-07: no standoffs (removed from the board)
 STANDOFF_FP = "MountingHole:MountingHole_3.2mm_M3"
 
 # Secondary parts (d, 2026-10-06): placed in the same step as their primary because they must sit close to it.

@@ -57,6 +57,7 @@ History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the
 | Pin map | Follows the layout. `pinmap.py` is edited to match the PCB, then rebuilt (`build.sh` without `FLOORPLAN=1`). |
 | Pitch channels | WIDTH moved to U1 section D (EQ FREQ to U2 D), so each quad has one 1V/OCT input. |
 | Traces | Orthogonal only (no diagonals). **Front horizontal, back vertical**; pad escapes up to 2.5 mm are exempt (d, 2026-10-07). `score_candidate.py` counts diagonals and longer off-convention segments as hard failures. Ignore untraced minor-part pads while routing. |
+| Standoffs | **None** (d, 2026-10-07: removed). The boards are held by the board-to-board headers and the panel. |
 | Process | Transparency: before a run, say what it changes and how long it takes; report results in mm or plain units, with pictures; no long opaque searches. |
 
 **Rules from the sources (accepted by d, 2026-10-07)** — community guide (`docs/community-pcb-layout-guide.md`
