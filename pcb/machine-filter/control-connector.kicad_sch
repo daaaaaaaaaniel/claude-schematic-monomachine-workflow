@@ -14,7 +14,7 @@
 		(comment 3 "Page 12: Control board: board-to-board connector")
 	)
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_01x10"
+		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -25,7 +25,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 12.7 0)
+				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -34,8 +34,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x10"
-				(at 0 -15.24 0)
+			(property "Value" "Conn_01x03"
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -66,7 +66,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -99,10 +99,10 @@
 					)
 				)
 			)
-			(symbol "Conn_01x10_1_1"
+			(symbol "Conn_01x03_1_1"
 				(rectangle
-					(start -1.27 11.43)
-					(end 1.27 -13.97)
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -112,8 +112,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 10.287)
-					(end 0 10.033)
+					(start -1.27 2.667)
+					(end 0 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -123,14 +123,179 @@
 					)
 				)
 				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
+					(start -1.27 0.127)
+					(end 0 -0.127)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
 						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x05"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x05"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x05_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
 					)
 				)
 				(rectangle
@@ -188,41 +353,8 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -10.033)
-					(end 0 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -12.573)
-					(end 0 -12.827)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin passive line
-					(at -5.08 10.16 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -240,7 +372,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 7.62 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -258,7 +390,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -276,7 +408,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -294,7 +426,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -311,100 +443,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -10.16 0)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -12.7 0)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x13"
+		(symbol "Connector_Generic:Conn_01x22"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -415,7 +457,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0 17.78 0)
+				(at 0 27.94 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -424,8 +466,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x13"
-				(at 0 -17.78 0)
+			(property "Value" "Conn_01x22"
+				(at 0 -30.48 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -456,7 +498,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x13, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x22, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -489,10 +531,10 @@
 					)
 				)
 			)
-			(symbol "Conn_01x13_1_1"
+			(symbol "Conn_01x22_1_1"
 				(rectangle
-					(start -1.27 16.51)
-					(end 1.27 -16.51)
+					(start -1.27 26.67)
+					(end 1.27 -29.21)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -502,8 +544,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 15.367)
-					(end 0 15.113)
+					(start -1.27 25.527)
+					(end 0 25.273)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -513,8 +555,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 12.827)
-					(end 0 12.573)
+					(start -1.27 22.987)
+					(end 0 22.733)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -524,458 +566,14 @@
 					)
 				)
 				(rectangle
-					(start -1.27 10.287)
-					(end 0 10.033)
+					(start -1.27 20.447)
+					(end 0 20.193)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
 						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -10.033)
-					(end 0 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -12.573)
-					(end 0 -12.827)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -15.113)
-					(end 0 -15.367)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 15.24 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 12.7 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 10.16 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 7.62 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -10.16 0)
-					(length 3.81)
-					(name "Pin_11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -12.7 0)
-					(length 3.81)
-					(name "Pin_12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -15.24 0)
-					(length 3.81)
-					(name "Pin_13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector_Generic:Conn_01x15"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x15"
-				(at 0 -20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x15, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x15_1_1"
-				(rectangle
-					(start -1.27 19.05)
-					(end 1.27 -19.05)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
 					)
 				)
 				(rectangle
@@ -1143,8 +741,52 @@
 						(type none)
 					)
 				)
+				(rectangle
+					(start -1.27 -20.193)
+					(end 0 -20.447)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -22.733)
+					(end 0 -22.987)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -25.273)
+					(end 0 -25.527)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -27.813)
+					(end 0 -28.067)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at -5.08 17.78 0)
+					(at -5.08 25.4 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -1162,7 +804,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 15.24 0)
+					(at -5.08 22.86 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -1180,7 +822,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 12.7 0)
+					(at -5.08 20.32 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -1198,7 +840,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 10.16 0)
+					(at -5.08 17.78 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -1216,7 +858,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 7.62 0)
+					(at -5.08 15.24 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -1234,7 +876,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 12.7 0)
 					(length 3.81)
 					(name "Pin_6"
 						(effects
@@ -1252,7 +894,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 10.16 0)
 					(length 3.81)
 					(name "Pin_7"
 						(effects
@@ -1270,7 +912,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 7.62 0)
 					(length 3.81)
 					(name "Pin_8"
 						(effects
@@ -1288,7 +930,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_9"
 						(effects
@@ -1306,7 +948,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_10"
 						(effects
@@ -1324,7 +966,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -7.62 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_11"
 						(effects
@@ -1342,7 +984,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -10.16 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_12"
 						(effects
@@ -1360,7 +1002,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -12.7 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_13"
 						(effects
@@ -1378,7 +1020,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -15.24 0)
+					(at -5.08 -7.62 0)
 					(length 3.81)
 					(name "Pin_14"
 						(effects
@@ -1396,7 +1038,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -17.78 0)
+					(at -5.08 -10.16 0)
 					(length 3.81)
 					(name "Pin_15"
 						(effects
@@ -1406,6 +1048,132 @@
 						)
 					)
 					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -12.7 0)
+					(length 3.81)
+					(name "Pin_16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -15.24 0)
+					(length 3.81)
+					(name "Pin_17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -17.78 0)
+					(length 3.81)
+					(name "Pin_18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -20.32 0)
+					(length 3.81)
+					(name "Pin_19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -22.86 0)
+					(length 3.81)
+					(name "Pin_20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -25.4 0)
+					(length 3.81)
+					(name "Pin_21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -27.94 0)
+					(length 3.81)
+					(name "Pin_22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2061,7 +1829,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "5c60fa63-3213-55a5-a10b-5937cbeef196")
+		(uuid "681e4dc5-6be0-5866-af14-5ff4df921529")
 	)
 	(text "Board-to-board connector"
 		(exclude_from_sim no)
@@ -2073,9 +1841,9 @@
 			)
 			(justify left)
 		)
-		(uuid "0fb250c1-7bd0-5ba4-a6b0-70e5afcafd35")
+		(uuid "a90044ae-f75f-578c-8a12-98d3360bab27")
 	)
-	(text "3 single-row 2.54 mm headers: JA* female on the control board's back, JB* male on the main board's front"
+	(text "4 single-row 2.54 mm headers: JA* female on the control board's back, JB* male on the main board's front"
 		(exclude_from_sim no)
 		(at 17.24 39.82 0)
 		(effects
@@ -2085,10 +1853,10 @@
 			)
 			(justify left)
 		)
-		(uuid "681e4dc5-6be0-5866-af14-5ff4df921529")
+		(uuid "5320d160-9682-51b4-8a9c-b1416e41d7ac")
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x15")
+		(lib_id "Connector_Generic:Conn_01x22")
 		(at 60.96 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2097,22 +1865,22 @@
 		(dnp no)
 		(uuid "df005c00-e05e-50ee-b3a3-98fe95122271")
 		(property "Reference" "JA1"
-			(at 62.23 58.42 0)
+			(at 62.23 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1x15 socket"
-			(at 62.23 60.96 0)
+		(property "Value" "1x22 socket"
+			(at 62.23 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical"
 			(at 60.96 83.82 0)
 			(effects
 				(font
@@ -2139,7 +1907,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "2.54 mm female header 1x15, 8.5 mm (as the Seed3 sockets)"
+		(property "MPN" "2.54 mm female header 1x22, 8.5 mm (as the Seed3 sockets)"
 			(at 60.96 83.82 0)
 			(effects
 				(font
@@ -2211,6 +1979,27 @@
 		(pin "15"
 			(uuid "971b79df-3670-589f-9f5a-5d47da1647e8")
 		)
+		(pin "16"
+			(uuid "f62f75f9-91a6-565c-8652-88d634fc4ef7")
+		)
+		(pin "17"
+			(uuid "acece3c1-d71c-50e3-ab9b-047b1aa84c21")
+		)
+		(pin "18"
+			(uuid "d3f6e267-477f-50bd-9b70-cc64ddc8a388")
+		)
+		(pin "19"
+			(uuid "d5396c31-4680-5dbc-93cb-8762c631b162")
+		)
+		(pin "20"
+			(uuid "c3e84cb9-8f65-5552-8115-cb494a0fbe1c")
+		)
+		(pin "21"
+			(uuid "82e48e74-fdef-5c0e-8ff4-d86605eb0da6")
+		)
+		(pin "22"
+			(uuid "8013b327-97c3-56eb-bb06-07f9b45856fe")
+		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
@@ -2222,14 +2011,124 @@
 	)
 	(symbol
 		(lib_id "filter-module:CTL_GND")
+		(at 48.26 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8003a51f-a5b8-5bd7-b749-6ac520479af6")
+		(property "Reference" "#PWR120"
+			(at 41.91 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 44.96 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 48.26 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0150cf33-5fb2-5f21-91f3-390b12037398")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
+					(reference "#PWR120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CTL_OUT_R"
+		(shape passive)
+		(at 48.26 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "af40f74a-0bf4-5e6a-9717-2dd307966028")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 60.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CTL_OUT_L"
+		(shape passive)
+		(at 48.26 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8ae6a2f8-c95f-5265-9937-f80184508443")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 63.5 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
 		(at 48.26 66.04 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a5bc64ea-796a-5e5f-a066-34b69b4ffde8")
-		(property "Reference" "#PWR125"
+		(uuid "4c57d546-2b05-5403-9a94-58e823e9a03b")
+		(property "Reference" "#PWR121"
 			(at 41.91 66.04 90)
 			(effects
 				(font
@@ -2275,18 +2174,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "c903cce4-279a-56c7-994c-f770a1c9e4d0")
+			(uuid "3ed909bb-0dcc-50d3-b431-df21a4b619aa")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR125")
+					(reference "#PWR121")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(global_label "CTL_IN_L"
+	(global_label "CTL_IN_R"
 		(shape passive)
 		(at 48.26 68.58 180)
 		(fields_autoplaced yes)
@@ -2296,7 +2195,7 @@
 			)
 			(justify right)
 		)
-		(uuid "a90044ae-f75f-578c-8a12-98d3360bab27")
+		(uuid "e322651f-1d3e-5be2-86fb-94592c18f485")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 48.26 68.58 180)
 			(effects
@@ -2308,7 +2207,7 @@
 			)
 		)
 	)
-	(global_label "CTL_IN_R"
+	(global_label "CTL_IN_L"
 		(shape passive)
 		(at 48.26 71.12 180)
 		(fields_autoplaced yes)
@@ -2318,7 +2217,7 @@
 			)
 			(justify right)
 		)
-		(uuid "5320d160-9682-51b4-8a9c-b1416e41d7ac")
+		(uuid "23985518-3a2b-53ad-9399-3d07ebd949bb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 48.26 71.12 180)
 			(effects
@@ -2338,8 +2237,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a05ea8eb-644c-5b33-893a-244a3600badf")
-		(property "Reference" "#PWR126"
+		(uuid "ffdb8d1e-6eca-5d7d-8b5f-da3103abb09a")
+		(property "Reference" "#PWR122"
 			(at 41.91 73.66 90)
 			(effects
 				(font
@@ -2385,72 +2284,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "ff416ad3-8b61-569d-8455-a31b12e1f529")
+			(uuid "e31faf3d-bcac-55f1-a96d-f8dc5710a385")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR126")
+					(reference "#PWR122")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(global_label "CTL_OUT_R"
-		(shape passive)
-		(at 48.26 76.2 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "af40f74a-0bf4-5e6a-9717-2dd307966028")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.26 76.2 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CTL_OUT_L"
-		(shape passive)
-		(at 48.26 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8ae6a2f8-c95f-5265-9937-f80184508443")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.26 78.74 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 48.26 81.28 270)
+		(lib_id "filter-module:CTL_+3V3_A")
+		(at 48.26 76.2 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "73c09080-5e51-5f4a-b72e-d75f16dfa350")
-		(property "Reference" "#PWR127"
-			(at 41.91 81.28 90)
+		(uuid "b2ec31af-8e58-5c5b-be0b-427232157e0c")
+		(property "Reference" "#PWR123"
+			(at 52.07 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2458,17 +2313,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "CTL_GND"
-			(at 44.96 81.28 90)
+		(property "Value" "CTL_+3V3_A"
+			(at 44.96 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 81.28 90)
+			(at 48.26 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2477,7 +2332,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 81.28 90)
+			(at 48.26 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2485,8 +2340,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 48.26 81.28 90)
+		(property "Description" "Power symbol: control board +3.3 V analog, from the main board through the connector"
+			(at 48.26 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2495,18 +2350,106 @@
 			)
 		)
 		(pin "1"
-			(uuid "4fd596a0-919e-5143-ad0d-a009d348301e")
+			(uuid "8d9722ce-a37d-5d34-aa97-99c2e3e5485e")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR127")
+					(reference "#PWR123")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(global_label "CTL_POT_VOL"
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 48.26 78.74 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e2bd332-bafc-5d87-96c2-f6f004d29afd")
+		(property "Reference" "#PWR124"
+			(at 41.91 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 44.96 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 48.26 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cf7870f1-e9de-5ace-9e25-86c23ece6df0")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
+					(reference "#PWR124")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CTL_CV_BASE"
+		(shape passive)
+		(at 48.26 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6a355eac-6b5e-5649-a2ec-750f0c1f2477")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 81.28 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CTL_CV_WIDTH"
 		(shape passive)
 		(at 48.26 83.82 180)
 		(fields_autoplaced yes)
@@ -2516,7 +2459,7 @@
 			)
 			(justify right)
 		)
-		(uuid "e322651f-1d3e-5be2-86fb-94592c18f485")
+		(uuid "f5fa8872-55a8-5096-bfe9-cfe4b594fd1f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 48.26 83.82 180)
 			(effects
@@ -2536,8 +2479,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "36b4e5b8-7b8e-57f9-a724-23e8629c7b6d")
-		(property "Reference" "#PWR128"
+		(uuid "a5bc64ea-796a-5e5f-a066-34b69b4ffde8")
+		(property "Reference" "#PWR125"
 			(at 41.91 86.36 90)
 			(effects
 				(font
@@ -2583,36 +2526,80 @@
 			)
 		)
 		(pin "1"
-			(uuid "bb576936-4082-50f6-9d7b-ed97dd62500e")
+			(uuid "c903cce4-279a-56c7-994c-f770a1c9e4d0")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR128")
+					(reference "#PWR125")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(global_label "CTL_LED_A"
-		(shape passive)
-		(at 48.26 88.9 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "23985518-3a2b-53ad-9399-3d07ebd949bb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.26 88.9 180)
+	(symbol
+		(lib_id "filter-module:CTL_+12V")
+		(at 48.26 88.9 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a05ea8eb-644c-5b33-893a-244a3600badf")
+		(property "Reference" "#PWR126"
+			(at 52.07 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 				(hide yes)
+			)
+		)
+		(property "Value" "CTL_+12V"
+			(at 44.96 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board +12 V, from the main board through the connector"
+			(at 48.26 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff416ad3-8b61-569d-8455-a31b12e1f529")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
+					(reference "#PWR126")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -2624,8 +2611,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5e92a793-b980-511e-a717-f15670e6b5c0")
-		(property "Reference" "#PWR129"
+		(uuid "73c09080-5e51-5f4a-b72e-d75f16dfa350")
+		(property "Reference" "#PWR127"
 			(at 41.91 91.44 90)
 			(effects
 				(font
@@ -2671,6 +2658,182 @@
 			)
 		)
 		(pin "1"
+			(uuid "4fd596a0-919e-5143-ad0d-a009d348301e")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
+					(reference "#PWR127")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CTL_POT_VOL"
+		(shape passive)
+		(at 48.26 93.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1b760413-daf3-58d1-9053-1e779d29bd9b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 93.98 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CTL_POT_MUX"
+		(shape passive)
+		(at 48.26 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a63e721d-4150-53f7-9b24-3237b8809426")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 96.52 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 48.26 99.06 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "36b4e5b8-7b8e-57f9-a724-23e8629c7b6d")
+		(property "Reference" "#PWR128"
+			(at 41.91 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 44.96 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 48.26 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb576936-4082-50f6-9d7b-ed97dd62500e")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
+					(reference "#PWR128")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_-12V")
+		(at 48.26 101.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e92a793-b980-511e-a717-f15670e6b5c0")
+		(property "Reference" "#PWR129"
+			(at 52.07 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_-12V"
+			(at 44.96 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board -12 V, from the main board through the connector"
+			(at 48.26 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
 			(uuid "3702b999-b7b9-5d26-9af0-cecda2c3071f")
 		)
 		(instances
@@ -2683,8 +2846,8 @@
 		)
 	)
 	(symbol
-		(lib_id "filter-module:CTL_+12V")
-		(at 48.26 93.98 90)
+		(lib_id "filter-module:CTL_GND")
+		(at 48.26 104.14 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2692,7 +2855,7 @@
 		(dnp no)
 		(uuid "0dd86e8a-073d-56b5-8910-c003f4eb3e05")
 		(property "Reference" "#PWR130"
-			(at 52.07 93.98 90)
+			(at 41.91 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2700,17 +2863,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "CTL_+12V"
-			(at 44.96 93.98 90)
+		(property "Value" "CTL_GND"
+			(at 44.96 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 93.98 90)
+			(at 48.26 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2719,7 +2882,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 93.98 90)
+			(at 48.26 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2727,8 +2890,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol: control board +12 V, from the main board through the connector"
-			(at 48.26 93.98 90)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 48.26 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2748,9 +2911,53 @@
 			)
 		)
 	)
+	(global_label "CTL_CV_HPRES"
+		(shape passive)
+		(at 48.26 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a7d45760-cfaa-5854-85f3-581c665cf7b2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 106.68 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CTL_CV_EQF"
+		(shape passive)
+		(at 48.26 109.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "935c0c1d-4d30-5fad-9e96-0803ab670ca6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 109.22 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(symbol
 		(lib_id "filter-module:CTL_GND")
-		(at 48.26 96.52 270)
+		(at 48.26 111.76 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2758,7 +2965,7 @@
 		(dnp no)
 		(uuid "13c650a5-34e2-52ce-81c6-5aaa5ca20263")
 		(property "Reference" "#PWR131"
-			(at 41.91 96.52 90)
+			(at 41.91 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2767,7 +2974,7 @@
 			)
 		)
 		(property "Value" "CTL_GND"
-			(at 44.96 96.52 90)
+			(at 44.96 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2776,7 +2983,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 96.52 90)
+			(at 48.26 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2785,7 +2992,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 96.52 90)
+			(at 48.26 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2794,7 +3001,7 @@
 			)
 		)
 		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 48.26 96.52 90)
+			(at 48.26 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2814,141 +3021,9 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "filter-module:CTL_-12V")
-		(at 48.26 99.06 90)
-		(unit 1)
+	(text "JA1: pin 1 at (44.45, 25.4) mm,"
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b3f541e3-30bd-5d47-a1f5-a24806efd9cd")
-		(property "Reference" "#PWR132"
-			(at 52.07 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_-12V"
-			(at 44.96 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 48.26 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board -12 V, from the main board through the connector"
-			(at 48.26 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5346b5e0-b2ce-5f56-9166-e5035e64d6ce")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR132")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 48.26 101.6 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8793f99e-1e49-5bf2-908d-5bedd29b956c")
-		(property "Reference" "#PWR133"
-			(at 41.91 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 44.96 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 48.26 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 48.26 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "301d863f-8ea7-5a80-a16c-69e6e17ffe8f")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR133")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "JA1: pin 1 at (21.95, 69.205) mm,"
-		(exclude_from_sim no)
-		(at 38.1 107.95 0)
+		(at 38.1 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2956,11 +3031,11 @@
 			)
 			(justify left)
 		)
-		(uuid "6a355eac-6b5e-5649-a2ec-750f0c1f2477")
+		(uuid "46d2033a-110b-5ff7-9b06-6bd2f39c834d")
 	)
-	(text "panel frame; pins run up (main side)"
+	(text "panel frame; pins run down (main side)"
 		(exclude_from_sim no)
-		(at 38.1 111.76 0)
+		(at 38.1 121.92 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2968,10 +3043,10 @@
 			)
 			(justify left)
 		)
-		(uuid "f5fa8872-55a8-5096-bfe9-cfe4b594fd1f")
+		(uuid "cd48b369-f956-5c51-ab4a-fd7ccbba2dbe")
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x13")
+		(lib_id "Connector_Generic:Conn_01x03")
 		(at 127 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2980,22 +3055,22 @@
 		(dnp no)
 		(uuid "8d1d592a-210b-5335-94a6-4aa70135520d")
 		(property "Reference" "JA2"
-			(at 128.27 60.96 0)
+			(at 128.27 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1x13 socket"
-			(at 128.27 63.5 0)
+		(property "Value" "1x3 socket"
+			(at 128.27 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x13_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
 			(at 127 83.82 0)
 			(effects
 				(font
@@ -3022,7 +3097,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "2.54 mm female header 1x13, 8.5 mm (as the Seed3 sockets)"
+		(property "MPN" "2.54 mm female header 1x3, 8.5 mm (as the Seed3 sockets)"
 			(at 127 83.82 0)
 			(effects
 				(font
@@ -3058,240 +3133,12 @@
 		(pin "3"
 			(uuid "35409cd4-7f10-5dba-b547-2af017b51a8f")
 		)
-		(pin "4"
-			(uuid "b72b70ff-ed4d-534f-b5d2-16054f5533e2")
-		)
-		(pin "5"
-			(uuid "6c60cd7b-5001-5ba6-bb8e-d0f04dc4131a")
-		)
-		(pin "6"
-			(uuid "fbd76828-8ee0-55db-bc71-83232643756e")
-		)
-		(pin "7"
-			(uuid "73f5b50c-67ad-5f36-8f4e-d2c4ce2a83b7")
-		)
-		(pin "8"
-			(uuid "b253355a-e655-50cf-ab10-4732a2f73564")
-		)
-		(pin "9"
-			(uuid "82756cc3-8082-53fc-b7b7-d12a19065f5f")
-		)
-		(pin "10"
-			(uuid "4fe9abd9-ba67-54da-b67d-2e0b7f8342b6")
-		)
-		(pin "11"
-			(uuid "7aa0ae19-9a93-57df-b9d6-d34a9f15bf5f")
-		)
-		(pin "12"
-			(uuid "06d49ab1-cac1-509c-ba2b-3f47d8df918b")
-		)
-		(pin "13"
-			(uuid "f71564f9-9af3-5041-a1f6-c05e2f7f36ea")
-		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
 					(reference "JA2")
 					(unit 1)
 				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 114.3 68.58 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0a5e40ee-4a2c-5eaa-bece-9ca82333a205")
-		(property "Reference" "#PWR134"
-			(at 107.95 68.58 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 111 68.58 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 68.58 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 68.58 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 114.3 68.58 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2a8164b1-1863-5d3d-847c-7619b5b85869")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR134")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "CTL_CV_BASE"
-		(shape passive)
-		(at 114.3 71.12 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1b760413-daf3-58d1-9053-1e779d29bd9b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 114.3 71.12 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CTL_CV_WIDTH"
-		(shape passive)
-		(at 114.3 73.66 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a63e721d-4150-53f7-9b24-3237b8809426")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 114.3 73.66 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 114.3 76.2 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2e41237e-1eb7-5e2c-af64-8c115e27827c")
-		(property "Reference" "#PWR135"
-			(at 107.95 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 111 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 114.3 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "72d5ffe6-4f60-571c-aeaa-4c2e46979a55")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR135")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "CTL_CV_HPRES"
-		(shape passive)
-		(at 114.3 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a7d45760-cfaa-5854-85f3-581c665cf7b2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 114.3 78.74 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -3305,7 +3152,7 @@
 			)
 			(justify right)
 		)
-		(uuid "935c0c1d-4d30-5fad-9e96-0803ab670ca6")
+		(uuid "b1e663f6-a938-5dac-8caa-dec4519f75a0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 114.3 81.28 180)
 			(effects
@@ -3325,8 +3172,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d10b4081-3732-5cca-93b5-0371c8c4b743")
-		(property "Reference" "#PWR136"
+		(uuid "b3f541e3-30bd-5d47-a1f5-a24806efd9cd")
+		(property "Reference" "#PWR132"
 			(at 107.95 83.82 90)
 			(effects
 				(font
@@ -3372,12 +3219,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "4bc2b321-ef57-5242-8f0e-36f4711f8778")
+			(uuid "5346b5e0-b2ce-5f56-9166-e5035e64d6ce")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR136")
+					(reference "#PWR132")
 					(unit 1)
 				)
 			)
@@ -3393,7 +3240,7 @@
 			)
 			(justify right)
 		)
-		(uuid "46d2033a-110b-5ff7-9b06-6bd2f39c834d")
+		(uuid "7fcfb7c3-bab9-5650-85ef-d9fe1f6e6e4c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 114.3 86.36 180)
 			(effects
@@ -3405,207 +3252,9 @@
 			)
 		)
 	)
-	(global_label "CTL_CV_EQF"
-		(shape passive)
-		(at 114.3 88.9 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "cd48b369-f956-5c51-ab4a-fd7ccbba2dbe")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 114.3 88.9 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 114.3 91.44 270)
-		(unit 1)
+	(text "JA2: pin 1 at (67.31, 59.69) mm,"
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "14d99739-e273-508f-a279-f77738e660ec")
-		(property "Reference" "#PWR137"
-			(at 107.95 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 111 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 114.3 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a1e8c061-4764-513d-b1d2-ddc2584bdc75")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR137")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "CTL_CV_SRR"
-		(shape passive)
-		(at 114.3 93.98 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b1e663f6-a938-5dac-8caa-dec4519f75a0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 114.3 93.98 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "CTL_CV_DIST"
-		(shape passive)
-		(at 114.3 96.52 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7fcfb7c3-bab9-5650-85ef-d9fe1f6e6e4c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 114.3 96.52 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 114.3 99.06 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2bbaf256-2877-5f2b-9b8f-f7ebf0b5329e")
-		(property "Reference" "#PWR138"
-			(at 107.95 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 111 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 114.3 99.06 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7f588540-161f-5556-8485-8e457360868a")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR138")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "JA2: pin 1 at (41.635, 66.03) mm,"
-		(exclude_from_sim no)
-		(at 104.14 105.41 0)
+		(at 104.14 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3617,7 +3266,7 @@
 	)
 	(text "panel frame; pins run down (main side)"
 		(exclude_from_sim no)
-		(at 104.14 109.22 0)
+		(at 104.14 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3628,7 +3277,7 @@
 		(uuid "cdbb2aea-abc6-5722-b4a6-b681e06709a9")
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x10")
+		(lib_id "Connector_Generic:Conn_01x05")
 		(at 193.04 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3637,22 +3286,22 @@
 		(dnp no)
 		(uuid "a527f851-ddef-5d55-b08d-9ce1380fa839")
 		(property "Reference" "JA3"
-			(at 194.31 64.77 0)
+			(at 194.31 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1x10 socket"
-			(at 194.31 67.31 0)
+		(property "Value" "1x5 socket"
+			(at 194.31 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical"
 			(at 193.04 83.82 0)
 			(effects
 				(font
@@ -3679,7 +3328,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "2.54 mm female header 1x10, 8.5 mm (as the Seed3 sockets)"
+		(property "MPN" "2.54 mm female header 1x5, 8.5 mm (as the Seed3 sockets)"
 			(at 193.04 83.82 0)
 			(effects
 				(font
@@ -3721,21 +3370,6 @@
 		(pin "5"
 			(uuid "5ee89340-f291-5194-9e31-aed921d5fa96")
 		)
-		(pin "6"
-			(uuid "a54940d7-3002-532a-ad9f-22bc3b84ced0")
-		)
-		(pin "7"
-			(uuid "61ef1344-25c9-5c2b-90f6-aafd664f5178")
-		)
-		(pin "8"
-			(uuid "bc7861bd-6dd1-5cbf-93c1-3f127b5b7dc9")
-		)
-		(pin "9"
-			(uuid "cc5cea53-331c-579f-8b49-414a57aa9681")
-		)
-		(pin "10"
-			(uuid "677bf7cb-1e3c-532a-b44f-adf6babf8858")
-		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
@@ -3745,75 +3379,9 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 180.34 73.66 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d04b10a5-8faa-5dcd-97b6-f6e49ae2d15a")
-		(property "Reference" "#PWR139"
-			(at 173.99 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 177.04 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 180.34 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f1e1bc70-bc48-5298-b2d8-17758d971a4d")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR139")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "CTL_POT_MUX"
+	(global_label "CTL_LED_A"
 		(shape passive)
-		(at 180.34 76.2 180)
+		(at 180.34 78.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3823,7 +3391,7 @@
 		)
 		(uuid "14266d81-d0f4-55b2-9372-21931b9283a5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.34 76.2 180)
+			(at 180.34 78.74 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3833,73 +3401,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 180.34 78.74 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "17c9533d-2211-5678-856b-700258742612")
-		(property "Reference" "#PWR140"
-			(at 173.99 78.74 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 177.04 78.74 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 78.74 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 78.74 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 180.34 78.74 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5e4ef792-744b-55f5-ab91-4ec88adc0522")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR140")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(global_label "CTL_MUX_C"
+	(global_label "CTL_MUX_B"
 		(shape passive)
 		(at 180.34 81.28 180)
 		(fields_autoplaced yes)
@@ -3921,7 +3423,7 @@
 			)
 		)
 	)
-	(global_label "CTL_MUX_B"
+	(global_label "CTL_MUX_C"
 		(shape passive)
 		(at 180.34 83.82 180)
 		(fields_autoplaced yes)
@@ -3943,75 +3445,9 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 180.34 86.36 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "76be48ee-10c8-5fca-9ff3-25c4f464ecd4")
-		(property "Reference" "#PWR141"
-			(at 173.99 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 177.04 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 180.34 86.36 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "11f19809-6e94-5326-91f4-0c83699610b2")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR141")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(global_label "CTL_MUX_A"
 		(shape passive)
-		(at 180.34 88.9 180)
+		(at 180.34 86.36 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4021,7 +3457,7 @@
 		)
 		(uuid "aa05ea95-5c4b-5ae8-813e-8cbcdfad6434")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.34 88.9 180)
+			(at 180.34 86.36 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4033,15 +3469,15 @@
 	)
 	(symbol
 		(lib_id "filter-module:CTL_GND")
-		(at 180.34 91.44 270)
+		(at 180.34 88.9 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6f3ae225-bbf3-5e4c-a2c8-fba45128dffd")
-		(property "Reference" "#PWR142"
-			(at 173.99 91.44 90)
+		(uuid "8793f99e-1e49-5bf2-908d-5bedd29b956c")
+		(property "Reference" "#PWR133"
+			(at 173.99 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4050,7 +3486,7 @@
 			)
 		)
 		(property "Value" "CTL_GND"
-			(at 177.04 91.44 90)
+			(at 177.04 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4059,7 +3495,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 91.44 90)
+			(at 180.34 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4068,7 +3504,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 91.44 90)
+			(at 180.34 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4077,7 +3513,7 @@
 			)
 		)
 		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 180.34 91.44 90)
+			(at 180.34 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4086,152 +3522,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "ac7d1747-29b4-592b-8337-3c603a508f57")
+			(uuid "301d863f-8ea7-5a80-a16c-69e6e17ffe8f")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR142")
+					(reference "#PWR133")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(symbol
-		(lib_id "filter-module:CTL_+3V3_A")
-		(at 180.34 93.98 90)
-		(unit 1)
+	(text "JA3: pin 1 at (26.67, 68.58) mm,"
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4f15966d-0eeb-5618-8ba5-9edf8f31bf2a")
-		(property "Reference" "#PWR143"
-			(at 184.15 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_+3V3_A"
-			(at 177.04 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board +3.3 V analog, from the main board through the connector"
-			(at 180.34 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b8ef7862-a233-5e0c-8fef-f7877a368872")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR143")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "filter-module:CTL_GND")
-		(at 180.34 96.52 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d7eccb2e-0364-5699-bce0-95a0972db796")
-		(property "Reference" "#PWR144"
-			(at 173.99 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "CTL_GND"
-			(at 177.04 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 180.34 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 180.34 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
-			(at 180.34 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "984ba702-0ad0-52d5-89d9-6fb9e92edc1d")
-		)
-		(instances
-			(project "machine-filter"
-				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR144")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "JA3: pin 1 at (21.95, 84.445) mm,"
-		(exclude_from_sim no)
-		(at 170.18 102.87 0)
+		(at 170.18 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4243,7 +3547,7 @@
 	)
 	(text "panel frame; pins run down (main side)"
 		(exclude_from_sim no)
-		(at 170.18 106.68 0)
+		(at 170.18 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4252,6 +3556,237 @@
 			(justify left)
 		)
 		(uuid "ebdf8eef-a808-56a4-86d4-b158bd960053")
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x03")
+		(at 259.08 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "830ce117-3e4f-53c3-bbf9-92c604565f0d")
+		(property "Reference" "JA4"
+			(at 260.35 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1x3 socket"
+			(at 260.35 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+			(at 259.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "to the main board (female, on the control board's back)"
+			(at 259.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "2.54 mm female header 1x3, 8.5 mm (as the Seed3 sockets)"
+			(at 259.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 259.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 259.08 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8204cf5f-4d02-5e29-927f-9b5f2f438f0b")
+		)
+		(pin "2"
+			(uuid "21310bdb-a1a8-5cfd-b225-5f21951cbe5e")
+		)
+		(pin "3"
+			(uuid "4547153b-7a7a-5b59-96be-b20343a9cc93")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
+					(reference "JA4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CTL_CV_DIST"
+		(shape passive)
+		(at 246.38 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "37a35e34-3383-5e7d-9ac6-5851cd5fb182")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 246.38 81.28 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 246.38 83.82 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0a5e40ee-4a2c-5eaa-bece-9ca82333a205")
+		(property "Reference" "#PWR134"
+			(at 240.03 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 243.08 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 246.38 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a8164b1-1863-5d3d-847c-7619b5b85869")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
+					(reference "#PWR134")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CTL_CV_SRR"
+		(shape passive)
+		(at 246.38 86.36 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9f4c9745-51ba-5958-862a-94bb3a79e68a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 246.38 86.36 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(text "JA4: pin 1 at (57.15, 111.76) mm,"
+		(exclude_from_sim no)
+		(at 236.22 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "62161f5e-06f3-52fc-80d1-ef9fd9a99f21")
+	)
+	(text "panel frame; pins run up (main side)"
+		(exclude_from_sim no)
+		(at 236.22 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "c622cc7c-0037-5b84-9177-86ae207690e3")
 	)
 	(text "Supplies from the main board (PWR_FLAG: driven through the connector)"
 		(exclude_from_sim no)
@@ -4263,7 +3798,7 @@
 			)
 			(justify left)
 		)
-		(uuid "37a35e34-3383-5e7d-9ac6-5851cd5fb182")
+		(uuid "69cae579-e2ab-57fc-9f12-e0f894c081da")
 	)
 	(symbol
 		(lib_id "filter-module:CTL_+12V")
@@ -4273,8 +3808,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "382c7ee7-0d4c-5455-97f8-44b930eee3d1")
-		(property "Reference" "#PWR145"
+		(uuid "2e41237e-1eb7-5e2c-af64-8c115e27827c")
+		(property "Reference" "#PWR135"
 			(at 27.94 148.59 0)
 			(effects
 				(font
@@ -4319,12 +3854,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7e2bf264-d762-5641-a35f-3337b86d3401")
+			(uuid "72d5ffe6-4f60-571c-aeaa-4c2e46979a55")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR145")
+					(reference "#PWR135")
 					(unit 1)
 				)
 			)
@@ -4421,8 +3956,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "439fac07-1215-5130-b7c8-d3f50c49d65c")
-		(property "Reference" "#PWR146"
+		(uuid "d10b4081-3732-5cca-93b5-0371c8c4b743")
+		(property "Reference" "#PWR136"
 			(at 58.42 140.97 0)
 			(effects
 				(font
@@ -4467,12 +4002,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "72d44420-f50d-565f-bd9d-b0505f6238e9")
+			(uuid "4bc2b321-ef57-5242-8f0e-36f4711f8778")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR146")
+					(reference "#PWR136")
 					(unit 1)
 				)
 			)
@@ -4569,8 +4104,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8bce1b0a-4618-5a15-97a1-98012ffaff15")
-		(property "Reference" "#PWR147"
+		(uuid "14d99739-e273-508f-a279-f77738e660ec")
+		(property "Reference" "#PWR137"
 			(at 88.9 148.59 0)
 			(effects
 				(font
@@ -4615,12 +4150,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "36785f82-7581-5226-889b-19a6732dfd61")
+			(uuid "a1e8c061-4764-513d-b1d2-ddc2584bdc75")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR147")
+					(reference "#PWR137")
 					(unit 1)
 				)
 			)
@@ -4717,8 +4252,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bea74850-9ff8-551c-909b-a7166431ea7b")
-		(property "Reference" "#PWR148"
+		(uuid "2bbaf256-2877-5f2b-9b8f-f7ebf0b5329e")
+		(property "Reference" "#PWR138"
 			(at 119.38 151.13 0)
 			(effects
 				(font
@@ -4763,12 +4298,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "e6f705a7-2e1b-5aa8-b8fd-843c9a6dbb40")
+			(uuid "7f588540-161f-5556-8485-8e457360868a")
 		)
 		(instances
 			(project "machine-filter"
 				(path "/2d3363f2-481d-573e-813e-0e55dd9cdd97/3882cb41-c82e-57e5-bcf7-b957e380e56b"
-					(reference "#PWR148")
+					(reference "#PWR138")
 					(unit 1)
 				)
 			)
@@ -4867,7 +4402,7 @@
 			)
 			(justify left)
 		)
-		(uuid "9f4c9745-51ba-5958-862a-94bb3a79e68a")
+		(uuid "7a34529b-35a7-5e0e-acfb-c864ec56bf71")
 	)
 	(text "12   Control board: board-to-board connector"
 		(exclude_from_sim no)
@@ -4879,7 +4414,40 @@
 			)
 			(justify left)
 		)
+		(uuid "5868a603-5a29-5e8a-8f01-9c8cf15264e1")
+	)
+	(wire
+		(pts
+			(xy 48.26 58.42)
+			(xy 55.88 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
 		(uuid "5626d49e-10d2-5b99-8dc2-1f874a7897f3")
+	)
+	(wire
+		(pts
+			(xy 48.26 60.96)
+			(xy 55.88 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2deb1938-de64-5cab-bc3a-0ccfda8ea589")
+	)
+	(wire
+		(pts
+			(xy 48.26 63.5)
+			(xy 55.88 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c8fc5c1-8065-576d-a527-d9b1bd07c237")
 	)
 	(wire
 		(pts
@@ -4890,7 +4458,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2deb1938-de64-5cab-bc3a-0ccfda8ea589")
+		(uuid "223f2784-8a3e-5d07-8f6d-9a7781b302f9")
 	)
 	(wire
 		(pts
@@ -4901,7 +4469,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2c8fc5c1-8065-576d-a527-d9b1bd07c237")
+		(uuid "9eb427bb-f880-5463-a153-a1f695b35164")
 	)
 	(wire
 		(pts
@@ -4912,7 +4480,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "223f2784-8a3e-5d07-8f6d-9a7781b302f9")
+		(uuid "c0d00bd9-f3d4-5459-9461-9379c909ecd7")
 	)
 	(wire
 		(pts
@@ -4923,7 +4491,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9eb427bb-f880-5463-a153-a1f695b35164")
+		(uuid "0f94b0fa-bcaa-571d-ba38-cd3090bcdab2")
 	)
 	(wire
 		(pts
@@ -4934,7 +4502,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c0d00bd9-f3d4-5459-9461-9379c909ecd7")
+		(uuid "9c755574-3df5-5cb8-a4f6-7443300ccc31")
 	)
 	(wire
 		(pts
@@ -4945,7 +4513,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0f94b0fa-bcaa-571d-ba38-cd3090bcdab2")
+		(uuid "786d5b37-55ba-501b-8573-b4df1fccc652")
 	)
 	(wire
 		(pts
@@ -4956,7 +4524,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9c755574-3df5-5cb8-a4f6-7443300ccc31")
+		(uuid "4addbebc-9d91-57da-a4dc-6be9488121ef")
 	)
 	(wire
 		(pts
@@ -4967,7 +4535,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "786d5b37-55ba-501b-8573-b4df1fccc652")
+		(uuid "b7461b2f-70f0-575d-ad70-9029866a9b0e")
 	)
 	(wire
 		(pts
@@ -4978,7 +4546,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4addbebc-9d91-57da-a4dc-6be9488121ef")
+		(uuid "ea705f9f-c4df-560b-8569-caeee4862748")
 	)
 	(wire
 		(pts
@@ -4989,7 +4557,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b7461b2f-70f0-575d-ad70-9029866a9b0e")
+		(uuid "0a560700-792a-54f4-bc13-9533d6f62833")
 	)
 	(wire
 		(pts
@@ -5000,7 +4568,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ea705f9f-c4df-560b-8569-caeee4862748")
+		(uuid "5f2cce28-2838-5d15-adaf-8e8e74dcc4d4")
 	)
 	(wire
 		(pts
@@ -5011,7 +4579,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0a560700-792a-54f4-bc13-9533d6f62833")
+		(uuid "426fc813-6a38-5cae-954e-04407fbabc95")
 	)
 	(wire
 		(pts
@@ -5022,7 +4590,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5f2cce28-2838-5d15-adaf-8e8e74dcc4d4")
+		(uuid "00f2b220-2377-50ce-aebf-79a5bc979c4d")
 	)
 	(wire
 		(pts
@@ -5033,7 +4601,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "426fc813-6a38-5cae-954e-04407fbabc95")
+		(uuid "21ff85c2-d54c-584e-9adb-1d2a13f9c26e")
 	)
 	(wire
 		(pts
@@ -5044,34 +4612,12 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "00f2b220-2377-50ce-aebf-79a5bc979c4d")
-	)
-	(wire
-		(pts
-			(xy 114.3 68.58)
-			(xy 121.92 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21ff85c2-d54c-584e-9adb-1d2a13f9c26e")
-	)
-	(wire
-		(pts
-			(xy 114.3 71.12)
-			(xy 121.92 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
 		(uuid "6274b0bf-5516-56d0-bddb-c668c2b95920")
 	)
 	(wire
 		(pts
-			(xy 114.3 73.66)
-			(xy 121.92 73.66)
+			(xy 48.26 104.14)
+			(xy 55.88 104.14)
 		)
 		(stroke
 			(width 0)
@@ -5081,8 +4627,8 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 76.2)
-			(xy 121.92 76.2)
+			(xy 48.26 106.68)
+			(xy 55.88 106.68)
 		)
 		(stroke
 			(width 0)
@@ -5092,14 +4638,25 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 78.74)
-			(xy 121.92 78.74)
+			(xy 48.26 109.22)
+			(xy 55.88 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "63e25b6c-3ca7-5f55-ab20-6b438958f39b")
+	)
+	(wire
+		(pts
+			(xy 48.26 111.76)
+			(xy 55.88 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "235481eb-8da4-518d-896d-c5bffdf42d41")
 	)
 	(wire
 		(pts
@@ -5110,7 +4667,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "235481eb-8da4-518d-896d-c5bffdf42d41")
+		(uuid "88c6d2d9-71ef-5adb-946a-55c8ad9e75d5")
 	)
 	(wire
 		(pts
@@ -5121,7 +4678,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "88c6d2d9-71ef-5adb-946a-55c8ad9e75d5")
+		(uuid "ad6af2ac-386c-56d6-ba8d-9e6812f4e9ab")
 	)
 	(wire
 		(pts
@@ -5132,84 +4689,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ad6af2ac-386c-56d6-ba8d-9e6812f4e9ab")
-	)
-	(wire
-		(pts
-			(xy 114.3 88.9)
-			(xy 121.92 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
 		(uuid "860f8d9c-7b8a-57f0-8366-4fedc5caf288")
-	)
-	(wire
-		(pts
-			(xy 114.3 91.44)
-			(xy 121.92 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e9c935a-1a0c-5864-96a5-0fc180acee9c")
-	)
-	(wire
-		(pts
-			(xy 114.3 93.98)
-			(xy 121.92 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f164a716-5130-582c-a671-8decc5bb9312")
-	)
-	(wire
-		(pts
-			(xy 114.3 96.52)
-			(xy 121.92 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b345595-cc44-559d-a4cf-b71cc82ef8d0")
-	)
-	(wire
-		(pts
-			(xy 114.3 99.06)
-			(xy 121.92 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff204c04-4bc5-543a-851c-c8216ef7bb69")
-	)
-	(wire
-		(pts
-			(xy 180.34 73.66)
-			(xy 187.96 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "323546c5-5835-54da-9dd2-5e699d31d15d")
-	)
-	(wire
-		(pts
-			(xy 180.34 76.2)
-			(xy 187.96 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1c35983-b222-5df7-b7ee-256371992c78")
 	)
 	(wire
 		(pts
@@ -5220,7 +4700,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8de6a7fc-b425-522a-ab1b-6f452a8fdee3")
+		(uuid "6e9c935a-1a0c-5864-96a5-0fc180acee9c")
 	)
 	(wire
 		(pts
@@ -5231,7 +4711,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b9a95964-16b6-5406-99a2-bd584a3daf3f")
+		(uuid "f164a716-5130-582c-a671-8decc5bb9312")
 	)
 	(wire
 		(pts
@@ -5242,7 +4722,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "27663e09-9bee-5336-834d-025e3ee4b9bc")
+		(uuid "4b345595-cc44-559d-a4cf-b71cc82ef8d0")
 	)
 	(wire
 		(pts
@@ -5253,7 +4733,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "470ac2ce-8ff5-5fcb-8e2a-dea1c151f156")
+		(uuid "ff204c04-4bc5-543a-851c-c8216ef7bb69")
 	)
 	(wire
 		(pts
@@ -5264,40 +4744,40 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "28f7cd81-4b83-56e9-9c7d-ed6b4c4f55e8")
+		(uuid "323546c5-5835-54da-9dd2-5e699d31d15d")
 	)
 	(wire
 		(pts
-			(xy 180.34 91.44)
-			(xy 187.96 91.44)
+			(xy 246.38 81.28)
+			(xy 254 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "695112a3-231b-5c0d-a53e-b1949beef2e5")
+		(uuid "e1c35983-b222-5df7-b7ee-256371992c78")
 	)
 	(wire
 		(pts
-			(xy 180.34 93.98)
-			(xy 187.96 93.98)
+			(xy 246.38 83.82)
+			(xy 254 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6d6b801b-66ee-57da-8a33-b7156bb6a6c9")
+		(uuid "8de6a7fc-b425-522a-ab1b-6f452a8fdee3")
 	)
 	(wire
 		(pts
-			(xy 180.34 96.52)
-			(xy 187.96 96.52)
+			(xy 246.38 86.36)
+			(xy 254 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7b2cfcb1-2b4c-532b-a08e-07fc321030b8")
+		(uuid "b9a95964-16b6-5406-99a2-bd584a3daf3f")
 	)
 	(wire
 		(pts
@@ -5308,7 +4788,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "dac3f0dd-7fce-5c86-bb8e-2be1979dbf83")
+		(uuid "27663e09-9bee-5336-834d-025e3ee4b9bc")
 	)
 	(wire
 		(pts
@@ -5319,7 +4799,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a0c21aa8-60f4-54ac-abfb-658ce7c2d963")
+		(uuid "470ac2ce-8ff5-5fcb-8e2a-dea1c151f156")
 	)
 	(wire
 		(pts
@@ -5330,7 +4810,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "16b2ab74-d7a9-52fb-8cd8-5825f45dc229")
+		(uuid "28f7cd81-4b83-56e9-9c7d-ed6b4c4f55e8")
 	)
 	(wire
 		(pts
@@ -5341,7 +4821,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9d0f99a5-e288-5ee1-8b4f-379bf0e698e5")
+		(uuid "695112a3-231b-5c0d-a53e-b1949beef2e5")
 	)
 	(embedded_fonts no)
 )

@@ -1,0 +1,15 @@
+{
+ "name": "c06-headers",
+ "note": "control ICs placed (no leads under bodies); 4 header lines from connector_search.py",
+ "metrics": {
+  "unrouted_between_placed_parts": 201,
+  "power_disconnects": 156,
+  "drc_problems": 0,
+  "vias": 8,
+  "track_mm": 193.2,
+  "parts_on_main_board": 90,
+  "diagonal_segments": 0,
+  "off_convention_long": 0,
+  "locked_violations": []
+ }
+}

@@ -14,7 +14,8 @@ in order of how strongly they are tied to what's already placed, then every part
 others fixed. A pose is legal when (rules from d, 2026-10-06/07, docs/placement-workflow.md):
   - its courtyard keeps 0.5 mm from every other courtyard on the same side and 1.5 mm inside the board edge;
   - its pads keep 0.3 mm from other nets' pads, tracks and vias on its copper (through-hole pads: both layers);
-  - its through-hole pads stay out of the other side's courtyards (a jack or pot body sits on them).
+  - its through-hole pads stay out of the other side's courtyards (a jack or pot body sits on them), and no other
+    part's through-hole lead sits under its body.
 Sides: main board = back (JLC assembly); control board = back (bodies), leads through to the front.
 """
 import json
@@ -136,6 +137,9 @@ class World:
                     cu[sd].append((g, net))
                 if net:
                     self.anchor.setdefault(net, []).append((x + px, y + py, r))
+        tht = [(box(x + px - hw, y + py - hh, x + px + hw, y + py + hh), r)
+               for r, (x, y, s) in self.placed.items() for num, net, px, py, hw, hh, th in s.pads if th]
+        self.tht = (STRtree([g for g, _ in tht]) if tht else None, tht)
         self.cy = {s: (STRtree([g for g, _ in v]) if v else None, v) for s, v in cy.items()}
         self.cu = {s: (STRtree([g for g, _ in v]) if v else None, v) for s, v in cu.items()}
 
@@ -149,6 +153,11 @@ class World:
         tree, items = self.cy[side]
         if tree is not None:
             for i in tree.query(me, predicate="intersects"):
+                if items[i][1] != ref:
+                    return False
+        tree, items = self.tht                       # no other part's lead under this part's body
+        if tree is not None:
+            for i in tree.query(box(x + c[0], y + c[1], x + c[2], y + c[3]), predicate="intersects"):
                 if items[i][1] != ref:
                     return False
         for num, net, px, py, hw, hh, tht in s.pads:

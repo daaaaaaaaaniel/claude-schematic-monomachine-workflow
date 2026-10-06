@@ -3,6 +3,13 @@
 
     python3 pcb/tools/rematch.py headers [--board X.kicad_pcb] [--write]   # board-to-board header pin order
     python3 pcb/tools/rematch.py adc [--write]                             # ADC pins (tools/rematch_adc.py)
+    python3 pcb/tools/rematch.py mux [--write]       # which 74HC4051 channel reads which pot (firmware table!)
+    python3 pcb/tools/rematch.py leds [--write]      # which LM324 section (U7/U8) drives which CV's LED
+
+mux / leds: minimum total orthogonal distance (Hungarian assignment) from the placed U6 / U7 / U8 pins to the pads
+they connect to: for mux, each pot's wiper; for leds, the CV jack's tip (+ input, through R80-R87) and the LED's
+two pins (output and - input). --write updates pinmap.MUX_PIN and MUX_SELECT (then docs/firmware-changes.md
+section 2 must be regenerated) or pinmap.LED_UNIT.
 
 headers: for each header pair JAn/JBn on the board, every signal is tried at every non-ground pin (all orders, by
 brute force: at most 8 signals per header). The cost of a signal at a pin is the orthogonal (|dx| + |dy|) distance
@@ -122,6 +129,9 @@ def headers(path, write):
                         missing.append(f"{net} ({board})")
                 row.append(c)
             cost[s] = row
+        if len(sigs) > 8:                            # too many orders to try all: tools/connector_search.py sets it
+            report.append(f"JA{h}/JB{h}: pins line up; {len(sigs)} signals, order kept (connector_search.py sets it)")
+            continue
         slots = [s if s == "GND" else None for s in old]
         before = sum(cost[s][k] for k, s in enumerate(old) if s != "GND")
         c, order = best_order(sigs, slots, cost)
@@ -143,13 +153,96 @@ def headers(path, write):
         print("written to design/pinmap.py HEADER_PINS")
 
 
+CV_NAMES = ["BASE", "WIDTH", "HPRES", "LPRES", "EQF", "EQG", "DIST", "SRR"]
+MUX_CHANNEL_OF_PIN = {"13": 0, "14": 1, "15": 2, "12": 3, "1": 4, "5": 5, "2": 6, "4": 7}   # 74HC4051 datasheet
+SECTION_PINS = [("1", "2", "3"), ("7", "6", "5"), ("8", "9", "10"), ("14", "13", "12")]       # out, -, + (A-D)
+
+
+def pad_xy(pads, ref, num):
+    return next((x, y) for r, n, net, board, x, y in pads if r == ref and n == num)
+
+
+def manhattan(a, b):
+    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
+
+def hungarian(names, slots, cost):
+    import numpy as np
+    from scipy.optimize import linear_sum_assignment
+    m = np.array([[cost(n, s) for s in slots] for n in names])
+    ri, ci = linear_sum_assignment(m)
+    return {names[i]: slots[j] for i, j in zip(ri, ci)}, m
+
+
+def mux(path, write):
+    pads = read_board(path)
+    wiper = {n: pad_xy(pads, f"RV{i + 2}", "2") for i, n in enumerate(CV_NAMES)}
+    slots = list(MUX_CHANNEL_OF_PIN)
+    new, m = hungarian(CV_NAMES, slots, lambda n, s: manhattan(wiper[n], pad_xy(pads, "U6", s)))
+    old = sum(manhattan(wiper[n], pad_xy(pads, "U6", PM.MUX_PIN[n])) for n in CV_NAMES)
+    now = sum(manhattan(wiper[n], pad_xy(pads, "U6", new[n])) for n in CV_NAMES)
+    sel = [None] * 8
+    for n, pin in new.items():
+        sel[MUX_CHANNEL_OF_PIN[pin]] = n
+    print(f"mux: {old:.1f} -> {now:.1f} mm (pot wiper to U6 pin, orthogonal)")
+    if now >= old - 0.01:
+        print("    current assignment is already as short; kept")
+        return
+    for n in CV_NAMES:
+        if new[n] != PM.MUX_PIN[n]:
+            print(f"    {n}: U6 pin {PM.MUX_PIN[n]} (ch {MUX_CHANNEL_OF_PIN[PM.MUX_PIN[n]]}) -> pin {new[n]} "
+                  f"(ch {MUX_CHANNEL_OF_PIN[new[n]]})")
+    print("    firmware select table 0..7:", sel)
+    if write and now < old:
+        t = open(PINMAP).read()
+        t = re.sub(r"^MUX_PIN = .*$", "MUX_PIN = " + repr(new).replace("'", '"'), t, count=1, flags=re.M)
+        t = re.sub(r"^MUX_SELECT = \[[^\]]*\]", "MUX_SELECT = " + repr(sel).replace("'", '"'), t, count=1, flags=re.M)
+        open(PINMAP, "w").write(t)
+        print("written to design/pinmap.py MUX_PIN, MUX_SELECT")
+
+
+def leds(path, write):
+    pads = read_board(path)
+    jack = {}
+    for i, n in enumerate(CV_NAMES):
+        jack[n] = next((x, y) for r, num, net, board, x, y in pads if net == f"CTL_CV_{n}" and r.startswith("J")
+                       and not r.startswith("JA"))
+    led = {n: (pad_xy(pads, f"D{2 + i}", "1"), pad_xy(pads, f"D{2 + i}", "2")) for i, n in enumerate(CV_NAMES)}
+    slots = [(u, k) for u in ("U7", "U8") for k in (1, 2, 3, 4)]
+
+    def cost(n, s):
+        out, inv, plus = SECTION_PINS[s[1] - 1]
+        return (manhattan(pad_xy(pads, s[0], plus), jack[n]) + manhattan(pad_xy(pads, s[0], out), led[n][0])
+                + manhattan(pad_xy(pads, s[0], inv), led[n][1]))
+    new, m = hungarian(CV_NAMES, slots, cost)
+    old = sum(cost(n, tuple(PM.LED_UNIT[n])) for n in CV_NAMES)
+    now = sum(cost(n, new[n]) for n in CV_NAMES)
+    print(f"leds: {old:.1f} -> {now:.1f} mm (section pins to jack tip and LED pins, orthogonal)")
+    if now >= old - 0.01:
+        print("    current assignment is already as short; kept")
+        return
+    for n in CV_NAMES:
+        if tuple(new[n]) != tuple(PM.LED_UNIT[n]):
+            print(f"    {n}: {PM.LED_UNIT[n][0]}{'ABCD'[PM.LED_UNIT[n][1] - 1]} -> {new[n][0]}{'ABCD'[new[n][1] - 1]}")
+    if write and now < old:
+        t = open(PINMAP).read()
+        t = re.sub(r"^LED_UNIT = .*$", "LED_UNIT = " + repr({n: new[n] for n in CV_NAMES}).replace("'", '"'), t,
+                   count=1, flags=re.M)
+        open(PINMAP, "w").write(t)
+        print("written to design/pinmap.py LED_UNIT")
+
+
 def main():
     args = sys.argv[1:]
     path = args[args.index("--board") + 1] if "--board" in args else BOARD
-    if not args or args[0] not in ("headers", "adc"):
+    if not args or args[0] not in ("headers", "adc", "mux", "leds"):
         sys.exit(__doc__)
     if args[0] == "headers":
         headers(path, "--write" in args)
+    elif args[0] == "mux":
+        mux(path, "--write" in args)
+    elif args[0] == "leds":
+        leds(path, "--write" in args)
     else:
         import rematch_adc
         rematch_adc.main()
