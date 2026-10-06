@@ -73,7 +73,8 @@ History of the 2026-10-06 steps: git log of branch `pcb-first-placement` and the
   **Exception (d, 2026-10-07): the board-to-board headers may sit right at the edge**; only the fab's copper-to-edge
   minimum applies to their pads.
 - *Board-to-board connectors (d, 2026-10-07):* up to 4 straight lines, each line built from 1×2 and 1×3 headers
-  **butted end to end** at continuous 2.54 mm pitch (preferred over one long 1×N). Pin order is free (swap groups).
+  **butted end to end** at continuous 2.54 mm pitch (preferred over one long 1×N); a line may run horizontally or
+  vertically. Pin order is free (swap groups).
   Needs: sockets whose body is exactly N × 2.54 mm (end-to-end stackable; check when choosing the part), and
   footprints whose courtyard ends at the body ends so butted parts don't trip the courtyard check (a project-library
   variant). Found by an exhaustive search over the legal straight runs once the other parts are placed.
