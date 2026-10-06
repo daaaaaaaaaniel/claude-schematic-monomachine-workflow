@@ -117,6 +117,12 @@ cd pcb/machine-filter && DISPLAY=:99 pcbnew machine-filter.kicad_pcb &
 
 - Konnect's release downloads are blocked by the container's proxy, so it is built from source. Rust's pinned
   1.96 toolchain can't be downloaded either; the installed stable toolchain works (`RUSTUP_TOOLCHAIN=stable`).
+- 3D view: `apt-get install kicad-packages3d` (280 MB download, 3.3 GB; not in setup-toolchain.sh), then
+  `KICAD10_3DMODEL_DIR=/usr/share/kicad/3dmodels kicad-cli pcb render <pcb> --side bottom --rotate "-35,0,30"
+  --perspective --quality high -o out.png` (a few seconds). KiCad has no Daisy Seed model (the footprint's model path
+  points at a file KiCad doesn't ship), and the microSD socket has none, so both render flat.
+- Pictures without the GUI: `kicad-cli pcb export svg <pcb> --layers B.Cu,B.Silkscreen,B.Courtyard,Edge.Cuts
+  --mode-single --fit-page-to-board` takes about 0.5 s; no ratsnest. Use the GUI only when the ratsnest matters.
 - Screenshot: `DISPLAY=:99 import -window root shot.png`. Ctrl+Home zooms to all objects; scroll (xdotool click 4)
   zooms in at the mouse.
 
