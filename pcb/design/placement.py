@@ -224,4 +224,48 @@ STEPS = [
     #    vias from the old lanes deleted by position in KiCad's scripting console (Konnect has no via delete).
     {"name": "lpres_lane", "board": "main", "delete": {"B.Cu": ["ADC_LPRES"], "F.Cu": ["ADC_LPRES"]},
      "routes": [("ADC_LPRES", [("B.Cu", [(58.79, 38.69), (61.5, 38.69), (61.5, 48.85)]), ("F.Cu", [(61.5, 48.85), (48.855, 48.85)])])]},
+    # All op-amps rotated 90 degrees (d), each in the direction that brings more of its Seed3-connected pins to the
+    #    Seed3 side: U2, U1 clockwise (outputs A and D on the Seed3 side; A carries the 1V/OCT input), U3
+    #    counter-clockwise (both codec-feeding outputs on the Seed3 side), U4 counter-clockwise (its codec inputs are
+    #    equally near either way; this keeps L above R as Seed3 pins 18/19, so they don't cross). Directions as seen in
+    #    the editor (panel-side view). C20 1 mm right, clear of DIST's lane. The eight ADC traces redrawn: left-end
+    #    outputs on back lanes beside the socket row; right-end outputs on back lanes right of the chip, then a via and
+    #    a horizontal front run to the pin.
+    {"name": "rotate_opamps", "board": "main",
+     "rotate": {"U2": ("main", 56.1, 42.493, "back", [270, 90], "1", (52.283, 39.783)),
+                "U1": ("main", 56.1, 57.81, "back", [270, 90], "1", (52.283, 55.1)),
+                "U3": ("main", 23.5, 49.5, "back", [90, 270], "1", (25.405, 52.2)),
+                "U4": ("main", 23.5, 41.5, "back", [90, 270], "1", (25.405, 44.2))},
+     "parts": {"C20": ("main", 63.5, 57.8, 0, "back")},
+     "delete": {"B.Cu": ["ADC_BASE", "ADC_WIDTH", "ADC_EQG", "ADC_HPRES", "ADC_LPRES", "ADC_EQF", "ADC_DIST", "ADC_SRR"], "F.Cu": ["ADC_BASE", "ADC_WIDTH", "ADC_EQG", "ADC_HPRES", "ADC_LPRES", "ADC_EQF", "ADC_DIST", "ADC_SRR"]}, "delete_vias": ["ADC_BASE", "ADC_WIDTH", "ADC_EQG", "ADC_HPRES", "ADC_LPRES", "ADC_EQF", "ADC_DIST", "ADC_SRR"],
+     "routes": [
+        ("ADC_BASE", [("B.Cu", [(52.283, 39.783), (50.6, 39.783), (50.6, 46.31), (48.855, 46.31)])]),
+        ("ADC_EQF", [("B.Cu", [(52.283, 45.183), (51.2, 45.183), (51.2, 51.39), (48.855, 51.39)])]),
+        ("ADC_HPRES", [("B.Cu", [(59.917, 39.783), (61.0, 39.783), (61.0, 43.77)]), ("F.Cu", [(61.0, 43.77), (48.855, 43.77)])]),
+        ("ADC_LPRES", [("B.Cu", [(59.917, 45.183), (61.6, 45.183), (61.6, 48.85)]), ("F.Cu", [(61.6, 48.85), (48.855, 48.85)])]),
+        ("ADC_WIDTH", [("B.Cu", [(52.283, 55.1), (50.6, 55.1), (50.6, 61.55), (48.855, 61.55)])]),
+        ("ADC_SRR", [("B.Cu", [(52.283, 60.5), (51.2, 60.5), (51.2, 64.09), (48.855, 64.09)])]),
+        ("ADC_EQG", [("B.Cu", [(59.917, 55.1), (61.0, 55.1), (61.0, 53.93)]), ("F.Cu", [(61.0, 53.93), (48.855, 53.93)])]),
+        ("ADC_DIST", [("B.Cu", [(59.917, 60.5), (61.6, 60.5), (61.6, 56.47)]), ("F.Cu", [(61.6, 56.47), (48.855, 56.47)])]),
+    ]},
+    #    (One old DIST via had been re-netted by KiCad to CV_DIST, a pad it touched, so the by-net delete missed it;
+    #    removed by position at panel (60.3, 56.47) with kicad-python.)
+    # J13 rotated 90 degrees (d): upright, so the power block is re-packed in its corner; of the two upright angles,
+    #    the one that puts the +12 V pin (9) nearer FB1 is kept. Its trace to FB1 redrawn.
+    {"name": "power_upright", "pack": "power", "at": ("main", 3.0, 86.0, "back"), "width": 31.0,
+     "beside": True,     # (packed below the header the block was 39 mm tall, past the board's bottom edge)
+     "rot_try": ("J13", [0, 180], ("J13", "9", "FB1", "1")), "delete_nets": ["Net-(FB1-Pad1)"],
+     "traces": [("L", "J13", "FB1")]},
+    # J14 rotated 90 degrees (d): upright again, in the direction that keeps D- above D+ and on the Seed3 side
+    #    (KiCad 180). Placed near the right edge (x 64.6) so its bottom row clears the VIN trace and C6. D- straight from
+    #    Seed3 pin 36; D+ from pin 37 slips between J14's rows (y 80.6) and columns (x 64.6) into pin 3.
+    {"name": "j14_upright", "parts": {"J14": ("main", 64.6, 83.14, 180, "back")},
+     "check_pads": {("J14", "2"): (63.33, 79.33), ("J14", "3"): (65.87, 81.87)}},
+    {"name": "j14_usb_upright", "board": "main",
+     "delete": {"B.Cu": ["/Main: Daisy Seed3/USB_DM", "/Main: Daisy Seed3/USB_DP"]},
+     "routes": [
+        ("/Main: Daisy Seed3/USB_DM", [("B.Cu", [(48.855, 79.33), (63.33, 79.33)])]),
+        ("/Main: Daisy Seed3/USB_DP", [("B.Cu", [(48.855, 81.87), (61.8, 81.87), (61.8, 80.6), (64.6, 80.6),
+                                                  (64.6, 81.87), (65.87, 81.87)])]),
+    ]},
 ]

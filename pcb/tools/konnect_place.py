@@ -73,7 +73,7 @@ def drag(c, step):
     print("  save:", c.call("save_project", {}))
 
 
-def pack(c, step):
+def pack(c, step, save=True):
     """The group as one block, shelf-packed (primary first) from the top-left corner `at` into rows of `width` mm;
     then the traces: ("L", r1, r2) = Konnect's L-bend on their shared net; ("dogleg", r1, r2, x) = three straight
     segments, the middle one vertical at panel x (to pass beside a socket row)."""
@@ -86,7 +86,7 @@ def pack(c, step):
     refs = [prim] + rest
     for r in refs:
         c.call("flip_component", {"board": BOARD, "reference": r, "layer": "B.Cu" if side == "back" else "F.Cu"})
-    moves, x, y, row_h = [], 0.0, 0.0, 0.0
+    moves, x, y, row_h, left = [], 0.0, 0.0, 0.0, 0.0
     for r in refs:
         w, h, ox, oy = size[got[r]["footprint"]]
         rot = step.get("rot", {}).get(r, 0)
@@ -94,10 +94,13 @@ def pack(c, step):
             w, h, ox, oy = h, w, oy, ox
         if side == "back":                          # KiCad mirrors a back-side part top-to-bottom
             oy = -oy
-        if x > 0 and x + w > step["width"]:
-            x, y, row_h = 0.0, y + row_h + 1.5, 0.0
+        if x > left and x + w > step["width"]:
+            x, y, row_h = left, y + row_h + 1.5, 0.0
         kx, ky = kicad(board, x0 + x + w / 2, y0 + y + h / 2)
         moves.append({"reference": r, "x": round(kx - ox, 4), "y": round(ky - oy, 4), "rotation": rot})
+        if r == prim and step.get("beside"):        # the rest packs in the column beside the (tall) primary
+            left, x, row_h = w + 1.5, w + 1.5, 0.0
+            continue
         x, row_h = x + w + 1.5, max(row_h, h)
     c.call("set_component_placements", {"board": BOARD, "placements": moves})
     print(f"  {step['pack']}: {len(refs)} parts as one block, {step['width']:.0f} x {y + row_h:.0f} mm "
@@ -116,7 +119,39 @@ def pack(c, step):
                     c.call("route_trace", {"board": BOARD, "net_name": net, "layer": "B.Cu", "width": 0.25,
                                            "x1": xa, "y1": ya, "x2": xb, "y2": yb})
         print(f"  trace ({kind}) {r1}.{p1} -> {r2}.{p2} on {net}")
-    print("  save:", c.call("save_project", {}))
+    if save:
+        print("  save:", c.call("save_project", {}))
+
+
+def rotate(c, step):
+    """{ref: (board, x, y, side, [candidate KiCad angles], pad, (x, y) expected panel position of that pad)}"""
+    for ref, (board, x, y, side, cands, pad, (ex, ey)) in step["rotate"].items():
+        c.call("flip_component", {"board": BOARD, "reference": ref, "layer": "B.Cu" if side == "back" else "F.Cu"})
+        kx, ky = kicad(board, x, y)
+        tx, ty = kicad(board, ex, ey)
+        for a in cands:
+            c.call("set_component_placements", {"board": BOARD, "placements": [
+                {"reference": ref, "x": kx, "y": ky, "rotation": a}]})
+            p = pad_map(c, ref)[pad]
+            if math.hypot(p["x"] - tx, p["y"] - ty) < 0.05:
+                print(f"  {ref}: rotation {a} puts pad {pad} at panel ({ex}, {ey})")
+                break
+        else:
+            raise SystemExit(f"{ref}: no candidate angle puts pad {pad} at ({ex}, {ey}); stopped")
+    for ref, (board, x, y, a, side) in step.get("parts", {}).items():
+        kx, ky = kicad(board, x, y)
+        c.call("set_component_placements", {"board": BOARD, "placements": [
+            {"reference": ref, "x": kx, "y": ky, "rotation": a}]})
+
+
+def delete_vias(nets):
+    """Konnect has no via delete; KiCad's own IPC API (kicad-python) does it in the running editor."""
+    from kipy import KiCad
+    b = KiCad(socket_path="ipc:///tmp/kicad/api.sock").get_board()
+    vs = [v for v in b.get_vias() if v.net.name in nets]
+    if vs:
+        b.remove_items(vs)
+    return len(vs)
 
 
 def routes(c, step):
@@ -132,6 +167,8 @@ def routes(c, step):
                 gone += 1
     if gone:
         print(f"  deleted {gone} segments")
+    if step.get("delete_vias"):
+        print(f"  deleted {delete_vias(set(step['delete_vias']))} vias")
     for net, legs in step["routes"]:
         for i, (layer, pts) in enumerate(legs):
             k = [kicad(board, x, y) for x, y in pts]
@@ -152,11 +189,34 @@ def main():
         if "drag" in step:                          # d: the whole staged group in one gesture
             drag(c, step)
             return
+        if "pack" in step and "rot_try" in step:    # pack once per candidate angle; keep the shortest critical link
+            tr = c.call("query_traces", {"board": BOARD})
+            tr = tr["traces"] if isinstance(tr, dict) else tr
+            for x in tr:
+                if x["net"] in step.get("delete_nets", []):
+                    c.call("delete_trace", {"board": BOARD, "uuid": x["uuid"]})
+            ref, cands, (r1, p1, r2, p2) = step["rot_try"]
+            best = None
+            for a in cands:
+                step.setdefault("rot", {})[ref] = a
+                pack(c, dict(step, traces=[]), save=False)
+                d = math.hypot(pad_map(c, r1)[p1]["x"] - pad_map(c, r2)[p2]["x"],
+                               pad_map(c, r1)[p1]["y"] - pad_map(c, r2)[p2]["y"])
+                print(f"  {ref} at {a}: {r1}.{p1} to {r2}.{p2} = {d:.1f} mm")
+                best = min(best or (d, a), (d, a))
+            step["rot"][ref] = best[1]
+            pack(c, step)
+            return
         if "pack" in step:                          # the group as one block, packed to fit its corner
             pack(c, step)
             return
+        if "rotate" in step:                        # rotate in place, choosing the KiCad angle by where pad 1 lands
+            rotate(c, step)
         if "routes" in step:                        # explicit traces: polylines in panel mm, vias between layers
             routes(c, step)
+            return
+        if "rotate" in step:
+            print("  save:", c.call("save_project", {}))
             return
         moves = []
         for ref, (board, x, y, rot, side) in step["parts"].items():

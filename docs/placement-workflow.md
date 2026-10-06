@@ -82,10 +82,11 @@ should go. Steps 2-5 arranged their groups part by part, before this rule; they 
 - A minor part (resistor or capacitor that isn't a secondary part) counts as absent until one of its pads has a
   trace on its own net (d): ignore its pads and courtyard while routing; those parts move later.
   `tools/drc_summary.py` runs DRC and lists clashes with such parts separately from real problems.
-- **Deleting vias** (Konnect can't): KiCad's Tools > Cleanup Tracks & Vias with only "Delete vias connected on
-  only one layer" ticked removes dangling ones. For vias that aren't dangling, use the editor's scripting console
-  (Tools > Scripting Console; enlarge its window, click the last `>>>` prompt, type one line removing
-  `pcbnew.GetBoard()` vias at given positions, then `pcbnew.Refresh()`), then save through Konnect.
+- **Deleting vias** (Konnect can't): use KiCad's own IPC library, kicad-python (`pip install --break-system-packages
+  kicad-python`): `KiCad(socket_path="ipc:///tmp/kicad/api.sock").get_board()`, `get_vias()`, `remove_items(...)`.
+  `konnect_place.py` does this for a step's `delete_vias` nets. Delete by position when KiCad has re-netted a via.
+  **Never type into the editor's window** (scripting console or otherwise): on 2026-10-06 a missed click sent a line
+  of code to the board as keyboard shortcuts; File > Revert to the last save undid it.
 - **Deleting a trace leaves its vias**, and KiCad re-nets an orphaned via to whatever pad it touches (here GND and
   −10 V), which then shows up as a short. Delete the old vias whenever a route is redrawn.
 
