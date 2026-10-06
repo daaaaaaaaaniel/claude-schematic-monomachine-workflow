@@ -9,3 +9,6 @@ pcb/machine-filter/*.lck
 .DS_Store
 # KiCad 10 local history
 pcb/machine-filter/.history/
+explore/routing/*/*.kicad_pcb
+explore/routing/*/*.drc.json
+explore/routing/*.kicad_pcb

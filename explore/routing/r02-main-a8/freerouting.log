@@ -1,0 +1,55 @@
+2026-10-07 01:45:10.345 INFO   Freerouting v2.3.0 (build-date: 2026-08-07)
+2026-10-07 01:45:11.116 WARN   Analytics tracking: first delivery failure in this window - /v1/analytics/identify - IOException: Unable to tunnel through proxy. Proxy returns "HTTP/1.1 403 Forbidden". Further failures will be aggregated and reported every 60 minutes.
+2026-10-07 01:45:12.498 INFO   [77525F\00C0D8] Loading board file 'main.dsn'...
+2026-10-07 01:45:13.440 INFO   [77525F\00C0D8] Job '77525F\00C0D8' started at 2026-10-06T22:45:13.439764691Z.
+2026-10-07 01:45:13.581 WARN   GitHub release response does not contain 'tag_name': {"message":"GitHub access to this repository is not enabled for this session. Use add_repo to request access. If add_repo answers that read access is already available and you need GitHub API or write access, call add_repo again with access:\"push\" to attach the repository with credentials.","documentation_url":"https://docs.anthropic.com/en/docs/claude-code/github-actions"}
+2026-10-07 01:45:14.023 INFO   [77525F\00C0D8] Fanout stage started on board '89dffa353b5fca0f5821ada2f73e9ca8' with 172 of 214 SMD pins needing fanout (8 already connected, 34 netless).
+2026-10-07 01:45:21.337 INFO   [77525F\00C0D8] Fanout pass #1 on board '59d8e873d0f546cc267fd7cdb65a451f' completed in 7.11 seconds with 153 SMD pins fanouted, 0 not routed, 0 insert errors, +56 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-10-07 01:45:22.278 INFO   [77525F\00C0D8] Fanout pass #2 on board '5a9a82886d8ab59ef7ecf5d77928127e' completed in 0.89 seconds with 18 SMD pins fanouted, 0 not routed, 0 insert errors, +6 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-10-07 01:45:22.926 INFO   [77525F\00C0D8] Fanout pass #3 on board '5a9a82886d8ab59ef7ecf5d77928127e' completed in 0.59 seconds with 9 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-10-07 01:45:23.049 INFO   [77525F\00C0D8] Fanout stage completed: started with 180 total SMD pins, completed in 8.91 seconds, escaped pins: 173/180 (96.1%), using 2.43 total CPU seconds, 4.58 GB total allocated, and 239.8 MB peak heap usage.
+2026-10-07 01:45:23.107 INFO   [77525F\00C0D8] Auto-routing stage started on board '5a9a82886d8ab59ef7ecf5d77928127e' for 68 unrouted items.
+2026-10-07 01:46:15.132 WARN   BasicBoard.normalize_traces: reached 2000 iterations for net 'ADC_HPRES' — stopping to prevent hang. The board geometry for this net may be oscillating (split/combine cycle); traces are kept as-is and further normalization for this net is suppressed on this board candidate.
+2026-10-07 01:46:25.433 INFO   [77525F\00C0D8] Auto-routing pass #1 on board '5a9a82886d8ab59ef7ecf5d77928127e' was completed in 61.82 seconds with the score of 868.63 (22 unrouted and 1 violation), using 29.33 CPU seconds and the job allocated 136.57 GB of memory so far.
+2026-10-07 01:46:33.485 INFO   [77525F\00C0D8] Auto-routing pass #2 on board 'e7b8b81ea02b8228b87378624170d894' was completed in 7.83 seconds with the score of 921.88 (13 unrouted and 1 violation), using 33.20 CPU seconds and the job allocated 155.43 GB of memory so far.
+2026-10-07 01:46:38.117 INFO   [77525F\00C0D8] Auto-routing pass #3 on board '3ccb4682dbde336ee76fab53b73084e1' was completed in 4.27 seconds with the score of 933.72 (11 unrouted and 1 violation), using 35.57 CPU seconds and the job allocated 166.63 GB of memory so far.
+2026-10-07 01:46:42.136 INFO   [77525F\00C0D8] Auto-routing pass #4 on board '79fad45b6a8c0960725938d91484bc74' was completed in 3.79 seconds with the score of 945.55 (9 unrouted and 1 violation), using 37.44 CPU seconds and the job allocated 176.27 GB of memory so far.
+2026-10-07 01:46:46.164 INFO   [77525F\00C0D8] Auto-routing pass #5 on board 'bd25e474c75fadc20fc8c81f9853b6c0' was completed in 3.72 seconds with the score of 951.47 (8 unrouted and 1 violation), using 39.23 CPU seconds and the job allocated 185.21 GB of memory so far.
+2026-10-07 01:46:48.654 INFO   [77525F\00C0D8] Auto-routing pass #6 on board 'a132068e410f4ef474812ce91f8772b4' was completed in 2.21 seconds with the score of 951.47 (8 unrouted and 1 violation), using 40.72 CPU seconds and the job allocated 193.04 GB of memory so far.
+2026-10-07 01:46:50.513 INFO   [77525F\00C0D8] Auto-routing pass #7 on board 'da73e0645703040f86306bea311612e2' was completed in 1.65 seconds with the score of 951.47 (8 unrouted and 1 violation), using 41.31 CPU seconds and the job allocated 196.13 GB of memory so far.
+2026-10-07 01:46:52.481 INFO   [77525F\00C0D8] Auto-routing pass #8 on board '0354d291e452936cae7bd1cce35b44b3' was completed in 1.77 seconds with the score of 951.47 (8 unrouted and 1 violation), using 42.54 CPU seconds and the job allocated 202.57 GB of memory so far.
+2026-10-07 01:46:54.922 INFO   [77525F\00C0D8] Auto-routing pass #9 on board '97a47aeb26d4a384445242777e7ea1a3' was completed in 2.17 seconds with the score of 951.47 (8 unrouted and 1 violation), using 44.31 CPU seconds and the job allocated 211.35 GB of memory so far.
+2026-10-07 01:46:56.511 INFO   [77525F\00C0D8] Auto-routing pass #10 on board '0080781df4a987a69c4cb922ebfef2f1' was completed in 1.37 seconds with the score of 951.47 (8 unrouted and 1 violation), using 44.92 CPU seconds and the job allocated 214.55 GB of memory so far.
+2026-10-07 01:46:58.590 INFO   [77525F\00C0D8] Auto-routing pass #11 on board 'ad58edf76a29b4d48d4c96f35c06023b' was completed in 1.88 seconds with the score of 951.47 (8 unrouted and 1 violation), using 46.23 CPU seconds and the job allocated 221.49 GB of memory so far.
+2026-10-07 01:47:01.294 INFO   [77525F\00C0D8] Auto-routing pass #12 on board '71a785ac06afd410b32b06afb8a355a3' was completed in 2.33 seconds with the score of 951.47 (8 unrouted and 1 violation), using 47.91 CPU seconds and the job allocated 229.98 GB of memory so far.
+2026-10-07 01:47:04.387 INFO   [77525F\00C0D8] Auto-routing pass #13 on board '71a785ac06afd410b32b06afb8a355a3' was completed in 2.94 seconds with the score of 951.47 (8 unrouted and 1 violation), using 49.29 CPU seconds and the job allocated 236.78 GB of memory so far.
+2026-10-07 01:47:06.726 INFO   [77525F\00C0D8] Auto-routing pass #14 on board 'cf36d6a35f059fd6096f33c8944e05be' was completed in 2.11 seconds with the score of 951.47 (8 unrouted and 1 violation), using 50.85 CPU seconds and the job allocated 244.94 GB of memory so far.
+2026-10-07 01:47:08.820 INFO   [77525F\00C0D8] Auto-routing pass #15 on board '4516559fe1e2d4fbe5deb6fb37ecdd3b' was completed in 1.95 seconds with the score of 951.47 (8 unrouted and 1 violation), using 51.99 CPU seconds and the job allocated 251.06 GB of memory so far.
+2026-10-07 01:47:10.551 INFO   [77525F\00C0D8] Auto-routing pass #16 on board '71a785ac06afd410b32b06afb8a355a3' was completed in 0.00 seconds with the score of 951.47 (8 unrouted and 1 violation), using 52.71 CPU seconds and the job allocated 254.85 GB of memory so far.
+2026-10-07 01:47:12.842 INFO   [77525F\00C0D8] Auto-routing pass #17 on board '71a785ac06afd410b32b06afb8a355a3' was completed in 2.14 seconds with the score of 951.47 (8 unrouted and 1 violation), using 54.31 CPU seconds and the job allocated 263.30 GB of memory so far.
+2026-10-07 01:47:14.804 INFO   [77525F\00C0D8] Auto-routing pass #18 on board 'cf36d6a35f059fd6096f33c8944e05be' was completed in 1.80 seconds with the score of 951.47 (8 unrouted and 1 violation), using 55.44 CPU seconds and the job allocated 268.87 GB of memory so far.
+2026-10-07 01:47:14.889 INFO   [77525F\00C0D8] The router's best score (951.47) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (8 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net '-12V' (2 unrouted connections):
+    - U3-4  ->  JB1-18
+    - C3-2  ->  R3-2
+  Net 'ADC_LPRES' (1 unrouted connection):
+    - U2-8  ->  R23-2
+  Net 'ADC_DIST' (1 unrouted connection):
+    - R35-2  ->  U1-8
+  Net '+3V3_D' (1 unrouted connection):
+    - R104-2  ->  R101-2
+  Net 'Net-(U2A--)' (1 unrouted connection):
+    - R12-1  ->  U2-2
+  Net '-10V_REF' (1 unrouted connection):
+    - C7-1  ->  U5-2
+  Net 'Net-(FB1-Pad1)' (1 unrouted connection):
+    - J13-10  ->  J13-9
+2026-10-07 01:47:15.353 INFO   [77525F\00C0D8] Auto-routing stage completed: started with 149 unrouted nets, completed in 121.56 seconds, final score: 951.47 (8 unrouted and 1 violation), using 55.44 total CPU seconds, 268.87 GB total allocated, and 388.6 MB peak heap usage.
+2026-10-07 01:47:15.479 INFO   [77525F\00C0D8] Optimization stage started on board '71a785ac06afd410b32b06afb8a355a3' with score 951.47 (8 unrouted and 1 violation).
+2026-10-07 01:47:27.788 INFO   [77525F\00C0D8] Stopping optimization pass #1 early after 50 consecutive items could not be improved.
+2026-10-07 01:47:27.901 INFO   [77525F\00C0D8] Optimizer pass #1 on board 'b6f31bc30b7f65677e6b96ddb34531b5' was completed in 12.12 seconds with the score of 951.47 (8 unrouted and 1 violation).
+2026-10-07 01:47:27.966 INFO   [77525F\00C0D8] Stopping optimizer because the improvement in this pass (0.0000%) is below the threshold (1.00%).
+2026-10-07 01:47:28.024 INFO   [77525F\00C0D8] Optimization stage completed: started with score 951.47 (8 unrouted and 1 violation), completed in 12.49 seconds, final score: 951.47 (8 unrouted and 1 violation), using 6.48 total CPU seconds, 35.91 GB total allocated, and 358.9 MB peak heap usage.
+2026-10-07 01:47:28.029 INFO   [77525F\00C0D8] Job '77525F\00C0D8' finished with state: COMPLETED (elapsed: 2 minutes 14.59 seconds, finished at UTC: 2026-10-06T22:47:28.028262395Z).
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43697 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
