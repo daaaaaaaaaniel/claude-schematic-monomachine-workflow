@@ -14,7 +14,10 @@ PCB. The post-mortem that led here is in `HANDOFF.md`.
 | 5 | U3, U4 (audio) left of the Seed3, by the codec pins 16–19; traces: Seed3 pin 16 → R52, pin 18 → R60 (the codec lines pass through series resistors; there is no direct Seed3–op-amp pin pair) | done |
 | 6 | U5 (−10 V ref) at the right edge beside the CV groups, not under the Seed3 (8 offset lines would cross the socket row); trace U5 → R28 | done |
 | 7 | J13 power entry (bottom left, sideways), J15 microSD (left middle), J14 (bottom right), each as one packed block; trace J13 → FB1 | done |
-| 8 | Headers (main front + control back, same panel spot), control board (panel parts at their fixed spots; U6, U7, U8 as blocks), standoffs | **next**: ends round one |
+| 8 | All eight CV op-amp outputs → Seed3 ADC pins (4 on the back, 4 via the front) | done |
+| 9 | Control board panel parts (12 jacks, 9 pots, 9 LEDs) at their fixed panel positions, front | done |
+| 10 | Headers (main front + control back, same panel spot, clear of the panel parts) | **next** |
+| 11 | U6, U7, U8 as blocks on the control board's back; standoffs | later (d: main board first) |
 
 Round-one flags for d (`pcb/out/round1-main-board.png`):
 - the J15 and J14 critical traces were drawn and deleted: their last leg ran along the connector's own pin row
