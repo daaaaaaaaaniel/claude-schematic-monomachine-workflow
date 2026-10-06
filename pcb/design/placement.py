@@ -90,4 +90,24 @@ STEPS = [
      "check_pads": {("U3", "1"): (20.8, 51.405), ("U3", "7"): (26.2, 50.135), ("U4", "1"): (20.8, 43.405),
                     ("U4", "6"): (26.2, 40.865), ("R52", "2"): (30.6, 51.39), ("R60", "1"): (30.6, 46.31)},
      "traces": [("A1", "16", "R52", "2", 0.25, "B.Cu"), ("A1", "18", "R60", "1", 0.25, "B.Cu")]},
+    # 5. U5 (-10 V reference), d: one gesture. Moved off the zone sketch's spot under the Seed3: from there all eight
+    #    offset lines would have to pass between socket pins (the pocket); at the right edge it sits beside the CV
+    #    groups that use it. Its group (C7, R3) comes as a block. Critical trace: to R28 (EQ FREQ offset), the
+    #    nearest offset resistor (already on the board).
+    #    (A straight drag of the staged cluster put C7 and R3 past the board's right edge; repacked as a column.)
+    {"name": "ref_u5", "pack": "ref_u5", "at": ("main", 66.6, 47.0, "back"), "width": 3.6,
+     "traces": [("L", "U5", "R28")]},
+    # 6. J13, J15, J14 in one go (d: finish the first round quickly). Each group as one block packed to fit its
+    #    corner; minor parts ride along unarranged.
+    #    J13 power entry: bottom left, header turned sideways (rot 90) so the block fits under the microSD.
+    #    Critical trace: J13 -> FB1 (the +12 V chain's first part).
+    {"name": "power", "pack": "power", "at": ("main", 3.0, 86.0, "back"), "width": 31.0, "rot": {"J13": 90},
+     "traces": [("L", "J13", "FB1")]},
+    #    J15 microSD: left middle, beside the SD pins (2-7). Critical trace: one SD line, Seed3 -> J15, as a dogleg
+    #    passing beside the socket row.
+    {"name": "microsd", "pack": "microsd", "at": ("main", 3.0, 63.0, "back"), "width": 28.0,
+     "traces": [("dogleg", "A1", "J15", 32.2, "SD_CK")]},
+    #    J14 expansion: bottom right, beside the USB pins (36/37), turned sideways. Critical trace: USB, Seed3 -> J14.
+    {"name": "expansion", "pack": "expansion", "at": ("main", 53.0, 76.0, "back"), "width": 16.0, "rot": {"J14": 90},
+     "traces": [("dogleg", "A1", "J14", 50.3, "USB_D")]},
 ]

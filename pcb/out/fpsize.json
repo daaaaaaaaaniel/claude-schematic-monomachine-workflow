@@ -1,0 +1,170 @@
+{
+"Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical": [
+3.59,
+26.45,
+0.0,
+11.43
+],
+"Connector_PinSocket_2.54mm:PinSocket_1x13_P2.54mm_Vertical": [
+3.59,
+34.07,
+0.0,
+15.24
+],
+"Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical": [
+3.59,
+39.15,
+0.0,
+17.78
+],
+"filter-module:SOIC-14_3.9x8.65mm_Pitch1.27mm": [
+7.45,
+9.36,
+-0.01,
+0.03
+],
+"Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal": [
+7.03,
+2.15,
+2.54,
+0.0
+],
+"filter-module:LED_3mm_Raised": [
+4.35,
+2.25,
+0.0,
+0.0
+],
+"Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm": [
+4.65,
+2.15,
+1.25,
+0.0
+],
+"filter-module:SOIC-16_3.9x9.9mm_Pitch1.27mm": [
+7.45,
+10.55,
+0.0,
+0.0
+],
+"filter-module:Pot_9mm_SnapIn_ES": [
+12.65,
+13.3,
+0.0,
+1.48
+],
+"filter-module:PJ398SM_Jack_4ms_BentGND": [
+13.42,
+9.45,
+0.25,
+0.0
+],
+"filter-module:PJ398SM_Jack_ES": [
+9.55,
+13.75,
+0.0,
+0.6
+],
+"filter-module:LED_3mm_C1A2": [
+4.75,
+4.61,
+0.0,
+0.0
+],
+"Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical": [
+3.59,
+26.45,
+0.0,
+11.43
+],
+"Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical": [
+3.59,
+34.08,
+0.0,
+15.23
+],
+"Connector_PinHeader_2.54mm:PinHeader_1x15_P2.54mm_Vertical": [
+3.59,
+39.17,
+0.0,
+17.78
+],
+"filter-module:SOIC-8_3.9x4.9mm_Pitch1.27mm": [
+7.55,
+5.55,
+0.0,
+0.0
+],
+"filter-module:R_0603": [
+3.25,
+1.55,
+0.0,
+0.0
+],
+"filter-module:C_0603": [
+3.25,
+1.55,
+0.0,
+0.0
+],
+"filter-module:TF-01A": [
+17.27,
+12.34,
+-0.08,
+-1.65
+],
+"filter-module:Pins_2x04_2.54mm_TH": [
+5.47,
+10.31,
+0.0,
+0.0
+],
+"filter-module:Daisy_Seed_ES_Sockets": [
+18.29,
+51.31,
+7.62,
+24.13
+],
+"filter-module:SOT-23": [
+3.45,
+3.55,
+0.0,
+0.0
+],
+"filter-module:R_1206_3216Metric": [
+4.61,
+2.29,
+0.0,
+0.0
+],
+"filter-module:Pins_2x05_2.54mm_TH_EurorackPower_Shrouded": [
+9.95,
+21.41,
+0.0,
+0.0
+],
+"filter-module:R_0805_2012Metric": [
+3.41,
+1.95,
+0.0,
+0.0
+],
+"filter-module:D_SOD-123": [
+4.75,
+1.75,
+0.0,
+0.0
+],
+"Capacitor_SMD:CP_Elec_6.3x7.7": [
+9.45,
+7.15,
+0.0,
+0.0
+],
+"filter-module:C_0805": [
+3.15,
+1.85,
+0.0,
+0.0
+]
+}

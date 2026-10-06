@@ -12,7 +12,15 @@ PCB. The post-mortem that led here is in `HANDOFF.md`.
 | 3 | U2 with its CV group (BASE, HP RES, LP RES, EQ FREQ), right of the ADC pins, pin 1 level with Seed3 pin 23; trace: U2 pin 1 (BASE out) → Seed3 pin 23, straight, 3 mm | done |
 | 4 | U1 with its CV group below U2; ADC pins re-matched to the placed chips (`tools/rematch_adc.py`; d: keep it); trace: U1 pin 1 (WIDTH out) → Seed3 pin 29, straight, 3 mm | done |
 | 5 | U3, U4 (audio) left of the Seed3, by the codec pins 16–19; traces: Seed3 pin 16 → R52, pin 18 → R60 (the codec lines pass through series resistors; there is no direct Seed3–op-amp pin pair) | done |
-| 6… | U5; J13; J15, J14; headers; standoffs (the order in §3) | to do |
+| 6 | U5 (−10 V ref) at the right edge beside the CV groups, not under the Seed3 (8 offset lines would cross the socket row); trace U5 → R28 | done |
+| 7 | J13 power entry (bottom left, sideways), J15 microSD (left middle), J14 (bottom right), each as one packed block; trace J13 → FB1 | done |
+| 8 | Headers (main front + control back, same panel spot), control board (panel parts at their fixed spots; U6, U7, U8 as blocks), standoffs | **next**: ends round one |
+
+Round-one flags for d (`pcb/out/round1-main-board.png`):
+- the J15 and J14 critical traces were drawn and deleted: their last leg ran along the connector's own pin row
+  (DRC shorts); they need a deliberate route;
+- R70 (Seed3 group) overlaps R100 (microSD block): minor parts, for the minor-parts round;
+- U5 is not where the zone sketch put it (see step 6).
 
 Branch: `pcb-first-placement`. Pictures: `pcb/out/zone-sketch.png`, `pcb/out/step1-groups-kicad.png`,
 `pcb/out/step2-seed3-kicad.png`, `pcb/out/step3-u2-kicad.png`, `pcb/out/step3-u2-closeup.png`, `pcb/out/step4-u1-closeup.png`, `pcb/out/step5-audio-closeup.png`.
