@@ -110,4 +110,7 @@ STEPS = [
     #    J14 expansion: bottom right, beside the USB pins (36/37), turned sideways. Critical trace: USB, Seed3 -> J14.
     {"name": "expansion", "pack": "expansion", "at": ("main", 53.0, 76.0, "back"), "width": 16.0, "rot": {"J14": 90},
      "traces": [("dogleg", "A1", "J14", 50.3, "USB_D")]},
+    # Feedback round (d): "rotate the SD card 90 degrees CCW" (as seen in the editor's panel-side view). J15 turned in
+    #    place; its pad row now faces the Seed3's SD pins.
+    {"name": "j15_rot", "parts": {"J15": ("main", 11.715, 67.52, 90, "back")}},
 ]
