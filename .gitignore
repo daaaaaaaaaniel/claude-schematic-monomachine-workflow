@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+pcb/machine_filter.erc
+pcb/machine_filter.log
+pcb/machine_filter_sklib.py
+pcb/machine-filter/*-backups/
+pcb/machine-filter/fp-info-cache
+pcb/machine-filter/*.lck
+.DS_Store

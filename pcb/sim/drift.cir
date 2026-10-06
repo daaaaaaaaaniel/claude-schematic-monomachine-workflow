@@ -1,0 +1,27 @@
+* Worst-case drift per kelvin of the 1V/OCT stage: thick-film R12 (+/-100 ppm/K), 0.1 % parts (+/-25 ppm/K, assumed), LM4040C (100 ppm/K max)
+VCC vp 0 3.3
+VREF ref 0 -10
+VIN cv 0 DC 0
+R10 cv rin 100k
+R13 rin inv 20k
+R11 inv adc 20k
+R12 inv ref 120k
+Gm 0 n1 0 inv 1e-3
+R1 n1 0 1e8
+Bout adc 0 V = 0.12 + 3.08*(0.5 + 0.5*tanh((v(n1)-1.66)/1.54))
+.control
+set noaskquit
+dc VIN 0 1 1
+print v(adc)
+alter R12 = 119880
+alter R11 = 20005
+alter VREF dc = -10.01
+alter R10 = 99975
+alter R13 = 19995
+dc VIN 0 1 1
+print v(adc)
+alter R12 = 119970
+dc VIN 0 1 1
+print v(adc)
+.endc
+.end

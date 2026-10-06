@@ -1,0 +1,45 @@
+* 1V/OCT input (BASE): R10 100k 0.1% + R13 20k 0.1% in, R11 20k 0.1% feedback, R12 120k 1% offset, LM4040C -10 V +/-0.5 %
+* Monte Carlo (uniform within tolerance), then a worst-case temperature drift check.
+VCC vp 0 3.3
+VREF ref 0 -10
+VIN cv 0 DC 0
+R10 cv rin 100k
+R13 rin inv 20k
+R11 inv adc 20k
+R12 inv ref 120k
+Gm 0 n1 0 inv 1e-3
+R1 n1 0 1e8
+Bout adc 0 V = 0.12 + 3.08*(0.5 + 0.5*tanh((v(n1)-1.66)/1.54))
+.control
+set noaskquit
+let n = 2000
+let scale = vector(n)
+let offs = vector(n)
+let k = 0
+while k < n
+  let a = 100e3*(1 + 0.001*sunif(0))
+  alter R10 = a
+  let a = 20e3*(1 + 0.001*sunif(0))
+  alter R13 = a
+  let a = 20e3*(1 + 0.001*sunif(0))
+  alter R11 = a
+  let a = 120e3*(1 + 0.01*sunif(0))
+  alter R12 = a
+  let a = -10*(1 + 0.005*sunif(0))
+  alter VREF dc = a
+  dc VIN 0 1 1
+  let scale[k] = v(adc)[0] - v(adc)[1]
+  let offs[k] = v(adc)[0]
+  let k = k + 1
+end
+let serr = (scale/0.1666667 - 1)*1200
+echo "scale error, cents per octave: min max"
+print vecmin(serr) vecmax(serr)
+echo "offset at 0 V CV (V): min max"
+print vecmin(offs) vecmax(offs)
+let ocents = (offs - 1.6666667)/0.1666667*1200
+echo "offset error, cents: min max"
+print vecmin(ocents) vecmax(ocents)
+wrdata mc.txt serr ocents
+.endc
+.end

@@ -1,0 +1,29 @@
+* CV input stage (LMV324, National model) on +3V3_A: CV -> 120k -> inverting, 20k || 1n, 120k to -10V_REF; + to GND
+.include models/lmv324.mod
+VCC vp 0 3.3
+VREF ref 0 -10
+VIN cv 0 DC 0 AC 1
+RIN cv inv 120k
+RF inv adc 20k
+CF inv adc 1n
+ROFF inv ref 120k
+XU 0 inv vp 0 adc lmv324_NS
+.control
+set noaskquit
+dc VIN -12 12 0.02
+wrdata dccv.txt v(adc) v(inv)
+meas dc amax max v(adc)
+meas dc amin min v(adc)
+meas dc invmax max v(inv)
+meas dc invmin min v(inv)
+meas dc a0 find v(adc) at=0
+meas dc ap8 find v(adc) at=8
+meas dc am8 find v(adc) at=-8
+meas dc xlow when v(adc)=0.05 cross=1
+meas dc xhigh when v(adc)=3.25 cross=1
+ac dec 50 10 1meg
+meas ac g10 find vdb(adc) at=10
+let g3 = g10 - 3
+meas ac f3db when vdb(adc)=g3 fall=1
+.endc
+.end

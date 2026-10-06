@@ -1,0 +1,14 @@
+* LMV324 model: open-loop output swing at 3.3 V into 100k and 10k
+.include models/lmv324.mod
+VCC vp 0 3.3
+VP inp 0 DC 1.65
+VN inn 0 DC 1.65
+XU inp inn vp 0 out lmv324_NS
+RL out 0 100k
+.control
+set noaskquit
+dc VP 1.6 1.7 0.001
+meas dc vmax max v(out)
+meas dc vmin min v(out)
+.endc
+.end

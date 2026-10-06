@@ -1,0 +1,4144 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "ae54eb47-46ca-4935-bee4-00fcef2e9739")
+	(paper "A3")
+	(title_block
+		(title "MACHINE FILTER")
+		(date "2026-10-06")
+		(rev "beta")
+		(company "MACHINE FILTER (Seed3 build): control board")
+		(comment 1 "Drawn by pcb/design/gen_sch.py from boards.py; netlist checked against machine_filter.py (SKiDL).")
+		(comment 2 "Circuit blocks after Electrosmith's Seed3 Eurorack Dev Kit Rev3 (MIT).")
+		(comment 3 "Page 8: Control board: jacks and clip LED")
+	)
+	(lib_symbols
+		(symbol "filter-module:CTL_GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CTL_GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CTL_GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0)
+						(xy 0 -1.27)
+						(xy 1.27 -1.27)
+						(xy 0 -2.54)
+						(xy -1.27 -1.27)
+						(xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CTL_GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "filter-module:EURO_JACK"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at -2.54 4.064 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 -6.096 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "filter-module:PJ398SM_Jack_ES"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "EURO_JACK_1_0"
+				(polyline
+					(pts
+						(xy -2.54 2.54)
+						(xy 0 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0)
+						(xy -0.762 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.54)
+						(xy 4.572 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.524)
+						(xy -0.508 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 2.286)
+						(xy -1.016 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 0)
+						(xy -0.762 2.286)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 1.524)
+						(xy -0.762 2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54)
+						(xy 1.524 1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 1.016)
+						(xy 2.286 1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.588 -2.794)
+					(end 4.572 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "NORM"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "NORM"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 2.54)
+					(name "TIP"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "TIP"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "filter-module:Red_3mm_TH"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "LED"
+				(at -1.27 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.143 1.143)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "Red_3mm_TH"
+				(at -8.89 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.143 1.143)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "4ms_LED:LED_3mm_C1A2_Polarity_Indicator"
+				(at 0.762 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
+			(property "Datasheet" "https://ledz.com/led.datasheet/330HR3C.pdf"
+				(at 11.43 -13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Description" "LED Red TH"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Specifications" "LED Red T3 3mm Lum>=100mcd @ 20mA"
+				(at -2.54 -7.874 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Manufacturer" "Ledz (Heibei I.T.)"
+				(at -2.54 -9.398 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Part Number" "330HR3C"
+				(at -2.54 -10.922 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Display" "Red"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Production Stage" "C"
+				(at -2.54 -16.51 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "ki_keywords" "RED, LED, TH"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*LED*C1*A2*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Red_3mm_TH_1_0"
+				(polyline
+					(pts
+						(xy 0 0)
+						(xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0)
+						(xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27)
+						(xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905)
+						(xy -0.762 3.302)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 2.032)
+						(xy 0.381 3.429)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27)
+						(xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27)
+						(xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Red_3mm_TH_1_1"
+				(polyline
+					(pts
+						(xy -0.762 3.302)
+						(xy 0.127 2.921)
+						(xy 0.127 2.921)
+						(xy -0.381 2.413)
+						(xy -0.381 2.413)
+						(xy -0.762 3.302)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.381 3.429)
+						(xy 1.27 3.048)
+						(xy 1.27 3.048)
+						(xy 0.762 2.54)
+						(xy 0.762 2.54)
+						(xy 0.381 3.429)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 15.24 33.02)
+		(end 160.02 129.54)
+		(stroke
+			(width 0.1524)
+			(type dash)
+			(color 132 132 132 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "5cb415c6-0bf9-4c74-a501-432a062c48a8")
+	)
+	(text "Audio jacks"
+		(exclude_from_sim no)
+		(at 17.24 36.62 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "66114c31-8ec6-4573-bf83-ab12fea8a776")
+	)
+	(text "IN R normalled to IN L; OUT jacks' switch unused"
+		(exclude_from_sim no)
+		(at 17.24 39.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "f6a29610-734a-4dcf-9cf8-3d902bf250a9")
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 38.1 58.42 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "df787d16-e038-4009-ad7d-86d3dcd20df8")
+		(property "Reference" "J3"
+			(at 36.83 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 36.83 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_ES"
+			(at 38.1 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "OUT L"
+			(at 38.1 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM"
+			(at 38.1 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 38.1 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 38.1 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "be1a4052-7edf-419c-9709-1b69348ac1e4")
+		)
+		(pin "NORM"
+			(uuid "6c9ab039-5e12-4517-ba4d-8e770a512015")
+		)
+		(pin "TIP"
+			(uuid "f6ff8ec6-7b0b-4e76-bcd7-d26bdec6edb8")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(no_connect
+		(at 43.18 58.42)
+		(uuid "4214b4a9-ae8b-4b49-b257-b628157072da")
+	)
+	(text "OUT L"
+		(exclude_from_sim no)
+		(at 30.48 58.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "f168c267-ad8e-42ed-9437-8243c0d53e8d")
+	)
+	(global_label "CTL_OUT_L"
+		(shape passive)
+		(at 53.34 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b4babf68-d737-4621-a7dd-af90b6666b4d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 53.34 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 48.26 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f0b5a25e-1b80-46fa-aeb2-48a664945462")
+		(property "Reference" "#PWR068"
+			(at 48.26 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 48.26 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 48.26 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6adc567-5280-4c10-8646-1cf8191ac6f0")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR068")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 101.6 58.42 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "65071143-6e10-46af-a310-4102d454d5ef")
+		(property "Reference" "J4"
+			(at 100.33 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 100.33 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_ES"
+			(at 101.6 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "OUT R"
+			(at 101.6 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM"
+			(at 101.6 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 101.6 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 101.6 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "9fb06338-f8b4-41cd-aa6c-1a62cd4b8be2")
+		)
+		(pin "NORM"
+			(uuid "305faf63-9432-491f-930c-649886c15773")
+		)
+		(pin "TIP"
+			(uuid "c6fd8c35-25f1-49b8-98dd-55492898f798")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(no_connect
+		(at 106.68 58.42)
+		(uuid "1a8b63fd-a87f-4a39-840e-2b1e8e0652b6")
+	)
+	(text "OUT R"
+		(exclude_from_sim no)
+		(at 93.98 58.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "1a4b19cd-990c-446a-8d81-424a1cb7a507")
+	)
+	(global_label "CTL_OUT_R"
+		(shape passive)
+		(at 116.84 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "43caa034-a4ff-4050-9096-1ad37fb0845a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.84 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 111.76 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ecfc4d56-3419-40b8-9ab8-7c4a5a0e4fcf")
+		(property "Reference" "#PWR069"
+			(at 111.76 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 111.76 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 111.76 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4e2049ab-a7fa-4759-889e-282263fda3ac")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 38.1 99.06 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cb92386b-7fc6-41e9-b1a0-f5f2aebca51e")
+		(property "Reference" "J1"
+			(at 36.83 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 36.83 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_ES"
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "IN L"
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM"
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 38.1 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "31c5c023-5d92-4dad-9dea-3361e2631c94")
+		)
+		(pin "NORM"
+			(uuid "5dca2811-e0fb-4a9d-9df0-1b9fd9772084")
+		)
+		(pin "TIP"
+			(uuid "6e71daab-ef87-4191-ae30-406b0ca1df20")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "IN L"
+		(exclude_from_sim no)
+		(at 30.48 99.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "339c5975-5a40-47bd-b43f-2cca208d7dea")
+	)
+	(global_label "CTL_IN_L"
+		(shape passive)
+		(at 53.34 96.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e447228f-44d5-44a9-804c-8eae676e8be4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 53.34 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 48.26 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0b3072fd-3fad-4a80-a0e7-6c580fcfdbac")
+		(property "Reference" "#PWR070"
+			(at 48.26 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 48.26 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 48.26 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2ec7bee3-fd3e-46eb-8ce8-ceac86ba1a07")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 101.6 99.06 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a1fa7ee-8d09-483a-9054-cbeed26f0282")
+		(property "Reference" "J2"
+			(at 100.33 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_ES"
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "IN R (normalled to IN L)"
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM"
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 101.6 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "5c5c315c-6823-4f33-a989-bfb38f8c70c2")
+		)
+		(pin "NORM"
+			(uuid "703d77d3-81c0-4549-ad17-8ab925091623")
+		)
+		(pin "TIP"
+			(uuid "154b53aa-6c7d-44a3-acb2-f94a5e37c051")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "IN R"
+		(exclude_from_sim no)
+		(at 93.98 99.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "addadd79-f5c7-4956-9392-957e79e93a48")
+	)
+	(global_label "CTL_IN_R"
+		(shape passive)
+		(at 116.84 96.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1287af41-0bf6-41ce-8495-8849bd91f997")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.84 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CTL_IN_L"
+		(shape passive)
+		(at 116.84 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0397c1e6-1ae7-4c5e-bd5b-1f285f63cd6f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.84 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(text "normal: IN L"
+		(exclude_from_sim no)
+		(at 127 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "43e414da-3b4a-450f-be6b-e2059a84855c")
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 111.76 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc8f2250-ff17-4d68-8661-82fbb32cea50")
+		(property "Reference" "#PWR071"
+			(at 111.76 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 111.76 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 111.76 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3fe60168-0a04-4bec-b6cd-fdc1dd745ee2")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(rectangle
+		(start 165.1 33.02)
+		(end 396.24 129.54)
+		(stroke
+			(width 0.1524)
+			(type dash)
+			(color 132 132 132 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "af4932d5-1618-44d7-8056-ae8df6d24cf4")
+	)
+	(text "CV jacks"
+		(exclude_from_sim no)
+		(at 167.1 36.62 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "ec74c350-524f-43e4-bb0b-70d614cd7b04")
+	)
+	(text "unplugged: the switch grounds the input (0 V, LED dark)"
+		(exclude_from_sim no)
+		(at 167.1 39.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "4dc1319f-3327-42ef-993e-7024b18af770")
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 187.96 53.34 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b189d9f0-a0ab-4adf-9e30-15d6d992f491")
+		(property "Reference" "J5"
+			(at 186.69 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 186.69 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 187.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "BASE · 1V/OCT CV"
+			(at 187.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 187.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 187.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 187.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "f2538728-cd7e-4fc0-8f6a-2bd0842e5d2f")
+		)
+		(pin "NORM"
+			(uuid "85382432-3049-400f-bfe0-9e0b325f3f0f")
+		)
+		(pin "TIP"
+			(uuid "600b7be4-07b1-421f-bd5f-174c31dbde3e")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "BASE · 1V/OCT"
+		(exclude_from_sim no)
+		(at 180.34 53.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "86c13d32-d107-413e-b149-60680ef8186b")
+	)
+	(global_label "CTL_CV_BASE"
+		(shape passive)
+		(at 203.2 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9a22deb2-d7d5-4923-aa6d-da91d4da3136")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 203.2 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 198.12 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26f8ad77-6fe8-4990-a53a-48f10bfe3d84")
+		(property "Reference" "#PWR072"
+			(at 198.12 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 198.12 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 198.12 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d6d7217-7f6b-4fa6-bc63-8fbbd91dbd3d")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 294.64 53.34 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "443f2d93-56fe-47f8-9684-cd917e284e56")
+		(property "Reference" "J6"
+			(at 293.37 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 293.37 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 294.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "WIDTH (1V/OCT) CV"
+			(at 294.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 294.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 294.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 294.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "d383b987-0be7-4a95-8718-961b8ca05ce8")
+		)
+		(pin "NORM"
+			(uuid "a0772ea9-39dc-4aba-bfa4-7a282d83f180")
+		)
+		(pin "TIP"
+			(uuid "bac72f35-d826-4a57-8a12-07527bcfc540")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "WIDTH (1V/OCT)"
+		(exclude_from_sim no)
+		(at 287.02 53.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "c1951842-1b07-41dc-b10a-dded78c26f98")
+	)
+	(global_label "CTL_CV_WIDTH"
+		(shape passive)
+		(at 309.88 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2ffba290-e7f1-4b27-978f-d81f6f39d0a8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 309.88 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 304.8 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "706bef42-6d85-49a8-81f2-726b7545d76f")
+		(property "Reference" "#PWR073"
+			(at 304.8 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 304.8 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 304.8 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 304.8 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f6304c8-b90c-4c42-8b77-c270e0afddab")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 187.96 73.66 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e33c4473-c5d6-4051-a4f5-d70e9e9c7c14")
+		(property "Reference" "J7"
+			(at 186.69 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 186.69 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 187.96 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "HP RES CV"
+			(at 187.96 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 187.96 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 187.96 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 187.96 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "c0a769e8-e733-48e2-a6f6-a13ff0d25520")
+		)
+		(pin "NORM"
+			(uuid "2087b556-6060-4ef8-bf67-f78848f0d4c2")
+		)
+		(pin "TIP"
+			(uuid "4f09f425-ca1b-47f0-a8af-47b34475606e")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "HP RES"
+		(exclude_from_sim no)
+		(at 180.34 74.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "c351ddce-4b1e-4390-aeb9-78efa5a6e5ff")
+	)
+	(global_label "CTL_CV_HPRES"
+		(shape passive)
+		(at 203.2 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8db653f4-3b32-4de3-894d-43eaabbfb68c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 203.2 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 198.12 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "60eba623-b4d7-40f3-8ab4-6f06fec00ef6")
+		(property "Reference" "#PWR074"
+			(at 198.12 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 198.12 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 198.12 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4765cd85-8db1-4f36-af49-1654228ab66d")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR074")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 294.64 73.66 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e311aaba-5d4b-4f42-ab74-421e90b10bbd")
+		(property "Reference" "J8"
+			(at 293.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 293.37 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 294.64 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "LP RES CV"
+			(at 294.64 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 294.64 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 294.64 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 294.64 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "53e003bb-b3dc-4d5e-9e3f-e51fe809c8d9")
+		)
+		(pin "NORM"
+			(uuid "ac2e0390-fb14-4abf-84f1-7bd1cb9d66b7")
+		)
+		(pin "TIP"
+			(uuid "e678ddd3-d082-4b13-bc68-dedcdf3ede44")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "LP RES"
+		(exclude_from_sim no)
+		(at 287.02 74.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "a96fb954-ff2c-4e5f-9bea-59d6a113394d")
+	)
+	(global_label "CTL_CV_LPRES"
+		(shape passive)
+		(at 309.88 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d1dc5655-cce8-4a2f-964f-cbadcb335d7c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 309.88 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 304.8 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6600933c-6274-47dd-9e79-f5b1fe3dd200")
+		(property "Reference" "#PWR075"
+			(at 304.8 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 304.8 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 304.8 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 304.8 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0a3ed43-d9e4-4887-af01-cd8add3c8d86")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR075")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 187.96 93.98 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "664fd75f-a6aa-456c-8001-9cb28f5a69b9")
+		(property "Reference" "J9"
+			(at 186.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 186.69 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 187.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "EQ FREQ CV"
+			(at 187.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 187.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 187.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 187.96 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "ea796b97-53a2-4b4c-932c-174c9be567ba")
+		)
+		(pin "NORM"
+			(uuid "82d76553-30ea-4936-afe7-652285adf0d5")
+		)
+		(pin "TIP"
+			(uuid "0139d8eb-9a8d-47fa-b120-da2934c78210")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "EQ FREQ"
+		(exclude_from_sim no)
+		(at 180.34 94.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "b1c2e143-9f25-4274-89c9-3a976be0588b")
+	)
+	(global_label "CTL_CV_EQF"
+		(shape passive)
+		(at 203.2 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "efb8c79e-42dd-411f-bb3c-9bcfe33c7237")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 203.2 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 198.12 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c57634d1-e821-42b1-8b94-c70ae62820e5")
+		(property "Reference" "#PWR076"
+			(at 198.12 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 198.12 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 198.12 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a775e0e-a38d-4b72-a5da-992536fa26e0")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR076")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 294.64 93.98 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a72b8da-32b9-4f03-9156-0f4d6f8f18c1")
+		(property "Reference" "J10"
+			(at 293.37 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 293.37 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 294.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "EQ GAIN CV"
+			(at 294.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 294.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 294.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 294.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "31b32b27-71ab-487a-8081-dc2ddc38d70a")
+		)
+		(pin "NORM"
+			(uuid "a8a59ef5-922d-4b4a-9457-2cfc8ca4dc97")
+		)
+		(pin "TIP"
+			(uuid "75173ea4-e239-4877-bbc8-89471e99da5f")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "EQ GAIN"
+		(exclude_from_sim no)
+		(at 287.02 94.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "1e1263d0-da5f-4e13-8cec-b014be071893")
+	)
+	(global_label "CTL_CV_EQG"
+		(shape passive)
+		(at 309.88 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e60cb170-d825-4c6f-9feb-6d66622d52a2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 309.88 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 304.8 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "60b6f125-b039-4c4a-9e67-a28144842b28")
+		(property "Reference" "#PWR077"
+			(at 304.8 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 304.8 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 304.8 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 304.8 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6860fe9c-0a2f-4d4f-8030-23319f0584fe")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR077")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 187.96 114.3 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6b834d25-32b7-49dd-9093-22caef0852bd")
+		(property "Reference" "J11"
+			(at 186.69 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 186.69 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 187.96 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "DISTORTION CV"
+			(at 187.96 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 187.96 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 187.96 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 187.96 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "aa5b407d-dafe-4a54-8775-39d250b2e66f")
+		)
+		(pin "NORM"
+			(uuid "e8410c1e-57b0-4f03-8a44-87356fe986bf")
+		)
+		(pin "TIP"
+			(uuid "b161d9b0-6ef3-4879-8e62-cfea55ca3492")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "DISTORTION"
+		(exclude_from_sim no)
+		(at 180.34 114.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "9d1e6874-a25b-4e2d-82d9-9b47fc037eb9")
+	)
+	(global_label "CTL_CV_DIST"
+		(shape passive)
+		(at 203.2 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "66820004-23b4-41bc-9b79-5ddb2f73e9f2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 203.2 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 198.12 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e0d7e99-5690-4d03-939d-0346ec98a9c4")
+		(property "Reference" "#PWR078"
+			(at 198.12 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 198.12 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 198.12 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "519c1e42-7ead-447c-a472-dd90b8db90d1")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:EURO_JACK")
+		(at 294.64 114.3 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "77b847fc-dc00-4034-be91-04a44785ed4c")
+		(property "Reference" "J12"
+			(at 293.37 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PJ398SM"
+			(at 293.37 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:PJ398SM_Jack_4ms_BentGND"
+			(at 294.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SMPL RATE CV"
+			(at 294.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "Thonkiconn PJ398SM, sleeve leg bent to the footprint"
+			(at 294.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 294.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 294.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "GND"
+			(uuid "778ffacd-130c-4710-b043-1ce62a80aa91")
+		)
+		(pin "NORM"
+			(uuid "269c7ca6-46bf-4902-a260-4889629d4851")
+		)
+		(pin "TIP"
+			(uuid "24638d98-bf92-4e4e-a425-74d0bb624324")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "SMPL RATE"
+		(exclude_from_sim no)
+		(at 287.02 114.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify right)
+		)
+		(uuid "a99205b8-101d-438c-8a76-040ff12c60ee")
+	)
+	(global_label "CTL_CV_SRR"
+		(shape passive)
+		(at 309.88 111.76 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0b43c3b9-7d17-462b-a104-de0966631354")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 309.88 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 304.8 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d3e2f024-8dad-4611-8a1c-f6d515eb2ec1")
+		(property "Reference" "#PWR079"
+			(at 304.8 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 304.8 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 304.8 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 304.8 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59f26e35-0a2c-45b9-92ed-d35af792a52b")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR079")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(rectangle
+		(start 15.24 137.16)
+		(end 160.02 182.88)
+		(stroke
+			(width 0.1524)
+			(type dash)
+			(color 132 132 132 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ae7849dc-a459-4218-bce5-310e1653f054")
+	)
+	(text "Clip LED"
+		(exclude_from_sim no)
+		(at 17.24 140.76 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "88017449-8e51-424b-a3e5-6567ff0c782b")
+	)
+	(text "driven from the Seed3 through R70 on the main board"
+		(exclude_from_sim no)
+		(at 17.24 143.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "91bdacc6-b362-431f-8b0d-6b35aa85d0c5")
+	)
+	(symbol
+		(lib_id "filter-module:Red_3mm_TH")
+		(at 66.04 160.02 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a9365806-8f03-4424-a3e6-c1c138e38242")
+		(property "Reference" "D1"
+			(at 67.31 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "red 3 mm"
+			(at 67.31 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "filter-module:LED_3mm_C1A2"
+			(at 66.04 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "clip LED, 2 o'clock from VOLUME"
+			(at 66.04 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "3 mm red LED, diffused"
+			(at 66.04 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Assembly" "hand"
+			(at 66.04 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Board" "control"
+			(at 66.04 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9ad48a3e-1596-47be-ace0-80fad7d77fd5")
+		)
+		(pin "2"
+			(uuid "2325075b-a464-4d5e-9aae-0a3fcbccbaaf")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "CTL_LED_A"
+		(shape input)
+		(at 53.34 160.02 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5c0755c8-a351-4342-b505-a53d0e6f6384")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 53.34 160.02 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "filter-module:CTL_GND")
+		(at 73.66 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fbc0d826-6f62-4b03-bb2e-415a80900161")
+		(property "Reference" "#PWR080"
+			(at 73.66 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "CTL_GND"
+			(at 73.66 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol: control board ground, joined to GND through the board connector"
+			(at 73.66 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cac51a12-12ac-4699-8f5c-0d18e97c158e")
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b/673b796a-4d58-41e0-a41c-7a09eb476dec"
+					(reference "#PWR080")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(text "clip LED, 2 o'clock from VOLUME"
+		(exclude_from_sim no)
+		(at 78.74 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9348d95b-f4fc-46b5-9849-6eb007a9047f")
+	)
+	(text "8   Control board: jacks and clip LED"
+		(exclude_from_sim no)
+		(at 20.32 24.13 0)
+		(effects
+			(font
+				(size 3 3)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "32dbd620-bce7-42c1-bcfd-a3b05a1e0ced")
+	)
+	(wire
+		(pts
+			(xy 43.18 55.88)
+			(xy 53.34 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33cc374d-ba87-48a9-bbb5-38179890bafa")
+	)
+	(wire
+		(pts
+			(xy 43.18 60.96)
+			(xy 48.26 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adfcff62-2b6c-44fc-9826-b6efd7ab1cb0")
+	)
+	(wire
+		(pts
+			(xy 48.26 60.96)
+			(xy 48.26 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9de23b78-626a-4bdd-94d2-7a7e0aea8988")
+	)
+	(wire
+		(pts
+			(xy 106.68 55.88)
+			(xy 116.84 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23472ffc-c5e4-4e48-a55b-747284173713")
+	)
+	(wire
+		(pts
+			(xy 106.68 60.96)
+			(xy 111.76 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84f4b3ea-bf8e-4fa5-827a-b773e2846fe8")
+	)
+	(wire
+		(pts
+			(xy 111.76 60.96)
+			(xy 111.76 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72076a8a-08eb-4d08-a6cb-630ef170c8cf")
+	)
+	(wire
+		(pts
+			(xy 43.18 96.52)
+			(xy 53.34 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d63f02b4-5a73-4802-8b61-1727ea0638da")
+	)
+	(wire
+		(pts
+			(xy 43.18 99.06)
+			(xy 48.26 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58e06705-4501-4246-b133-04824188ee24")
+	)
+	(wire
+		(pts
+			(xy 48.26 99.06)
+			(xy 48.26 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "567d8101-aceb-4be9-bdb8-e2da8a14de43")
+	)
+	(wire
+		(pts
+			(xy 48.26 101.6)
+			(xy 48.26 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec28195d-fa72-4cbb-b68b-ed428703f52f")
+	)
+	(wire
+		(pts
+			(xy 43.18 101.6)
+			(xy 48.26 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0670043-d0c0-43e8-941a-b5a4929099b4")
+	)
+	(wire
+		(pts
+			(xy 106.68 96.52)
+			(xy 116.84 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d19e0804-6fd2-4960-8138-751f613a3db3")
+	)
+	(wire
+		(pts
+			(xy 106.68 99.06)
+			(xy 114.3 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2add7df4-e737-47c0-b075-7c6699f95b46")
+	)
+	(wire
+		(pts
+			(xy 114.3 99.06)
+			(xy 114.3 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90eca2fb-0ef9-4b1d-855b-67d2f266ffb3")
+	)
+	(wire
+		(pts
+			(xy 114.3 109.22)
+			(xy 116.84 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4138c9d7-f2a3-4081-ad66-e7a2e41e3558")
+	)
+	(wire
+		(pts
+			(xy 106.68 101.6)
+			(xy 111.76 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1c25e91-2a5a-42e7-b059-fcfd15501cb6")
+	)
+	(wire
+		(pts
+			(xy 111.76 101.6)
+			(xy 111.76 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5df9f3e-a533-41d0-b9c9-dde9487bf295")
+	)
+	(wire
+		(pts
+			(xy 193.04 50.8)
+			(xy 203.2 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ec8c341-3d82-4f1d-9d4d-850b73314e72")
+	)
+	(wire
+		(pts
+			(xy 193.04 53.34)
+			(xy 198.12 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f6bf842-a8f3-4d1d-adaa-c5b150a01a1e")
+	)
+	(wire
+		(pts
+			(xy 198.12 53.34)
+			(xy 198.12 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e146ef14-e81a-4f35-8d4e-86f9efcaae77")
+	)
+	(wire
+		(pts
+			(xy 198.12 55.88)
+			(xy 198.12 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89784b7b-b28a-483e-97ba-f46e62384686")
+	)
+	(wire
+		(pts
+			(xy 193.04 55.88)
+			(xy 198.12 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88b42242-149d-40d0-bc06-f2d2b608fe6f")
+	)
+	(wire
+		(pts
+			(xy 299.72 50.8)
+			(xy 309.88 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cd27224-ce72-4981-af14-4b7c5a82594b")
+	)
+	(wire
+		(pts
+			(xy 299.72 53.34)
+			(xy 304.8 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acda8ba3-1eee-4d2f-a7a9-c9fcf05ef2d4")
+	)
+	(wire
+		(pts
+			(xy 304.8 53.34)
+			(xy 304.8 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4eaf5ff2-7f89-4251-9496-f61a3520c708")
+	)
+	(wire
+		(pts
+			(xy 304.8 55.88)
+			(xy 304.8 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df6758c8-a783-40c2-a2fb-732e2077099f")
+	)
+	(wire
+		(pts
+			(xy 299.72 55.88)
+			(xy 304.8 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0a7014e-2e09-4ba1-a5d0-ba8624615157")
+	)
+	(wire
+		(pts
+			(xy 193.04 71.12)
+			(xy 203.2 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65152c89-8b77-4e3c-a58f-d704336bd433")
+	)
+	(wire
+		(pts
+			(xy 193.04 73.66)
+			(xy 198.12 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf7f1ff9-89e5-4518-a8dd-e6922fe2982a")
+	)
+	(wire
+		(pts
+			(xy 198.12 73.66)
+			(xy 198.12 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "200e6f5a-c1bd-48c8-97cf-200c62c4f548")
+	)
+	(wire
+		(pts
+			(xy 198.12 76.2)
+			(xy 198.12 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d361fe70-df06-4c1c-939c-e3e3c46ea76a")
+	)
+	(wire
+		(pts
+			(xy 193.04 76.2)
+			(xy 198.12 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "434d3ef0-3feb-443c-9b46-0c33ef42f605")
+	)
+	(wire
+		(pts
+			(xy 299.72 71.12)
+			(xy 309.88 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2827f1c2-09f9-40bc-93f1-631c1103ae7c")
+	)
+	(wire
+		(pts
+			(xy 299.72 73.66)
+			(xy 304.8 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "034a6bf6-5782-4fa6-9230-c84e31ee59af")
+	)
+	(wire
+		(pts
+			(xy 304.8 73.66)
+			(xy 304.8 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1b2efeb-52e9-4ee1-b340-dc0001537cdb")
+	)
+	(wire
+		(pts
+			(xy 304.8 76.2)
+			(xy 304.8 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "942791bc-dab2-442d-9c33-71678c4a4ade")
+	)
+	(wire
+		(pts
+			(xy 299.72 76.2)
+			(xy 304.8 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71cd4df1-4188-4b42-ae91-8c5a953381be")
+	)
+	(wire
+		(pts
+			(xy 193.04 91.44)
+			(xy 203.2 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31454076-8217-4e9d-85ac-f2646afb779a")
+	)
+	(wire
+		(pts
+			(xy 193.04 93.98)
+			(xy 198.12 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8046d83-951d-4404-9a94-695c1890bb2a")
+	)
+	(wire
+		(pts
+			(xy 198.12 93.98)
+			(xy 198.12 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ae1f897-44ab-44b5-af8a-966464e63354")
+	)
+	(wire
+		(pts
+			(xy 198.12 96.52)
+			(xy 198.12 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "080223d0-ff1d-4a47-95df-bae84023e10c")
+	)
+	(wire
+		(pts
+			(xy 193.04 96.52)
+			(xy 198.12 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8b6eb90-7941-4b69-a909-498d6532888f")
+	)
+	(wire
+		(pts
+			(xy 299.72 91.44)
+			(xy 309.88 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b4efa7a-9e98-40a4-b1c0-81d61a4a8466")
+	)
+	(wire
+		(pts
+			(xy 299.72 93.98)
+			(xy 304.8 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c15508be-0076-4a07-b5e2-a86ff7665393")
+	)
+	(wire
+		(pts
+			(xy 304.8 93.98)
+			(xy 304.8 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cfa4477-e489-4158-bb19-9c1f2339578b")
+	)
+	(wire
+		(pts
+			(xy 304.8 96.52)
+			(xy 304.8 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9145c025-a315-4171-a867-2e2df8dab063")
+	)
+	(wire
+		(pts
+			(xy 299.72 96.52)
+			(xy 304.8 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef5712fb-aaf0-4dbb-923e-62c9b00caede")
+	)
+	(wire
+		(pts
+			(xy 193.04 111.76)
+			(xy 203.2 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8cbd541-b586-4317-beb6-f7623c69159c")
+	)
+	(wire
+		(pts
+			(xy 193.04 114.3)
+			(xy 198.12 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ba3bec2-7456-4faa-9622-e5117417b06a")
+	)
+	(wire
+		(pts
+			(xy 198.12 114.3)
+			(xy 198.12 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcdd93a9-518b-4077-98ae-0de4005127c6")
+	)
+	(wire
+		(pts
+			(xy 198.12 116.84)
+			(xy 198.12 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41e95dd5-78d9-475f-8a52-d38a00aa8cc5")
+	)
+	(wire
+		(pts
+			(xy 193.04 116.84)
+			(xy 198.12 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a1fad45-ae5c-4405-9cad-6f64a9fbb540")
+	)
+	(wire
+		(pts
+			(xy 299.72 111.76)
+			(xy 309.88 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fb88237-67ff-46d5-b53d-daf0a8cbf258")
+	)
+	(wire
+		(pts
+			(xy 299.72 114.3)
+			(xy 304.8 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f91ba0e-7a1c-4b82-a0b7-1554d003384c")
+	)
+	(wire
+		(pts
+			(xy 304.8 114.3)
+			(xy 304.8 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b40c3a8e-0fcd-490c-b9f7-a2647eafcb72")
+	)
+	(wire
+		(pts
+			(xy 304.8 116.84)
+			(xy 304.8 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c6b2a1d-8fd1-4f1d-a738-7d47415818ae")
+	)
+	(wire
+		(pts
+			(xy 299.72 116.84)
+			(xy 304.8 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca701c25-5c68-4cc4-9c62-72ca0111b654")
+	)
+	(wire
+		(pts
+			(xy 53.34 160.02)
+			(xy 60.96 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddc320b8-3d52-4042-b512-df56e1c94978")
+	)
+	(wire
+		(pts
+			(xy 68.58 160.02)
+			(xy 73.66 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d67ca49d-0ecd-4557-b709-752292d9cf23")
+	)
+	(wire
+		(pts
+			(xy 73.66 160.02)
+			(xy 73.66 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7a7ccc9-d9c6-4bc8-a68a-1e39ca34e775")
+	)
+	(junction
+		(at 48.26 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e651ed7-2d43-482e-8b4d-1c4d507cdf35")
+	)
+	(junction
+		(at 198.12 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d7692b47-f079-472e-9f53-473386a19f7d")
+	)
+	(junction
+		(at 198.12 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ec0a6ea-6b60-4b21-85ae-fd0b3903afd1")
+	)
+	(junction
+		(at 198.12 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8bf549cb-d552-4d30-9da2-94032498173e")
+	)
+	(junction
+		(at 198.12 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ffd7f5cd-921c-4aa3-b777-18265f992f02")
+	)
+	(junction
+		(at 304.8 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "02a6a7dc-c8c5-4d8f-9711-db776139bd2b")
+	)
+	(junction
+		(at 304.8 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a02d9b4-e0c5-4928-a6c9-797ddc7e00d1")
+	)
+	(junction
+		(at 304.8 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76965ea3-5dc1-4506-8c2e-56f200a336c3")
+	)
+	(junction
+		(at 304.8 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de4388da-c586-4f7b-b2ae-dd081f5f052d")
+	)
+	(embedded_fonts no)
+)

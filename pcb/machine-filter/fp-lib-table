@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "filter-module")(type "KiCad")(uri "${KIPRJMOD}/../lib/filter-module.pretty")(options "")(descr "Project footprints, see lib/SOURCES.md"))
+)

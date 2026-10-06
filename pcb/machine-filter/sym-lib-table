@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "filter-module")(type "KiCad")(uri "${KIPRJMOD}/../lib/filter-module.kicad_sym")(options "")(descr "Project library, see lib/SOURCES.md"))
+)

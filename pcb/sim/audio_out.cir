@@ -1,0 +1,43 @@
+* Audio output stage U4 (TL072, TI 1989 macromodel): codec -> 100R (codec Zout) -> 10k -> inverting, Rf || Cf, 100R -> 100k load
+.include models/tl072.mod
+.param RF=39k CF=100p
+VCC vp 0 11.7
+VEE vn 0 -11.7
+VIN src 0 DC 0 AC 1 SIN(0 1.4142 1k)
+RZ src cod 100
+RIN cod inv 10k
+RF inv out {RF}
+CF inv out {CF}
+XU 0 inv vp vn out TL072
+RS out jack 100
+RL jack 0 100k
+.control
+set noaskquit
+foreach rf 39k 100k
+  if $rf eq 39k
+    alterparam RF=39k
+    alterparam CF=100p
+  else
+    alterparam RF=100k
+    alterparam CF=33p
+  end
+  reset
+  echo "=== RF = $rf"
+  dc VIN -3 3 0.005
+  let ideal = -v(src)*$&rf/10.1e3*(1)
+  wrdata dc_$rf.txt v(jack)
+  meas dc vmax max v(jack)
+  meas dc vmin min v(jack)
+  ac dec 50 10 1meg
+  wrdata ac_$rf.txt vdb(jack) vp(jack)
+  meas ac g1k find vdb(jack) at=1k
+  meas ac g20k find vdb(jack) at=20k
+  let g3 = g1k - 3
+  meas ac f3db when vdb(jack)=g3 fall=1
+  meas ac fpk max vdb(jack) from=1k to=1meg
+  tran 2u 5m
+  wrdata tran_$rf.txt v(src) v(jack)
+  fourier 1k v(jack)
+end
+.endc
+.end

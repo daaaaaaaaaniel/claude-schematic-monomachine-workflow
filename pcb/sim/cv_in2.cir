@@ -1,0 +1,36 @@
+* CV input stage with a behavioural LMV324 matching TI's datasheet swing: VOL 0.06-0.18 V, VOH VCC-0.1 V (RL 10k), GBW ~1 MHz.
+* (The National macromodel tops out at 2.5 V on 3.3 V, contradicting TI's datasheet, so it isn't used here.)
+.param VOL=0.12 VOH=3.2
+VCC vp 0 3.3
+VREF ref 0 -10
+VIN cv 0 DC 0 AC 1
+RIN cv inv 120k
+RF inv adc 20k
+CF inv adc 1n
+ROFF inv ref 120k
+* single-pole op amp: A0 = 1e5, pole 10 Hz (GBW 1 MHz), output clamped to [VOL, VOH]
+Gm 0 n1 0 inv 1e-3
+R1 n1 0 1e8
+C1 n1 0 159p
+Bout adc_i 0 V = {VOL} + ({VOH}-{VOL}) * (0.5 + 0.5*tanh((v(n1) - ({VOH}+{VOL})/2) / (({VOH}-{VOL})/2)))
+Ro adc_i adc 10
+.control
+set noaskquit
+dc VIN -12 12 0.02
+wrdata dccv2.txt v(adc) v(inv)
+meas dc amax max v(adc)
+meas dc amin min v(adc)
+meas dc invmax max v(inv)
+meas dc invmin min v(inv)
+meas dc a0 find v(adc) at=0
+meas dc ap8 find v(adc) at=8
+meas dc am8 find v(adc) at=-8
+meas dc vinv02 when v(inv)=-0.2 cross=1
+meas dc lin_lo when v(adc)=0.2 cross=1
+meas dc lin_hi when v(adc)=3.15 cross=1
+ac dec 50 10 1meg
+meas ac g10 find vdb(adc) at=10
+let g3 = g10 - 3
+meas ac f3db when vdb(adc)=g3 fall=1
+.endc
+.end

@@ -1,0 +1,3497 @@
+(export 
+  (version "D")
+  (design
+    (source "machine_filter.py")
+    (date "10/06/2026 08:01 PM")
+    (tool "SKiDL (2.3.0)")
+    (sheet
+      (number 1)
+      (name "/cv/cv1/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6ef0a41a-0ce1-520b-930e-be8673c50b73/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 2)
+      (name "/")
+      (tstamps "/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 3)
+      (name "/cv/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 4)
+      (name "/cv/cv5/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6439d93e-84ec-5393-b62d-90c19b84ded5/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 5)
+      (name "/cv/cv7/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 6)
+      (name "/cv/cv3/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/33520868-9ca9-592a-a7e0-ce5b9acd5fe1/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 7)
+      (name "/audio/")
+      (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 8)
+      (name "/cv/cv8/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/4c579a76-6370-557c-9b35-c15e8f695a0e/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 9)
+      (name "/seed/")
+      (tstamps "/2369e6f2-780f-5133-b532-1a091f982cc4/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 10)
+      (name "/controls/")
+      (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 11)
+      (name "/cv/cv2/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/76211a31-32c5-550b-a96c-1dd148227ac5/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 12)
+      (name "/connectors/")
+      (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 13)
+      (name "/power/")
+      (tstamps "/fd57245b-6c1e-5121-a5d7-1feafbd22fd5/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 14)
+      (name "/cv/cv4/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/c53ec302-0275-51f0-abb3-42b00ec3a227/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 15)
+      (name "/cv/cv6/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value "")))))
+  (components
+    (comp
+      (ref "C80")
+      (value "100n")
+      (description "Unpolarized capacitor")
+      (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+      (fields
+        (field
+          (name "MPN") "100 nF 50 V X7R ceramic, 2.5 mm pitch")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Unpolarized capacitor")
+        (field
+          (name "Footprint") "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "C80")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "C"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "691875cf-4f01-53cd-b650-08f0614a30f9"))
+    (comp
+      (ref "C81")
+      (value "100n")
+      (description "Unpolarized capacitor")
+      (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+      (fields
+        (field
+          (name "MPN") "100 nF 50 V X7R ceramic, 2.5 mm pitch")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Unpolarized capacitor")
+        (field
+          (name "Footprint") "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "C81")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "C"))
+      (sheetpath
+        (names "/cv/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/"))
+      (component_classes)
+      (tstamps "1e280be9-9f4b-50f3-99ac-bc716c1ca1e8"))
+    (comp
+      (ref "C82")
+      (value "100n")
+      (description "Unpolarized capacitor")
+      (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+      (fields
+        (field
+          (name "MPN") "100 nF 50 V X7R ceramic, 2.5 mm pitch")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Unpolarized capacitor")
+        (field
+          (name "Footprint") "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "C82")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "C"))
+      (sheetpath
+        (names "/cv/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/"))
+      (component_classes)
+      (tstamps "6b6aaf95-19ab-55a0-a303-d3d31d1be36e"))
+    (comp
+      (ref "C83")
+      (value "100n")
+      (description "Unpolarized capacitor")
+      (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+      (fields
+        (field
+          (name "MPN") "100 nF 50 V X7R ceramic, 2.5 mm pitch")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Unpolarized capacitor")
+        (field
+          (name "Footprint") "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "C83")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "C"))
+      (sheetpath
+        (names "/cv/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/"))
+      (component_classes)
+      (tstamps "a5c7b5c3-7dec-51a1-9062-7c967fef03d6"))
+    (comp
+      (ref "C84")
+      (value "100n")
+      (description "Unpolarized capacitor")
+      (footprint "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+      (fields
+        (field
+          (name "MPN") "100 nF 50 V X7R ceramic, 2.5 mm pitch")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Unpolarized capacitor")
+        (field
+          (name "Footprint") "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "C84")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "C"))
+      (sheetpath
+        (names "/cv/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/"))
+      (component_classes)
+      (tstamps "ade75ae4-22bc-5aae-89d6-46d7ab16e323"))
+    (comp
+      (ref "D1")
+      (value "red 3 mm")
+      (description "LED Red TH")
+      (footprint "filter-module:LED_3mm_C1A2")
+      (fields
+        (field
+          (name "MPN") "3 mm red LED, diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "LED Red TH")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_C1A2")
+        (field
+          (name "Datasheet") "https://ledz.com/led.datasheet/330HR3C.pdf")
+        (field
+          (name "SKiDL Tag") "D1")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "Red_3mm_TH"))
+      (sheetpath
+        (names "/seed/")
+        (tstamps "/2369e6f2-780f-5133-b532-1a091f982cc4/"))
+      (component_classes)
+      (tstamps "056c3ec2-f629-5210-9e8e-3587d5ab85d1"))
+    (comp
+      (ref "D2")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D2")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv1/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6ef0a41a-0ce1-520b-930e-be8673c50b73/"))
+      (component_classes)
+      (tstamps "4e742907-23dd-5e59-9e86-3e76e480c8b5"))
+    (comp
+      (ref "D3")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D3")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv2/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/76211a31-32c5-550b-a96c-1dd148227ac5/"))
+      (component_classes)
+      (tstamps "5a5db699-14ed-5a39-88f7-2a8beac910c8"))
+    (comp
+      (ref "D4")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D4")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv3/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/33520868-9ca9-592a-a7e0-ce5b9acd5fe1/"))
+      (component_classes)
+      (tstamps "30ea524d-6830-5d3b-86aa-e38376454500"))
+    (comp
+      (ref "D5")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D5")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv4/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/c53ec302-0275-51f0-abb3-42b00ec3a227/"))
+      (component_classes)
+      (tstamps "08e94650-dd45-51a4-abf6-f417372cec10"))
+    (comp
+      (ref "D6")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D6")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv5/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6439d93e-84ec-5393-b62d-90c19b84ded5/"))
+      (component_classes)
+      (tstamps "a5273e8c-f7db-5bed-a64a-ec2ce246fd29"))
+    (comp
+      (ref "D7")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D7")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv6/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/"))
+      (component_classes)
+      (tstamps "832764a0-054b-5321-8812-6ab672e506e1"))
+    (comp
+      (ref "D8")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D8")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv7/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/"))
+      (component_classes)
+      (tstamps "53ab52f2-7693-5b63-9237-07d7c765bebb"))
+    (comp
+      (ref "D9")
+      (value "red/green 3 mm")
+      (description "Dual LED, bidirectional")
+      (footprint "filter-module:LED_3mm_Raised")
+      (fields
+        (field
+          (name "MPN") "3 mm red/green bicolour LED, 2 leads (anti-parallel), diffused")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Dual LED, bidirectional")
+        (field
+          (name "Footprint") "filter-module:LED_3mm_Raised")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "D9")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Device")
+        (part "LED_Dual_Bidirectional"))
+      (sheetpath
+        (names "/cv/cv8/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/4c579a76-6370-557c-9b35-c15e8f695a0e/"))
+      (component_classes)
+      (tstamps "72a5298f-c5a8-5aa9-a513-34beb186aa46"))
+    (comp
+      (ref "J1")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_ES")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J1")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/audio/")
+        (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/"))
+      (component_classes)
+      (tstamps "9bf7875b-46ca-5b1e-a4bb-887c038d4ac7"))
+    (comp
+      (ref "J10")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J10")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv6/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/"))
+      (component_classes)
+      (tstamps "26ad1963-51ab-51b3-94a0-85c39895ca20"))
+    (comp
+      (ref "J11")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J11")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv7/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/"))
+      (component_classes)
+      (tstamps "2bdd1248-35b9-5c0f-a0e5-773be7ab4afb"))
+    (comp
+      (ref "J12")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J12")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv8/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/4c579a76-6370-557c-9b35-c15e8f695a0e/"))
+      (component_classes)
+      (tstamps "15a2e4b7-4f10-5645-875d-341e5b11f21a"))
+    (comp
+      (ref "J2")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_ES")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J2")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/audio/")
+        (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/"))
+      (component_classes)
+      (tstamps "26fa8807-12c8-58cb-942c-96a82708c7db"))
+    (comp
+      (ref "J3")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_ES")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J3")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/audio/")
+        (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/"))
+      (component_classes)
+      (tstamps "d5b831cc-ee13-559b-ba1b-71f79697f97f"))
+    (comp
+      (ref "J4")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_ES")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J4")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/audio/")
+        (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/"))
+      (component_classes)
+      (tstamps "3ed73ded-7d23-5a47-b669-8898b378e89b"))
+    (comp
+      (ref "J5")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J5")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv1/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6ef0a41a-0ce1-520b-930e-be8673c50b73/"))
+      (component_classes)
+      (tstamps "6b763302-a4ec-5591-bcbf-469efa71b803"))
+    (comp
+      (ref "J6")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J6")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv2/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/76211a31-32c5-550b-a96c-1dd148227ac5/"))
+      (component_classes)
+      (tstamps "131c2854-e8e7-5e1d-af3f-f911a878f687"))
+    (comp
+      (ref "J7")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J7")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv3/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/33520868-9ca9-592a-a7e0-ce5b9acd5fe1/"))
+      (component_classes)
+      (tstamps "77ec0f42-89d5-57b0-9a6c-a2104cf9c3bf"))
+    (comp
+      (ref "J8")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J8")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv4/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/c53ec302-0275-51f0-abb3-42b00ec3a227/"))
+      (component_classes)
+      (tstamps "174d4133-a363-5e25-8e50-e6fb07741164"))
+    (comp
+      (ref "J9")
+      (value "PJ398SM")
+      (description "")
+      (footprint "filter-module:PJ398SM_Jack_4ms_BentGND")
+      (fields
+        (field
+          (name "MPN") "Thonkiconn PJ398SM, sleeve leg bent to the footprint")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "filter-module:PJ398SM_Jack_4ms_BentGND")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "J9")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "EURO_JACK"))
+      (sheetpath
+        (names "/cv/cv5/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6439d93e-84ec-5393-b62d-90c19b84ded5/"))
+      (component_classes)
+      (tstamps "d77332a6-7ad7-5a1f-aa12-bfc6d11666ad"))
+    (comp
+      (ref "JA1")
+      (value "1x15 socket")
+      (description "Generic connector, single row, 01x15, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (footprint "Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical")
+      (fields
+        (field
+          (name "MPN") "2.54 mm female header 1x15, 8.5 mm (as the Seed3 sockets)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Generic connector, single row, 01x15, script generated (kicad-library-utils/schlib/autogen/connector/)")
+        (field
+          (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x15_P2.54mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "JA1")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Connector_Generic")
+        (part "Conn_01x15"))
+      (sheetpath
+        (names "/connectors/")
+        (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/"))
+      (component_classes)
+      (tstamps "fd24de71-50bd-556a-9650-405666bc37ff"))
+    (comp
+      (ref "JA2")
+      (value "1x13 socket")
+      (description "Generic connector, single row, 01x13, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (footprint "Connector_PinSocket_2.54mm:PinSocket_1x13_P2.54mm_Vertical")
+      (fields
+        (field
+          (name "MPN") "2.54 mm female header 1x13, 8.5 mm (as the Seed3 sockets)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Generic connector, single row, 01x13, script generated (kicad-library-utils/schlib/autogen/connector/)")
+        (field
+          (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x13_P2.54mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "JA2")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Connector_Generic")
+        (part "Conn_01x13"))
+      (sheetpath
+        (names "/connectors/")
+        (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/"))
+      (component_classes)
+      (tstamps "5bfceb59-df82-5fb3-b86b-0237802498ff"))
+    (comp
+      (ref "JA3")
+      (value "1x10 socket")
+      (description "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (footprint "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical")
+      (fields
+        (field
+          (name "MPN") "2.54 mm female header 1x10, 8.5 mm (as the Seed3 sockets)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)")
+        (field
+          (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "JA3")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Connector_Generic")
+        (part "Conn_01x10"))
+      (sheetpath
+        (names "/connectors/")
+        (tstamps "/f641babc-4382-53cd-b931-c445ac05de1f/"))
+      (component_classes)
+      (tstamps "f8154023-71fd-585a-81cd-2c181c2d565f"))
+    (comp
+      (ref "R71")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R71")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv1/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6ef0a41a-0ce1-520b-930e-be8673c50b73/"))
+      (component_classes)
+      (tstamps "86d0fa41-7904-5450-969c-3034faedab20"))
+    (comp
+      (ref "R72")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R72")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv2/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/76211a31-32c5-550b-a96c-1dd148227ac5/"))
+      (component_classes)
+      (tstamps "bea8d2cd-e433-505d-8d48-5928d6fb0ecf"))
+    (comp
+      (ref "R73")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R73")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv3/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/33520868-9ca9-592a-a7e0-ce5b9acd5fe1/"))
+      (component_classes)
+      (tstamps "95a3c66b-b813-54cf-9cf4-bf2a402c4200"))
+    (comp
+      (ref "R74")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R74")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv4/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/c53ec302-0275-51f0-abb3-42b00ec3a227/"))
+      (component_classes)
+      (tstamps "7fa43da8-2028-52fd-b01a-47c1045747e7"))
+    (comp
+      (ref "R75")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R75")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv5/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6439d93e-84ec-5393-b62d-90c19b84ded5/"))
+      (component_classes)
+      (tstamps "93f7f396-14ef-5879-b824-a0db9806f654"))
+    (comp
+      (ref "R76")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R76")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv6/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/"))
+      (component_classes)
+      (tstamps "0e967c68-f80f-5033-a3df-c26255ea77c0"))
+    (comp
+      (ref "R77")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R77")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv7/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/"))
+      (component_classes)
+      (tstamps "0fa78c8f-d1d4-5d68-890c-40940a6acd7a"))
+    (comp
+      (ref "R78")
+      (value "1.5k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1.5k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R78")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv8/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/4c579a76-6370-557c-9b35-c15e8f695a0e/"))
+      (component_classes)
+      (tstamps "0ae3d243-5a46-5af0-9938-35fd91bbac1d"))
+    (comp
+      (ref "R80")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R80")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv1/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6ef0a41a-0ce1-520b-930e-be8673c50b73/"))
+      (component_classes)
+      (tstamps "d9d31902-ba75-5771-a19f-6d49daaa29c0"))
+    (comp
+      (ref "R81")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R81")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv2/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/76211a31-32c5-550b-a96c-1dd148227ac5/"))
+      (component_classes)
+      (tstamps "f87d818c-5802-58df-a068-e380b0304831"))
+    (comp
+      (ref "R82")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R82")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv3/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/33520868-9ca9-592a-a7e0-ce5b9acd5fe1/"))
+      (component_classes)
+      (tstamps "a2bdbabd-3fc7-5c0c-83f8-bae534e14fc1"))
+    (comp
+      (ref "R83")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R83")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv4/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/c53ec302-0275-51f0-abb3-42b00ec3a227/"))
+      (component_classes)
+      (tstamps "172c9b60-0d0d-5082-8c26-8492dd25b3a0"))
+    (comp
+      (ref "R84")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R84")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv5/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6439d93e-84ec-5393-b62d-90c19b84ded5/"))
+      (component_classes)
+      (tstamps "ff57464d-5768-53cc-8140-b02c687854cb"))
+    (comp
+      (ref "R85")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R85")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv6/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/"))
+      (component_classes)
+      (tstamps "bc5221df-b237-5f6a-a166-7c2c6a854dd1"))
+    (comp
+      (ref "R86")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R86")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv7/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/"))
+      (component_classes)
+      (tstamps "da012ca6-53fe-5f35-a1fa-07eaa388ceb3"))
+    (comp
+      (ref "R87")
+      (value "10k")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "10k 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R87")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv8/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/4c579a76-6370-557c-9b35-c15e8f695a0e/"))
+      (component_classes)
+      (tstamps "127e2c8b-2e4b-57a4-8d67-e43af1c95bf9"))
+    (comp
+      (ref "R90")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R90")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv1/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6ef0a41a-0ce1-520b-930e-be8673c50b73/"))
+      (component_classes)
+      (tstamps "03891c11-870c-5f3d-9625-daba668ebe18"))
+    (comp
+      (ref "R91")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R91")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv2/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/76211a31-32c5-550b-a96c-1dd148227ac5/"))
+      (component_classes)
+      (tstamps "547b64b4-285c-5dc6-b34a-9bd03d1d200f"))
+    (comp
+      (ref "R92")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R92")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv3/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/33520868-9ca9-592a-a7e0-ce5b9acd5fe1/"))
+      (component_classes)
+      (tstamps "7d8ac75c-c8c0-558c-a637-31bbc251637b"))
+    (comp
+      (ref "R93")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R93")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv4/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/c53ec302-0275-51f0-abb3-42b00ec3a227/"))
+      (component_classes)
+      (tstamps "d4d1823d-8db4-5bac-8c2f-427fccd9d1ff"))
+    (comp
+      (ref "R94")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R94")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv5/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6439d93e-84ec-5393-b62d-90c19b84ded5/"))
+      (component_classes)
+      (tstamps "944e13f1-7d34-552b-b084-5f0584ad30ba"))
+    (comp
+      (ref "R95")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R95")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv6/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/"))
+      (component_classes)
+      (tstamps "11c1cd69-8ad8-5665-8d5a-dd5fc99a3dc8"))
+    (comp
+      (ref "R96")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R96")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv7/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/"))
+      (component_classes)
+      (tstamps "797325a1-2073-5045-96a3-4175d6f115d8"))
+    (comp
+      (ref "R97")
+      (value "1M")
+      (description "Resistor")
+      (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+      (fields
+        (field
+          (name "MPN") "1M 1/8 W 1% metal film, axial DIN0204")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Resistor")
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "R97")
+        (field
+          (name "SKiDL Line") "machine_filter.py:107"))
+      (libsource
+        (lib "Device")
+        (part "R"))
+      (sheetpath
+        (names "/cv/cv8/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/4c579a76-6370-557c-9b35-c15e8f695a0e/"))
+      (component_classes)
+      (tstamps "6298c769-478d-585f-aea2-e198a781cfe7"))
+    (comp
+      (ref "RV1")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV1")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "9d35565c-9c94-5464-adc7-db9ad39f454a"))
+    (comp
+      (ref "RV2")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV2")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "2205b84e-0376-5ce5-bb64-2849af453bbc"))
+    (comp
+      (ref "RV3")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV3")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "71541262-e454-5e57-8e3e-7651c95cca86"))
+    (comp
+      (ref "RV4")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV4")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "d398fdb1-004b-51dd-879a-b1a8eed6cda8"))
+    (comp
+      (ref "RV5")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV5")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "ba96c3fd-3ab5-5d72-8ff7-3f95a2a4daf8"))
+    (comp
+      (ref "RV6")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV6")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "32f79dfc-3485-500c-8a16-0d1f51f9221c"))
+    (comp
+      (ref "RV7")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV7")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "8b8379b3-16c0-564a-aab0-4889d8494c33"))
+    (comp
+      (ref "RV8")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV8")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "d8e7282f-eabf-54ed-9cbb-f65091d8c818"))
+    (comp
+      (ref "RV9")
+      (value "B10k")
+      (description "9mm vertical snap-in pot, Alpha / Panasonic style")
+      (footprint "filter-module:Pot_9mm_SnapIn_ES")
+      (fields
+        (field
+          (name "MPN") "Alpha RD901F 9 mm B10k (any shaft)")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "9mm vertical snap-in pot, Alpha / Panasonic style")
+        (field
+          (name "Footprint") "filter-module:Pot_9mm_SnapIn_ES")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RV9")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "filter-module")
+        (part "POT_9MM"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "1cdf959e-9d72-5769-b0fa-6c9be41f6b51"))
+    (comp
+      (ref "U6")
+      (value "74HC4051")
+      (description "8-channel analog multiplexer/demultiplexer, DIP-16/SOIC-16/TSSOP-16")
+      (footprint "filter-module:SOIC-16_3.9x9.9mm_Pitch1.27mm")
+      (fields
+        (field
+          (name "LCSC") "C9386")
+        (field
+          (name "MPN") "74HC4051D,653")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "8-channel analog multiplexer/demultiplexer, DIP-16/SOIC-16/TSSOP-16")
+        (field
+          (name "Footprint") "filter-module:SOIC-16_3.9x9.9mm_Pitch1.27mm")
+        (field
+          (name "Datasheet") "http://www.ti.com/lit/ds/symlink/cd74hc4051.pdf")
+        (field
+          (name "SKiDL Tag") "U6")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "74xx")
+        (part "74HC4051"))
+      (sheetpath
+        (names "/controls/")
+        (tstamps "/6f823a46-42b4-584e-a126-f64519c7a81d/"))
+      (component_classes)
+      (tstamps "0eb69089-8600-5193-b78d-595852a8c2b1"))
+    (comp
+      (ref "U7")
+      (value "LM324")
+      (description "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14")
+      (footprint "filter-module:SOIC-14_3.9x8.65mm_Pitch1.27mm")
+      (fields
+        (field
+          (name "LCSC") "C71035")
+        (field
+          (name "MPN") "LM324DT")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14")
+        (field
+          (name "Footprint") "filter-module:SOIC-14_3.9x8.65mm_Pitch1.27mm")
+        (field
+          (name "Datasheet") "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf")
+        (field
+          (name "SKiDL Tag") "U7")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Amplifier_Operational")
+        (part "LM324"))
+      (sheetpath
+        (names "/cv/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/"))
+      (component_classes)
+      (tstamps "9a8a2f40-9a18-5cbc-a0a0-dc180af6fbb3"))
+    (comp
+      (ref "U8")
+      (value "LM324")
+      (description "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14")
+      (footprint "filter-module:SOIC-14_3.9x8.65mm_Pitch1.27mm")
+      (fields
+        (field
+          (name "LCSC") "C71035")
+        (field
+          (name "MPN") "LM324DT")
+        (field
+          (name "Assembly") "hand")
+        (field
+          (name "Description") "Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14")
+        (field
+          (name "Footprint") "filter-module:SOIC-14_3.9x8.65mm_Pitch1.27mm")
+        (field
+          (name "Datasheet") "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf")
+        (field
+          (name "SKiDL Tag") "U8")
+        (field
+          (name "SKiDL Line") "machine_filter.py:116"))
+      (libsource
+        (lib "Amplifier_Operational")
+        (part "LM324"))
+      (sheetpath
+        (names "/cv/")
+        (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/"))
+      (component_classes)
+      (tstamps "e5a99623-e213-5c5f-827e-365b32e60645")))
+  (nets
+    (net
+      (code 1)
+      (name "+12V")
+      (class "Default")
+      (node
+        (ref "C81")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C83")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "12")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "4")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U8")
+        (pin "4")
+        (pintype "POWER-IN")))
+    (net
+      (code 2)
+      (name "+3V3_A")
+      (class "Default")
+      (node
+        (ref "C80")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA3")
+        (pin "9")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV1")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV2")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV3")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV4")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV5")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV6")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV7")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV8")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV9")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "16")
+        (pintype "POWER-IN")))
+    (net
+      (code 3)
+      (name "-12V")
+      (class "Default")
+      (node
+        (ref "C82")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C84")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "14")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "11")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U8")
+        (pin "11")
+        (pintype "POWER-IN")))
+    (net
+      (code 4)
+      (name "CVB_BASE")
+      (class "Default")
+      (node
+        (ref "R80")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R90")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "12")
+        (pintype "INPUT")))
+    (net
+      (code 5)
+      (name "CVB_DIST")
+      (class "Default")
+      (node
+        (ref "R86")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R96")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "10")
+        (pintype "INPUT")))
+    (net
+      (code 6)
+      (name "CVB_EQF")
+      (class "Default")
+      (node
+        (ref "R84")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R94")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "12")
+        (pintype "INPUT")))
+    (net
+      (code 7)
+      (name "CVB_EQG")
+      (class "Default")
+      (node
+        (ref "R85")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R95")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "3")
+        (pintype "INPUT")))
+    (net
+      (code 8)
+      (name "CVB_HPRES")
+      (class "Default")
+      (node
+        (ref "R82")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R92")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "10")
+        (pintype "INPUT")))
+    (net
+      (code 9)
+      (name "CVB_LPRES")
+      (class "Default")
+      (node
+        (ref "R83")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R93")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "5")
+        (pintype "INPUT")))
+    (net
+      (code 10)
+      (name "CVB_SRR")
+      (class "Default")
+      (node
+        (ref "R87")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R97")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "5")
+        (pintype "INPUT")))
+    (net
+      (code 11)
+      (name "CVB_WIDTH")
+      (class "Default")
+      (node
+        (ref "R81")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R91")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "3")
+        (pintype "INPUT")))
+    (net
+      (code 12)
+      (name "CV_BASE")
+      (class "Default")
+      (node
+        (ref "J5")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R80")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 13)
+      (name "CV_DIST")
+      (class "Default")
+      (node
+        (ref "J11")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "12")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R86")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 14)
+      (name "CV_EQF")
+      (class "Default")
+      (node
+        (ref "J9")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "9")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R84")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 15)
+      (name "CV_EQG")
+      (class "Default")
+      (node
+        (ref "J10")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "8")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R85")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 16)
+      (name "CV_HPRES")
+      (class "Default")
+      (node
+        (ref "J7")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "5")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R82")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 17)
+      (name "CV_LPRES")
+      (class "Default")
+      (node
+        (ref "J8")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "6")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R83")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 18)
+      (name "CV_SRR")
+      (class "Default")
+      (node
+        (ref "J12")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "11")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R87")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 19)
+      (name "CV_WIDTH")
+      (class "Default")
+      (node
+        (ref "J6")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R81")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 20)
+      (name "GND")
+      (class "Default")
+      (node
+        (ref "C80")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C81")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C82")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C83")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C84")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J10")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J10")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J11")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J11")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J12")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J12")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J2")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J3")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J4")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J5")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J5")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J6")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J6")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J7")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J7")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J8")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J8")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J9")
+        (pin "GND")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J9")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "11")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "13")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "15")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "7")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "9")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "10")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "13")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA2")
+        (pin "7")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA3")
+        (pin "10")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA3")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA3")
+        (pin "6")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA3")
+        (pin "8")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R71")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R72")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R73")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R74")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R75")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R76")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R77")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R78")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R90")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R91")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R92")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R93")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R94")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R95")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R96")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R97")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV7")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV8")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV9")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "6")
+        (pintype "INPUT"))
+      (node
+        (ref "U6")
+        (pin "7")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U6")
+        (pin "8")
+        (pintype "POWER-IN")))
+    (net
+      (code 21)
+      (name "IN_L")
+      (class "Default")
+      (node
+        (ref "J1")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J2")
+        (pin "NORM")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 22)
+      (name "IN_R")
+      (class "Default")
+      (node
+        (ref "J2")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "3")
+        (pintype "PASSIVE")))
+    (net
+      (code 23)
+      (name "LEDDRV_BASE")
+      (class "Default")
+      (node
+        (ref "D2")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U7")
+        (pin "14")
+        (pintype "OUTPUT")))
+    (net
+      (code 24)
+      (name "LEDDRV_DIST")
+      (class "Default")
+      (node
+        (ref "D8")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U8")
+        (pin "8")
+        (pintype "OUTPUT")))
+    (net
+      (code 25)
+      (name "LEDDRV_EQF")
+      (class "Default")
+      (node
+        (ref "D6")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U8")
+        (pin "14")
+        (pintype "OUTPUT")))
+    (net
+      (code 26)
+      (name "LEDDRV_EQG")
+      (class "Default")
+      (node
+        (ref "D7")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U8")
+        (pin "1")
+        (pintype "OUTPUT")))
+    (net
+      (code 27)
+      (name "LEDDRV_HPRES")
+      (class "Default")
+      (node
+        (ref "D4")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U7")
+        (pin "8")
+        (pintype "OUTPUT")))
+    (net
+      (code 28)
+      (name "LEDDRV_LPRES")
+      (class "Default")
+      (node
+        (ref "D5")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U7")
+        (pin "7")
+        (pintype "OUTPUT")))
+    (net
+      (code 29)
+      (name "LEDDRV_SRR")
+      (class "Default")
+      (node
+        (ref "D9")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U8")
+        (pin "7")
+        (pintype "OUTPUT")))
+    (net
+      (code 30)
+      (name "LEDDRV_WIDTH")
+      (class "Default")
+      (node
+        (ref "D3")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "U7")
+        (pin "1")
+        (pintype "OUTPUT")))
+    (net
+      (code 31)
+      (name "LEDFB_BASE")
+      (class "Default")
+      (node
+        (ref "D2")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R71")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "13")
+        (pintype "INPUT")))
+    (net
+      (code 32)
+      (name "LEDFB_DIST")
+      (class "Default")
+      (node
+        (ref "D8")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R77")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "9")
+        (pintype "INPUT")))
+    (net
+      (code 33)
+      (name "LEDFB_EQF")
+      (class "Default")
+      (node
+        (ref "D6")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R75")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "13")
+        (pintype "INPUT")))
+    (net
+      (code 34)
+      (name "LEDFB_EQG")
+      (class "Default")
+      (node
+        (ref "D7")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R76")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "2")
+        (pintype "INPUT")))
+    (net
+      (code 35)
+      (name "LEDFB_HPRES")
+      (class "Default")
+      (node
+        (ref "D4")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R73")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "9")
+        (pintype "INPUT")))
+    (net
+      (code 36)
+      (name "LEDFB_LPRES")
+      (class "Default")
+      (node
+        (ref "D5")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R74")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "6")
+        (pintype "INPUT")))
+    (net
+      (code 37)
+      (name "LEDFB_SRR")
+      (class "Default")
+      (node
+        (ref "D9")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R78")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U8")
+        (pin "6")
+        (pintype "INPUT")))
+    (net
+      (code 38)
+      (name "LEDFB_WIDTH")
+      (class "Default")
+      (node
+        (ref "D3")
+        (pin "2")
+        (pintype "INPUT"))
+      (node
+        (ref "R72")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U7")
+        (pin "2")
+        (pintype "INPUT")))
+    (net
+      (code 39)
+      (name "LED_A")
+      (class "Default")
+      (node
+        (ref "D1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "10")
+        (pintype "PASSIVE")))
+    (net
+      (code 40)
+      (name "MUX_A")
+      (class "Default")
+      (node
+        (ref "JA3")
+        (pin "7")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "11")
+        (pintype "INPUT")))
+    (net
+      (code 41)
+      (name "MUX_B")
+      (class "Default")
+      (node
+        (ref "JA3")
+        (pin "5")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "10")
+        (pintype "INPUT")))
+    (net
+      (code 42)
+      (name "MUX_C")
+      (class "Default")
+      (node
+        (ref "JA3")
+        (pin "4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "9")
+        (pintype "INPUT")))
+    (net
+      (code 43)
+      (name "NC_J3_NORM")
+      (class "Default")
+      (node
+        (ref "J3")
+        (pin "NORM")
+        (pintype "PASSIVE")))
+    (net
+      (code 44)
+      (name "NC_J4_NORM")
+      (class "Default")
+      (node
+        (ref "J4")
+        (pin "NORM")
+        (pintype "PASSIVE")))
+    (net
+      (code 45)
+      (name "OUT_L")
+      (class "Default")
+      (node
+        (ref "J3")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "6")
+        (pintype "PASSIVE")))
+    (net
+      (code 46)
+      (name "OUT_R")
+      (class "Default")
+      (node
+        (ref "J4")
+        (pin "TIP")
+        (pintype "PASSIVE"))
+      (node
+        (ref "JA1")
+        (pin "5")
+        (pintype "PASSIVE")))
+    (net
+      (code 47)
+      (name "POT_BASE")
+      (class "Default")
+      (node
+        (ref "RV2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "15")
+        (pintype "PASSIVE")))
+    (net
+      (code 48)
+      (name "POT_DIST")
+      (class "Default")
+      (node
+        (ref "RV8")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "12")
+        (pintype "PASSIVE")))
+    (net
+      (code 49)
+      (name "POT_EQF")
+      (class "Default")
+      (node
+        (ref "RV6")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "13")
+        (pintype "PASSIVE")))
+    (net
+      (code 50)
+      (name "POT_EQG")
+      (class "Default")
+      (node
+        (ref "RV7")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "4")
+        (pintype "PASSIVE")))
+    (net
+      (code 51)
+      (name "POT_HPRES")
+      (class "Default")
+      (node
+        (ref "RV4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "14")
+        (pintype "PASSIVE")))
+    (net
+      (code 52)
+      (name "POT_LPRES")
+      (class "Default")
+      (node
+        (ref "RV5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 53)
+      (name "POT_MUX")
+      (class "Default")
+      (node
+        (ref "JA3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "3")
+        (pintype "PASSIVE")))
+    (net
+      (code 54)
+      (name "POT_SRR")
+      (class "Default")
+      (node
+        (ref "RV9")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "5")
+        (pintype "PASSIVE")))
+    (net
+      (code 55)
+      (name "POT_VOL")
+      (class "Default")
+      (node
+        (ref "JA1")
+        (pin "8")
+        (pintype "PASSIVE"))
+      (node
+        (ref "RV1")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 56)
+      (name "POT_WIDTH")
+      (class "Default")
+      (node
+        (ref "RV3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U6")
+        (pin "1")
+        (pintype "PASSIVE")))))

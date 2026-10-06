@@ -1,0 +1,29 @@
+* Audio output stage U4 (TL072, TI 1989 macromodel): codec -> 100R (codec Zout) -> 10k -> inverting, Rf || Cf, 100R -> 100k load
+.include models/tl072.mod
+.param RF=39k CF=100p
+VCC vp 0 11.7
+VEE vn 0 -11.7
+VIN src 0 DC 0 AC 1 SIN(0 1.4142 1k)
+RZ src cod 100
+RIN cod inv 10k
+RF inv out {RF}
+CF inv out {CF}
+XU 0 inv vp vn out TL072
+RS out jack 100
+RL jack 0 100k
+.control
+set noaskquit
+alter RF = 51k
+alter CF = 47p
+dc VIN -3 3 0.005
+wrdata p_dc51.txt v(jack)
+ac dec 50 10 1meg
+wrdata p_ac51.txt vdb(jack)
+alter RF = 100k
+alter CF = 33p
+dc VIN -3 3 0.005
+wrdata p_dc100.txt v(jack)
+ac dec 50 10 1meg
+wrdata p_ac100.txt vdb(jack)
+.endc
+.end

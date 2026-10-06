@@ -1,0 +1,271 @@
+(footprint "PJ398SM_Jack_ES"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Thonkiconn PJ398SM / WQP518MA 3.5 mm jack, from Electrosmith's Seed3 Eurorack Dev Kit Rev3 (MIT). Origin = barrel.")
+	(property "Reference" "REF**"
+		(at -4.7625 4.445 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "a027b7ff-931d-4de3-a7e4-fb2ff771f2df")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "~"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "722568a8-b49a-4b90-afd6-fc63cb27b7ab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ba0e8b83-d8ba-46b0-8278-87645846f920")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "73a931ee-7edf-4c4f-9fe8-546bbbdf6a55")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -4.5 -6)
+		(end -4.5 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "39df0dc9-5011-4e33-9337-ac273bec1878")
+	)
+	(fp_line
+		(start -4.5 -6)
+		(end -1.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e4100d95-5c62-4c6d-bca3-d8906f7d47c1")
+	)
+	(fp_line
+		(start -4.5 4.5)
+		(end 0.2 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ad74e099-7b60-4464-844a-ad6889c8f5c2")
+	)
+	(fp_line
+		(start -1.5 -6)
+		(end -1.5 -4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f4174b8f-9ea4-4d8a-9c0c-a2e9ab19670e")
+	)
+	(fp_line
+		(start -1.5 -6)
+		(end 1.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dc1fcccf-b710-420e-af33-be43d830386b")
+	)
+	(fp_line
+		(start -1.5 -4)
+		(end 1.5 -4)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fdfaf2f6-9f47-4e9a-af24-deeef2e5c9ea")
+	)
+	(fp_line
+		(start -0.2 4.6)
+		(end -0.2 6.7)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "da93f716-2681-4707-8c74-c9d2eee10523")
+	)
+	(fp_line
+		(start -0.2 6.7)
+		(end 0.2 6.7)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "68f044b5-a642-4139-9abc-23b42d579b82")
+	)
+	(fp_line
+		(start 0.2 4.5)
+		(end 4.5 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f8fe91b6-5b5d-4b83-b2c0-d2a369799530")
+	)
+	(fp_line
+		(start 0.2 6.7)
+		(end 0.2 4.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cf66407a-cab7-4dd7-9ca3-f1903619e16d")
+	)
+	(fp_line
+		(start 1.5 -6)
+		(end 4.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "df7e4ad3-ee0a-4af8-8f52-4f2802cb19db")
+	)
+	(fp_line
+		(start 1.5 -4)
+		(end 1.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "357f773f-678d-41de-b3a0-1781434c018a")
+	)
+	(fp_line
+		(start 4.5 4.5)
+		(end 4.5 -6)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "af6b6395-564d-460a-addc-e0048d91bd47")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 2.690721 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "3d9a9196-6964-478d-b27e-c76564f7c575")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3.162275 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "add8d2d7-816f-4acc-b45b-850331a5006c")
+	)
+	(pad "GND" thru_hole circle
+		(at 0 6.5)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(pinfunction "GND_GND")
+		(pintype "passive")
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+	)
+	(pad "NORM" thru_hole circle
+		(at 0 3.5)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(pinfunction "NORM_NORM")
+		(pintype "passive")
+		(solder_mask_margin 0.1016)
+		(thermal_bridge_angle 0)
+	)
+	(pad "TIP" thru_hole circle
+		(at 0 -5)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(pinfunction "TIP_TIP")
+		(pintype "passive")
+		(solder_mask_margin 0.1016)
+		(zone_connect 2)
+		(thermal_bridge_angle 0)
+	)
+	(embedded_fonts no)
+	(fp_poly
+		(pts
+			(xy -4.75 -6.25)
+			(xy 4.75 -6.25)
+			(xy 4.75 4.75)
+			(xy 1 4.75)
+			(xy 1 7.45)
+			(xy -1 7.45)
+			(xy -1 4.75)
+			(xy -4.75 4.75)
+		)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(model "${KICAD10_3DMODEL_DIR}/Connector_Audio.3dshapes/Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical.step"
+		(offset
+			(xyz 0 -6.4846 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -180)
+		)
+	)
+)

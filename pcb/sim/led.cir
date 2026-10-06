@@ -1,0 +1,39 @@
+* CV LED driver (LM324, TI 1989 macromodel) on +/-11.7 V: CV -> 10k -> + (1M to GND); bicolour LED (anti-parallel) out <-> -; 1.5k - to GND
+.include models/lm324.mod
+VCC vp 0 11.7
+VEE vn 0 -11.7
+VIN cv 0 DC 0
+R80 cv p 10k
+R90 p 0 1Meg
+XU p m vp vn out LM324
+* green: anode at the output (positive CV), red: anode at the - input (negative CV)
+DG out m DGRN
+DR m out DRED
+R71 m 0 1.5k
+.model DGRN D(IS=2.3e-20 N=2 RS=10)
+.model DRED D(IS=7.7e-18 N=2 RS=10)
+.control
+set noaskquit
+dc VIN -12 12 0.01
+let ig = i(VIN)*0
+let iled = v(m)/1.5k
+wrdata dcled.txt iled v(out) v(p)
+meas dc i01 find iled at=0.1
+meas dc i05 find iled at=0.5
+meas dc i1 find iled at=1
+meas dc i2 find iled at=2
+meas dc i5 find iled at=5
+meas dc i8 find iled at=8
+meas dc i10 find iled at=10
+meas dc i12 find iled at=12
+meas dc in01 find iled at=-0.1
+meas dc in1 find iled at=-1
+meas dc in5 find iled at=-5
+meas dc in8 find iled at=-8
+meas dc in10 find iled at=-10
+meas dc in12 find iled at=-12
+meas dc vp_m12 find v(p) at=-12
+meas dc out_p12 find v(out) at=12
+meas dc out_m12 find v(out) at=-12
+.endc
+.end

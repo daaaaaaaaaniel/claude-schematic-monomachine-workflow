@@ -1,0 +1,1100 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "81a6d8da-00c8-47ba-baa1-d553f71aa18b")
+	(paper "A3")
+	(title_block
+		(title "MACHINE FILTER")
+		(date "2026-10-06")
+		(rev "beta")
+		(company "MACHINE FILTER (Seed3 build): both boards")
+		(comment 1 "Drawn by pcb/design/gen_sch.py from boards.py; netlist checked against machine_filter.py (SKiDL).")
+		(comment 2 "Circuit blocks after Electrosmith's Seed3 Eurorack Dev Kit Rev3 (MIT).")
+		(comment 3 "Page 1: MACHINE FILTER: two boards")
+	)
+	(lib_symbols)
+	(rectangle
+		(start 15.24 33.02)
+		(end 404.86 101.6)
+		(stroke
+			(width 0.1524)
+			(type dash)
+			(color 132 132 132 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "3cf024b0-af50-4eb2-8f6c-a1b4a6bd256d")
+	)
+	(text "Two boards, one module"
+		(exclude_from_sim no)
+		(at 17.24 36.62 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "a5cfdb76-d7ac-4937-a925-75b784d8783b")
+	)
+	(text "one KiCad project; the PCB file holds both boards side by side, cut apart for fabrication by tools/separate.sh (KiKit)"
+		(exclude_from_sim no)
+		(at 17.24 39.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(justify left)
+		)
+		(uuid "bad75ed6-0afd-42ab-afdc-4777e05142b8")
+	)
+	(text "MAIN board"
+		(exclude_from_sim no)
+		(at 20.32 49.53 0)
+		(effects
+			(font
+				(size 1.6 1.6)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "8564559d-3602-4b35-a9e6-614641bccbc7")
+	)
+	(text "JLC SMD assembly, 70 x 100 mm. Back: Daisy Seed3 on sockets, power entry, CV ADC stages U1/U2, audio U3/U4,"
+		(exclude_from_sim no)
+		(at 20.32 53.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a8242a8d-b813-43d0-bc75-46b2d9869cab")
+	)
+	(text "-10 V reference U5, expansion header J14, optional microSD J15 (DNP). Front: male headers JB1 (15 pins), JB2 (13 pins), JB3 (10 pins)."
+		(exclude_from_sim no)
+		(at 20.32 57.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "34fad61b-e5f2-4637-9a39-02bf1c348f77")
+	)
+	(text "CONTROL board"
+		(exclude_from_sim no)
+		(at 20.32 62.87 0)
+		(effects
+			(font
+				(size 1.6 1.6)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "8cd754d9-07d0-4d75-a174-bed56aa1101e")
+	)
+	(text "Hand-soldered, 70 x 107 mm. Front: 12 jacks, 9 pots, 9 LEDs. Back: pot multiplexer U6, LED drivers U7/U8 (SOIC),"
+		(exclude_from_sim no)
+		(at 20.32 67.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4a296c01-e2c8-4fbe-914d-27597349fdbf")
+	)
+	(text "through-hole resistors and capacitors, female headers JA1, JA2, JA3."
+		(exclude_from_sim no)
+		(at 20.32 71.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8914ecbf-12d9-4c9a-bec4-8dbe79117250")
+	)
+	(text "How they meet"
+		(exclude_from_sim no)
+		(at 20.32 76.21 0)
+		(effects
+			(font
+				(size 1.6 1.6)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "f93cc98d-34f1-440c-9b38-ab0390cfde1c")
+	)
+	(text "JAn plugs onto JBn, pin k to pin k, about 11 mm apart. Every net on the control board is its own copper, so it has its"
+		(exclude_from_sim no)
+		(at 20.32 80.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9a97de1a-e412-4993-adcc-383d1a410544")
+	)
+	(text "own name: the main board's name with the prefix CTL_ (CTL_GND, CTL_+12V, CTL_CV_BASE, ...). CTL_x meets x only at"
+		(exclude_from_sim no)
+		(at 20.32 84.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "87b158ba-86a2-4735-8774-50d54b90ed60")
+	)
+	(text "the header pins (pages 7 and 12), as in the hardware. tools/check_netlist.py checks that the boards joined there are"
+		(exclude_from_sim no)
+		(at 20.32 88.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c2153a9-6fbf-4900-a9cf-f77806cc4417")
+	)
+	(text "exactly the one-circuit SKiDL netlist (machine_filter.py)."
+		(exclude_from_sim no)
+		(at 20.32 92.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "909d0109-2daa-4abe-8747-1c140881e523")
+	)
+	(text "MAIN board (JLC SMD assembly)"
+		(exclude_from_sim no)
+		(at 20.32 120.65 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "a0f42219-cb32-4a75-a4de-f0f61721174c")
+	)
+	(text "page 2"
+		(exclude_from_sim no)
+		(at 22.86 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "bcb12f49-46a1-4ab7-96a6-d1d62b1c3157")
+	)
+	(text "Eurorack power entry"
+		(exclude_from_sim no)
+		(at 22.86 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5767f028-c77c-4f56-8bf4-931548c0bd17")
+	)
+	(text "Seed3 VIN filter"
+		(exclude_from_sim no)
+		(at 22.86 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "87bfe551-554a-4292-a521-416a30cc4d3c")
+	)
+	(text "-10 V reference"
+		(exclude_from_sim no)
+		(at 22.86 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8cd0455a-2cc0-49d2-9494-c30708b1c445")
+	)
+	(text "page 3"
+		(exclude_from_sim no)
+		(at 86.36 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "686cf11d-69a7-4091-b475-17c418ba530a")
+	)
+	(text "Daisy Seed3 (A1)"
+		(exclude_from_sim no)
+		(at 86.36 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50fcf7d5-c85c-42de-a456-eafdb56cfa52")
+	)
+	(text "expansion header J14"
+		(exclude_from_sim no)
+		(at 86.36 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a865acec-f65c-4a14-bb1c-b4fd399889d4")
+	)
+	(text "clip-LED resistor R70"
+		(exclude_from_sim no)
+		(at 86.36 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0efe87f7-892e-4c59-b49d-87038e4138f4")
+	)
+	(text "microSD J15 (optional)"
+		(exclude_from_sim no)
+		(at 86.36 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d9e44372-6bf4-4feb-8918-df14b46cd8b4")
+	)
+	(text "page 4"
+		(exclude_from_sim no)
+		(at 149.86 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "b8e9f868-acba-4fcd-8ba1-b00d4408803f")
+	)
+	(text "BASE, WIDTH, HP RES, LP RES"
+		(exclude_from_sim no)
+		(at 149.86 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2837805b-86bd-43e7-bda6-a55b5736c76f")
+	)
+	(text "ADC stages (U2)"
+		(exclude_from_sim no)
+		(at 149.86 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8950a7ae-ec1a-4175-96c6-85f2c6fb64d5")
+	)
+	(text "page 5"
+		(exclude_from_sim no)
+		(at 213.36 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "63751fdf-b6eb-43c8-a892-d8ad524c92c7")
+	)
+	(text "EQ FREQ, EQ GAIN, DIST, SMPL RATE"
+		(exclude_from_sim no)
+		(at 213.36 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8b129d71-7faa-4634-8f5a-436a612061b9")
+	)
+	(text "ADC stages (U1)"
+		(exclude_from_sim no)
+		(at 213.36 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b2743a6f-9efb-4bb9-bef4-dd3189c5a244")
+	)
+	(text "page 6"
+		(exclude_from_sim no)
+		(at 276.86 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "6888d0d5-8ad9-488a-b0d3-ba9502f11192")
+	)
+	(text "IN L / IN R -> U3 -> codec"
+		(exclude_from_sim no)
+		(at 276.86 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "df544a94-e377-4891-9d6d-d7a3e96f063b")
+	)
+	(text "codec -> U4 -> OUT L / OUT R"
+		(exclude_from_sim no)
+		(at 276.86 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7f9cae4d-408b-4765-adf2-e2494f645da1")
+	)
+	(text "page 7"
+		(exclude_from_sim no)
+		(at 340.36 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "1a347295-8026-4d0e-a8ee-1bf27606db09")
+	)
+	(text "JB1, JB2, JB3"
+		(exclude_from_sim no)
+		(at 340.36 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b42bbc4d-d0ea-4ab5-9def-0195c5d3bf7d")
+	)
+	(text "to the control board"
+		(exclude_from_sim no)
+		(at 340.36 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5655a97e-0bc1-48cf-b989-86c8ee67509f")
+	)
+	(text "CONTROL board (hand-soldered)"
+		(exclude_from_sim no)
+		(at 20.32 179.07 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "b7c0aacf-9265-49ba-9b27-a0482a73debd")
+	)
+	(text "page 8"
+		(exclude_from_sim no)
+		(at 22.86 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "2122b0db-7bd0-4b62-8954-553534471488")
+	)
+	(text "12 jacks"
+		(exclude_from_sim no)
+		(at 22.86 198.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bf6d82fe-5d93-4d14-a051-1095ce66b81c")
+	)
+	(text "clip LED D1"
+		(exclude_from_sim no)
+		(at 22.86 201.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e5b22498-39ca-4008-ad5c-0c00bfe9b9b3")
+	)
+	(text "page 9"
+		(exclude_from_sim no)
+		(at 86.36 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "88d9e74a-7844-4082-9e4e-1211528b25ea")
+	)
+	(text "9 pots"
+		(exclude_from_sim no)
+		(at 86.36 198.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8677c65e-9626-4915-b532-7615770454a3")
+	)
+	(text "pot multiplexer U6"
+		(exclude_from_sim no)
+		(at 86.36 201.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a326b3e-7be2-4c59-b20a-191f7b8165a8")
+	)
+	(text "page 10"
+		(exclude_from_sim no)
+		(at 149.86 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "5e97c3fe-58c0-44e4-86be-168b8dee5a2e")
+	)
+	(text "BASE, WIDTH, HP RES, LP RES"
+		(exclude_from_sim no)
+		(at 149.86 198.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d319baae-fe4d-4501-a759-bf0a4fdb58ac")
+	)
+	(text "LED drivers (U7)"
+		(exclude_from_sim no)
+		(at 149.86 201.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5b926b5f-af6a-406b-87fc-9f71c41abfde")
+	)
+	(text "page 11"
+		(exclude_from_sim no)
+		(at 213.36 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "3222b49f-f668-4a50-aa0d-bdd9af7ee83d")
+	)
+	(text "EQ FREQ, EQ GAIN, DIST, SMPL RATE"
+		(exclude_from_sim no)
+		(at 213.36 198.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5bd91d57-432a-4f3b-9ee5-bad725f18ddb")
+	)
+	(text "LED drivers (U8)"
+		(exclude_from_sim no)
+		(at 213.36 201.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3dfca6a0-2303-406d-a998-ff88e397f139")
+	)
+	(text "page 12"
+		(exclude_from_sim no)
+		(at 276.86 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "5741f420-20d4-4a4b-831f-ba75fa2f0c05")
+	)
+	(text "JA1, JA2, JA3"
+		(exclude_from_sim no)
+		(at 276.86 198.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1feeb6d7-d356-480a-bb90-22eec56af85c")
+	)
+	(text "to the main board"
+		(exclude_from_sim no)
+		(at 276.86 201.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a508683c-208c-40e5-8c7c-028113745583")
+	)
+	(text "1   MACHINE FILTER: two boards"
+		(exclude_from_sim no)
+		(at 20.32 24.13 0)
+		(effects
+			(font
+				(size 3 3)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "c68e89fa-d470-4383-b641-92d9bc832acc")
+	)
+	(sheet
+		(at 20.32 129.54)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ea3a9dfc-8d04-4e94-9323-75fe7f32635a")
+		(property "Sheetname" "Main: power"
+			(at 20.32 128.8284 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main-power.kicad_sch"
+			(at 20.32 160.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 83.82 129.54)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "050808f4-2777-4725-9175-f9ff58c7a572")
+		(property "Sheetname" "Main: Daisy Seed3"
+			(at 83.82 128.8284 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main-seed3.kicad_sch"
+			(at 83.82 160.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 147.32 129.54)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "58f48f13-bb1e-4abe-be3b-692992488351")
+		(property "Sheetname" "Main: CV inputs 1-4"
+			(at 147.32 128.8284 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main-cv-inputs-1-4.kicad_sch"
+			(at 147.32 160.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 210.82 129.54)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5780b017-d0b5-4370-88c0-b9ffa4bd6724")
+		(property "Sheetname" "Main: CV inputs 5-8"
+			(at 210.82 128.8284 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main-cv-inputs-5-8.kicad_sch"
+			(at 210.82 160.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 274.32 129.54)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "16dcb901-9887-4c46-90ed-8da36474b337")
+		(property "Sheetname" "Main: audio"
+			(at 274.32 128.8284 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main-audio.kicad_sch"
+			(at 274.32 160.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 337.82 129.54)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "80c83993-e6e5-4951-b1ba-58960efc9fb2")
+		(property "Sheetname" "Main: connector"
+			(at 337.82 128.8284 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "main-connector.kicad_sch"
+			(at 337.82 160.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.32 187.96)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "673b796a-4d58-41e0-a41c-7a09eb476dec")
+		(property "Sheetname" "Control: jacks"
+			(at 20.32 187.2484 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control-jacks.kicad_sch"
+			(at 20.32 219.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 83.82 187.96)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f8ff3f6f-f4c0-475a-b577-6260bd3d40f4")
+		(property "Sheetname" "Control: pots"
+			(at 83.82 187.2484 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control-pots.kicad_sch"
+			(at 83.82 219.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 147.32 187.96)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "267cd885-2f27-46a7-8c0c-d670b9e80c43")
+		(property "Sheetname" "Control: CV LEDs 1-4"
+			(at 147.32 187.2484 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control-cv-leds-1-4.kicad_sch"
+			(at 147.32 219.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 210.82 187.96)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "bcad83c3-0127-4d10-97ba-92a41e98d8fd")
+		(property "Sheetname" "Control: CV LEDs 5-8"
+			(at 210.82 187.2484 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control-cv-leds-5-8.kicad_sch"
+			(at 210.82 219.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 274.32 187.96)
+		(size 58.42 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9e332a2b-9368-467c-af2c-9bd945cc5093")
+		(property "Sheetname" "Control: connector"
+			(at 274.32 187.2484 0)
+			(effects
+				(font
+					(size 1.6 1.6)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control-connector.kicad_sch"
+			(at 274.32 219.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "machine-filter"
+				(path "/81a6d8da-00c8-47ba-baa1-d553f71aa18b"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

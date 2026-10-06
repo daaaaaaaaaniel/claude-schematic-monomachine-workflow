@@ -1,0 +1,27 @@
+* Audio input stage U3 (TL072): jack -> 100k -> inverting, 10k || 330p, 100R -> codec input (modelled as 10k to GND, AC-coupled inside the Seed)
+.include models/tl072.mod
+VCC vp 0 11.7
+VEE vn 0 -11.7
+VIN jack 0 DC 0 AC 1
+RIN jack inv 100k
+RF inv out 10k
+CF inv out 330p
+XU 0 inv vp vn out TL072
+RS out cod 100
+RL cod 0 10k
+.control
+set noaskquit
+dc VIN -12 12 0.05
+wrdata dcin.txt v(cod) v(inv)
+meas dc cmax max v(cod)
+meas dc cmin min v(cod)
+meas dc invmax max v(inv)
+meas dc invmin min v(inv)
+ac dec 50 10 1meg
+wrdata acin.txt vdb(cod)
+meas ac g1k find vdb(cod) at=1k
+meas ac g20k find vdb(cod) at=20k
+let g3 = g1k - 3
+meas ac f3db when vdb(cod)=g3 fall=1
+.endc
+.end
