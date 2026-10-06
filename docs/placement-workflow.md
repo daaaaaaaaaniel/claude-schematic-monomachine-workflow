@@ -17,6 +17,8 @@ PCB. The post-mortem that led here is in `HANDOFF.md`.
 | 8 | All eight CV op-amp outputs → Seed3 ADC pins (4 on the back, 4 via the front) | done |
 | 9 | Control board panel parts (12 jacks, 9 pots, 9 LEDs) at their fixed panel positions, front | done |
 | 9b | J14 re-placed sideways by Seed3 pins 36/37; USB D−/D+ traces round the outside of the header (back) | done |
+| 9c | Op-amps rotated, J13/J14 upright; ten CV input resistors in line with their op-amp inputs | done |
+| 9d | All 47 untraced minor parts parked beside the board (`tools/park_minor.py`); board shows only decided parts | done |
 | 10 | Headers (main front + control back, same panel spot, clear of the panel parts) | **next** |
 | 11 | U6, U7, U8 as blocks on the control board's back; standoffs | later (d: main board first) |
 
