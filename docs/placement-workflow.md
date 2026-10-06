@@ -16,12 +16,13 @@ PCB. The post-mortem that led here is in `HANDOFF.md`.
 | 7 | J13 power entry (bottom left, sideways), J15 microSD (left middle), J14 (bottom right), each as one packed block; trace J13 → FB1 | done |
 | 8 | All eight CV op-amp outputs → Seed3 ADC pins (4 on the back, 4 via the front) | done |
 | 9 | Control board panel parts (12 jacks, 9 pots, 9 LEDs) at their fixed panel positions, front | done |
+| 9b | J14 re-placed sideways by Seed3 pins 36/37; USB D−/D+ traces round the outside of the header (back) | done |
 | 10 | Headers (main front + control back, same panel spot, clear of the panel parts) | **next** |
 | 11 | U6, U7, U8 as blocks on the control board's back; standoffs | later (d: main board first) |
 
 Round-one flags for d (`pcb/out/round1-main-board.png`):
-- the J15 and J14 critical traces were drawn and deleted: their last leg ran along the connector's own pin row
-  (DRC shorts); they need a deliberate route;
+- the J15 critical trace (SD clock) was drawn and deleted: its last leg ran along the socket's pad row (DRC short);
+  it needs a deliberate route (J14's USB pair is done);
 - R70 (Seed3 group) overlaps R100 (microSD block): minor parts, for the minor-parts round;
 - U5 is not where the zone sketch put it (see step 6).
 

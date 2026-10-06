@@ -187,4 +187,18 @@ STEPS = [
     ]},
     # C21 (U2 decoupling, a secondary part) 0.6 mm right: clear of LP RES's back lane at x 59.6.
     {"name": "c21_nudge", "parts": {"C21": ("main", 61.6, 42.5, 0, "back")}},
+    # J14 (d: "place and trace J14"): sideways (2 rows x 4), its top row level with Seed3 pin 36 (USB D-) and its
+    #    bottom row with pin 37 (D+). D- (pin 2) and D+ (pin 3) sit at the far end of their rows, so each trace goes
+    #    round the outside of the header (D- along a lane just above it, D+ just below) and drops into its pad.
+    #    (First try: upright, 4 rows tall; its bottom pin landed on the VIN trace. Replaced.)
+    {"name": "j14", "parts": {"J14": ("main", 56.5, 80.6, 90, "back")},
+     "check_pads": {("J14", "2"): (60.31, 79.33), ("J14", "3"): (57.77, 81.87)}},
+    {"name": "j14_usb", "board": "main",
+     "delete": {"B.Cu": ["/Main: Daisy Seed3/USB_DM", "/Main: Daisy Seed3/USB_DP"]},
+     "routes": [
+        ("/Main: Daisy Seed3/USB_DM", [("B.Cu", [(48.855, 79.33), (50.6, 79.33), (50.6, 78.06), (60.31, 78.06),
+                                                  (60.31, 79.33)])]),
+        ("/Main: Daisy Seed3/USB_DP", [("B.Cu", [(48.855, 81.87), (51.2, 81.87), (51.2, 83.14), (57.77, 83.14),
+                                                  (57.77, 81.87)])]),
+    ]},
 ]
