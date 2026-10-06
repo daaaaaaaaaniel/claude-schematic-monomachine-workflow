@@ -1,0 +1,12 @@
+#pragma experiment("TRAITS")
+import is_atomic_part
+import has_part_picked
+import has_designator_prefix
+
+component R0603:
+    """100k 0603 resistor, pre-picked (no picker call)."""
+    trait is_atomic_part<manufacturer="UNI-ROYAL", partnumber="0603WAF1003T5E", footprint="R_0603.kicad_mod", symbol="R.kicad_sym">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C25803", manufacturer="UNI-ROYAL", partno="0603WAF1003T5E">
+    trait has_designator_prefix<prefix="R">
+    signal p1 ~ pin 1
+    signal p2 ~ pin 2

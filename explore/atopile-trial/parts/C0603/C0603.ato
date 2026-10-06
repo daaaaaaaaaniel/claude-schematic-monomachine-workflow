@@ -1,0 +1,12 @@
+#pragma experiment("TRAITS")
+import is_atomic_part
+import has_part_picked
+import has_designator_prefix
+
+component C0603:
+    """100n 0603 capacitor, pre-picked (no picker call)."""
+    trait is_atomic_part<manufacturer="YAGEO", partnumber="CC0603KRX7R9BB104", footprint="C_0603.kicad_mod", symbol="C.kicad_sym">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C14663", manufacturer="YAGEO", partno="CC0603KRX7R9BB104">
+    trait has_designator_prefix<prefix="C">
+    signal p1 ~ pin 1
+    signal p2 ~ pin 2

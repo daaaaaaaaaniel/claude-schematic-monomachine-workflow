@@ -1,0 +1,17 @@
+#pragma experiment("TRAITS")
+from "parts/R0603/R0603.ato" import R0603
+from "parts/C0603/C0603.ato" import C0603
+
+module App:
+    signal vin
+    signal mid
+    signal gnd
+    r = new R0603
+    c = new C0603
+    vin ~ r.p1
+    r.p2 ~ mid
+    mid ~ c.p1
+    c.p2 ~ gnd
+    r2 = new R0603
+    mid ~ r2.p1
+    r2.p2 ~ gnd

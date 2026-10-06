@@ -134,20 +134,25 @@ make -j$(nproc) && make install && ldconfig
   KiKit does nothing else with wx. On a desktop with KiCad's own Python (macOS, Windows), install KiKit into KiCad's
   Python instead, and no stand-in is needed.
 
-## Tried 2026-10-06: atopile (not adopted)
+## Tried 2026-10-06 and 2026-10-07: atopile (not adopted)
 
-d asked to try [atopile](https://github.com/atopile/atopile) on the `pcb-second-placement` branch. What happened in
-the cloud container:
+d asked to try [atopile](https://github.com/atopile/atopile) (PyPI `atopile`) on the `pcb-second-placement` branch.
+Test design: `explore/atopile-trial/`.
 - **0.12.6** (the newest release that installs on Python 3.13) refuses to run: "atopile 0.12 is retired and can no
   longer run commands. Move to app.atopile.io (0.16+)."
-- **0.15.8** (the last classic CLI; needs Python 3.14, installed with `uv venv --python 3.14`) runs, and a two-part test
-  design compiles up to part picking, then stops: "Part picking on atopile 0.15.8 requires sign-in. Run `ato auth
-  login`, or migrate to app.atopile.io (0.16+)." Sign-in is a browser OAuth flow against `clerk.atopile.io`, and
-  picking calls `gateway.atopile.io`.
-- **None of atopile's servers are reachable** from the cloud container (`gateway.atopile.io`, `clerk.atopile.io`,
-  `app.atopile.io`: no connection through the network allowlist), so neither sign-in nor picking can work here.
-- **0.16+** is a browser workspace at app.atopile.io, outside this repository and toolchain.
-
-Beyond access: atopile would mean re-describing the whole circuit in `.ato`, a third source of connectivity beside
-SKiDL and `boards.py`, after the schematic was declared done. The feature that would help this layout most, laying
-out one CV channel and repeating it, is also in KiCad itself (multichannel layout tools), with no rewrite.
+- **0.15.9** (the newest on PyPI, Sept 2026; the last classic CLI; needs Python 3.14: `uv venv --python 3.14`) runs.
+  - **Part picking needs sign-in**, a browser OAuth flow against `clerk.atopile.io`; picking calls
+    `gateway.atopile.io`. Neither server is reachable from the cloud container.
+  - **Works offline with pre-picked parts.** Parts declared as atomic parts (local `.kicad_mod` + `.kicad_sym`, a fixed
+    LCSC number via `has_part_picked`) skip the picker. The build then completes with no network access. It writes a
+    `.kicad_pcb` with the footprints and nets, and a BOM with LCSC numbers.
+  - **Blocker: it targets KiCad 9, and this project is KiCad 10.** atopile 0.15.9 writes and reads KiCad 9 files
+    (format 20241229). Once KiCad 10 saves the board (format 20260206), the next `ato build` fails to parse it
+    ("UnexpectedType in kicad.pcb.Layer field 'tenting'"). Layout edits made in KiCad 10 can't go back through atopile.
+    Using it would mean moving the whole project back to KiCad 9. KiCad 10 files don't open in 9.
+  - The classic CLI ends at 0.15.x; new development is the browser workspace (app.atopile.io, 0.16+), so a KiCad 10
+    fix for the CLI is unlikely.
+- **Fit, apart from the blockers:** atopile would mean re-describing the whole circuit in `.ato`, a third source of
+  connectivity beside SKiDL and `boards.py`, after the schematic was declared done. Its designators are assigned
+  automatically (R1, C1, …), not the schematic's. The feature that would help this layout most, laying out one CV
+  channel and repeating it, is also in KiCad 10 itself (multichannel layout tools), with no rewrite.
