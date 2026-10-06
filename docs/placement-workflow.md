@@ -9,11 +9,14 @@ PCB. The post-mortem that led here is in `HANDOFF.md`.
 |---|---|---|
 | 1 | Footprints in the PCB, sorted into function groups beside the boards; area budget; zone sketch | done |
 | 2 | Seed3 placed with its group; first trace (VIN pin 39 → C6) | done |
-| 3 | U2 with its CV group (BASE, HP RES, LP RES, EQ FREQ), right of the ADC pins; trace: BASE op-amp output → its ADC pin | **next** |
-| 4… | U1; U3, U4; U5; J13; J15, J14; headers; standoffs (the order in §3) | to do |
+| 3 | U2 with its CV group (BASE, HP RES, LP RES, EQ FREQ), right of the ADC pins, pin 1 level with Seed3 pin 23; trace: U2 pin 1 (BASE out) → Seed3 pin 23, straight, 3 mm | done |
+| 4 | U1 with its CV group; then re-match the four channels' sections ↔ ADC pins to the placed chips (pin map) | **next** |
+| 5… | U3, U4; U5; J13; J15, J14; headers; standoffs (the order in §3) | to do |
 
 Branch: `pcb-first-placement`. Pictures: `pcb/out/zone-sketch.png`, `pcb/out/step1-groups-kicad.png`,
-`pcb/out/step2-seed3-kicad.png`.
+`pcb/out/step2-seed3-kicad.png`, `pcb/out/step3-u2-kicad.png`.
+DRC after step 3: no courtyard or clearance problems; only reference labels overlapping on silkscreen (tidy at the
+end), and 17 footprints flagged as differing from their library copies (pre-existing; check before fabrication).
 
 ## 2. The method (d)
 
