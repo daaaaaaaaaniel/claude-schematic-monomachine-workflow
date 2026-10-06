@@ -119,6 +119,22 @@ def pack(c, step):
     print("  save:", c.call("save_project", {}))
 
 
+def routes(c, step):
+    """Each route: (net, [(layer, [(x, y), ...]), ...]) in panel mm on `board`; a via joins consecutive layers."""
+    board = step["board"]
+    for net, legs in step["routes"]:
+        for i, (layer, pts) in enumerate(legs):
+            k = [kicad(board, x, y) for x, y in pts]
+            for (x1, y1), (x2, y2) in zip(k, k[1:]):
+                c.call("route_trace", {"board": BOARD, "net_name": net, "layer": layer, "width": 0.25,
+                                       "x1": x1, "y1": y1, "x2": x2, "y2": y2})
+            if i + 1 < len(legs):
+                vx, vy = k[-1]
+                c.call("add_via", {"board": BOARD, "net_name": net, "x": vx, "y": vy, "drill": 0.4, "pad_size": 0.8})
+        print(f"  {net}: {sum(len(p) - 1 for _, p in legs)} segments, {len(legs) - 1} via(s)")
+    print("  save:", c.call("save_project", {}))
+
+
 def main():
     step = next(s for s in P.STEPS if s["name"] == sys.argv[1])
     c = Client()
@@ -128,6 +144,9 @@ def main():
             return
         if "pack" in step:                          # the group as one block, packed to fit its corner
             pack(c, step)
+            return
+        if "routes" in step:                        # explicit traces: polylines in panel mm, vias between layers
+            routes(c, step)
             return
         moves = []
         for ref, (board, x, y, rot, side) in step["parts"].items():

@@ -113,4 +113,16 @@ STEPS = [
     # Feedback round (d): "rotate the SD card 90 degrees CCW" (as seen in the editor's panel-side view). J15 turned in
     #    place; its pad row now faces the Seed3's SD pins.
     {"name": "j15_rot", "parts": {"J15": ("main", 11.715, 67.52, 90, "back")}},
+    # Op-amp -> Seed3 traces (d: "draw all the traces that go directly from an opamp on the main board to a daisy
+    #    pin"): the CV outputs to their ADC pins (BASE and WIDTH were drawn earlier). Outputs on the op-amps' left
+    #    (Seed3) side stay on the back; those on the far side drop through a via 1.5 mm right of the pin and run on
+    #    the front, where only the Seed3's through-hole socket pins are, straight to the pin.
+    {"name": "opamp_adc", "board": "main", "routes": [
+        ("ADC_HPRES", [("B.Cu", [(51.89, 38.69), (50.4, 38.69), (50.4, 43.77), (48.855, 43.77)])]),
+        ("ADC_EQG", [("B.Cu", [(51.89, 54.007), (48.855, 53.93)])]),
+        ("ADC_LPRES", [("B.Cu", [(57.29, 38.69), (58.8, 38.69)]), ("F.Cu", [(58.8, 38.69), (48.855, 48.85)])]),
+        ("ADC_EQF", [("B.Cu", [(57.29, 46.31), (58.8, 46.31)]), ("F.Cu", [(58.8, 46.31), (48.855, 51.39)])]),
+        ("ADC_DIST", [("B.Cu", [(57.29, 54.007), (58.8, 54.007)]), ("F.Cu", [(58.8, 54.007), (48.855, 56.47)])]),
+        ("ADC_SRR", [("B.Cu", [(57.29, 61.627), (58.8, 61.627)]), ("F.Cu", [(58.8, 61.627), (48.855, 64.09)])]),
+    ]},
 ]
