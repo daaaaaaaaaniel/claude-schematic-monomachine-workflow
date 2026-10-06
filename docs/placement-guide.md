@@ -310,4 +310,4 @@ This guide says which parts should sit next to which other parts, for the **rev 
 - **J14 (expansion 2×4)** sits by the Seed3's USB end. Route USB_DP and USB_DM side by side as a pair, from pins 36/37.
 - **MIDI_TX/RX** leave Seed3 pins 14/15 (USART1) and run to J14. Pins 14/15 sit next to the codec pins 16–19: keep the MIDI traces off the U3/U4 side and on the other layer where they pass the codec lines.
 - **J15 (microSD, optional):** the six SDMMC lines (pins 2–7) run short and direct to the socket, CK (pin 7) kept away from the others where possible; the 47k pull-ups R100–R104 sit by the Seed pins, C100 at the socket's VDD pin. The socket is DNP by default; its footprint and traces are always there.
-- J14's ground pins 1, 4, 6 and 8 each get a via at the header *(guide: David Haillant)*.
+- J14's ground pins 1, 3 and 8 each get a via at the header *(guide: David Haillant)*.

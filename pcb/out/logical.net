@@ -2,7 +2,7 @@
   (version "D")
   (design
     (source "machine_filter.py")
-    (date "10/07/2026 12:19 AM")
+    (date "10/07/2026 12:33 AM")
     (tool "SKiDL (2.3.0)")
     (sheet
       (number 1)
@@ -5915,7 +5915,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "J14")
-        (pin "4")
+        (pin "3")
         (pintype "PASSIVE"))
       (node
         (ref "J14")
@@ -7111,7 +7111,7 @@
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "J14")
-        (pin "3")
+        (pin "4")
         (pintype "PASSIVE")))
     (net
       (code 112)

@@ -260,7 +260,7 @@ def board():
           Part("C71", "C100n", {"1": "GND", "2": "-12V"}, "Audio op-amp supply", "U3 V-"),
           Part("C72", "C100n", {"1": "+12V", "2": "GND"}, "Audio op-amp supply", "U4 V+"),
           Part("C73", "C100n", {"1": "GND", "2": "-12V"}, "Audio op-amp supply", "U4 V-")]
-    P.append(Part("J14", "EXP", {"1": "GND", "2": "USB_DM", "3": "USB_DP", "4": "GND", "5": "MIDI_TX", "6": "MIDI_RX",
+    P.append(Part("J14", "EXP", {"1": "GND", "2": "USB_DM", "3": "GND", "4": "USB_DP", "5": "MIDI_TX", "6": "MIDI_RX",
                                 "7": "+3V3_D", "8": "GND"}, "Expansion header",
                   "to the 2HP USB-C / MIDI expander (ribbon: pin = wire)"))
     # pot multiplexer: 8 wipers -> POT_MUX; S0/S1/S2 = MUX_A/B/C

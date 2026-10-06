@@ -1,0 +1,15 @@
+{
+ "name": "c04-j14-swap",
+ "note": "J14 pins 3/4 swapped; USB_DP straight on the front",
+ "metrics": {
+  "unrouted_between_placed_parts": 206,
+  "power_disconnects": 162,
+  "drc_problems": 0,
+  "vias": 8,
+  "track_mm": 193.2,
+  "parts_on_main_board": 39,
+  "diagonal_segments": 0,
+  "off_convention_long": 0,
+  "locked_violations": []
+ }
+}

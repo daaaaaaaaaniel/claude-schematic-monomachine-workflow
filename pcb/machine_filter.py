@@ -214,9 +214,10 @@ def seed():
     d1["1"] += GND
     j14 = stock("Connector_Generic", "Conn_02x04_Odd_Even", "J14", "EXPANSION 2x4", f"{FM}:Pins_2x04_2.54mm_TH",
                 mpn="2x4 2.54 mm pin header, unshrouded")
-    for pin, net in {"2": "USB_DM", "3": "USB_DP", "5": "MIDI_TX", "6": "MIDI_RX"}.items():
+    # D+ on pin 4, ground on pin 3 (d, 2026-10-07): both USB lines reach the near pin column in a straight line
+    for pin, net in {"2": "USB_DM", "4": "USB_DP", "5": "MIDI_TX", "6": "MIDI_RX"}.items():
         j14[pin] += N(net)
-    j14[1, 4, 8] += GND
+    j14[1, 3, 8] += GND
     j14[7] += D33
     # optional microSD socket (as the Dev Kit): SDMMC1 on pins 2-7, 47k pull-ups on CMD and D0-D3; the socket is DNP
     j15 = stock(FM, "MicroSD_TF-01A", "J15", "TF-01A", f"{FM}:TF-01A", "C91145",

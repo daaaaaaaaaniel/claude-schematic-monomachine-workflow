@@ -23,6 +23,7 @@ EXPECTED = {
     "A1": {"2", "3", "4", "5", "6", "7", "14", "15"} | {str(k) for k in range(22, 36)},   # SDMMC (new); ADC pins
     "U6": {"1", "2", "4", "5", "12", "13", "14", "15"},                  # pot multiplexer channels
     **{u: {"1", "2", "3", "5", "6", "7", "8", "9", "10", "12", "13", "14"} for u in ("U1", "U2", "U7", "U8")},
+    "J14": {"3", "4"},                                                   # USB_DP / GND swapped (d, 2026-10-07)
 }
 NEW_PARTS = {"J15", "R100", "R101", "R102", "R103", "R104", "C100"}   # the optional microSD socket and its parts
 

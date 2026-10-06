@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/claude/claude-schematic-monomachine-workflow/pcb/machine-filter/machine-filter.kicad_sch")
-		(date "2026-10-07T00:20:10")
+		(date "2026-10-07T00:33:59")
 		(tool "Eeschema 10.0.6-10.0.6~ubuntu24.04.1")
 		(sheet
 			(number "1")
@@ -14736,8 +14736,8 @@
 			)
 			(node
 				(ref "J14")
-				(pin "3")
-				(pinfunction "Pin_3_3")
+				(pin "4")
+				(pinfunction "Pin_4_4")
 				(pintype "passive")
 			)
 		)
@@ -16181,8 +16181,8 @@
 			)
 			(node
 				(ref "J14")
-				(pin "4")
-				(pinfunction "Pin_4_4")
+				(pin "3")
+				(pinfunction "Pin_3_3")
 				(pintype "passive")
 			)
 			(node

@@ -2,7 +2,7 @@
   (version "D")
   (design
     (source "machine_filter.py")
-    (date "10/07/2026 12:19 AM")
+    (date "10/07/2026 12:33 AM")
     (tool "SKiDL (2.3.0)")
     (sheet
       (number 1)
@@ -265,8 +265,8 @@
           (value ""))))
     (sheet
       (number 8)
-      (name "/cv/cv6/")
-      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/")
+      (name "/cv/cv7/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
       (title_block
         (title)
         (company)
@@ -302,8 +302,8 @@
           (value ""))))
     (sheet
       (number 9)
-      (name "/cv/cv7/")
-      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
+      (name "/cv/cv6/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/ea07ef4a-4240-56e0-946e-07ad5135fe0d/")
       (title_block
         (title)
         (company)
@@ -3977,7 +3977,7 @@
         (pintype "PASSIVE"))
       (node
         (ref "J14")
-        (pin "4")
+        (pin "3")
         (pintype "PASSIVE"))
       (node
         (ref "J14")
@@ -4737,7 +4737,7 @@
         (pintype "BIDIRECTIONAL"))
       (node
         (ref "J14")
-        (pin "3")
+        (pin "4")
         (pintype "PASSIVE")))
     (net
       (code 78)

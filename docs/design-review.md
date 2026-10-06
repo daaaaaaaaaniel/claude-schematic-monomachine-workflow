@@ -86,6 +86,9 @@ design were checked against primary sources, and which questions remain. Checked
 - **Expansion header pinout: leave as is (d, 2026-10-06).** Optional header; a future expander will probably use jumper wires, so the rotation hazard (a 2×4
   connector turned 180° puts +3V3_D on USB_DM) matters only if a one-piece 2×4 housing or ribbon is used. A
   rotation-safe pinout is free to adopt anyway.
+- **Expansion header pins 3 and 4 swapped (d, 2026-10-07):** USB_DP on pin 4, GND on pin 3, so D− and D+ run straight from
+  Seed3 pins 36/37 into J14's near pin column; the old pin 3 route squeezed between pins 2 and 4 (0.27 mm each side, hand-soldered).
+  The 180° rotation hazard is unchanged (pin 2 ↔ pin 7).
 - **LED height in the panel:** the builder's choice at assembly; not a design constraint.
 
 ## Added 2026-10-06: the two-board split
