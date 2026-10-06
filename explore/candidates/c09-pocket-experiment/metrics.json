@@ -1,0 +1,15 @@
+{
+ "name": "c09-pocket-experiment",
+ "note": "EXPERIMENT: connectors with the strict pocket rule (not chosen); c08 is the measured alternative",
+ "metrics": {
+  "unrouted_between_placed_parts": 193,
+  "power_disconnects": 148,
+  "drc_problems": 0,
+  "vias": 8,
+  "track_mm": 193.2,
+  "parts_on_main_board": 94,
+  "diagonal_segments": 0,
+  "off_convention_long": 0,
+  "locked_violations": []
+ }
+}

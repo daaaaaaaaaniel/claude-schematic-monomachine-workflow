@@ -1,0 +1,111 @@
+{
+ "score": 1135.2109999999998,
+ "lines": [
+  {
+   "pins": [
+    "OUT_R",
+    "GND",
+    "OUT_L",
+    "GND",
+    "IN_R",
+    "IN_L",
+    "GND",
+    "+3V3_A",
+    "GND",
+    "CV_BASE",
+    "GND",
+    "CV_WIDTH",
+    "GND",
+    "+12V",
+    "GND",
+    "POT_VOL",
+    "POT_MUX",
+    "GND",
+    "CV_HPRES",
+    "GND",
+    "CV_LPRES",
+    "GND",
+    "CV_SRR",
+    "GND",
+    "CV_EQF",
+    "GND",
+    "CV_DIST",
+    "GND",
+    "-12V",
+    "GND"
+   ],
+   "pin1": [
+    43.18,
+    25.4
+   ],
+   "step": [
+    0.0,
+    2.54
+   ],
+   "rot_JB": 0,
+   "rot_JA": 180,
+   "origin_JB": [
+    43.18,
+    25.4
+   ],
+   "origin_JA": [
+    43.18,
+    25.4
+   ],
+   "signal_mm": 831.7
+  },
+  {
+   "pins": [
+    "LED_A",
+    "MUX_A",
+    "MUX_C",
+    "MUX_B",
+    "GND"
+   ],
+   "pin1": [
+    21.59,
+    57.15
+   ],
+   "step": [
+    -2.54,
+    0.0
+   ],
+   "rot_JB": 270,
+   "rot_JA": 90,
+   "origin_JB": [
+    21.59,
+    57.15
+   ],
+   "origin_JA": [
+    21.59,
+    57.15
+   ],
+   "signal_mm": 214.0
+  },
+  {
+   "pins": [
+    "CV_EQG",
+    "GND"
+   ],
+   "pin1": [
+    64.77,
+    100.33
+   ],
+   "step": [
+    2.54,
+    0.0
+   ],
+   "rot_JB": 90,
+   "rot_JA": 270,
+   "origin_JB": [
+    64.77,
+    100.33
+   ],
+   "origin_JA": [
+    64.77,
+    100.33
+   ],
+   "signal_mm": 58.5
+  }
+ ]
+}

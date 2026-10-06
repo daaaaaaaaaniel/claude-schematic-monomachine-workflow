@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """One routing experiment with Freerouting on one board, measured before anything touches the real board.
 
-    python3 pcb/tools/route_board.py main|control <name> [--gnd skip|route] [--passes N] [--against C] [--apply]
+    python3 pcb/tools/route_board.py main|control <name> [--gnd skip|route] [--passes N] [--fr "freerouting args"] [--apply]
 
 1. Cuts the board out of the saved project file into explore/routing/<name>/ (pcbnew, a scratch copy).
 2. Exports KiCad's own Specctra DSN and adds d's rules for the router (2026-10-06/07): 90-degree routing only
-   (snap_angle ninety_degree), front horizontal / back vertical (layer_rule preferred directions; going against
-   them costs C times as much, default 4). Hand-routed traces are locked, so they go in as fixed wires.
+   (snap_angle ninety_degree), front horizontal / back vertical (layer_rule preferred directions). Freerouting 2.3
+   honours the snap angle but ignores the direction costs (from the DSN, the CLI and freerouting.json alike, tested
+   2026-10-07); its built-in default already prefers F.Cu horizontal / B.Cu vertical, more weakly than d's rule.
+   Hand-routed traces are locked, so they go in as fixed wires.
    --gnd skip (default) leaves ground unrouted for the copper fill; --gnd route lets the router draw it too.
 3. Runs Freerouting headless (the local jar; nothing leaves the machine) and imports its session into the scratch
    copy.
@@ -172,7 +174,8 @@ def main():
     if os.path.exists(ses):
         os.remove(ses)
     t0 = time.time()
-    r = subprocess.run(["java", "-jar", JAR, "-de", dsn, "-do", ses, "-mp", passes, "--gui.enabled=false"],
+    extra = args[args.index("--fr") + 1].split() if "--fr" in args else []
+    r = subprocess.run(["java", "-jar", JAR, "-de", dsn, "-do", ses, "-mp", passes, "--gui.enabled=false"] + extra,
                        capture_output=True, text=True, timeout=3600)
     open(os.path.join(d, "freerouting.log"), "w").write(r.stdout + r.stderr)
     if not os.path.exists(ses):

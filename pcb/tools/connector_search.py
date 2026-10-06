@@ -3,6 +3,8 @@
 
     python3 pcb/tools/connector_search.py [--seed N] [--restarts K] [--free R1,C2,...] [--write]
 
+--pocket: inside the pocket between the Seed3's socket rows a pin carries only ground or a signal that ends at a
+Seed3 pin (d's open problem from 2026-10-06, explore/header-candidates/README.md).
 --free leaves those parts out (as if not yet placed): use it for parts that get re-placed around the connectors.
 
 Rules (d, 2026-10-07; docs/placement-workflow.md section 4):
@@ -106,6 +108,7 @@ def load(free=()):
     socket = []
     targets = {}
     tht = {"main": [], "control": []}
+    meta = {}
     pads = {"main": [], "control": []}
     for f in b.GetFootprints():
         ref = f.GetReference()
@@ -132,7 +135,11 @@ def load(free=()):
             if ref == "A1":
                 xs.append((px, py))
         if ref == "A1":                                   # the Seed3's two socket strips
-            for col in {round(x, 2) for x, _ in xs}:
+            cols = sorted({round(x, 2) for x, _ in xs})
+            meta["pocket"] = (cols[0] + 1.27 - OFFSET[bd][0], min(y for _, y in xs) - 1.27 - OFFSET[bd][1],
+                              cols[-1] - 1.27 - OFFSET[bd][0], max(y for _, y in xs) + 1.27 - OFFSET[bd][1])
+            meta["seed_nets"] = {p.GetNetname() for p in f.Pads()}
+            for col in cols:
                 ys = [y for x, y in xs if round(x, 2) == col]
                 socket.append(box(col - 1.27, min(ys) - 1.27, col + 1.27, max(ys) + 1.27))
     for t in b.GetTracks():
@@ -148,7 +155,7 @@ def load(free=()):
     cy[("control", "tht")] = tht["control"]
     cy[("main", "pads")] = pads["main"]
     cy[("control", "pads")] = pads["control"]
-    return copper, cy, targets
+    return copper, cy, targets, meta
 
 
 def legal_grid(copper, cy):
@@ -186,8 +193,8 @@ def legal_grid(copper, cy):
 
 
 class Problem:
-    def __init__(self, free=()):
-        copper, cy, targets = load(free)
+    def __init__(self, free=(), pocket=False):
+        copper, cy, targets, meta = load(free)
         self.xs, self.ys, self.ok = legal_grid(copper, cy)
         self.sigs = [s for pins in PM.HEADER_PINS.values() for s in pins if s != "GND"]
         X, Y = np.meshgrid(self.xs, self.ys, indexing="ij")
@@ -202,6 +209,11 @@ class Problem:
                     continue
                 t = np.array(t)
                 c += np.min(np.abs(X[..., None] - t[:, 0]) + np.abs(Y[..., None] - t[:, 1]), axis=-1)
+            if pocket and s not in meta["seed_nets"]:
+                # the pocket between the Seed3's socket rows: only ground or a signal that ends at a Seed3 pin
+                # (d's open problem, explore/header-candidates/README.md): others would squeeze out past the pins
+                x0, y0, x1, y1 = meta["pocket"]
+                c = c + BAD * ((X > x0) & (X < x1) & (Y > y0) & (Y < y1))
             self.cost[s] = c
         self.nx, self.ny = self.ok.shape
         self.runs = []                                  # maximal straight runs of legal sites, 2 lattice steps apart
@@ -392,7 +404,7 @@ def main():
     seed = int(args[args.index("--seed") + 1]) if "--seed" in args else 1
     restarts = int(args[args.index("--restarts") + 1]) if "--restarts" in args else 8
     free = args[args.index("--free") + 1].split(",") if "--free" in args else []
-    P = Problem(free)
+    P = Problem(free, pocket="--pocket" in args)
     print(f"legal pin sites: {int(P.ok.sum())} of {P.ok.size} lattice points (both boards)")
     if P.missing:
         print("no placed target for:", ", ".join(P.missing))

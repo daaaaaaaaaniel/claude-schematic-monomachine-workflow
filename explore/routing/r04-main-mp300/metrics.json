@@ -1,0 +1,15 @@
+{
+ "drc_problems": 0,
+ "drc_types": [],
+ "unrouted": 5,
+ "unrouted_ground": 60,
+ "vias": 61,
+ "track_mm": 2101.9,
+ "diagonal_segments": 0,
+ "off_convention_long": 77,
+ "board": "main",
+ "gnd": "skip",
+ "passes": "300",
+ "against": "4.0",
+ "seconds": 196
+}
