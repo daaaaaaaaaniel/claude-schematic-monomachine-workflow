@@ -40,6 +40,20 @@ CONTROL = {
 STANDOFFS = {"main": ["H1", "H2", "H3", "H4"], "control": ["H11", "H12", "H13", "H14"]}   # optional (d)
 STANDOFF_FP = "MountingHole:MountingHole_3.2mm_M3"
 
+# Secondary parts (d, 2026-10-06): placed in the same step as their primary because they must sit close to it.
+# Everything else in a group is a minor part, placed only after every primary and secondary is on the board. The
+# one exception: when a primary's critical trace passes through a minor part, that one part is placed (provisionally)
+# so the trace can be drawn, and the report says so.
+SECONDARY = {
+    "seed3": ["C6"],                                        # at VIN (pin 39)
+    "cv_u2": ["C21"], "cv_u1": ["C20"],                     # decoupling
+    "audio_in": ["C70", "C71"], "audio_out": ["C72", "C73"],
+    "ref_u5": ["C7"],
+    "power": ["FB1", "D10", "C1", "C2", "FB2", "D11", "C3", "C4"],   # protection and bulk, in chain order
+    "microsd": ["C100"], "expansion": [], "headers": [],
+    "mux_u6": ["C80"], "leds_u7": ["C81", "C82"], "leds_u8": ["C83", "C84"],
+}
+
 # Placement order (d agreed, 2026-10-06): 1 Seed3; 2 U2 then U1; 3 U3, U4; 4 U5; 5 J13; 6 J15, J14; 7 headers;
 # 8 standoffs (optional)
 ORDER = ["seed3", "cv_u2", "cv_u1", "audio_in", "audio_out", "ref_u5", "power", "microsd", "expansion", "headers",
