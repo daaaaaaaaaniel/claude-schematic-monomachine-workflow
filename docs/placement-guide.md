@@ -3,13 +3,13 @@
 This guide says which parts should sit next to which other parts, for the **rev beta** two-board schematic (`pcb/out/machine-filter.pdf`: main board pages 2–7, control board pages 8–12). Net names here are the main board's; on the control board the same nets carry the prefix `CTL_` (`CTL_CV_BASE`, `CTL_GND`, …), because each board's copper is its own net, joined only through the headers. Sections run from most to least important. Each one opens with the rule it applies, then names every part and pin it affects.
 
 **The boards** (d, 2026-10-06):
-- **MAIN** is assembled by JLC (SMD only), 70 × 100 mm, 2 layers (d, 2026-10-06). Its back carries every SMD part, the Seed3 on sockets, the power header J13, the expansion header J14 and the optional microSD socket J15 (DNP). Its front carries only the male headers JB1–JB3.
+- **MAIN** is assembled by JLC (SMD only), 70 × 100 mm, 2 layers (d, 2026-10-06). Its back carries every SMD part, the Seed3 on sockets, the power header J13, the expansion header J14 and the optional microSD socket J15 (DNP). Its front carries only the male board-to-board headers JB1–JB4.
 - **CONTROL** is hand-soldered, 70 × 107 mm, 2 layers is fine. Its front faces the panel and carries the jacks, pots and LEDs. Its back carries the pot multiplexer U6, the LED drivers U7/U8 (SOIC), their through-hole resistors and capacitors, and the female headers JA1–JA3.
-- The control board's JA1–JA3 plug onto the main board's JB1–JB3 (JAn onto JBn, pin k to pin k). With 8.5 mm sockets on 2.5 mm header plastic the boards sit about 11 mm apart.
+- The control board's JA1–JA4 plug onto the main board's JB1–JB4 (JAn onto JBn, pin k to pin k). With 8.5 mm sockets on 2.5 mm header plastic the boards sit about 11 mm apart.
 
 **Coordinates:** everything is in the panel frame seen from the front, in mm (x right, y down), as in `pcb/design/boards.py`. Parts on a board's back are seen mirrored from the front. "Left" and "right" mean as seen from the front panel.
 
-**Where the numbers come from:** `pcb/design/floorplan.py` places the parts with KiCad's own footprints, chooses the board-to-board headers (how many, which signals, where: `headers.py`), then picks the pin assignments that make the short connections shortest. It writes them to `pcb/design/pinmap.py`, which lists the floorplan position of every IC, connector and bulky part (`CONTROL_PLACEMENT`, `MAIN_PLACEMENT`); resistors, small capacitors and ferrite beads are left to the layout, following this guide. The pictures are `pcb/out/floorplan-main.png` and `pcb/out/floorplan-control.png`. The floorplan only proves the parts fit and sets the pin assignment. The PCB step should refine it, not copy it blindly. If a chip ends up somewhere else, re-run `floorplan.py` (or edit its rules), then `tools/build.sh`.
+**Where the numbers come from:** `pcb/design/floorplan.py` places the parts with KiCad's own footprints, chose the original board-to-board headers (since 2026-10-07 `pcb/tools/connector_search.py` chooses them from the placed boards, section 7), then picks the pin assignments that make the short connections shortest. It writes them to `pcb/design/pinmap.py`, which lists the floorplan position of every IC, connector and bulky part (`CONTROL_PLACEMENT`, `MAIN_PLACEMENT`); resistors, small capacitors and ferrite beads are left to the layout, following this guide. The pictures are `pcb/out/floorplan-main.png` and `pcb/out/floorplan-control.png`. The floorplan only proves the parts fit and sets the pin assignment. The PCB step should refine it, not copy it blindly. If a chip ends up somewhere else, re-run `floorplan.py` (or edit its rules), then `tools/build.sh`.
 
 **Where the rules come from:**
 - *(guide: name)* marks rules from the Sourcery Studios #pcb-creation channel (`docs/community-pcb-layout-guide.md`).
@@ -90,7 +90,7 @@ This guide says which parts should sit next to which other parts, for the **rev 
 
 **Worked example: CV 1 (BASE, 1V/OCT), on U2 section A (pins 1, 2, 3)**
 - **R11 (20k 0.1%) and C10 (1n)** sit side by side across U2 pin 2 (−) and pin 1 (out).
-- **R13 (20k 0.1%)** has one end on pin 2. **R10 (100k 0.1%)** sits directly behind it. R10's far end takes the trace from JB2 pin 2 (CV_BASE).
+- **R13 (20k 0.1%)** has one end on pin 2. **R10 (100k 0.1%)** sits directly behind it. R10's far end takes the trace from the board-to-board connector (CV_BASE; pin in the table below).
 - **R12 (120k offset, 25 ppm/K)** has one end on pin 2. The −10V_REF trace comes to R12's other end, not to the pin.
 - **Pin 3 (+)** gets a ground via right next to the pin.
 - **Pin 1 (out)** runs to Seed3 pin 23 (ADC_BASE). This trace is the one the floorplan keeps short: it's the ADC's input, and the Seed's ADC samples it.
@@ -99,14 +99,14 @@ This guide says which parts should sit next to which other parts, for the **rev 
 
 | CV | Section: − / out / + | R_in at − pin | R_f | C_f | Offset | From header pin | To Seed3 pin |
 |---|---|---|---|---|---|---|---|
-| 1 BASE (1V/OCT) | U2A: 2 / 1 / 3 | R13 (R10 behind it) | R11 | C10 | R12 | JB2.2 | 23 |
-| 2 WIDTH (1V/OCT) | U1A: 2 / 1 / 3 | R17 (R14 behind it) | R15 | C11 | R16 | JB2.3 | 29 |
-| 3 HP RES | U2B: 6 / 7 / 5 | R18 | R19 | C12 | R20 | JB2.5 | 22 |
-| 4 LP RES | U2C: 9 / 8 / 10 | R22 | R23 | C13 | R24 | JB2.6 | 24 |
-| 5 EQ FREQ | U2D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB2.9 | 25 |
-| 6 EQ GAIN | U1B: 6 / 7 / 5 | R30 | R31 | C15 | R32 | JB2.8 | 26 |
-| 7 DIST | U1C: 9 / 8 / 10 | R34 | R35 | C16 | R36 | JB2.12 | 27 |
-| 8 SMPL RATE | U1D: 13 / 14 / 12 | R38 | R39 | C17 | R40 | JB2.11 | 30 |
+| 1 BASE (1V/OCT) | U2A: 2 / 1 / 3 | R13 (R10 behind it) | R11 | C10 | R12 | JB1.10 | 23 |
+| 2 WIDTH (1V/OCT) | U1A: 2 / 1 / 3 | R17 (R14 behind it) | R15 | C11 | R16 | JB1.11 | 29 |
+| 3 HP RES | U2B: 6 / 7 / 5 | R18 | R19 | C12 | R20 | JB1.20 | 22 |
+| 4 LP RES | U2C: 9 / 8 / 10 | R22 | R23 | C13 | R24 | JB2.1 | 24 |
+| 5 EQ FREQ | U2D: 13 / 14 / 12 | R26 | R27 | C14 | R28 | JB1.21 | 25 |
+| 6 EQ GAIN | U1B: 6 / 7 / 5 | R30 | R31 | C15 | R32 | JB2.3 | 26 |
+| 7 DIST | U1C: 9 / 8 / 10 | R34 | R35 | C16 | R36 | JB4.1 | 27 |
+| 8 SMPL RATE | U1D: 13 / 14 / 12 | R38 | R39 | C17 | R40 | JB4.3 | 30 |
 
 **Detail**
 - **U2 serves CV 1, 3, 4 and 5; U1 serves CV 2 and 6–8**, so each chip carries one 1V/OCT channel (BASE on U2, WIDTH on U1; d, 2026-10-06). Which section feeds which ADC pin is re-matched once U1/U2 are placed, so no output trace crosses another.
@@ -167,7 +167,7 @@ This guide says which parts should sit next to which other parts, for the **rev 
   - R3 (1k) runs from pin 2 to −12 V.
 - **The −10V_REF trace** runs from U5 pin 2 to R12, R16, R20, R24 (at U2) and R28, R32, R36, R40 (at U1).
 - In the floorplan, U5 sits just above U2, so the trace is a short bus down past both chips.
-- Keep it away from the LED_A line (Seed3 pin 12 → R70 → JB1 pin 10, running up between the socket rows) and from the USB and MIDI lines to J14. MUX_A/B/C stay under the Seed3 (pins 8/9/10 to JB3), away from U5.
+- Keep it away from the LED_A line (Seed3 pin 12 → R70 → JB3 pin 1) and from the USB and MIDI lines to J14. MUX_A/B/C run from Seed3 pins 8/9/10 to JB3, away from U5.
 
 ---
 
@@ -204,32 +204,39 @@ This guide says which parts should sit next to which other parts, for the **rev 
 
 ## 7. Board-to-board connector
 
-**Rules**
-- Put plenty of ground pins on board-to-board connectors *(guide: David Haillant)*.
-- Group signals by kind, with ground pins between the groups *(general practice)*.
+**Rules** (d, 2026-10-07; `pcb/design/swap_groups.py`, `docs/placement-workflow.md` section 4)
+- Up to 4 straight lines, horizontal or vertical, each one header pair cut to length (2–40 pins): JAn female on the
+  control board's back over JBn male on the main board's front, pin k on pin k. Lines may sit right at the board edge.
+- Every connector has a ground; every audio or CV signal has a ground beside it; a supply pin has grounds on both
+  sides; two kinds of signal never sit side by side without a ground between them *(guides: David Haillant, plenty of
+  ground pins; Eddy Bergman, extra ground pins)*.
 
-**The three headers.** Single-row 2.54 mm. Positions are in the panel frame, from `pinmap.py` (`HEADER_POS`); `python3 pcb/tools/doc_tables.py` prints this table.
+**The connectors.** Found by `pcb/tools/connector_search.py` once every other part was placed: it tries straight
+runs of pin sites that are legal on both boards (clear of copper, of the jack/pot/LED bodies on the control front,
+of the socket bodies and leads on the control back, and of the Seed3's socket strips) and minimises the orthogonal
+distance from each signal's pin to its pads on both boards. `pcb/tools/sync_headers.py` put them on the board;
+`python3 pcb/tools/doc_tables.py` prints this table.
 
 | Header | Pins | Pin 1 (panel frame, mm) | Orientation (main side) | Pin order |
 |---|---|---|---|---|
-| JA1 / JB1 | 15 | (21.95, 69.205) | vertical, pin 1 at the bottom | GND, IN_L, IN_R, GND, OUT_R, OUT_L, GND, POT_VOL, GND, LED_A, GND, +12V, GND, -12V, GND |
-| JA2 / JB2 | 13 | (41.635, 66.03) | vertical, pin 1 at the top | GND, CV_BASE, CV_WIDTH, GND, CV_HPRES, CV_LPRES, GND, CV_EQG, CV_EQF, GND, CV_SRR, CV_DIST, GND |
-| JA3 / JB3 | 10 | (21.95, 84.445) | vertical, pin 1 at the top | GND, POT_MUX, GND, MUX_C, MUX_B, GND, MUX_A, GND, +3V3_A, GND |
+| JA1 / JB1 | 22 | (44.45, 25.4) | vertical, pin 1 at the top | GND, OUT_R, OUT_L, GND, IN_R, IN_L, GND, +3V3_A, GND, CV_BASE, CV_WIDTH, GND, +12V, GND, POT_VOL, POT_MUX, GND, -12V, GND, CV_HPRES, CV_EQF, GND |
+| JA2 / JB2 | 3 | (67.31, 59.69) | vertical, pin 1 at the top | CV_LPRES, GND, CV_EQG |
+| JA3 / JB3 | 5 | (26.67, 68.58) | vertical, pin 1 at the top | LED_A, MUX_B, MUX_C, MUX_A, GND |
+| JA4 / JB4 | 3 | (57.15, 111.76) | vertical, pin 1 at the bottom | CV_DIST, GND, CV_SRR |
 
 **Detail**
-- **17 of the 38 pins are ground.** `design/headers.py` builds each header's pin order the same way: GND, then the analog signals in pairs with a GND after each pair, then the digital lines in pairs, then each supply between GNDs.
-  - **JB1** carries the audio (IN_L/IN_R, OUT_R/OUT_L), POT_VOL, the clip-LED drive LED_A and ±12 V.
-  - **JB2** carries the eight CVs to the ADC stages.
-  - **JB3** carries POT_MUX, the three mux selects and +3V3_A.
-- **Where they sit.**
-  - On the control board: JA1 above U6 and JA3 below it, in the channel between the two pot columns; JA2 in the channel between the right pot column and the CV jacks.
-  - On the main board: JB1 and JB3 stand between the Seed3's two socket rows (x 21.95, 7.4 mm from each row); JB1's top 12 pins are above the Seed's upper end. JB2 is right of U1/U2, 11.9 mm from the nearest Seed pin.
-- **Hand soldering (d, 2026-10-06).** The search keeps every header pin at least 5.08 mm from every Seed3 pin (`SEED_MIN` in `headers.py`); the result is 7.46 mm.
-  - JB1/JB3's pins come out on the main board's back, between the socket rows, under the Seed3. Solder them before the Seed3 sockets (easiest), and trim them flush.
-  - Check that they clear the Seed3's underside (the Seed sits 8.5 mm up on its sockets).
-- **Orientation.** A header's main-side rotation is in `HEADER_POS`; its control-side (back) rotation is the mirrored one in the same tuple. Pin 1 of JAn lands on pin 1 of JBn.
-- **Alignment:** both boards must use the same x/y for the headers. `pinmap.py` holds them. Generate both footprints' positions from it, never by hand.
-- **Current:** the ±12 V pins feed only U7/U8 and their LEDs (under 50 mA each way), and +3V3_A feeds only the pots and U6. One 2.54 mm pin each is ample.
+- **33 pins, 12 of them ground** (the old three headers had 38 and 17).
+  - **J1 (22 pins)** runs down the channel between the right pot column and the CV jacks (panel x 44.45, y 25–79);
+    on the main board it stands between the Seed3's socket rows. It carries the audio, the supplies, both pot
+    signals and four CVs.
+  - **J2 and J4 (3 pins each)** sit beside the CV jacks and carry two CVs each.
+  - **J3 (5 pins)** sits beside U6 and carries the mux selects and the clip-LED drive.
+- **Hand soldering.** JB1's pins come out on the main board's back between the Seed3's socket rows, under the module:
+  solder JB1 before the Seed3 sockets and trim the pins flush; the Seed sits 8.5 mm up on its sockets.
+- **Orientation.** JAn on the back is turned 180° from JBn (KiCad flips back-side parts top-to-bottom); the tools
+  check that every pin k of JAn sits on pin k of JBn.
+- **Current:** the ±12 V pins feed only U7/U8 and their LEDs (under 50 mA each way), and +3V3_A feeds only the pots
+  and U6. One 2.54 mm pin each is ample.
 
 ---
 
@@ -263,7 +270,7 @@ This guide says which parts should sit next to which other parts, for the **rev 
 - **Seed3:** vertical, USB end at the bottom edge, socket rows at x 14.57 and 29.81 (left of centre).
   - The codec pins 16–19 (left row) and the ADC pins 22–32 (right row) are at the Seed's upper end.
   - USB 36/37 and VIN 39 are at the bottom.
-  - JB1 and JB3 stand between the socket rows (section 7).
+  - JB1 stands between the socket rows (section 7).
 - **U3/U4 (audio):** left of the Seed3, beside the codec pins.
 - **U2 then U1 (CV ADC):** right of the Seed3, between the ADC pins and JB2. U5 sits just above U2.
 - **J13 and the power chain:** top-left. **J14:** bottom, right of the Seed's USB end, near USB 36/37.
@@ -293,8 +300,8 @@ This guide says which parts should sit next to which other parts, for the **rev 
   - **Left column** goes down one side, to pins 15, 14, 13, 12: RV2 (BASE), RV4 (HP RES), RV6 (EQ FREQ), RV8 (DIST).
   - **Right column** goes down the other side, to pins 1, 2, 4, 5: RV3 (WIDTH), RV5 (LP RES), RV7 (EQ GAIN), RV9 (SMPL RATE).
   - Mind the back-side mirroring when you turn U6.
-- **U6 pin 3 (POT_MUX)** runs to JA3 pin 2, then on the main board from JB3 pin 2 to Seed3 pin 31.
-- **MUX_A/B/C** (U6 pins 11/10/9) run to JA3 pins 7/5/4. On the main board they go from JB3 to Seed3 pins 8/9/10.
+- **U6 pin 3 (POT_MUX)** runs to JA1 pin 16, then on the main board from JB1 pin 16 to Seed3 pin 31.
+- **MUX_A/B/C** (U6 pins 11/10/9) run to JA3 pins 4/2/3. On the main board they go from JB3 to Seed3 pins 8/9/10.
 - **RV1 (VOLUME)** wiper runs to JA1 pin 8, then from JB1 pin 8 to Seed3 pin 28.
 - **C80** at pin 16. Pins 6, 7, 8 to GND.
 
@@ -306,7 +313,7 @@ This guide says which parts should sit next to which other parts, for the **rev 
 
 **Rules:** keep digital and fast lines short and at the digital end of the Seed3 *(guide: The2dCour)*.
 
-- **R70 (1k)** sits at Seed3 pin 12 (main board). LED_A runs from R70 to JB1 pin 10, then on the control board from JA1 pin 10 to **D1** (the clip LED). Keep it away from U3/U4 and −10V_REF.
+- **R70 (1k)** sits at Seed3 pin 12 (main board). LED_A runs from R70 to JB3 pin 1, then on the control board from JA3 pin 1 to **D1** (the clip LED). Keep it away from U3/U4 and −10V_REF.
 - **J14 (expansion 2×4)** sits by the Seed3's USB end. Route USB_DP and USB_DM side by side as a pair, from pins 36/37.
 - **MIDI_TX/RX** leave Seed3 pins 14/15 (USART1) and run to J14. Pins 14/15 sit next to the codec pins 16–19: keep the MIDI traces off the U3/U4 side and on the other layer where they pass the codec lines.
 - **J15 (microSD, optional):** the six SDMMC lines (pins 2–7) run short and direct to the socket, CK (pin 7) kept away from the others where possible; the 47k pull-ups R100–R104 sit by the Seed pins, C100 at the socket's VDD pin. The socket is DNP by default; its footprint and traces are always there.

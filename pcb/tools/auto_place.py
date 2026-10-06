@@ -190,6 +190,13 @@ class World:
         return pts
 
     def best(self, ref, back):
+        for radius in (RADIUS, 2 * RADIUS, 4 * RADIUS):
+            got = self._best(ref, back, radius)
+            if got is not None:
+                return got
+        return None
+
+    def _best(self, ref, back, radius):
         fp = self.fps[ref]
         nets = {p.GetNumber(): p.GetNetname() for p in fp.Pads()}
         tg = {n: self.targets(ref, n) for n in set(nets.values()) if weight(n) > 0}
@@ -198,7 +205,7 @@ class World:
             return None
         cx = np.mean([v[:, 0].mean() for v in tg.values()])
         cyy = np.mean([v[:, 1].mean() for v in tg.values()])
-        g = np.arange(-RADIUS, RADIUS + 1e-9, STEP)
+        g = np.arange(-radius, radius + 1e-9, STEP if radius <= RADIUS else 2 * STEP)
         X, Y = np.meshgrid(cx + g, cyy + g)
         X, Y = X.ravel(), Y.ravel()
         cands = []

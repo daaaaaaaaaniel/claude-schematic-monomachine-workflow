@@ -86,10 +86,10 @@ A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This fol
 
 - **MAIN** (70 × 100 mm, panel y 14–114; 2 layers, d 2026-10-06: the 4-layer plan was for the single-board module):
   - Back: Seed3 on sockets (USB end down, at least 25 mm inside the control board's edge: see the post-mortem), power entry J13, CV ADC stages U1/U2, audio U3/U4, the −10 V reference U5, expansion header J14, every SMD R/C.
-  - Front: male headers JB1–JB3. The schematic has candidate A's provisional headers: JB1 15 pins, JB2 13 pins, JB3 10 pins. Their count, pin order and sites get settled after the major parts are placed.
+  - Front: male headers JB1–JB4 (22 + 3 + 5 + 3 pins), chosen on 2026-10-07 by `pcb/tools/connector_search.py` from the placed boards (`docs/placement-guide.md` section 7).
 - **CONTROL** (70 × 107 mm, the panel's board area; 2 layers):
   - Front: 12 jacks, 9 pots, 9 LEDs.
-  - Back: pot mux U6, LED drivers U7/U8 (SOIC), through-hole R/C, female headers JA1–JA3.
+  - Back: pot mux U6, LED drivers U7/U8 (SOIC), through-hole R/C, female headers JA1–JA4.
 - **Stack:** JAn plugs onto JBn, pin k to pin k, about 11 mm apart. Only robust signals cross: jack-level CV and audio, pot wipers, mux selects, clip-LED drive, and the supplies. In the provisional version, 17 of the 38 pins are ground. JB1 carries audio, POT_VOL, LED_A and ±12 V; JB2 the eight CVs; JB3 POT_MUX, the mux selects and +3V3_A.
 - **Net names:** each board's nets are its own copper, so the control board's nets carry the prefix `CTL_` (`CTL_GND`, `CTL_+12V`, `CTL_CV_BASE`, …). `CTL_x` meets `x` only at JAn/JBn pin k. That's what lets one PCB file hold both boards without the design-rule check reporting every crossing net as unrouted. The cost: ERC can't see the header joins, so `tools/check_netlist.py` checks them.
 - **Why LED drivers on CONTROL:** LED current stays off the main board's analog ground, the 1 MΩ inputs sit at the jacks, and they're hand-solderable.

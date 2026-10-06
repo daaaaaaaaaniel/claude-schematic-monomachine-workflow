@@ -2,7 +2,7 @@
   (version "D")
   (design
     (source "machine_filter.py")
-    (date "10/07/2026 01:35 AM")
+    (date "10/07/2026 01:41 AM")
     (tool "SKiDL (2.3.0)")
     (sheet
       (number 1)
@@ -302,6 +302,43 @@
           (value ""))))
     (sheet
       (number 9)
+      (name "/cv/cv7/")
+      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "machine_filter.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value ""))))
+    (sheet
+      (number 10)
       (name "/audio/")
       (tstamps "/941fa1e7-8799-5f7c-8ace-7dda23c16360/")
       (title_block
@@ -338,7 +375,7 @@
           (number "9")
           (value ""))))
     (sheet
-      (number 10)
+      (number 11)
       (name "/cv/cv4/")
       (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/c53ec302-0275-51f0-abb3-42b00ec3a227/")
       (title_block
@@ -375,46 +412,9 @@
           (number "9")
           (value ""))))
     (sheet
-      (number 11)
+      (number 12)
       (name "/power/")
       (tstamps "/fd57245b-6c1e-5121-a5d7-1feafbd22fd5/")
-      (title_block
-        (title)
-        (company)
-        (rev)
-        (date)
-        (source "machine_filter.py")
-        (comment
-          (number "1")
-          (value ""))
-        (comment
-          (number "2")
-          (value ""))
-        (comment
-          (number "3")
-          (value ""))
-        (comment
-          (number "4")
-          (value ""))
-        (comment
-          (number "5")
-          (value ""))
-        (comment
-          (number "6")
-          (value ""))
-        (comment
-          (number "7")
-          (value ""))
-        (comment
-          (number "8")
-          (value ""))
-        (comment
-          (number "9")
-          (value ""))))
-    (sheet
-      (number 12)
-      (name "/cv/cv7/")
-      (tstamps "/39e412f7-fd3a-5c49-8764-04aaa27adfe0/6cc6cdae-7821-5d1f-be41-15a5b0aea53e/")
       (title_block
         (title)
         (company)

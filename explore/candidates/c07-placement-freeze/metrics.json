@@ -1,0 +1,15 @@
+{
+ "name": "c07-placement-freeze",
+ "note": "placement frozen: control THT parts, standoffs",
+ "metrics": {
+  "unrouted_between_placed_parts": 189,
+  "power_disconnects": 145,
+  "drc_problems": 0,
+  "vias": 8,
+  "track_mm": 193.2,
+  "parts_on_main_board": 94,
+  "diagonal_segments": 0,
+  "off_convention_long": 0,
+  "locked_violations": []
+ }
+}
