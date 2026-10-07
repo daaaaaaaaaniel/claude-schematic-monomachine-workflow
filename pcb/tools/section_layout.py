@@ -107,6 +107,15 @@ def layout(w, section):
         a = cv_top(w, "U2", "2", -1, [("C10", "out"), ("R12", "vref"), ("R11", "out"), "R13", "R10"])
         b = cv_top(w, "U2", "6", +1, [("R19", "out"), ("C12", "out"), ("R20", "vref"), "R18"])
         return a + b
+    if section == "seed_supply":
+        # the Seed3's supply filter at its VIN pin: +12V -> R1 -> (C5) -> R2 -> VIN pin 39, C6 already at the pin
+        v = pin(w, "A1", "39")
+        # both resistors pad 2 to the left (toward VIN), the node cap under the junction
+        return [("R2", v[0] + 3.85, v[1] + 9.35, 180), ("R1", v[0] + 8.95, v[1] + 9.35, 180),
+                ("C5", v[0] + 6.4, v[1] + 14.6, 180)]
+    if section == "power_fix":                        # FB2 at the start of the -12 V chain, in line with D11
+        d = pin(w, "D11", "1")
+        return [("FB2", d[0] + 0.8, d[1] + 3.6, 0)]   # just below D11, pad 1 toward J13's -12 V pins
     if section == "ctl_u6":  # noqa                           # the mux's decoupler at its supply pin 16
         p16 = pin(w, "U6", "16")
         return [("C80", p16[0] + 1.25, p16[1] - 3.2, 0)]
