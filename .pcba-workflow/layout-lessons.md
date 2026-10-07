@@ -64,3 +64,11 @@ KiCad flips a footprint top-to-bottom, so a back-side JAn at the same rotation a
 order reversed along the column: pin k no longer sits on pin k. pinmap.HEADER_POS gives both the same rotation
 (floorplan.py assumed a left-right mirror), which is wrong in KiCad. `tools/rematch.py headers` checks every pin pair
 and refuses misaligned pairs; in the test a 180° turn of JAn fixed it.
+
+## Stacked placement rules overfit (2026-10-07)
+Each incident (J3 near a pot, U6 on RV4's lead, ...) added one more rule to `auto_place.py`, each stricter than the
+measured practice. Together they left **0 legal spots** for R96 within 12 mm of U8 on the control board, which is why
+its resistors kept landing 25–35 mm away. The main blocker was "no lead inside a front part's *courtyard*"; pot
+courtyards are ~31 mm² bigger than their bodies. The survey's rule (lead holes ≥ 1.0 mm outside the body *outline*)
+gives 640 legal spots in the same area. Lesson: when a rule is added to fix one case, check it against the measured
+data, and when placement keeps failing, count legal spots per rule before blaming the footprint.
