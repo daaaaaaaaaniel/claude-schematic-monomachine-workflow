@@ -38,7 +38,7 @@ def cy_edge(w, ref, side):
     return {"top": y + c[1] - OY, "bottom": y + c[3] - OY, "left": x + c[0] - OX, "right": x + c[2] - OX}[side]
 
 
-def cv_top(w, chip, minus, out_dir, parts, extra_r_in=None):
+def cv_top(w, chip, minus, out_dir, parts, rin_row=False):
     """A CV section on the chip's top pin row, facing up (-y). parts: (row1, row2, row3) as (ref, side) with side
     'out' or 'vref'; then the input resistor(s) in line above. out_dir: -1 = output pin to the left, +1 = right."""
     mx, my = pin(w, chip, minus)
@@ -51,12 +51,16 @@ def cv_top(w, chip, minus, out_dir, parts, extra_r_in=None):
         res.append((ref, mx + d * P, ry, 180 if d < 0 else 0))
     top = rows[2] - 0.775 - 0.5 - 1.625
     r_in = parts[3:]
+    if rin_row:                                         # input resistor as a 4th row, pad 2 (-) on the spine
+        res.append((r_in[0], mx + out_dir * P, rows[2] - ROW, 0 if out_dir < 0 else 180))
+        r_in = r_in[1:]
+        top -= ROW
     for k, ref in enumerate(r_in):                     # pad 2 = the - side (bottom), pad 1 = toward the jack
         res.append((ref, mx, top - k * (3.25 + 0.5), 270))
     return res
 
 
-def cv_bottom(w, chip, minus, out_dir, parts):
+def cv_bottom(w, chip, minus, out_dir, parts, rin_row=False):
     """The mirror of cv_top for a section on the chip's bottom pin row, facing down (+y)."""
     mx, my = pin(w, chip, minus)
     r1 = cy_edge(w, chip, "bottom") + 0.5 + 0.775
@@ -66,15 +70,31 @@ def cv_bottom(w, chip, minus, out_dir, parts):
         d = out_dir if side == "out" else -out_dir
         res.append((ref, mx + d * P, ry, 180 if d < 0 else 0))
     bottom = rows[2] + 0.775 + 0.5 + 1.625
-    for k, ref in enumerate(parts[3:]):                 # pad 2 = the - side (top), pad 1 = toward the jack
+    r_in = parts[3:]
+    if rin_row:
+        res.append((r_in[0], mx + out_dir * P, rows[2] + ROW, 0 if out_dir < 0 else 180))
+        r_in = r_in[1:]
+        bottom += ROW
+    for k, ref in enumerate(r_in):                      # pad 2 = the - side (top), pad 1 = toward the jack
         res.append((ref, mx, bottom + k * (3.25 + 0.5), 90))
     return res
 
 
 def layout(w, section):
+    if section == "u1_top":
+        a = cv_top(w, "U1", "2", -1, [("C11", "out"), ("R16", "vref"), ("R15", "out"), "R17", "R14"], rin_row=True)
+        b = cv_top(w, "U1", "6", +1, [("R31", "out"), ("C15", "out"), ("R32", "vref"), "R30"], rin_row=True)
+        return a + b
+    if section == "u5":                                # U5's series resistor beside the reference's pin 2
+        p2 = pin(w, "U5", "2")
+        return [("R3", p2[0] - 0.3, p2[1] - 3.2, 90)]   # pad 2 (-12 V) up, pad 1 (-10V_REF) down toward pin 2
+    if section == "u1_bottom":
+        c = cv_bottom(w, "U1", "9", +1, [("R35", "out"), ("C16", "out"), ("R36", "vref"), "R34"])
+        d = cv_bottom(w, "U1", "13", -1, [("C17", "out"), ("R40", "vref"), ("R39", "out"), "R38"])
+        return c + d
     if section == "u2_bottom":
-        c = cv_bottom(w, "U2", "9", +1, [("R23", "out"), ("C13", "out"), ("R24", "vref"), "R22"])
-        d = cv_bottom(w, "U2", "13", -1, [("C14", "out"), ("R28", "vref"), ("R27", "out"), "R26"])
+        c = cv_bottom(w, "U2", "9", +1, [("R23", "out"), ("C13", "out"), ("R24", "vref"), "R22"], rin_row=True)
+        d = cv_bottom(w, "U2", "13", -1, [("C14", "out"), ("R28", "vref"), ("R27", "out"), "R26"], rin_row=True)
         return c + d
     if section == "u2_top":
         a = cv_top(w, "U2", "2", -1, [("C10", "out"), ("R12", "vref"), ("R11", "out"), "R13", "R10"])
@@ -102,13 +122,14 @@ def layout(w, section):
     raise SystemExit(f"unknown section {section}")
 
 
-def legalise(w, ref, x, y, rot):
+def legalise(w, ref, x, y, rot, limit=None):
     s = w.shape(ref, rot, True)
     kx, ky = x + OX, y + OY
     if w.legal(ref, kx, ky, s):
         return kx, ky, s, 0.0
     best = None
-    for r in [k * 0.05 for k in range(1, 61)] + [3.0 + k * 0.25 for k in range(1, 25)]:
+    radii = [k * 0.05 for k in range(1, 61)] + [3.0 + k * 0.25 for k in range(1, 49)]
+    for r in radii[:limit]:
         for i in range(max(8, int(2 * math.pi * r / 0.05))):
             a = 2 * math.pi * i / max(8, int(2 * math.pi * r / 0.05))
             cx, cy = round((kx + r * math.cos(a)) / 0.05) * 0.05, round((ky + r * math.sin(a)) / 0.05) * 0.05
@@ -132,14 +153,33 @@ def main():
         w.placed.pop(ref, None)
     w.rebuild()
     result = {}
+    # first every part that fits on its pattern spot (nudged at most 0.5 mm), then the rest wherever is nearest,
+    # so a displaced part never takes another part's pattern spot
+    first = []
     for ref, x, y, rot in plan:
-        got = legalise(w, ref, x, y, rot)
+        got = legalise(w, ref, x, y, rot, limit=10)
         if got is None:
-            print(f"{ref}: no legal spot within 9 mm of its pattern position")
+            first.append(None)
             continue
         kx, ky, s, moved = got
         w.placed[ref] = (kx, ky, s)
         w.rebuild()
+        first.append(got)
+    for i, ((ref, x, y, rot), got) in enumerate(zip(plan, first)):
+        if got is None:
+            for r2 in [rot] + [a for a in (0, 90, 180, 270) if a != rot]:   # same turn first, then the others
+                got = legalise(w, ref, x, y, r2)
+                if got is not None:
+                    plan[i] = (ref, x, y, r2)
+                    rot = r2
+                    break
+        if got is None:
+            print(f"{ref}: no legal spot within 15 mm of its pattern position")
+            continue
+        kx, ky, s, moved = got
+        if ref not in w.placed:
+            w.placed[ref] = (kx, ky, s)
+            w.rebuild()
         result[ref] = {"x": round(kx, 4), "y": round(ky, 4), "rot": rot,
                        "pads": [[p[0], round(kx + p[2], 4), round(ky + p[3], 4)] for p in s.pads]}
         print(f"{ref}: panel ({kx - OX:.2f}, {ky - OY:.2f}) rot {rot}" + (f"  (moved {moved:.2f} mm to clear)" if moved else ""))

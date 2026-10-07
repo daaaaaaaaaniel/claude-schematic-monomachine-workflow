@@ -111,6 +111,15 @@ is locked yet: no block has been approved.
 - Standing (vertically mounted) resistors can fill the 2–3 mm gutters between jack columns (a footprint change).
 - Back-side SMD parts (U6–U8) may sit under a jack or pot, clear of its solder pins.
 
+**Op-amp sections (2026-10-07; d's layout study, `docs/reference/pcb-layout-study/`, 121 op-amps on 36 open-source
+Eurorack boards):** decoupling cap closest to its supply pin (within 3 mm, own ground via); feedback R and C within
+3 mm of the - and output pins; the rest of the - pin's parts within 6 mm; output series resistor within 10 mm; the
+long trace on the far side of the input resistor; repeated channels as identical banks (lay out one, copy it);
+neighbouring SOIC op-amps typically 12-14 mm apart centre to centre (about 5 mm between bodies). Our pattern
+(`pcb/tools/section_layout.py`): a spine from each - pin, the section's parts as rows across it, input resistors
+in line or as a fourth row; mirrored per section. U1 moved 9.5 mm down (d: "finish that up") so U2's lower and U1's
+upper channels both fit between the chips; U1's four ADC traces were removed and are re-routed with the rest.
+
 ## 5. Tools: KiCad 10 GUI + Konnect in the cloud container
 
 Konnect (github.com/mixelpixx/Konnect, v0.13) is an MCP server that edits the board open in KiCad's PCB editor

@@ -2173,7 +2173,7 @@
 			(uuid "bb7eaf84-d0ba-4819-a368-5f0b44e3ce6a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 12.7 -90)
+			(at 0 12.7 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "f4c559fd-bee2-4fb2-9534-7500a9409a92")
@@ -9599,7 +9599,7 @@
 			(uuid "4f7815de-304f-45d5-9790-dcf166eeffef")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 10.16 -90)
+			(at 0 10.16 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(uuid "594cdb53-dc49-48f3-925e-4eeddc351d44")
@@ -12347,7 +12347,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R84"
-			(at 2.54 1.92 -90)
+			(at 2.54 1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "bd7e1a4e-dbc1-4227-b737-690fe56b86a7")
@@ -12360,7 +12360,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 2.54 -1.92 -90)
+			(at 2.54 -1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -12374,7 +12374,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5ac118e2-85be-47f4-9b72-37cf7caa6516")
@@ -12386,7 +12386,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8ecf91ec-6acf-4c88-87b4-5e3f0caaedf8")
@@ -12463,7 +12463,7 @@
 			(uuid "df0a1176-5408-4c75-96e2-97b63948113b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 -90)
+			(at 2.54 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "3c20b41b-906e-4715-a580-bf11ad22c106")
@@ -12509,7 +12509,7 @@
 	(footprint "filter-module:C_0603"
 		(layer "B.Cu")
 		(uuid "0e390e1c-de97-4fe1-a08a-e9914036239c")
-		(at 243.5 107.8)
+		(at 243.5 117.3)
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C20"
@@ -13087,7 +13087,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R94"
-			(at 2.54 1.92 -90)
+			(at 2.54 1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "8ee3987b-5d92-4e26-8a1e-40f70392cd76")
@@ -13100,7 +13100,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 2.54 -1.92 -90)
+			(at 2.54 -1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -13114,7 +13114,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "c69f920c-b7d4-46d3-aa2e-bcfa0173fbca")
@@ -13126,7 +13126,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a8376130-22db-471b-9104-f3454dc1b5e5")
@@ -13203,7 +13203,7 @@
 			(uuid "aef5b5e5-551b-40fc-8665-c64bd6038b6b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 -90)
+			(at 2.54 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "528d0e5e-e231-472f-b59d-a0179bda9924")
@@ -13249,11 +13249,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "11a74075-deac-44ec-8525-bfdcc1990376")
-		(at 245.4 95.5 -90)
+		(at 234.4 99.6)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R28"
-			(at 0 1.45 90)
+			(at 0 1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "b347a675-aae7-4b3f-9802-511866382cc1")
@@ -13266,7 +13266,7 @@
 			)
 		)
 		(property "Value" "120k"
-			(at 0 -1.45 90)
+			(at 0 -1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -13280,7 +13280,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9d7ab714-b9ba-4bea-8595-3d233e62a345")
@@ -13292,7 +13292,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "fb1a2e75-43b7-4b99-b4a3-20cd21ede8dd")
@@ -13327,14 +13327,14 @@
 			(uuid "0ecb7756-dba4-4aec-9780-3e661672a79d")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "be22e578-1c63-4eb1-8217-438a18a6cc92")
+			(uuid "72d6fb36-6ef4-4384-85a6-e7c18907cb34")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -13347,6 +13347,16 @@
 			(uuid "1cd2afc9-7a3d-4cc4-ae41-22e92f0a5401")
 		)
 		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "be22e578-1c63-4eb1-8217-438a18a6cc92")
+		)
+		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -13356,25 +13366,15 @@
 			(layer "B.CrtYd")
 			(uuid "b44fe204-428c-420a-a2eb-a80fd7ea9adb")
 		)
-		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "72d6fb36-6ef4-4384-85a6-e7c18907cb34")
-		)
 		(pad "1" smd rect
-			(at -0.85 0 270)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U2D--)")
 			(uuid "a65e9134-773c-4b7e-8841-8110352f963a")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 270)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-10V_REF")
@@ -13875,7 +13875,7 @@
 	(footprint "filter-module:C_0603"
 		(layer "B.Cu")
 		(uuid "27fe3bab-5dcd-457c-8a58-428550035852")
-		(at 232.75 119.75 180)
+		(at 232.75 122.35 180)
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C17"
@@ -14022,7 +14022,7 @@
 	(footprint "filter-module:SOIC-14_3.9x8.65mm_Pitch1.27mm"
 		(layer "B.Cu")
 		(uuid "29cd0d96-d86d-4711-a9b5-65aaf1ccba28")
-		(at 236.1 107.81 -90)
+		(at 236.1 117.31 -90)
 		(descr "16-Lead Plastic Small Outline (SL) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)")
 		(tags "SOIC 1.27")
 		(property "Reference" "U1"
@@ -14344,11 +14344,11 @@
 	(footprint "filter-module:C_0603"
 		(layer "B.Cu")
 		(uuid "2d1d73a8-5ca4-49ac-927a-40d96557a22f")
-		(at 247.5 90.75 90)
+		(at 232.75 97.5 180)
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C14"
-			(at 0 1.3 -90)
+			(at 0 1.3 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "246c37ea-a43a-4990-963c-f2fd5efa81b8")
@@ -14361,7 +14361,7 @@
 			)
 		)
 		(property "Value" "1n"
-			(at 0.1 -1.299999 -90)
+			(at 0.1 -1.299999 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -14375,7 +14375,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "da7a99de-df37-43b7-94c2-517b508aed92")
@@ -14387,7 +14387,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2da7162f-59b5-446a-8735-f1b37a713f2d")
@@ -14422,16 +14422,6 @@
 			(uuid "742e53b3-57e7-4c4f-bc3a-75943954248f")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "588ca554-3643-4fef-8ae7-0ded650929b9")
-		)
-		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -14440,6 +14430,16 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "d609b483-053f-481a-b01a-f054c84beec9")
+		)
+		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "4f30e098-8eaa-4db0-a2b4-6844f164b656")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -14452,24 +14452,24 @@
 			(uuid "5a065304-4ccd-4cb7-a70f-9434c3e76bd7")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "4f30e098-8eaa-4db0-a2b4-6844f164b656")
+			(uuid "588ca554-3643-4fef-8ae7-0ded650929b9")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U2D--)")
 			(uuid "8a7eeabc-7f64-4af3-8064-19f80edfed6a")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_EQF")
@@ -14728,11 +14728,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "37fe047e-f3b7-4d13-8972-475f3a8d797f")
-		(at 234.403 98 180)
+		(at 232.75 103.8)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R26"
-			(at 0 1.450001 0)
+			(at 0 1.450001 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "70ff004f-f6c0-4429-aeb1-b7fcd4625f6e")
@@ -14745,7 +14745,7 @@
 			)
 		)
 		(property "Value" "120k"
-			(at 0 -1.45 0)
+			(at 0 -1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -14759,7 +14759,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d6c0a047-e3f9-43ee-88ce-4f736308cfa1")
@@ -14771,7 +14771,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2e6334a8-55b5-411b-b1bd-9d471fe3117b")
@@ -14786,16 +14786,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.85 -0.7)
-			(end -0.85 -0.7)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "0769e434-683f-4523-a36c-d31a388cd9c8")
-		)
-		(fp_line
 			(start -0.85 0.7)
 			(end 0.85 0.7)
 			(stroke
@@ -14806,24 +14796,24 @@
 			(uuid "83b6894e-5ae5-4ef5-a0d1-be2e201829b8")
 		)
 		(fp_line
-			(start 1.6 0.75)
+			(start 0.85 -0.7)
+			(end -0.85 -0.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "0769e434-683f-4523-a36c-d31a388cd9c8")
+		)
+		(fp_line
+			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "2b1a3e1d-2578-42d4-ad84-2b2462bb16b5")
-		)
-		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "9125f0ea-b63f-4d2c-9a2b-0ed050cb0616")
+			(uuid "a02158bc-f919-4c15-bc09-d15464b611ff")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -14836,24 +14826,34 @@
 			(uuid "ca70e6e6-0d2e-40d7-9294-463e5d303608")
 		)
 		(fp_line
-			(start -1.6 -0.75)
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "9125f0ea-b63f-4d2c-9a2b-0ed050cb0616")
+		)
+		(fp_line
+			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "a02158bc-f919-4c15-bc09-d15464b611ff")
+			(uuid "2b1a3e1d-2578-42d4-ad84-2b2462bb16b5")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 180)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "CV_EQF")
 			(uuid "42862439-eba2-4df2-9644-80b134f1b853")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 180)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U2D--)")
@@ -14879,7 +14879,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R96"
-			(at 2.54 1.92 -90)
+			(at 2.54 1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "b051e224-4bdf-4489-b355-079f4be1bf19")
@@ -14892,7 +14892,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 2.54 -1.92 -90)
+			(at 2.54 -1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -14906,7 +14906,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ad92e9a0-b385-4b0b-a14c-63c56495d270")
@@ -14918,7 +14918,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "735560de-325f-4d9a-afad-d15d5a39280c")
@@ -14995,7 +14995,7 @@
 			(uuid "6bac6c35-4fc4-4317-9ded-d4f30bc61c5c")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 -90)
+			(at 2.54 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "4f967b7a-9917-4b3e-aa16-1af460b0563b")
@@ -15041,7 +15041,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "38d241ee-1fc7-45fd-8e7c-b09c98c75048")
-		(at 239.483 101.9 180)
+		(at 239.4 105.95 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R30"
@@ -15691,7 +15691,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "39d4d726-6d69-4410-a9b2-16161f074fef")
-		(at 232.75 117.5 180)
+		(at 232.8 126.55 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R39"
@@ -15842,7 +15842,7 @@
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R50"
-			(at 0 1.45 -90)
+			(at 0 1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "4a461df8-c331-4aca-be20-2858f8a1ed67")
@@ -15855,7 +15855,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -15869,7 +15869,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3bb7bffa-32a9-4943-b362-2451170f4112")
@@ -15881,7 +15881,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "84673c81-51d1-40d3-8499-26bac82b9ab9")
@@ -16002,7 +16002,7 @@
 			)
 		)
 		(property "Value" "74HC4051"
-			(at 0.1143 0.4699 -90)
+			(at 0.1143 0.4699 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -16325,7 +16325,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R87"
-			(at 2.54 1.92 -90)
+			(at 2.54 1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "630e6fb0-5a14-44c1-97c2-c4b117c302fc")
@@ -16338,7 +16338,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 2.54 -1.92 -90)
+			(at 2.54 -1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -16352,7 +16352,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e39f21d2-ba42-460d-a252-8b2fea5f9691")
@@ -16364,7 +16364,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2072d4ce-a00d-4480-9875-baa759527e1c")
@@ -16441,7 +16441,7 @@
 			(uuid "da28f482-7eff-4849-97c6-f504abc8d048")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 -90)
+			(at 2.54 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "ee1358c5-97ca-4302-9354-f0f670d12d62")
@@ -16653,11 +16653,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "47f15b4e-c965-453f-a086-b75ca140414b")
-		(at 247.5 94.75 90)
+		(at 232.7 101.7 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R27"
-			(at 0 1.45 -90)
+			(at 0 1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "62cec42d-960e-4dc7-b890-58fd85c26a49")
@@ -16670,7 +16670,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -16684,7 +16684,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "0f0b9dee-87fa-41de-8bb3-1e64a375e423")
@@ -16696,7 +16696,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d89cad95-123a-4e0b-96f5-3ac8045d0506")
@@ -16731,16 +16731,6 @@
 			(uuid "8a36955a-061c-489f-b5c0-07995b090651")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "9a4fb17b-5451-4b90-8d6c-96993d3a58ec")
-		)
-		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -16749,6 +16739,16 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "2d809942-2c47-4d04-bc81-f0946b748778")
+		)
+		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "887112cb-991d-42ae-bace-c9482007f8f2")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -16761,24 +16761,24 @@
 			(uuid "9130e1e5-a02c-4429-b6f8-e0d5757d7b04")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "887112cb-991d-42ae-bace-c9482007f8f2")
+			(uuid "9a4fb17b-5451-4b90-8d6c-96993d3a58ec")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U2D--)")
 			(uuid "d0770e57-da63-4386-9a69-566111ce14e8")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_EQF")
@@ -17094,11 +17094,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "4f1da6da-0884-4e38-ba0f-7bfa1ce12f7d")
-		(at 240.75 114 90)
+		(at 239.5 122.35)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R35"
-			(at 0 1.45 -90)
+			(at 0 1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "25ff8117-e7ac-4b2a-b749-75e0052ddb33")
@@ -17111,7 +17111,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17125,7 +17125,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f9629054-d16d-465c-8b60-6787456c3c77")
@@ -17137,7 +17137,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "43d7ecfb-f6e6-4780-878a-1fbc79878574")
@@ -17152,16 +17152,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.85 -0.7)
-			(end -0.85 -0.7)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "7acbd1f2-7818-40d8-886e-5c357daba0fa")
-		)
-		(fp_line
 			(start -0.85 0.7)
 			(end 0.85 0.7)
 			(stroke
@@ -17172,6 +17162,16 @@
 			(uuid "ee0ef0e2-157e-4fa8-b454-b39a9695e9a2")
 		)
 		(fp_line
+			(start 0.85 -0.7)
+			(end -0.85 -0.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "7acbd1f2-7818-40d8-886e-5c357daba0fa")
+		)
+		(fp_line
 			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -17180,16 +17180,6 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "606a9679-86e1-4b59-b62d-0b5916128afe")
-		)
-		(fp_line
-			(start 1.6 0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "9a869b59-7619-4c3c-9e33-fce340615fa7")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -17211,15 +17201,25 @@
 			(layer "B.CrtYd")
 			(uuid "0ab14a96-0808-4e06-9580-3a6d98319d76")
 		)
+		(fp_line
+			(start 1.6 0.75)
+			(end 1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "9a869b59-7619-4c3c-9e33-fce340615fa7")
+		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1C--)")
 			(uuid "8e8cb9e6-6969-4992-8b5a-7a9847837515")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_DIST")
@@ -17241,11 +17241,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "51895f1b-9d32-4269-87de-3fd4d6577ab3")
-		(at 236.1 100.55 180)
+		(at 235.75 104.65 -90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R14"
-			(at 0 1.449999 0)
+			(at 0 1.449999 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "270358c3-d139-4a90-9387-3a59175cf3f2")
@@ -17258,7 +17258,7 @@
 			)
 		)
 		(property "Value" "100k 0.1%"
-			(at 0 -1.45 0)
+			(at 0 -1.45 90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -17272,7 +17272,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "115105da-d8a5-4d0c-9899-09ec562ee64e")
@@ -17284,7 +17284,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7e4e168a-6f58-49fb-b082-f91ff03e100c")
@@ -17299,16 +17299,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.85 -0.7)
-			(end -0.85 -0.7)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "3bc8f880-32ab-4e35-8de1-b3d5cbbc352c")
-		)
-		(fp_line
 			(start -0.85 0.699999)
 			(end 0.85 0.699999)
 			(stroke
@@ -17319,14 +17309,14 @@
 			(uuid "f40aee11-8ed1-473d-9675-083a1c46829c")
 		)
 		(fp_line
-			(start 1.6 0.75)
-			(end 1.6 -0.75)
+			(start 0.85 -0.7)
+			(end -0.85 -0.7)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "B.CrtYd")
-			(uuid "b38c1237-ac59-414c-83fb-bc0690df1e21")
+			(layer "B.SilkS")
+			(uuid "3bc8f880-32ab-4e35-8de1-b3d5cbbc352c")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -17349,6 +17339,16 @@
 			(uuid "5f49ff16-b270-46f8-8441-f4f7e22b42be")
 		)
 		(fp_line
+			(start 1.6 0.75)
+			(end 1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "b38c1237-ac59-414c-83fb-bc0690df1e21")
+		)
+		(fp_line
 			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -17359,14 +17359,14 @@
 			(uuid "5c4e1bed-e05e-47b9-8a09-fdc609246295")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 180)
+			(at -0.85 0 270)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "CV_WIDTH")
 			(uuid "ce9f2eb1-bb90-4ea6-995e-959b5d5ea32e")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 180)
+			(at 0.85 0 270)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(R14-Pad2)")
@@ -18434,11 +18434,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "653e7ba5-6a84-49eb-9ace-d8d5dd2f64c2")
-		(at 233.5 122.75 -90)
+		(at 234.45 124.45)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R40"
-			(at 0 1.45 90)
+			(at 0 1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "ecb343bf-f106-410e-a2a6-1380ab5a340b")
@@ -18451,7 +18451,7 @@
 			)
 		)
 		(property "Value" "120k"
-			(at 0 -1.45 90)
+			(at 0 -1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -18465,7 +18465,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ee32ade9-701a-4354-8530-c93ced870f71")
@@ -18477,7 +18477,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6d1a16ed-a4f4-4e30-a8f1-a1ac3fe26fc7")
@@ -18512,14 +18512,14 @@
 			(uuid "61e4dbfa-e6d8-4eae-b4de-9e103723a4d2")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "18ec7b15-794f-41f9-85e4-d48b508f7314")
+			(uuid "3a5dbc1f-732f-4dd7-8251-2b19ff288f1b")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -18532,6 +18532,16 @@
 			(uuid "bbb655a3-3eb1-4eff-8059-f2ad86f3a1fb")
 		)
 		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "18ec7b15-794f-41f9-85e4-d48b508f7314")
+		)
+		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -18541,25 +18551,15 @@
 			(layer "B.CrtYd")
 			(uuid "909471dc-5080-41c1-81ed-6b30db286d98")
 		)
-		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "3a5dbc1f-732f-4dd7-8251-2b19ff288f1b")
-		)
 		(pad "1" smd rect
-			(at -0.85 0 270)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1D--)")
 			(uuid "1aea0029-8e1c-47b8-b854-404597fff6f9")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 270)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-10V_REF")
@@ -19226,7 +19226,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R91"
-			(at 2.54 1.92 -90)
+			(at 2.54 1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "388b211d-427c-4944-a580-d96e69655bc0")
@@ -19239,7 +19239,7 @@
 			)
 		)
 		(property "Value" "1M"
-			(at 2.54 -1.92 -90)
+			(at 2.54 -1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -19253,7 +19253,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "395d5cdf-4b02-47cb-80a0-9c7a29ac0dcc")
@@ -19265,7 +19265,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "62088abf-c687-4589-87cc-b7738156721a")
@@ -19342,7 +19342,7 @@
 			(uuid "ac1c3d07-9ccf-42b2-8cf1-dd3300196482")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 -90)
+			(at 2.54 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "047a6cc1-534e-4c11-af69-a27a3890fddf")
@@ -19388,11 +19388,11 @@
 	(footprint "filter-module:C_0603"
 		(layer "B.Cu")
 		(uuid "6cbeef1c-cc1d-45a8-ad5b-0766114183c2")
-		(at 243.25 99.75 180)
+		(at 239.5 99.6)
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C13"
-			(at 0 1.3 0)
+			(at 0 1.3 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "3967cc6e-7985-4cb3-b3e5-562efc263cbc")
@@ -19405,7 +19405,7 @@
 			)
 		)
 		(property "Value" "1n"
-			(at 0.1 -1.300001 0)
+			(at 0.1 -1.300001 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -19419,7 +19419,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b529d63c-cdee-47a8-9a6e-533f4ce9b823")
@@ -19431,7 +19431,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "196b6794-6f20-42e9-9101-d7e44b84bd0f")
@@ -19446,16 +19446,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.15 -0.600001)
-			(end 0.15 0.6)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "0ccbc3c1-5104-4c31-8264-8ded5acea43f")
-		)
-		(fp_line
 			(start -0.15 0.6)
 			(end -0.15 -0.600001)
 			(stroke
@@ -19466,24 +19456,24 @@
 			(uuid "a9d92f21-9bf1-4ce2-aff4-69089826d6e0")
 		)
 		(fp_line
-			(start 1.6 0.75)
+			(start 0.15 -0.600001)
+			(end 0.15 0.6)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "0ccbc3c1-5104-4c31-8264-8ded5acea43f")
+		)
+		(fp_line
+			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "f1077a55-5a4e-4c99-b635-f778ba2ec8e7")
-		)
-		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "7ef02eb7-a451-4a01-b863-1b56e477e084")
+			(uuid "80c44b9b-cfba-4b1a-b1d0-515311a0ea0f")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -19496,24 +19486,34 @@
 			(uuid "bde6b9fd-21ae-429b-b6bc-e1f5c73caddb")
 		)
 		(fp_line
-			(start -1.6 -0.75)
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "7ef02eb7-a451-4a01-b863-1b56e477e084")
+		)
+		(fp_line
+			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "80c44b9b-cfba-4b1a-b1d0-515311a0ea0f")
+			(uuid "f1077a55-5a4e-4c99-b635-f778ba2ec8e7")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 180)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U2C--)")
 			(uuid "0cd11f16-c43b-4318-b002-1bc5cb56930c")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 180)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_LPRES")
@@ -19847,11 +19847,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "6f22a838-de0a-4f55-bf37-c3b1cf35f6dc")
-		(at 235.75 122.5 -90)
+		(at 234.35 110.15)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R16"
-			(at 0 1.449999 90)
+			(at 0 1.449999 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "e93e9016-9c47-480e-93a7-d16e2e9e4510")
@@ -19864,7 +19864,7 @@
 			)
 		)
 		(property "Value" "120k 25ppm"
-			(at 0 -1.45 90)
+			(at 0 -1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -19878,7 +19878,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "707e654d-d9fb-471d-ba50-da0d8e701ed1")
@@ -19890,7 +19890,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "059edeae-fd7e-4a93-be5d-2be55d913baf")
@@ -19925,14 +19925,14 @@
 			(uuid "8f4d48ac-f970-44ee-b0da-d93d3b67bb2e")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "24ed8d03-aeac-4b69-8345-c3f902cbc211")
+			(uuid "9888220c-f555-415f-acdf-fda06821d3bd")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -19945,6 +19945,16 @@
 			(uuid "97a8b5ce-c91e-4b97-a4ec-e9c23ebf8a37")
 		)
 		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "24ed8d03-aeac-4b69-8345-c3f902cbc211")
+		)
+		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -19954,25 +19964,15 @@
 			(layer "B.CrtYd")
 			(uuid "7def4903-f1da-4057-9dae-4e6d01b8c13d")
 		)
-		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "9888220c-f555-415f-acdf-fda06821d3bd")
-		)
 		(pad "1" smd rect
-			(at -0.85 0 270)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1A--)")
 			(uuid "cb24f701-0071-41da-9ed1-1bd8f0f4337b")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 270)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-10V_REF")
@@ -20576,7 +20576,7 @@
 			(uuid "1bf51f6b-8c61-45a6-9835-6a5c9d6589ea")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -7.62 -90)
+			(at 0 -7.62 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "5b5d2317-e745-4263-89c9-975fcd279da2")
@@ -20667,7 +20667,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "733e6f07-61d3-40ee-acfa-f2b080c403db")
-		(at 238.633 114.4 90)
+		(at 238.7 129.5 90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R34"
@@ -20965,7 +20965,7 @@
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R61"
-			(at 0 1.45 -90)
+			(at 0 1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "886d5879-a241-4819-a41e-d9cc230883f6")
@@ -20978,7 +20978,7 @@
 			)
 		)
 		(property "Value" "51k"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -20992,7 +20992,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "fc355d0e-71fa-40b8-85a0-52471ffc4a10")
@@ -21004,7 +21004,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "eeaba2d8-4f18-4a8e-b09c-f84b4ec7b432")
@@ -21125,7 +21125,7 @@
 			)
 		)
 		(property "Value" "LM324"
-			(at 0.1043 -0.1581 -90)
+			(at 0.1043 -0.1581 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -21742,11 +21742,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "79c2dc1b-e900-44f3-8786-39e6ccb35217")
-		(at 232.75 125.75 180)
+		(at 247.025 94.625 90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R3"
-			(at 0 1.45 0)
+			(at 0 1.45 -90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "ebf9a3a0-39ee-4d72-91d2-c3f456f36d19")
@@ -21759,7 +21759,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 0 -1.45 0)
+			(at 0 -1.45 -90)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -21773,7 +21773,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 -90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "bb850039-40d0-4823-aa93-a53f1b0490c8")
@@ -21785,7 +21785,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 -90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "670d561b-bb10-4bba-9b47-ea9b8cf9f5b8")
@@ -21820,6 +21820,16 @@
 			(uuid "3c2571a2-1105-4f03-b78c-a5e82e544143")
 		)
 		(fp_line
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "6bfcc755-c73d-4165-92de-b00154496c11")
+		)
+		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -21828,16 +21838,6 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "3c76a06a-8c9e-4017-9a3a-ce33429c5d10")
-		)
-		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "2db5e5a4-6b7e-4dcc-b54d-7fa0e93bdabc")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -21850,24 +21850,24 @@
 			(uuid "d1d46d3d-d8df-47ad-b956-e3b76dbbce6f")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
+			(start -1.6 0.75)
+			(end 1.6 0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "6bfcc755-c73d-4165-92de-b00154496c11")
+			(uuid "2db5e5a4-6b7e-4dcc-b54d-7fa0e93bdabc")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 180)
+			(at -0.85 0 90)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-10V_REF")
 			(uuid "db229cd7-3f3f-4ea4-b259-82a64cb751ec")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 180)
+			(at 0.85 0 90)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-12V")
@@ -21893,7 +21893,7 @@
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C71"
-			(at 0 1.3 -90)
+			(at 0 1.3 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "3557baed-72b8-4637-baca-7adc4048d94f")
@@ -21906,7 +21906,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0.1 -1.3 -90)
+			(at 0.1 -1.3 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -21920,7 +21920,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d64a01f7-8c7e-4770-aca6-f4d6b78b8379")
@@ -21932,7 +21932,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "871ce00c-d9e0-4e04-b656-8a614078d755")
@@ -22353,11 +22353,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "7d5e612b-4757-4870-9b07-0eece315560a")
-		(at 244.25 102.5)
+		(at 237.8 101.7 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R24"
-			(at 0 1.449999 180)
+			(at 0 1.449999 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "96709f83-f59f-4663-bbd5-0f43b94b804a")
@@ -22370,7 +22370,7 @@
 			)
 		)
 		(property "Value" "120k"
-			(at 0 -1.45 180)
+			(at 0 -1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -22384,7 +22384,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 180)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3630966c-4bc4-4f1b-a3da-0a1c29af4ac1")
@@ -22396,7 +22396,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 180)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ed6d1144-cbe5-4471-8b59-285466bc3e7a")
@@ -22411,16 +22411,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -0.85 0.699999)
-			(end 0.85 0.699999)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "c9c30585-63a3-476b-ae6b-e1885cff94df")
-		)
-		(fp_line
 			(start 0.85 -0.7)
 			(end -0.85 -0.7)
 			(stroke
@@ -22431,24 +22421,24 @@
 			(uuid "f2bde680-2433-4c2b-8d2a-8964870e3e23")
 		)
 		(fp_line
-			(start -1.6 -0.75)
+			(start -0.85 0.699999)
+			(end 0.85 0.699999)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "c9c30585-63a3-476b-ae6b-e1885cff94df")
+		)
+		(fp_line
+			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "c1865ccd-97aa-47e7-aa9e-103fe986a1a9")
-		)
-		(fp_line
-			(start -1.6 0.75)
-			(end -1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "2cec2880-1b24-42ba-8db4-3c5400f63b4f")
+			(uuid "0de1682d-d214-4efb-9b2e-850849369be4")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -22461,24 +22451,34 @@
 			(uuid "3996a3fe-2e91-434c-9cf9-cfc39a53992b")
 		)
 		(fp_line
-			(start 1.6 0.75)
+			(start -1.6 0.75)
+			(end -1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "2cec2880-1b24-42ba-8db4-3c5400f63b4f")
+		)
+		(fp_line
+			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "0de1682d-d214-4efb-9b2e-850849369be4")
+			(uuid "c1865ccd-97aa-47e7-aa9e-103fe986a1a9")
 		)
 		(pad "1" smd rect
-			(at -0.85 0)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U2C--)")
 			(uuid "7099acd1-6d15-430d-afb3-9a456ca1e48e")
 		)
 		(pad "2" smd rect
-			(at 0.85 0)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-10V_REF")
@@ -24197,7 +24197,7 @@
 			)
 		)
 		(property "Value" "LM324"
-			(at 0.1043 -0.1581 -90)
+			(at 0.1043 -0.1581 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -24502,11 +24502,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "885ae007-9524-440f-9380-80b6a24b5c31")
-		(at 245.25 110.75 -90)
+		(at 237.7 108.05 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R32"
-			(at 0 1.45 90)
+			(at 0 1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "d8d1e046-448e-4773-8429-343b04e38681")
@@ -24519,7 +24519,7 @@
 			)
 		)
 		(property "Value" "120k"
-			(at 0 -1.45 90)
+			(at 0 -1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -24533,7 +24533,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8c4aa387-c094-4f8b-9697-77af0258ba9d")
@@ -24545,7 +24545,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2d2a5f51-092c-4aaf-998d-383e6dcf5dce")
@@ -24560,6 +24560,16 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
+			(start 0.85 -0.7)
+			(end -0.85 -0.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "cf3edfbb-b288-415d-80ed-f36daa17330b")
+		)
+		(fp_line
 			(start -0.85 0.7)
 			(end 0.85 0.7)
 			(stroke
@@ -24570,14 +24580,14 @@
 			(uuid "cf67537a-fd4f-4dee-990b-5e3dac64b7b7")
 		)
 		(fp_line
-			(start 0.85 -0.7)
-			(end -0.85 -0.7)
+			(start 1.6 0.75)
+			(end 1.6 -0.75)
 			(stroke
-				(width 0.12)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "B.SilkS")
-			(uuid "cf3edfbb-b288-415d-80ed-f36daa17330b")
+			(layer "B.CrtYd")
+			(uuid "14173174-b7db-4f4c-b984-216c4b05024a")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -24600,16 +24610,6 @@
 			(uuid "46e442b0-ca36-49d4-9215-3fa492468489")
 		)
 		(fp_line
-			(start 1.6 0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "14173174-b7db-4f4c-b984-216c4b05024a")
-		)
-		(fp_line
 			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -24620,14 +24620,14 @@
 			(uuid "773be687-4151-4b66-915c-d116d45104a4")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 270)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1B--)")
 			(uuid "91a892c9-ca6c-4b7d-b65a-f033a25ce74c")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 270)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-10V_REF")
@@ -24649,7 +24649,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "8924b2e2-fb34-4acc-8e14-023e5544d8fd")
-		(at 233.553 114.4 90)
+		(at 233.6 129.5 90)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R38"
@@ -25624,11 +25624,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "a0b89242-b48a-4590-93e3-a9b92985de13")
-		(at 242.75 96.75 90)
+		(at 239.55 97.5)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R23"
-			(at 0 1.449999 -90)
+			(at 0 1.449999 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "c9b4edb7-2974-49f6-846f-04bc4a29cef6")
@@ -25641,7 +25641,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -25655,7 +25655,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8ff46fc3-8971-42bd-af50-440d0e261f5f")
@@ -25667,7 +25667,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "08db7f27-8568-4500-a1c1-992c6d8a6f82")
@@ -25682,16 +25682,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.85 -0.7)
-			(end -0.85 -0.7)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "cb9f2258-f13a-44fb-b4a0-0e1278367837")
-		)
-		(fp_line
 			(start -0.85 0.699999)
 			(end 0.85 0.699999)
 			(stroke
@@ -25702,6 +25692,16 @@
 			(uuid "f5a66a81-0191-4d24-82ac-3ca2deeb252f")
 		)
 		(fp_line
+			(start 0.85 -0.7)
+			(end -0.85 -0.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "cb9f2258-f13a-44fb-b4a0-0e1278367837")
+		)
+		(fp_line
 			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -25710,16 +25710,6 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "a0d54cce-64a9-4295-a765-d2a4a9250585")
-		)
-		(fp_line
-			(start 1.6 0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "d0359a9b-0791-43cd-a669-efcb7fcaaed8")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -25741,15 +25731,25 @@
 			(layer "B.CrtYd")
 			(uuid "d32e248a-43c6-41a6-8f06-423819628a9a")
 		)
+		(fp_line
+			(start 1.6 0.75)
+			(end 1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "d0359a9b-0791-43cd-a669-efcb7fcaaed8")
+		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U2C--)")
 			(uuid "55e2d353-e654-44f2-af8d-46c5ea162f43")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_LPRES")
@@ -25771,11 +25771,11 @@
 	(footprint "filter-module:C_0603"
 		(layer "B.Cu")
 		(uuid "a186c7cf-0094-4181-81c0-f2f582d6830d")
-		(at 243 114 90)
+		(at 239.55 124.45)
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C16"
-			(at 0 1.3 -90)
+			(at 0 1.3 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "ca45d54a-e3ce-4f48-ba95-04825eb0cdd4")
@@ -25788,7 +25788,7 @@
 			)
 		)
 		(property "Value" "1n"
-			(at 0.1 -1.299999 -90)
+			(at 0.1 -1.299999 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -25802,7 +25802,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "89054002-18fd-4937-ae5b-8e406220fb26")
@@ -25814,7 +25814,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5ebe03b6-cd8c-46b1-a6b8-46776c61a5ee")
@@ -25829,16 +25829,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.15 -0.6)
-			(end 0.15 0.6)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "4f4f4eaa-e1ca-46d1-861d-84848ed9fb4e")
-		)
-		(fp_line
 			(start -0.15 0.6)
 			(end -0.15 -0.6)
 			(stroke
@@ -25849,6 +25839,16 @@
 			(uuid "4ea33710-62d5-4381-b134-a37aa96f4712")
 		)
 		(fp_line
+			(start 0.15 -0.6)
+			(end 0.15 0.6)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "4f4f4eaa-e1ca-46d1-861d-84848ed9fb4e")
+		)
+		(fp_line
 			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -25857,16 +25857,6 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "fe7ac2e3-eaee-45dd-bcd9-3af70cb55bf3")
-		)
-		(fp_line
-			(start 1.6 0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "60b7ef50-1e2a-4ce3-98a7-b42a175288a3")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -25888,15 +25878,25 @@
 			(layer "B.CrtYd")
 			(uuid "d5a72fef-e2f2-4757-a347-82cc291801bf")
 		)
+		(fp_line
+			(start 1.6 0.75)
+			(end 1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "60b7ef50-1e2a-4ce3-98a7-b42a175288a3")
+		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1C--)")
 			(uuid "7006320c-d4dd-4a96-8a09-316aadd03fff")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_DIST")
@@ -26069,7 +26069,7 @@
 		(descr "Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm")
 		(property "Reference" "R83"
-			(at 2.54 1.92 -90)
+			(at 2.54 1.92 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "0d635566-498c-40e0-85ca-a7d73d71a954")
@@ -26082,7 +26082,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 2.54 -1.920001 -90)
+			(at 2.54 -1.920001 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -26096,7 +26096,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "da192bc6-f298-44a8-9f5f-2e1eba46d2bb")
@@ -26108,7 +26108,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ba3c3ce6-f3e8-41a7-82bf-23e54155abf8")
@@ -26185,7 +26185,7 @@
 			(uuid "c3ea3200-0ccc-496d-a0f2-a0e4146215d4")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.54 0 -90)
+			(at 2.54 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "94c88086-b7b2-4eb8-8a3f-abd902b873f7")
@@ -26984,11 +26984,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "ae72a22d-6a4d-485d-8642-b307561d228a")
-		(at 238 118.5 90)
+		(at 232.65 108.05 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R15"
-			(at 0 1.449999 -90)
+			(at 0 1.449999 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "cbd765e1-aeed-4b4e-87ef-92508abb278a")
@@ -27001,7 +27001,7 @@
 			)
 		)
 		(property "Value" "20k 0.1%"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -27015,7 +27015,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "4eb2b1a8-b8b7-434f-9fdf-c0d420d4e2f0")
@@ -27027,7 +27027,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "23229753-a2b6-4947-b84e-6f05d91930eb")
@@ -27062,16 +27062,6 @@
 			(uuid "670534e6-affa-4a45-9b1e-b4b275986253")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "0856d4e4-6cfc-4f86-b9d2-9f36983ff1e4")
-		)
-		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -27080,6 +27070,16 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "404c5e9a-6425-4e92-be84-b0fce3e14d29")
+		)
+		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "d889f39b-edde-4681-8c43-968170ca8cda")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -27092,24 +27092,24 @@
 			(uuid "efbfdbc6-3e47-4a6e-8ae3-9f4e5b75c093")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "d889f39b-edde-4681-8c43-968170ca8cda")
+			(uuid "0856d4e4-6cfc-4f86-b9d2-9f36983ff1e4")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1A--)")
 			(uuid "06c9c332-5a5e-483a-a1e5-40e959f48937")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_WIDTH")
@@ -27411,11 +27411,11 @@
 	(footprint "filter-module:C_0603"
 		(layer "B.Cu")
 		(uuid "b1eb1eb2-8e08-4e1b-a594-207620816699")
-		(at 235.75 118.5 90)
+		(at 232.65 112.25 180)
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C11"
-			(at 0 1.3 -90)
+			(at 0 1.3 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "53fc2b3d-8e8c-44aa-85d4-5614df588183")
@@ -27428,7 +27428,7 @@
 			)
 		)
 		(property "Value" "1n"
-			(at 0.1 -1.300001 -90)
+			(at 0.1 -1.300001 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -27442,7 +27442,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "573673f7-5234-4116-8ab0-197eb070a64e")
@@ -27454,7 +27454,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "609e9f83-42b9-4ab8-b892-e7dfddbbe8d8")
@@ -27489,16 +27489,6 @@
 			(uuid "8cfb3e2f-20ee-4e9d-b97a-8c377f3afc43")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "7d35467e-a402-4e94-8189-e78ec2a60c86")
-		)
-		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -27507,6 +27497,16 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "934bf46e-b351-495b-89ec-dbf7a268651f")
+		)
+		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "e4921756-96e6-43c4-be61-89f2a68bbfbc")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -27519,24 +27519,24 @@
 			(uuid "17c7fc4b-4abb-430d-98ab-a282694811a7")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "e4921756-96e6-43c4-be61-89f2a68bbfbc")
+			(uuid "7d35467e-a402-4e94-8189-e78ec2a60c86")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1A--)")
 			(uuid "cebc19a7-be89-4e54-8884-9145f3a5a150")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_WIDTH")
@@ -28165,11 +28165,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "c15dc97c-79e9-4abe-bb39-bfe0fd1901ea")
-		(at 233.553 101.4 -90)
+		(at 232.6 105.95)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R17"
-			(at 0 1.449999 90)
+			(at 0 1.449999 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "463fec0c-f386-45c7-9386-422f93b1f2c3")
@@ -28182,7 +28182,7 @@
 			)
 		)
 		(property "Value" "20k 0.1%"
-			(at 0 -1.45 90)
+			(at 0 -1.45 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -28196,7 +28196,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "596b5599-34de-4a45-b7d8-5d5884979845")
@@ -28208,7 +28208,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "98dd5ffb-0363-46f9-bf86-58dc54a52782")
@@ -28243,14 +28243,14 @@
 			(uuid "0aa0f693-bcb3-4aea-bac9-8093c9b80262")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "5e9d1a14-c2f7-407b-937a-f4595f019d91")
+			(uuid "24606088-44d0-446a-ac94-9e2faac2d882")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -28263,6 +28263,16 @@
 			(uuid "9f95c7f0-3d67-420e-8540-995cdc6bbe58")
 		)
 		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "5e9d1a14-c2f7-407b-937a-f4595f019d91")
+		)
+		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -28272,25 +28282,15 @@
 			(layer "B.CrtYd")
 			(uuid "81b89596-1504-4ae6-8a33-eace106556f4")
 		)
-		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "24606088-44d0-446a-ac94-9e2faac2d882")
-		)
 		(pad "1" smd rect
-			(at -0.85 0 270)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(R14-Pad2)")
 			(uuid "cd840bd7-d60a-4fff-9e00-b955eec8def3")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 270)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1A--)")
@@ -28459,7 +28459,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "c5f857aa-084f-4f5a-8440-31e9601e6f74")
-		(at 239.483 98 180)
+		(at 239.5 103.8 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R22"
@@ -28610,7 +28610,7 @@
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R70"
-			(at 0 1.449999 -90)
+			(at 0 1.449999 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "eb3f1047-cd67-42b2-a754-ec171bb4fa12")
@@ -28623,7 +28623,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -28637,7 +28637,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7f72ee35-e9bc-4910-b967-bd445ca1c422")
@@ -28649,7 +28649,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "1f1a6995-7b4e-45eb-88ba-e15868a4bf0f")
@@ -30475,7 +30475,7 @@
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R62"
-			(at 0 1.45 -90)
+			(at 0 1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "47c43f57-b6de-4a39-a6c9-0c56f0cc430b")
@@ -30488,7 +30488,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -30502,7 +30502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d3ebb5e4-1661-433c-9c7b-738a2a86fde1")
@@ -30514,7 +30514,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8444cf89-65a1-449e-8b48-3d0a1d3b7d81")
@@ -30622,7 +30622,7 @@
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R66"
-			(at 0 1.45 -90)
+			(at 0 1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "8948dfd6-83dc-40ef-83d4-b9eee0100f3c")
@@ -30635,7 +30635,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -30649,7 +30649,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "1e5ced93-08a7-4e97-8d49-67563a4be184")
@@ -30661,7 +30661,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8ae5b5b0-bd71-4550-97de-c6124330939a")
@@ -30931,7 +30931,7 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "dcaf4cd0-9989-4683-a19a-4de162265cd0")
-		(at 243 105.25)
+		(at 239.45 112.25)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R31"
@@ -31082,7 +31082,7 @@
 		(descr "C, Disc series, Radial, pin pitch=2.50mm, diameter*width=3.0*1.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
 		(tags "C Disc series Radial pin pitch 2.50mm diameter 3.0mm width 1.6mm Capacitor")
 		(property "Reference" "C83"
-			(at 1.25 2.05 -90)
+			(at 1.25 2.05 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "b31b62b6-7d59-4d6e-8183-ed99d2d341f1")
@@ -31095,7 +31095,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 1.25 -2.05 -90)
+			(at 1.25 -2.05 270)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -31109,7 +31109,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6875b715-a74e-41d6-adb4-261b9e624795")
@@ -31121,7 +31121,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f61e7b86-c89f-4e51-a426-2c31bb8c967e")
@@ -31178,7 +31178,7 @@
 			(uuid "099d8fb6-4a9e-4d92-846e-d872ba4ae4db")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 -90)
+			(at 1.25 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "c61d7726-2e7c-4a24-821d-d6c8f054bbad")
@@ -31689,11 +31689,11 @@
 	(footprint "filter-module:C_0603"
 		(layer "B.Cu")
 		(uuid "e4a3575c-2013-480a-b5cf-000d8e8b0271")
-		(at 246.5 106 90)
+		(at 239.45 110.15)
 		(descr "Capacitor SMD 0603, reflow soldering, AVX (see smccp.pdf)")
 		(tags "capacitor 0603 C0603")
 		(property "Reference" "C15"
-			(at 0 1.3 -90)
+			(at 0 1.3 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "dd1409ad-9c99-44a1-9d02-3dedce5d5efc")
@@ -31706,7 +31706,7 @@
 			)
 		)
 		(property "Value" "1n"
-			(at 0.1 -1.299999 -90)
+			(at 0.1 -1.299999 180)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -31720,7 +31720,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d843aadc-3054-4787-9038-567db8430ba5")
@@ -31732,7 +31732,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "cc1650a5-a2b2-4562-8978-32f26a154334")
@@ -31747,16 +31747,6 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 0.15 -0.6)
-			(end 0.15 0.6)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "e0f09df6-a2c9-4ef2-aecb-8e0b07ee5337")
-		)
-		(fp_line
 			(start -0.15 0.6)
 			(end -0.15 -0.6)
 			(stroke
@@ -31767,6 +31757,16 @@
 			(uuid "2511b439-4b64-41ca-a34f-057a0134da70")
 		)
 		(fp_line
+			(start 0.15 -0.6)
+			(end 0.15 0.6)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "e0f09df6-a2c9-4ef2-aecb-8e0b07ee5337")
+		)
+		(fp_line
 			(start -1.6 -0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -31775,16 +31775,6 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "974f86e9-d73f-4ed5-8d9b-3332f55f4a8f")
-		)
-		(fp_line
-			(start 1.6 0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "75f9831f-8dc3-4317-9968-3cf5e3e700d9")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -31806,15 +31796,25 @@
 			(layer "B.CrtYd")
 			(uuid "912318e5-6774-4415-be05-65632797879d")
 		)
+		(fp_line
+			(start 1.6 0.75)
+			(end 1.6 -0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "75f9831f-8dc3-4317-9968-3cf5e3e700d9")
+		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1B--)")
 			(uuid "9a648a94-d5b2-4d88-b83f-342389290002")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "ADC_EQG")
@@ -32063,11 +32063,11 @@
 	(footprint "filter-module:R_0603"
 		(layer "B.Cu")
 		(uuid "e8338367-1f14-439e-a353-c64f354764d8")
-		(at 245.25 114.75 90)
+		(at 237.85 126.55 180)
 		(descr "Resistor SMD 0603, reflow soldering, Vishay (see dcrcw.pdf)")
 		(tags "resistor 0603")
 		(property "Reference" "R36"
-			(at 0 1.45 -90)
+			(at 0 1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(uuid "cd25e3c9-9d79-476b-9ce5-aa709af7750d")
@@ -32080,7 +32080,7 @@
 			)
 		)
 		(property "Value" "120k"
-			(at 0 -1.45 -90)
+			(at 0 -1.45 0)
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
@@ -32094,7 +32094,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "62eba19d-608a-4bce-a766-6571ac81a7d0")
@@ -32106,7 +32106,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 -90)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "72d861be-1d9c-4825-8bf3-f92ba52b9b7a")
@@ -32141,16 +32141,6 @@
 			(uuid "14daa43e-5c83-4749-85e8-57092fb2fe9b")
 		)
 		(fp_line
-			(start -1.6 -0.75)
-			(end 1.6 -0.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "66dcd4ce-ecbd-46ea-9a3f-f7bcc3e5cfb0")
-		)
-		(fp_line
 			(start 1.6 0.75)
 			(end 1.6 -0.75)
 			(stroke
@@ -32159,6 +32149,16 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "019694ab-c57f-423a-af0b-2e7897117a3e")
+		)
+		(fp_line
+			(start -1.6 0.75)
+			(end 1.6 0.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "4517c823-d31a-43c7-897a-778ce13c685e")
 		)
 		(fp_line
 			(start -1.6 0.75)
@@ -32171,24 +32171,24 @@
 			(uuid "3199d2e7-1e21-4eb7-b262-4051d9e216d4")
 		)
 		(fp_line
-			(start -1.6 0.75)
-			(end 1.6 0.75)
+			(start -1.6 -0.75)
+			(end 1.6 -0.75)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "4517c823-d31a-43c7-897a-778ce13c685e")
+			(uuid "66dcd4ce-ecbd-46ea-9a3f-f7bcc3e5cfb0")
 		)
 		(pad "1" smd rect
-			(at -0.85 0 90)
+			(at -0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "Net-(U1C--)")
 			(uuid "aa6eea83-d9f5-41db-acf9-0e878c7a5415")
 		)
 		(pad "2" smd rect
-			(at 0.85 0 90)
+			(at 0.85 0 180)
 			(size 1 1)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "-10V_REF")
@@ -33519,132 +33519,6 @@
 		(uuid "afd4423d-4472-48a3-935d-484bf3885223")
 	)
 	(segment
-		(start 241 103.93)
-		(end 228.855 103.93)
-		(width 0.3)
-		(locked yes)
-		(layer "F.Cu")
-		(net "ADC_EQG")
-		(uuid "11878520-1b93-4d37-8aef-b8f2df5e6137")
-	)
-	(via
-		(at 241 103.93)
-		(size 0.8)
-		(drill 0.4)
-		(layers "F.Cu" "B.Cu")
-		(locked yes)
-		(net "ADC_EQG")
-		(uuid "0054669d-230e-4b72-a1f9-4fc0b91a633b")
-	)
-	(segment
-		(start 239.917 105.1)
-		(end 241 105.1)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_EQG")
-		(uuid "66d73362-5c1b-4e72-a257-aec90177caf3")
-	)
-	(segment
-		(start 241 105.1)
-		(end 241 103.93)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_EQG")
-		(uuid "862355c3-8ad1-498e-897d-8b3b35392bcf")
-	)
-	(segment
-		(start 241.6 106.47)
-		(end 228.855 106.47)
-		(width 0.3)
-		(locked yes)
-		(layer "F.Cu")
-		(net "ADC_DIST")
-		(uuid "0712f4ee-c79c-427c-9e66-29565f1e4c99")
-	)
-	(via
-		(at 241.6 106.47)
-		(size 0.8)
-		(drill 0.4)
-		(layers "F.Cu" "B.Cu")
-		(locked yes)
-		(net "ADC_DIST")
-		(uuid "d62c792e-a58e-4eda-84ba-ae19a69a2f4c")
-	)
-	(segment
-		(start 241.6 110.5)
-		(end 241.6 106.47)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_DIST")
-		(uuid "406d14bf-4e3a-4fbf-b2d4-9a7239ddb7ca")
-	)
-	(segment
-		(start 239.917 110.5)
-		(end 241.6 110.5)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_DIST")
-		(uuid "47f6b55c-0c03-4141-8765-54fa6ba051ca")
-	)
-	(segment
-		(start 230.6 105.1)
-		(end 230.6 111.55)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_WIDTH")
-		(uuid "84e5a4e4-8cb6-4bf1-a1b9-ce7fa89d975e")
-	)
-	(segment
-		(start 232.283 105.1)
-		(end 230.6 105.1)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_WIDTH")
-		(uuid "e42e9c39-0383-4dfc-8316-fcbaa8c9e854")
-	)
-	(segment
-		(start 230.6 111.55)
-		(end 228.855 111.55)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_WIDTH")
-		(uuid "ea0429f6-0f28-4f29-96a4-43186cef5cf1")
-	)
-	(segment
-		(start 232.283 110.5)
-		(end 231.2 110.5)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_SRR")
-		(uuid "4b419f09-ff8a-4651-b7f3-35e69cb0aa35")
-	)
-	(segment
-		(start 231.2 114.09)
-		(end 228.855 114.09)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_SRR")
-		(uuid "b2a195c8-6877-445c-8c7a-a2f21c1da151")
-	)
-	(segment
-		(start 231.2 110.5)
-		(end 231.2 114.09)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "ADC_SRR")
-		(uuid "c59afa6f-fc76-4191-9f09-d7459feb9c21")
-	)
-	(segment
 		(start 228.855 129.33)
 		(end 243.33 129.33)
 		(width 0.3)
@@ -33690,42 +33564,6 @@
 		(uuid "691637fe-8f11-4de5-b3b2-6b92e4f8dcff")
 	)
 	(segment
-		(start 233.553 110.5)
-		(end 233.553 113.55)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "Net-(U1D--)")
-		(uuid "a14a4396-2519-4d77-8226-8e04a933260a")
-	)
-	(segment
-		(start 233.553 102.25)
-		(end 233.553 105.1)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "Net-(U1A--)")
-		(uuid "20ccdcd5-e6a7-4be7-bbd2-539fbd5413a7")
-	)
-	(segment
-		(start 238.633 105.1)
-		(end 238.633 101.9)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "Net-(U1B--)")
-		(uuid "0c5b2e2c-8632-4acb-8921-0d23aba9e8c7")
-	)
-	(segment
-		(start 238.633 110.5)
-		(end 238.633 113.55)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "Net-(U1C--)")
-		(uuid "3438e31e-f91e-4dcb-bc1d-4cdda6a4fe8e")
-	)
-	(segment
 		(start 186.705 141.625)
 		(end 194 141.625)
 		(width 1)
@@ -33760,15 +33598,6 @@
 		(layer "B.Cu")
 		(net "Net-(FB1-Pad1)")
 		(uuid "359cbed7-fe12-45b0-9745-233a53e6276b")
-	)
-	(segment
-		(start 233.553 100.55)
-		(end 235.25 100.55)
-		(width 0.3)
-		(locked yes)
-		(layer "B.Cu")
-		(net "Net-(R14-Pad2)")
-		(uuid "6a1a41cb-13fc-465b-9439-d05f8375bf68")
 	)
 	(embedded_fonts no)
 )
