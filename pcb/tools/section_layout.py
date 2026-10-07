@@ -100,6 +100,23 @@ def layout(w, section):
         a = cv_top(w, "U2", "2", -1, [("C10", "out"), ("R12", "vref"), ("R11", "out"), "R13", "R10"])
         b = cv_top(w, "U2", "6", +1, [("R19", "out"), ("C12", "out"), ("R20", "vref"), "R18"])
         return a + b
+    if section == "u4":
+        # section A (bottom row) faces U3: it goes to the right, its - and output traces leaving under the body
+        right = cy_edge(w, "U4", "right")
+        ym, yo = 40.6, 42.3
+        x1 = right + 0.5 + 0.775
+        res = [("R61", x1, (ym + yo) / 2, 270), ("C60", x1 + ROW, (ym + yo) / 2, 270),
+               ("R62", x1 + ROW, (ym + yo) / 2 - 4.2, 90)]                 # output series R, pad 2 toward J1
+        p8 = pin(w, "U4", "8")
+        res.append(("C72", x1, p8[1] - 2.0, 270))                          # +12 V pad (1) up, by pin 8
+        # section B (top row) faces up: the spine pattern, output pin 7 to the right
+        sx, sy = pin(w, "U4", "6")
+        r1 = cy_edge(w, "U4", "top") - 0.5 - 0.775
+        res += [("R65", sx + P, r1, 0), ("C62", sx + P, r1 - ROW, 0), ("R64", sx - P, r1 - 2 * ROW, 0),
+                ("R66", sx + P + 0.85, r1 - 3 * ROW, 0)]
+        p4 = pin(w, "U4", "4")
+        res.append(("C73", cy_edge(w, "U4", "left") - 0.5 - 0.775, p4[1] - 0.6, 90))   # -12 V pad (2) up, by pin 4
+        return res
     if section == "u3":
         sx, sy = pin(w, "U3", "2")                     # section A: bottom row, - pin 2, output pin 1 to the right
         r1 = cy_edge(w, "U3", "bottom") + 0.5 + 0.775
