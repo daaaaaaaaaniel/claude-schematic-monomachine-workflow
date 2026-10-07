@@ -110,6 +110,8 @@ is locked yet: no block has been approved.
 - Its body keeps 0.5–1.0 mm from the jack's or pot's own solder pins.
 - Neighbouring through-hole parts may have touching courtyards; parallel resistors at 3.17 mm pitch.
 - Standing (vertically mounted) resistors can fill the 2–3 mm gutters between jack columns (a footprint change).
+  **d, 2026-10-07: yes, as an iterative step** when the control board is redone: switch the LED drivers' resistors
+  (at least the 1 MΩ R90–R97 and 10k R80–R87) to standing footprints so they fit beside U7/U8.
 - Back-side SMD parts (U6–U8) may sit under a jack or pot, clear of its solder pins.
 
 **Op-amp sections (2026-10-07; d's layout study, `docs/reference/pcb-layout-study/`, 121 op-amps on 36 open-source
