@@ -22,6 +22,11 @@ sys.path.insert(0, HERE)
 import auto_place as A  # noqa: E402
 
 OX, OY = 180.0, 50.0          # main board: KiCad = panel + offset
+OFF = {"main": (180.0, 50.0), "control": (100.0, 50.0)}
+
+
+def off(w):
+    return OFF[w.board]
 P = 0.85                      # 0603 pad offset from its centre
 ROW = 2.05                    # row pitch
 
@@ -29,13 +34,15 @@ ROW = 2.05                    # row pitch
 def pin(w, ref, num):
     f = w.fps[ref]
     p = next(q for q in f.Pads() if q.GetNumber() == num)
-    return A.mm(p.GetPosition().x) - OX, A.mm(p.GetPosition().y) - OY
+    ox, oy = off(w)
+    return A.mm(p.GetPosition().x) - ox, A.mm(p.GetPosition().y) - oy
 
 
 def cy_edge(w, ref, side):
     x, y, s = w.placed[ref]
     c = s.cy
-    return {"top": y + c[1] - OY, "bottom": y + c[3] - OY, "left": x + c[0] - OX, "right": x + c[2] - OX}[side]
+    ox, oy = off(w)
+    return {"top": y + c[1] - oy, "bottom": y + c[3] - oy, "left": x + c[0] - ox, "right": x + c[2] - ox}[side]
 
 
 def cv_top(w, chip, minus, out_dir, parts, rin_row=False):
@@ -100,7 +107,38 @@ def layout(w, section):
         a = cv_top(w, "U2", "2", -1, [("C10", "out"), ("R12", "vref"), ("R11", "out"), "R13", "R10"])
         b = cv_top(w, "U2", "6", +1, [("R19", "out"), ("C12", "out"), ("R20", "vref"), "R18"])
         return a + b
-    if section == "microsd":
+    if section == "ctl_u6":  # noqa                           # the mux's decoupler at its supply pin 16
+        p16 = pin(w, "U6", "16")
+        return [("C80", p16[0] + 1.25, p16[1] - 3.2, 0)]
+    if section in ("ctl_u7", "ctl_u8"):
+        chip = "U7" if section == "ctl_u7" else "U8"
+        dec = {"U7": ("C81", "C82"), "U8": ("C83", "C84")}[chip]
+        res = []
+        p4, p11 = pin(w, chip, "4"), pin(w, chip, "11")
+        res.append((dec[0], p4[0] + 3.4, p4[1], 0))      # +12 V cap at pin 4 (right column), pad 1 nearest
+        res.append((dec[1], p11[0] - 3.4, p11[1], 0))    # -12 V cap at pin 11 (left column), pad 2 nearest
+        # each section's three resistors as a parallel bank (3.17 mm pitch), leads toward the chip on the side
+        # of its pins; sections on the upper half fan upward, the lower half downward
+        import pinmap as PM
+        names = ["BASE", "WIDTH", "HPRES", "LPRES", "EQF", "EQG", "DIST", "SRR"]
+        sect_pins = {1: ("1", "3"), 2: ("7", "5"), 3: ("8", "10"), 4: ("14", "12")}   # out, + of each section
+        for i, n in enumerate(names):
+            u, k = PM.LED_UNIT[n]
+            if u != chip:
+                continue
+            out_p, plus_p = (pin(w, chip, q) for q in sect_pins[k])
+            right = out_p[0] > p11[0] + 1                 # pins on the right column
+            side = 1 if right else -1
+            up = -1 if k in (1, 4) else 1                 # sections A/D are the upper ones (rot 180)
+            x = plus_p[0] + side * (2.9 + 2.54)          # bank centre: inner lead 2.9 mm outside the pin
+            for j, ref in enumerate((f"R{90 + i}", f"R{80 + i}", f"R{71 + i}")):
+                y = plus_p[1] + up * (1.6 + j * 3.17)
+                # + side (R90 pad 1, R80 pad 2) and the feedback side (R71 pad 1) toward the chip
+                inner_is_pad1 = ref.startswith(("R9", "R7"))
+                rot = (180 if inner_is_pad1 else 0) if right is False else (0 if inner_is_pad1 else 180)
+                res.append((ref, x, y, rot))
+        return res
+    if section == "microsd":  # noqa
         # the five SD pull-ups as a column of rows beside the Seed3 pins they serve (pad 1 = SD line, toward the
         # pin; pad 2 = +3V3_D, a common rail on the left), and J15's decoupler right at its supply pin 4
         sx = cy_edge(w, "A1", "left") - 0.5 - 1.625
@@ -150,7 +188,10 @@ def layout(w, section):
 
 def legalise(w, ref, x, y, rot, limit=None):
     s = w.shape(ref, rot, True)
-    kx, ky = x + OX, y + OY
+    ox, oy = off(w)
+    mx = sum(p[2] for p in s.pads) / len(s.pads)        # (x, y) is where the part's pads centre on
+    my = sum(p[3] for p in s.pads) / len(s.pads)
+    kx, ky = round((x + ox - mx) / 0.05) * 0.05, round((y + oy - my) / 0.05) * 0.05
     if w.legal(ref, kx, ky, s):
         return kx, ky, s, 0.0
     best = None
@@ -171,7 +212,9 @@ def main():
     secs = [a for a in sys.argv[1:] if not a.startswith("-") and not a.endswith(".json")]
     out = sys.argv[sys.argv.index("-o") + 1] if "-o" in sys.argv else os.path.join(
         HERE, "..", "out", f"section-{'-'.join(secs)}.json")
-    w = A.World(A.BOARD, "main")
+    board = "control" if all(s.startswith("ctl_") for s in secs) else "main"
+    w = A.World(A.BOARD, board)
+    OXY = off(w)
     plan = []
     for s in secs:
         plan += layout(w, s)
@@ -208,8 +251,8 @@ def main():
             w.rebuild()
         result[ref] = {"x": round(kx, 4), "y": round(ky, 4), "rot": rot,
                        "pads": [[p[0], round(kx + p[2], 4), round(ky + p[3], 4)] for p in s.pads]}
-        print(f"{ref}: panel ({kx - OX:.2f}, {ky - OY:.2f}) rot {rot}" + (f"  (moved {moved:.2f} mm to clear)" if moved else ""))
-    json.dump({"board": "main", "side": "back", "placements": result}, open(out, "w"), indent=1)
+        print(f"{ref}: panel ({kx - OXY[0]:.2f}, {ky - OXY[1]:.2f}) rot {rot}" + (f"  (moved {moved:.2f} mm to clear)" if moved else ""))
+    json.dump({"board": board, "side": "back", "placements": result}, open(out, "w"), indent=1)
     print("written", out)
 
 
