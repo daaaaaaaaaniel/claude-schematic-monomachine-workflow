@@ -1,5 +1,14 @@
 # MACHINE FILTER: handoff (rev beta schematic, two boards, 2026-10-06)
 
+> **Project shut down by d, 2026-10-07.** Nothing here is ready to fabricate. Where it stopped:
+> - **Schematic (rev beta):** done and checked. ERC 0, the two connectivity sources agree, swap groups are checked on every build.
+> - **Main board placement:** every zone placed section by section, DRC clean, not routed (Freerouting trials only).
+> - **Control board placement:** unfinished. The placement rules in `pcb/tools/auto_place.py` piled up until they
+>   left no legal spot for the LED-driver resistors near U7/U8 (see `.pcba-workflow/layout-lessons.md`, "Stacked
+>   placement rules overfit"). The fix would be the survey's four rules (`docs/reference/pcb-layout-study/`).
+> - **Headers:** still the pocket experiment; whether to restore commit `7f58046` was never decided.
+> - **Branch `pcb-second-placement`** (another session) was not touched from here.
+
 A 14HP Eurorack filter module built around an Electrosmith Daisy Seed3. This folder holds:
 - the schematic source and the project library;
 - the floorplan that sets the pin assignment;
