@@ -100,6 +100,15 @@ def layout(w, section):
         a = cv_top(w, "U2", "2", -1, [("C10", "out"), ("R12", "vref"), ("R11", "out"), "R13", "R10"])
         b = cv_top(w, "U2", "6", +1, [("R19", "out"), ("C12", "out"), ("R20", "vref"), "R18"])
         return a + b
+    if section == "microsd":
+        # the five SD pull-ups as a column of rows beside the Seed3 pins they serve (pad 1 = SD line, toward the
+        # pin; pad 2 = +3V3_D, a common rail on the left), and J15's decoupler right at its supply pin 4
+        sx = cy_edge(w, "A1", "left") - 0.5 - 1.625
+        res = [(ref, sx, pin(w, "A1", pnum)[1], 180)
+               for ref, pnum in (("R102", "6"), ("R103", "5"), ("R104", "4"), ("R100", "3"), ("R101", "2"))]
+        p4 = pin(w, "J15", "4")
+        res.append(("C100", p4[0] + 2.8, p4[1], 0))                       # pad 1 (+3V3_D) toward J15 pin 4
+        return res
     if section == "u4":
         # section A (bottom row) faces U3: it goes to the right, its - and output traces leaving under the body
         right = cy_edge(w, "U4", "right")
